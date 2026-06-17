@@ -1,0 +1,13 @@
+/* Direct stylesheet authoring is an advanced feature. Knowledge of CSS required.*/
+
+.view {
+	background: var(--container-background-color);
+}
+
+.card {
+    display: flex;
+    border: 1px solid var(--border-outline-color);
+    background: var(--container-background-color);
+    border-radius: var(--ui-components-card-border-radius-regular);
+    overflow: hidden;
+}

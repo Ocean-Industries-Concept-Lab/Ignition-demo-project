@@ -1,0 +1,11 @@
+{
+  "base": {
+    "style": {
+      "color": "var(--element-neutral-color);",
+      "fontFamily": "Noto Sans",
+      "fontSize": "var(--global-typography-ui-label-font-size);",
+      "fontWeight": "400",
+      "lineHeight": " var(--global-typography-ui-label-line-height);"
+    }
+  }
+}

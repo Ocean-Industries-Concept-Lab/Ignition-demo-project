@@ -1,0 +1,691 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "ObcAzimuthThrusterLabeled"
+        },
+        "position": {
+          "height": 279,
+          "width": 346,
+          "x": 30,
+          "y": 23
+        },
+        "propConfig": {
+          "props.angle": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/Angle"
+              },
+              "type": "tag"
+            }
+          },
+          "props.thrust": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/Thrust"
+              },
+              "type": "tag"
+            }
+          },
+          "props.thrustSetpoint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/ThrustSet"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "autoAtThrustSetpointDeadband": 2,
+          "bottomPropeller": "single",
+          "hasThrustSetpoint": true,
+          "size": "large",
+          "topPropeller": "cap"
+        },
+        "type": "navigation-instruments.azimuth-thruster-labeled.azimuth-thruster-labeled"
+      },
+      {
+        "meta": {
+          "name": "slider_0"
+        },
+        "position": {
+          "height": 48,
+          "rotate": {
+            "anchor": "135% -123%"
+          },
+          "width": 307,
+          "x": 98,
+          "y": 352
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/Thrust"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "type": "openbridge.manual.slider"
+      },
+      {
+        "meta": {
+          "name": "slider_1"
+        },
+        "position": {
+          "height": 48,
+          "rotate": {
+            "anchor": "135% -123%"
+          },
+          "width": 307,
+          "x": 98,
+          "y": 400
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/ThrustSet"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "type": "openbridge.manual.slider"
+      },
+      {
+        "meta": {
+          "name": "ObcCompass"
+        },
+        "position": {
+          "height": 396,
+          "width": 472,
+          "x": 347,
+          "y": -20
+        },
+        "propConfig": {
+          "props.courseOverGround": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/Thrust"
+              },
+              "type": "tag"
+            }
+          },
+          "props.heading": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/Angle"
+              },
+              "type": "tag"
+            }
+          },
+          "props.headingSetPoint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/ThrustSet"
+              },
+              "type": "tag"
+            }
+          },
+          "props.vesselImage": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/VesselType"
+              },
+              "transforms": [
+                {
+                  "expression": "{value}+\"-top\"",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "currentFromDirection": 20,
+          "currentSpeed": 1,
+          "windFromDirection": 14,
+          "windSpeed": 5
+        },
+        "type": "navigation-instruments.compass.compass"
+      },
+      {
+        "meta": {
+          "name": "ObcCompassIndicator"
+        },
+        "position": {
+          "height": 51,
+          "width": 50,
+          "x": 516.5,
+          "y": 326.5
+        },
+        "propConfig": {
+          "props.angle": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/Angle"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "type": "navigation-instruments.compass-indicator.compass-indicator"
+      },
+      {
+        "meta": {
+          "name": "ObcCompassIndicator_0"
+        },
+        "position": {
+          "height": 49,
+          "rotate": {
+            "anchor": "50% 87%"
+          },
+          "width": 49,
+          "x": 517,
+          "y": 375.5
+        },
+        "propConfig": {
+          "props.angle": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/Angle"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "northUp": true
+        },
+        "type": "navigation-instruments.compass-indicator.compass-indicator"
+      },
+      {
+        "meta": {
+          "name": "ObcCompassIndicator_1"
+        },
+        "position": {
+          "height": 46,
+          "width": 47,
+          "x": 642,
+          "y": 329
+        },
+        "propConfig": {
+          "props.angle": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/Angle"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "arrow": "course"
+        },
+        "type": "navigation-instruments.compass-indicator.compass-indicator"
+      },
+      {
+        "meta": {
+          "name": "ObcCompassIndicator_2"
+        },
+        "position": {
+          "height": 49,
+          "rotate": {
+            "anchor": "39% 50%"
+          },
+          "width": 47,
+          "x": 641,
+          "y": 375.5
+        },
+        "propConfig": {
+          "props.angle": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/Angle"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "arrow": "course",
+          "northUp": true
+        },
+        "type": "navigation-instruments.compass-indicator.compass-indicator"
+      },
+      {
+        "meta": {
+          "name": "ObcPitchRoll"
+        },
+        "position": {
+          "height": 269,
+          "width": 256,
+          "x": 488.5,
+          "y": 463
+        },
+        "propConfig": {
+          "props.pitch": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/Angle"
+              },
+              "transforms": [
+                {
+                  "expression": "{value}*.1",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.roll": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/Thrust"
+              },
+              "transforms": [
+                {
+                  "expression": "{value}*.1",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.vesselImageFore": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/VesselType"
+              },
+              "transforms": [
+                {
+                  "expression": "if( {value}\u003d\"car-ferry\",\"car-ferry-aft\",{value}+\"-fore\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.vesselImageSide": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/VesselType"
+              },
+              "transforms": [
+                {
+                  "expression": "{value}+\"-side\"",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "type": "navigation-instruments.pitch-roll.pitch-roll"
+      },
+      {
+        "meta": {
+          "name": "slider"
+        },
+        "position": {
+          "height": 48,
+          "rotate": {
+            "anchor": "135% -123%"
+          },
+          "width": 307,
+          "x": 98,
+          "y": 304
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/Angle"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "max": 360
+        },
+        "type": "openbridge.manual.slider"
+      },
+      {
+        "meta": {
+          "name": "stepper-box"
+        },
+        "position": {
+          "height": 48,
+          "width": 160,
+          "x": 98,
+          "y": 448
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/Angle"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "unit": "deg"
+        },
+        "type": "openbridge.manual.stepperbox"
+      },
+      {
+        "meta": {
+          "name": "icon"
+        },
+        "position": {
+          "height": 48,
+          "rotate": {
+            "anchor": "13% 25%"
+          },
+          "width": 48,
+          "x": 287,
+          "y": 562
+        },
+        "props": {
+          "name": "home"
+        },
+        "type": "openbridge.manual.icon"
+      },
+      {
+        "meta": {
+          "name": "checkbox"
+        },
+        "position": {
+          "height": 48,
+          "width": 160,
+          "x": 98,
+          "y": 629
+        },
+        "props": {
+          "label": "Fun"
+        },
+        "type": "openbridge.manual.checkbox"
+      },
+      {
+        "meta": {
+          "name": "toggle-switch"
+        },
+        "position": {
+          "height": 48,
+          "width": 160,
+          "x": 108,
+          "y": 684
+        },
+        "props": {
+          "checked": true,
+          "label": "Extra fun"
+        },
+        "type": "openbridge.manual.toggle-switch"
+      },
+      {
+        "meta": {
+          "name": "button"
+        },
+        "position": {
+          "height": 48,
+          "width": 197,
+          "x": 104.5,
+          "y": 765
+        },
+        "props": {
+          "fullWidth": true,
+          "hasLeadingIcon": true,
+          "hasTrailingIcon": true,
+          "label": "Button",
+          "leadingIcon": "ship",
+          "trailingIcon": "chevron-right-google"
+        },
+        "type": "openbridge.manual.button"
+      },
+      {
+        "meta": {
+          "name": "button_0"
+        },
+        "position": {
+          "height": 48,
+          "width": 197,
+          "x": 104,
+          "y": 813
+        },
+        "props": {
+          "label": "Button",
+          "leadingIcon": "placeholder",
+          "variant": "raised"
+        },
+        "type": "openbridge.manual.button"
+      },
+      {
+        "meta": {
+          "name": "button_1"
+        },
+        "position": {
+          "height": 48,
+          "rotate": {
+            "anchor": "50% 25%"
+          },
+          "width": 197,
+          "x": 104.5,
+          "y": 863
+        },
+        "props": {
+          "disabled": true,
+          "label": "Button",
+          "leadingIcon": "placeholder",
+          "variant": "raised"
+        },
+        "type": "openbridge.manual.button"
+      },
+      {
+        "meta": {
+          "name": "button_2"
+        },
+        "position": {
+          "height": 48,
+          "width": 132,
+          "x": 551,
+          "y": 835
+        },
+        "props": {
+          "hasLeadingIcon": true,
+          "label": "Hello",
+          "leadingIcon": "home"
+        },
+        "type": "openbridge.manual.button"
+      },
+      {
+        "meta": {
+          "name": "ObcThruster"
+        },
+        "position": {
+          "height": 172,
+          "width": 158,
+          "x": 369,
+          "y": 765
+        },
+        "type": "navigation-instruments.thruster.thruster"
+      },
+      {
+        "meta": {
+          "name": "ObcAnalogValve"
+        },
+        "position": {
+          "height": 82,
+          "width": 66,
+          "x": 405,
+          "y": 667
+        },
+        "type": "automation.analog-valve.analog-valve"
+      },
+      {
+        "meta": {
+          "name": "dropdown-button"
+        },
+        "position": {
+          "height": 48,
+          "width": 160,
+          "x": 98,
+          "y": 496
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/VesselType"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "options": [
+            {
+              "label": "Car ferry",
+              "value": "car-ferry"
+            },
+            {
+              "label": "Cargo",
+              "value": "cargo"
+            },
+            {
+              "label": "Cargo wind",
+              "value": "cargo-wind"
+            },
+            {
+              "label": "PSV",
+              "value": "psv"
+            },
+            {
+              "label": "Tanker",
+              "value": "tanker"
+            }
+          ]
+        },
+        "type": "openbridge.manual.dropdown-button"
+      },
+      {
+        "meta": {
+          "name": "text-input-field"
+        },
+        "position": {
+          "height": 48,
+          "width": 160,
+          "x": 98,
+          "y": 562
+        },
+        "propConfig": {
+          "props.labelIcon.path": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/icon"
+              },
+              "type": "tag"
+            }
+          },
+          "props.leadingIcon.path": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/icon"
+              },
+              "type": "tag"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/icon"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "hasLeadingIcon": true,
+          "labelIcon": {},
+          "leadingIcon": {}
+        },
+        "type": "openbridge.manual.text-input-field"
+      }
+    ],
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "width": "100px"
+      }
+    },
+    "props": {
+      "key": "value",
+      "style": {
+        "width": "100px"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

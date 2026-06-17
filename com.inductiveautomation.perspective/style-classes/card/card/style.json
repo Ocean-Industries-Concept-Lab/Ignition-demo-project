@@ -1,0 +1,14 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--container-background-color)",
+      "borderColor": "var(--border-outline-color)",
+      "borderStyle": "solid",
+      "borderWidth": "1px",
+      "borderTopLeftRadius": "var(--ui-components-card-border-radius-regular)",
+      "borderTopRightRadius": "var(--ui-components-card-border-radius-regular)",
+      "borderBottomLeftRadius": "var(--ui-components-card-border-radius-regular)",
+      "borderBottomRightRadius": "var(--ui-components-card-border-radius-regular)"
+    }
+  }
+}

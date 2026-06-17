@@ -1,0 +1,139 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "ObcAnalogValve"
+        },
+        "position": {
+          "height": 0.06,
+          "width": 0.06,
+          "x": 0.3437,
+          "y": 0.2649
+        },
+        "type": "automation.analog-valve.analog-valve"
+      },
+      {
+        "meta": {
+          "name": "ObcMotor"
+        },
+        "position": {
+          "height": 0.06,
+          "width": 0.06,
+          "x": 0.6325,
+          "y": 0.265
+        },
+        "props": {
+          "badgeAuto": true
+        },
+        "type": "automation.motor.motor"
+      },
+      {
+        "meta": {
+          "name": "ObcAutomationTank"
+        },
+        "position": {
+          "height": 0.215,
+          "width": 0.21,
+          "x": 0.5625,
+          "y": 0.5856
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "TextArea"
+        },
+        "position": {
+          "height": 0.2,
+          "width": 0.3,
+          "x": 0.0925,
+          "y": 0.44
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "publishInitial": false,
+                "tagPath": "[Sample_Tags]Ramp/Ramp0"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "type": "ia.input.text-area"
+      },
+      {
+        "meta": {
+          "name": "ObcAnalogValve_0"
+        },
+        "position": {
+          "height": 0.06,
+          "width": 0.06,
+          "x": 0.4675,
+          "y": 0.0975
+        },
+        "type": "automation.analog-valve.analog-valve"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "pipes": [
+        {
+          "appearance": "auto",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe",
+          "origin": {
+            "connections": [
+              {
+                "connections": [],
+                "x": 0.3737,
+                "y": 0.295
+              },
+              {
+                "connections": [],
+                "x": 0.6625,
+                "y": 0.6931
+              }
+            ],
+            "x": 0.6625,
+            "y": 0.295
+          },
+          "start": "none",
+          "stroke": "",
+          "visible": true,
+          "width": 6
+        },
+        {
+          "appearance": "auto",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_0",
+          "origin": {
+            "connections": [],
+            "x": 0.7762,
+            "y": 0.7837
+          },
+          "start": "none",
+          "stroke": "",
+          "visible": true,
+          "width": 10
+        }
+      ]
+    },
+    "type": "ia.container.coord"
+  }
+}

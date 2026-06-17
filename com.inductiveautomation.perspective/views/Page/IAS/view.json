@@ -1,0 +1,664 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 1071
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "ObcDigitalValve"
+        },
+        "position": {
+          "height": 85,
+          "rotate": {
+            "anchor": "50% 60%"
+          },
+          "width": 65,
+          "x": 277,
+          "y": 223
+        },
+        "props": {
+          "open": true
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "ObcInstrumentField"
+        },
+        "position": {
+          "height": 172,
+          "width": 108,
+          "x": 116,
+          "y": 29
+        },
+        "props": {
+          "hasSetpoint": true,
+          "hasSource": true,
+          "hasSrc": true,
+          "hasValue": true,
+          "setpoint": 20,
+          "size": "enhanced",
+          "source": "GPS",
+          "src": "GPS",
+          "tag": "Speed",
+          "unit": "kn",
+          "value": 30
+        },
+        "type": "navigation-instruments.instrument-field.instrument-field"
+      },
+      {
+        "meta": {
+          "name": "ObcAutomationTank"
+        },
+        "position": {
+          "height": 173,
+          "width": 168,
+          "x": 240,
+          "y": 431
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "publishInitial": false,
+                "tagPath": "[default]Project/ValvePosition"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "medium": "air",
+          "trend": "falling"
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "ObcAnalogValve"
+        },
+        "position": {
+          "height": 49,
+          "width": 49,
+          "x": 383.5,
+          "y": 240.5
+        },
+        "propConfig": {
+          "props.open": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/ValvePosition"
+              },
+              "transforms": [
+                {
+                  "expression": "if({value}\u003d0,false,true)",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "publishInitial": false,
+                "tagPath": "[default]Project/ValvePosition"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "labelPosition": "right",
+          "tag": "#13"
+        },
+        "type": "automation.analog-valve.analog-valve"
+      },
+      {
+        "meta": {
+          "name": "ObcDigitalValve_0"
+        },
+        "position": {
+          "height": 82,
+          "width": 66,
+          "x": 275.5,
+          "y": 312.5
+        },
+        "props": {
+          "progress": true,
+          "progressMode": "determinate",
+          "progressValue": 1,
+          "vertical": true
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "ObcAnalogValve_0"
+        },
+        "position": {
+          "height": 82,
+          "width": 66,
+          "x": 375,
+          "y": 312
+        },
+        "propConfig": {
+          "props.alert": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "publishInitial": false,
+                "tagPath": "[default]Project/valveError"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "tag": "#14",
+          "vertical": true
+        },
+        "type": "automation.analog-valve.analog-valve"
+      },
+      {
+        "meta": {
+          "name": "ObcAutomationTank_0"
+        },
+        "position": {
+          "height": 173,
+          "width": 168,
+          "x": 448,
+          "y": 431
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "publishInitial": false,
+                "tagPath": "[default]Project/ValvePosition"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "trend": "falling",
+          "variant": "compact"
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "ObcInstrumentField_0"
+        },
+        "position": {
+          "height": 172,
+          "width": 108,
+          "x": 215,
+          "y": 29
+        },
+        "props": {
+          "hasSetpoint": true,
+          "hasSource": true,
+          "hasSrc": true,
+          "hasValue": true,
+          "setpoint": 20,
+          "source": "GPS",
+          "src": "GPS",
+          "tag": "Speed",
+          "unit": "kn",
+          "value": 30
+        },
+        "type": "navigation-instruments.instrument-field.instrument-field"
+      },
+      {
+        "meta": {
+          "name": "ObcInstrumentField_1"
+        },
+        "position": {
+          "height": 31,
+          "width": 196,
+          "x": 321,
+          "y": 29
+        },
+        "props": {
+          "hasSetpoint": true,
+          "hasSource": true,
+          "hasSrc": true,
+          "hasValue": true,
+          "horizontal": true,
+          "setpoint": 20,
+          "source": "GPS",
+          "src": "GPS",
+          "tag": "Speed",
+          "unit": "kn",
+          "value": 30
+        },
+        "type": "navigation-instruments.instrument-field.instrument-field"
+      },
+      {
+        "meta": {
+          "name": "ObcInstrumentField_2"
+        },
+        "position": {
+          "height": 55,
+          "rotate": {
+            "anchor": "50% 39%"
+          },
+          "width": 221,
+          "x": 323,
+          "y": 76
+        },
+        "props": {
+          "hasSetpoint": true,
+          "hasSource": true,
+          "hasSrc": true,
+          "hasValue": true,
+          "horizontal": true,
+          "setpoint": 20,
+          "size": "enhanced",
+          "source": "GPS",
+          "src": "GPS",
+          "tag": "Speed",
+          "unit": "kn",
+          "value": 30
+        },
+        "type": "navigation-instruments.instrument-field.instrument-field"
+      },
+      {
+        "meta": {
+          "name": "ObcInstrumentField_3"
+        },
+        "position": {
+          "height": 55,
+          "width": 221,
+          "x": 473,
+          "y": 146
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "publishInitial": false,
+                "tagPath": "[default]Project/ValvePosition"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "hasSource": true,
+          "hasValue": true,
+          "horizontal": true,
+          "maxDigits": 3,
+          "setpoint": 20,
+          "size": "enhanced",
+          "source": "GPS",
+          "src": "GPS",
+          "tag": "Speed",
+          "unit": "kn"
+        },
+        "type": "navigation-instruments.instrument-field.instrument-field"
+      },
+      {
+        "meta": {
+          "name": "slider"
+        },
+        "position": {
+          "height": 48,
+          "width": 160,
+          "x": 491,
+          "y": 241.5
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/ValvePosition"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "type": "openbridge.manual.slider"
+      },
+      {
+        "meta": {
+          "name": "toggle-switch"
+        },
+        "position": {
+          "height": 48,
+          "rotate": {
+            "anchor": "50% 35%"
+          },
+          "width": 160,
+          "x": 485,
+          "y": 330
+        },
+        "propConfig": {
+          "props.checked": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Project/valveError"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "label": "Valve is stuck"
+        },
+        "type": "openbridge.manual.toggle-switch"
+      },
+      {
+        "meta": {
+          "name": "ObcMotor"
+        },
+        "position": {
+          "height": 49,
+          "width": 41,
+          "x": 198.5,
+          "y": 737
+        },
+        "props": {
+          "on": true,
+          "speedInPercent": 50,
+          "tag": 123
+        },
+        "type": "automation.motor.motor"
+      },
+      {
+        "meta": {
+          "name": "ObcMotor_0"
+        },
+        "position": {
+          "height": 49,
+          "width": 41,
+          "x": 128.5,
+          "y": 736
+        },
+        "props": {
+          "labelDirection": "left",
+          "labelPosition": "left",
+          "on": true,
+          "speedInPercent": 50,
+          "tag": 123
+        },
+        "type": "automation.motor.motor"
+      },
+      {
+        "meta": {
+          "name": "ObcMotor_1"
+        },
+        "position": {
+          "height": 49,
+          "rotate": {
+            "anchor": "50% 60%"
+          },
+          "width": 41,
+          "x": 276.5,
+          "y": 736
+        },
+        "props": {
+          "labelPosition": "bottom",
+          "on": true,
+          "speedInPercent": 50,
+          "tag": 123,
+          "vertical": true
+        },
+        "type": "automation.motor.motor"
+      },
+      {
+        "meta": {
+          "name": "ObcMotor_2"
+        },
+        "position": {
+          "height": 49,
+          "width": 41,
+          "x": 333.5,
+          "y": 736
+        },
+        "props": {
+          "labelDirection": "down",
+          "labelPosition": "right",
+          "on": true,
+          "speedInPercent": 50,
+          "tag": 123,
+          "vertical": true
+        },
+        "type": "automation.motor.motor"
+      },
+      {
+        "meta": {
+          "name": "ObcMotor_3"
+        },
+        "position": {
+          "height": 49,
+          "rotate": {
+            "anchor": "25% 25%"
+          },
+          "width": 41,
+          "x": 116,
+          "y": 866
+        },
+        "props": {
+          "alert": true,
+          "alertFrameThickness": "large",
+          "labelDirection": "left",
+          "labelPosition": "left",
+          "on": true,
+          "speedInPercent": 50,
+          "tag": 123
+        },
+        "type": "automation.motor.motor"
+      },
+      {
+        "meta": {
+          "name": "ObcMotor_4"
+        },
+        "position": {
+          "height": 49,
+          "rotate": {
+            "anchor": "25% 25%"
+          },
+          "width": 41,
+          "x": 116,
+          "y": 934
+        },
+        "props": {
+          "alert": true,
+          "labelDirection": "left",
+          "labelPosition": "left",
+          "on": true,
+          "speedInPercent": 50,
+          "tag": 123
+        },
+        "type": "automation.motor.motor"
+      },
+      {
+        "meta": {
+          "name": "ObcMotor_5"
+        },
+        "position": {
+          "height": 49,
+          "rotate": {
+            "anchor": "25% 25%"
+          },
+          "width": 41,
+          "x": 248.5,
+          "y": 866
+        },
+        "props": {
+          "alert": true,
+          "alertFrameStatus": "warning",
+          "labelDirection": "left",
+          "labelPosition": "left",
+          "on": true,
+          "speedInPercent": 50,
+          "tag": 123
+        },
+        "type": "automation.motor.motor"
+      },
+      {
+        "meta": {
+          "name": "ObcMotor_6"
+        },
+        "position": {
+          "height": 49,
+          "rotate": {
+            "anchor": "25% 25%"
+          },
+          "width": 41,
+          "x": 248,
+          "y": 934
+        },
+        "props": {
+          "alert": true,
+          "alertFrameStatus": "warning",
+          "labelDirection": "left",
+          "labelPosition": "left",
+          "on": true,
+          "speedInPercent": 50,
+          "tag": 123
+        },
+        "type": "automation.motor.motor"
+      },
+      {
+        "meta": {
+          "name": "ObcMotor_7"
+        },
+        "position": {
+          "height": 44,
+          "rotate": {
+            "anchor": "25% 37%"
+          },
+          "width": 80,
+          "x": 353.5,
+          "y": 935
+        },
+        "props": {
+          "alert": true,
+          "alertFrameStatus": "caution",
+          "labelDirection": "left",
+          "labelPosition": "left",
+          "on": true,
+          "speedInPercent": 50,
+          "tag": 123
+        },
+        "type": "automation.motor.motor"
+      },
+      {
+        "meta": {
+          "name": "ObcMotor_8"
+        },
+        "position": {
+          "height": 44,
+          "rotate": {
+            "anchor": "25% 37%"
+          },
+          "width": 80,
+          "x": 353.5,
+          "y": 867
+        },
+        "props": {
+          "alert": true,
+          "alertFrameStatus": "caution",
+          "labelDirection": "left",
+          "labelPosition": "left",
+          "on": true,
+          "speedInPercent": 50,
+          "tag": 123
+        },
+        "type": "automation.motor.motor"
+      },
+      {
+        "meta": {
+          "name": "ObcMotor_9"
+        },
+        "position": {
+          "height": 44,
+          "rotate": {
+            "anchor": "25% 37%"
+          },
+          "width": 45,
+          "x": 115.5,
+          "y": 1005
+        },
+        "props": {
+          "alert": true,
+          "alertFrameType": "large-side-flip",
+          "labelDirection": "left",
+          "labelPosition": "left",
+          "on": true,
+          "speedInPercent": 50,
+          "tag": 123
+        },
+        "type": "automation.motor.motor"
+      },
+      {
+        "meta": {
+          "name": "ObcMotor_10"
+        },
+        "position": {
+          "height": 49,
+          "width": 41,
+          "x": 248.5,
+          "y": 1007
+        },
+        "props": {
+          "labelDirection": "left",
+          "labelPosition": "left",
+          "on": true,
+          "progress": true,
+          "speedInPercent": 50,
+          "tag": 123
+        },
+        "type": "automation.motor.motor"
+      },
+      {
+        "meta": {
+          "name": "ObcPump"
+        },
+        "position": {
+          "height": 18,
+          "width": 25,
+          "x": 383,
+          "y": 1020
+        },
+        "props": {
+          "labelPosition": "left",
+          "on": true,
+          "speedInPercent": 100,
+          "tag": 101
+        },
+        "type": "automation.pump.pump"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

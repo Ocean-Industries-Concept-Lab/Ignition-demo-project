@@ -1,0 +1,68 @@
+{
+  "pages": {
+    "/": {
+      "title": "Home",
+      "viewPath": "Page/Format"
+    },
+    "/alarms": {
+      "title": "Alarms",
+      "viewPath": "Page/Alarms"
+    },
+    "/charts": {
+      "title": "",
+      "viewPath": "Page/Charts"
+    },
+    "/ias": {
+      "title": "IAS",
+      "viewPath": "Page/IAS"
+    },
+    "/maritime": {
+      "title": "",
+      "viewPath": "Page/Maritime"
+    },
+    "/test": {
+      "title": "",
+      "viewPath": "Page/View"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "top-bottom",
+    "left": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 768,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "menu",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 320,
+        "viewParams": {},
+        "viewPath": "Docks/Menu"
+      }
+    ],
+    "top": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 48,
+        "viewParams": {
+          "breakpointLarge": "768",
+          "breakpointMedium": "500",
+          "params": {},
+          "path": "Header/Header"
+        },
+        "viewPath": "Header/Header"
+      }
+    ]
+  }
+}

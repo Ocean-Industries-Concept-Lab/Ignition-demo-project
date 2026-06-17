@@ -1,0 +1,88 @@
+{
+  "custom": {},
+  "params": {
+    "params": {},
+    "size": "medium"
+  },
+  "propConfig": {
+    "params.params": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.size": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 48,
+      "width": 1118
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "topbar"
+        },
+        "position": {
+          "basis": "160px"
+        },
+        "propConfig": {
+          "props.filterSourcePath": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "publishInitial": false,
+                "tagPath": "[Sample_Tags]Writeable/WriteableString1"
+              },
+              "type": "tag"
+            }
+          },
+          "props.navMenuButtonPressed": {
+            "onChange": {
+              "enabled": null,
+              "script": "\tif (currentValue):\n\t\tsystem.perspective.openDock(\"menu\")\n\telse:\n\t\tsystem.perspective.closeDock(\"menu\")"
+            }
+          },
+          "props.pageName": {
+            "binding": {
+              "config": {
+                "path": "page.props.title"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "appName": "Demo"
+        },
+        "type": "openbridge.manual.topbar"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.style.backgroundColor": {
+        "binding": {
+          "config": {
+            "path": "session.props.theme"
+          },
+          "transforms": [
+            {
+              "code": "\tif \"dark\" in value:\n\t\treturn \"var(--neutral-10)\"\n\telse:\n\t\treturn \"\"",
+              "type": "script"
+            }
+          ],
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "base": {
+    "style": {
+      "color": "var(--element-neutral-color)",
+      "fontFamily": "Noto Sans",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "1",
+      "lineHeight": "16px",
+      "textAlign": "start"
+    }
+  }
+}

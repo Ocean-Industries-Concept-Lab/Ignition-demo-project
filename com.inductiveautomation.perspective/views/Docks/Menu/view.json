@@ -1,0 +1,78 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 796,
+      "width": 320
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "navbar"
+        },
+        "position": {
+          "basis": "160px"
+        },
+        "props": {
+          "alertListPageName": "Page/Alarms",
+          "companyImageUrl": "https://openbridge-demo.web.app/companylogo-day.png",
+          "items": [
+            {
+              "icon": "home",
+              "label": "Home",
+              "path": "/"
+            },
+            {
+              "icon": "ias",
+              "label": "IAS",
+              "path": "/ias"
+            },
+            {
+              "children": [
+                {
+                  "icon": "",
+                  "label": "sub",
+                  "path": ""
+                },
+                {
+                  "children": [
+                    {
+                      "icon": "",
+                      "label": "subsub",
+                      "path": ""
+                    }
+                  ],
+                  "icon": "",
+                  "label": "sub group",
+                  "path": ""
+                }
+              ],
+              "icon": "command-shared",
+              "label": "Group",
+              "path": ""
+            },
+            {
+              "icon": "input-devices-google",
+              "label": "UI components",
+              "path": "/maritime"
+            }
+          ]
+        },
+        "type": "openbridge.manual.navbar"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "Menu/Menu",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}
