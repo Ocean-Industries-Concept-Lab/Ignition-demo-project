@@ -183,7 +183,7 @@
                         "props": {
                           "style": {
                             "alignSelf": "stretch",
-                            "classes": "Title/label"
+                            "classes": "font/label text-color/element-neutral"
                           },
                           "text": "Wind"
                         },
@@ -267,7 +267,7 @@
                 "props": {
                   "justify": "center",
                   "style": {
-                    "classes": "Utils/p-8"
+                    "classes": "utils/p-16"
                   }
                 },
                 "type": "ia.container.flex"
@@ -284,13 +284,268 @@
             "props": {
               "hasTitle": true,
               "style": {
-                "classes": "Utils/p-8"
+                "classes": "utils/p-8"
               },
               "title": "Own ship data"
             },
             "type": "openbridge.manual.card"
           },
           {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label_1"
+                        },
+                        "props": {
+                          "style": {
+                            "alignSelf": "stretch",
+                            "classes": "font/label text-color/element-neutral"
+                          },
+                          "text": "Roll"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcInstrumentField_4"
+                        },
+                        "propConfig": {
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "tagPath": "[Sample_Tags]Ramp/Ramp9"
+                              },
+                              "transforms": [
+                                {
+                                  "expression": "sin({value}*.3+2)*15",
+                                  "type": "expression"
+                                }
+                              ],
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "hasSrc": 4445.4275,
+                          "hasValue": true,
+                          "maxDigits": 0,
+                          "neutralColor": true,
+                          "size": "enhanced",
+                          "tag": "Roll",
+                          "unit": "DEG"
+                        },
+                        "type": "navigation-instruments.instrument-field.instrument-field"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcInstrumentField_5"
+                        },
+                        "propConfig": {
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "tagPath": "[default]Project/ThrustSet"
+                              },
+                              "enabled": false,
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "hasValue": true,
+                          "maxDigits": 3,
+                          "neutralColor": true,
+                          "size": "enhanced",
+                          "tag": "Max roll",
+                          "unit": "DEG",
+                          "value": 15
+                        },
+                        "type": "navigation-instruments.instrument-field.instrument-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "position": {
+                      "basis": "100px",
+                      "grow": 1,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "flex-end",
+                      "direction": "column",
+                      "justify": "center"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "meta": {
+                      "name": "ObcPitchRoll"
+                    },
+                    "position": {
+                      "basis": "300px",
+                      "grow": 10
+                    },
+                    "propConfig": {
+                      "props.pitch": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Ramp/Ramp9"
+                          },
+                          "enabled": false,
+                          "transforms": [
+                            {
+                              "expression": "sin({value}*.3)*4",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      },
+                      "props.roll": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Ramp/Ramp9"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "sin({value}*.3+2)*15",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "hasMaxPitchAdvice": true,
+                      "hasMaxRollAdvice": true,
+                      "maxAvgPitch": 4,
+                      "maxAvgRoll": 15,
+                      "maxPitchAdvice": 10,
+                      "maxRollAdvice": 10,
+                      "minAvgPitch": -4,
+                      "minAvgRoll": -15,
+                      "pitch": 1,
+                      "triggerRollAdvice": true
+                    },
+                    "type": "navigation-instruments.pitch-roll.pitch-roll"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "alignSelf": "stretch",
+                            "classes": "font/label text-color/element-neutral"
+                          },
+                          "text": "Pitch"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcInstrumentField_2"
+                        },
+                        "propConfig": {
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "tagPath": "[Sample_Tags]Ramp/Ramp9"
+                              },
+                              "transforms": [
+                                {
+                                  "expression": "sin({value}*.3)*4",
+                                  "type": "expression"
+                                }
+                              ],
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "hasValue": true,
+                          "maxDigits": 0,
+                          "neutralColor": true,
+                          "size": "enhanced",
+                          "tag": "Pitch",
+                          "unit": "DEG"
+                        },
+                        "type": "navigation-instruments.instrument-field.instrument-field"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcInstrumentField_3"
+                        },
+                        "propConfig": {
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "publishInitial": false,
+                                "tagPath": "[default]Project/ThrustSet"
+                              },
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "hasValue": true,
+                          "maxDigits": 3,
+                          "neutralColor": true,
+                          "size": "enhanced",
+                          "tag": "Max pitch",
+                          "unit": "DEG"
+                        },
+                        "type": "navigation-instruments.instrument-field.instrument-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "position": {
+                      "basis": "100px",
+                      "grow": 1,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "flex-end",
+                      "direction": "column",
+                      "justify": "center"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "justify": "center",
+                  "style": {
+                    "classes": "utils/p-16"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
             "meta": {
               "name": "card_0"
             },
@@ -300,10 +555,11 @@
               "shrink": 0
             },
             "props": {
+              "hasTitle": true,
               "style": {
-                "classes": "Utils/p-8",
-                "key": "value"
-              }
+                "classes": "utils/p-8"
+              },
+              "title": "Motion"
             },
             "type": "openbridge.manual.card"
           }
@@ -321,6 +577,87 @@
       {
         "children": [
           {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "ObcPump"
+                    },
+                    "position": {
+                      "basis": "66.86px",
+                      "grow": 1,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "on": true,
+                      "speedInPercent": 50,
+                      "tag": "W1"
+                    },
+                    "type": "automation.pump.pump"
+                  },
+                  {
+                    "meta": {
+                      "name": "ObcPump_0"
+                    },
+                    "position": {
+                      "basis": "66.86px",
+                      "grow": 1,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "on": true,
+                      "progress": true,
+                      "speedInPercent": 20,
+                      "tag": "W2"
+                    },
+                    "type": "automation.pump.pump"
+                  },
+                  {
+                    "meta": {
+                      "name": "ObcPump_1"
+                    },
+                    "position": {
+                      "basis": "66.86px",
+                      "grow": 1,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "tag": "W3"
+                    },
+                    "type": "automation.pump.pump"
+                  },
+                  {
+                    "meta": {
+                      "name": "ObcPump_2"
+                    },
+                    "position": {
+                      "basis": "66.86px",
+                      "grow": 1,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alert": true,
+                      "alertFrameStatus": "warning",
+                      "alertFrameType": "large-side-flip",
+                      "tag": "W2"
+                    },
+                    "type": "automation.pump.pump"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-around",
+                  "style": {
+                    "classes": "utils/p-16"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
             "meta": {
               "name": "card"
             },
@@ -330,13 +667,113 @@
               "shrink": 0
             },
             "props": {
+              "hasTitle": true,
               "style": {
-                "classes": "Utils/p-8"
-              }
+                "classes": "utils/p-8"
+              },
+              "title": "Water pumps"
             },
             "type": "openbridge.manual.card"
           },
           {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "ObcSpeedGauge"
+                    },
+                    "position": {
+                      "basis": "313px",
+                      "grow": 10
+                    },
+                    "propConfig": {
+                      "props.speed": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Sine/Sine4"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}+100",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "maxSpeed": 200,
+                      "minSpeed": -40,
+                      "tickmarkInterval": 50
+                    },
+                    "type": "navigation-instruments.speed-gauge.speed-gauge"
+                  },
+                  {
+                    "meta": {
+                      "name": "ObcInstrumentField"
+                    },
+                    "position": {
+                      "align": "center",
+                      "basis": "111px",
+                      "grow": 1,
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "props.setpoint": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": ""
+                          },
+                          "enabled": false,
+                          "type": "tag"
+                        }
+                      },
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Sine/Sine4"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}+100",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "hasValue": true,
+                      "maxDigits": 5,
+                      "neutralColor": true,
+                      "size": "enhanced",
+                      "tag": "Pressure",
+                      "unit": "hPa"
+                    },
+                    "type": "navigation-instruments.instrument-field.instrument-field"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "justify": "center",
+                  "style": {
+                    "classes": "utils/p-16"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
             "meta": {
               "name": "card_0"
             },
@@ -346,10 +783,11 @@
               "shrink": 0
             },
             "props": {
+              "hasTitle": true,
               "style": {
-                "classes": "Utils/p-8",
-                "key": "value"
-              }
+                "classes": "utils/p-8"
+              },
+              "title": "Manifoil pressure"
             },
             "type": "openbridge.manual.card"
           }
@@ -371,7 +809,8 @@
     "props": {
       "direction": "column",
       "style": {
-        "backgroundColor": "var(--container-backdrop-color)"
+        "backgroundColor": "var(--container-backdrop-color)",
+        "classes": "utils/p-8"
       }
     },
     "type": "ia.container.flex"

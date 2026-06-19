@@ -1,7 +1,7 @@
 {
   "base": {
     "style": {
-      "fill": "var(--neutral-90)"
+      "padding": "16px"
     }
   }
 }

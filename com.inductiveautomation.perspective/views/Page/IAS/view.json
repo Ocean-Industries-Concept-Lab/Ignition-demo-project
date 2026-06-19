@@ -349,8 +349,8 @@
         },
         "position": {
           "height": 49,
-          "width": 41,
-          "x": 198.5,
+          "width": 81.15,
+          "x": 91.71,
           "y": 737
         },
         "props": {
@@ -366,9 +366,9 @@
         },
         "position": {
           "height": 49,
-          "width": 41,
-          "x": 128.5,
-          "y": 736
+          "width": 81.15,
+          "x": 180.65,
+          "y": 737
         },
         "props": {
           "labelDirection": "left",
@@ -388,9 +388,9 @@
           "rotate": {
             "anchor": "50% 60%"
           },
-          "width": 41,
-          "x": 276.5,
-          "y": 736
+          "width": 81.15,
+          "x": 269.6,
+          "y": 737
         },
         "props": {
           "labelPosition": "bottom",
@@ -407,9 +407,9 @@
         },
         "position": {
           "height": 49,
-          "width": 41,
-          "x": 333.5,
-          "y": 736
+          "width": 81.15,
+          "x": 358.55,
+          "y": 737
         },
         "props": {
           "labelDirection": "down",
@@ -432,7 +432,7 @@
           },
           "width": 41,
           "x": 116,
-          "y": 866
+          "y": 830
         },
         "props": {
           "alert": true,
@@ -456,7 +456,7 @@
           },
           "width": 41,
           "x": 116,
-          "y": 934
+          "y": 918
         },
         "props": {
           "alert": true,
@@ -479,7 +479,7 @@
           },
           "width": 41,
           "x": 248.5,
-          "y": 866
+          "y": 830
         },
         "props": {
           "alert": true,
@@ -503,7 +503,7 @@
           },
           "width": 41,
           "x": 248,
-          "y": 934
+          "y": 918
         },
         "props": {
           "alert": true,
@@ -527,7 +527,7 @@
           },
           "width": 80,
           "x": 353.5,
-          "y": 935
+          "y": 919
         },
         "props": {
           "alert": true,
@@ -551,7 +551,7 @@
           },
           "width": 80,
           "x": 353.5,
-          "y": 867
+          "y": 831
         },
         "props": {
           "alert": true,

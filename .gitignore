@@ -43,3 +43,6 @@
 **/.alarms_*
 .DS_Store
 thumbnail.png
+
+# Claude
+docs/superpowers
