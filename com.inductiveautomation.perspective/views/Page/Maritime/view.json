@@ -47,8 +47,10 @@
           }
         },
         "props": {
+          "angleSetpoint": 1,
           "autoAtThrustSetpointDeadband": 2,
           "bottomPropeller": "single",
+          "hasAngleSetpoint": true,
           "hasThrustSetpoint": true,
           "size": "large",
           "topPropeller": "cap"
@@ -227,7 +229,7 @@
           }
         },
         "props": {
-          "northUp": true
+          "northUp": false
         },
         "type": "navigation-instruments.compass-indicator.compass-indicator"
       },
@@ -238,8 +240,8 @@
         "position": {
           "height": 46,
           "width": 47,
-          "x": 642,
-          "y": 329
+          "x": 599.5,
+          "y": 326.5
         },
         "propConfig": {
           "props.angle": {
@@ -254,7 +256,8 @@
           }
         },
         "props": {
-          "arrow": "course"
+          "arrow": "course",
+          "direction": "course"
         },
         "type": "navigation-instruments.compass-indicator.compass-indicator"
       },
@@ -268,7 +271,7 @@
             "anchor": "39% 50%"
           },
           "width": 47,
-          "x": 641,
+          "x": 599.5,
           "y": 375.5
         },
         "propConfig": {
@@ -285,7 +288,8 @@
         },
         "props": {
           "arrow": "course",
-          "northUp": true
+          "northUp": false,
+          "type": "labeled"
         },
         "type": "navigation-instruments.compass-indicator.compass-indicator"
       },
@@ -296,8 +300,8 @@
         "position": {
           "height": 269,
           "width": 256,
-          "x": 488.5,
-          "y": 463
+          "x": 451,
+          "y": 479
         },
         "propConfig": {
           "props.pitch": {
@@ -404,8 +408,8 @@
         },
         "position": {
           "height": 48,
-          "width": 160,
-          "x": 98,
+          "width": 176,
+          "x": 90,
           "y": 448
         },
         "propConfig": {
@@ -428,24 +432,6 @@
       },
       {
         "meta": {
-          "name": "icon"
-        },
-        "position": {
-          "height": 48,
-          "rotate": {
-            "anchor": "13% 25%"
-          },
-          "width": 48,
-          "x": 287,
-          "y": 562
-        },
-        "props": {
-          "name": "home"
-        },
-        "type": "openbridge.manual.icon"
-      },
-      {
-        "meta": {
           "name": "checkbox"
         },
         "position": {
@@ -465,8 +451,8 @@
         },
         "position": {
           "height": 48,
-          "width": 160,
-          "x": 108,
+          "width": 177,
+          "x": 91,
           "y": 684
         },
         "props": {
@@ -481,7 +467,7 @@
         },
         "position": {
           "height": 48,
-          "width": 197,
+          "width": 160,
           "x": 104.5,
           "y": 765
         },
@@ -489,7 +475,7 @@
           "fullWidth": true,
           "hasLeadingIcon": true,
           "hasTrailingIcon": true,
-          "label": "Button",
+          "label": "Normal",
           "leadingIcon": "ship",
           "trailingIcon": "chevron-right-google"
         },
@@ -501,12 +487,13 @@
         },
         "position": {
           "height": 48,
-          "width": 197,
+          "width": 160,
           "x": 104,
           "y": 813
         },
         "props": {
-          "label": "Button",
+          "fullWidth": true,
+          "label": "Raised",
           "leadingIcon": "placeholder",
           "variant": "raised"
         },
@@ -521,58 +508,18 @@
           "rotate": {
             "anchor": "50% 25%"
           },
-          "width": 197,
+          "width": 160,
           "x": 104.5,
           "y": 863
         },
         "props": {
           "disabled": true,
-          "label": "Button",
+          "fullWidth": true,
+          "label": "Disabled",
           "leadingIcon": "placeholder",
           "variant": "raised"
         },
         "type": "openbridge.manual.button"
-      },
-      {
-        "meta": {
-          "name": "button_2"
-        },
-        "position": {
-          "height": 48,
-          "width": 132,
-          "x": 551,
-          "y": 835
-        },
-        "props": {
-          "hasLeadingIcon": true,
-          "label": "Hello",
-          "leadingIcon": "home"
-        },
-        "type": "openbridge.manual.button"
-      },
-      {
-        "meta": {
-          "name": "ObcThruster"
-        },
-        "position": {
-          "height": 172,
-          "width": 158,
-          "x": 369,
-          "y": 765
-        },
-        "type": "navigation-instruments.thruster.thruster"
-      },
-      {
-        "meta": {
-          "name": "ObcAnalogValve"
-        },
-        "position": {
-          "height": 82,
-          "width": 66,
-          "x": 405,
-          "y": 667
-        },
-        "type": "automation.analog-valve.analog-valve"
       },
       {
         "meta": {
@@ -598,6 +545,7 @@
           }
         },
         "props": {
+          "fullWidth": true,
           "options": [
             {
               "label": "Car ferry",

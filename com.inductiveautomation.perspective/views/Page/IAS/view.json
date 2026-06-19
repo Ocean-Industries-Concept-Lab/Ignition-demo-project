@@ -174,35 +174,6 @@
       },
       {
         "meta": {
-          "name": "ObcAutomationTank_0"
-        },
-        "position": {
-          "height": 173,
-          "width": 168,
-          "x": 448,
-          "y": 431
-        },
-        "propConfig": {
-          "props.value": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "direct",
-                "publishInitial": false,
-                "tagPath": "[default]Project/ValvePosition"
-              },
-              "type": "tag"
-            }
-          }
-        },
-        "props": {
-          "trend": "falling",
-          "variant": "compact"
-        },
-        "type": "automation.automation-tank.automation-tank"
-      },
-      {
-        "meta": {
           "name": "ObcInstrumentField_0"
         },
         "position": {

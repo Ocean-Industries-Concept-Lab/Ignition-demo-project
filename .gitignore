@@ -1,0 +1,45 @@
+# ==========================================
+# Ignition 8.3 - Full Gateway Data Gitignore
+# ==========================================
+
+
+
+# 1. Database & Cache Files
+**/db/
+**/metricsdb/
+**/autobackup/
+**/db_backup_sqlite.idb
+**/valueStore.idb
+**/jar-cache/
+
+# 2. Network Requests / Temp Files
+**/request
+**/response
+*.tmp
+*.bak
+**/var
+
+# 3. Log Files
+*.log
+**/logs
+
+# 4. Certificates and Local Security (Keep out of source control!)
+**/certificates/
+**/keystore/
+
+# 5. Environment / Runtime Configurations
+**/config/local
+**/config/resources/local
+**/.container-init.conf
+
+# 6. Backup, Upgrade, and Migration Reports
+**/conversion-report.txt
+**.digest.json
+**/projects/conversion-report.txt
+**/migration-log-*.md
+
+# 7. Internal System Bookkeeping
+**/.resources/
+**/.alarms_*
+.DS_Store
+thumbnail.png

@@ -1,0 +1,379 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "ObcInstrumentField"
+                        },
+                        "propConfig": {
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "publishInitial": false,
+                                "tagPath": "[default]Project/Thrust"
+                              },
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "hasValue": true,
+                          "maxDigits": 3,
+                          "size": "enhanced",
+                          "tag": "HDG",
+                          "unit": "DEG"
+                        },
+                        "type": "navigation-instruments.instrument-field.instrument-field"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcInstrumentField_0"
+                        },
+                        "propConfig": {
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "publishInitial": false,
+                                "tagPath": "[default]Project/ThrustSet"
+                              },
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "hasValue": true,
+                          "maxDigits": 3,
+                          "size": "enhanced",
+                          "tag": "COG",
+                          "unit": "DEG"
+                        },
+                        "type": "navigation-instruments.instrument-field.instrument-field"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcInstrumentField_1"
+                        },
+                        "propConfig": {
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "publishInitial": false,
+                                "tagPath": "[default]Project/Thrust"
+                              },
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "hasValue": true,
+                          "maxDigits": 3,
+                          "size": "enhanced",
+                          "tag": "ROT",
+                          "unit": "DEG/min"
+                        },
+                        "type": "navigation-instruments.instrument-field.instrument-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "position": {
+                      "basis": "100px",
+                      "grow": 1,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "flex-end",
+                      "direction": "column",
+                      "justify": "center"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "meta": {
+                      "name": "ObcCompass"
+                    },
+                    "position": {
+                      "basis": "300px",
+                      "grow": 10
+                    },
+                    "propConfig": {
+                      "props.courseOverGround": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "publishInitial": false,
+                            "tagPath": "[default]Project/ThrustSet"
+                          },
+                          "type": "tag"
+                        }
+                      },
+                      "props.heading": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[default]Project/Thrust"
+                          },
+                          "previewEnabled": false,
+                          "type": "tag"
+                        }
+                      },
+                      "props.headingSetPoint": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "publishInitial": false,
+                            "tagPath": "[default]Project/Thrust"
+                          },
+                          "type": "tag"
+                        }
+                      },
+                      "props.vesselImage": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[default]Project/VesselType"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}+\"-top\"",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "currentFromDirection": 45,
+                      "currentSpeed": 1,
+                      "rotAtZeroDeadband": 1,
+                      "windFromDirection": 15,
+                      "windSpeed": 2
+                    },
+                    "type": "navigation-instruments.compass.compass"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "alignSelf": "stretch",
+                            "classes": "Title/label"
+                          },
+                          "text": "Wind"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcInstrumentField_2"
+                        },
+                        "propConfig": {
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "tagPath": "[default]Project/Thrust"
+                              },
+                              "enabled": false,
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "hasValue": true,
+                          "maxDigits": 3,
+                          "neutralColor": true,
+                          "size": "enhanced",
+                          "tag": "Speed",
+                          "unit": "m/s",
+                          "value": 5
+                        },
+                        "type": "navigation-instruments.instrument-field.instrument-field"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcInstrumentField_3"
+                        },
+                        "propConfig": {
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "publishInitial": false,
+                                "tagPath": "[default]Project/ThrustSet"
+                              },
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "hasValue": true,
+                          "maxDigits": 3,
+                          "neutralColor": true,
+                          "size": "enhanced",
+                          "tag": "Direction",
+                          "unit": "DEG"
+                        },
+                        "type": "navigation-instruments.instrument-field.instrument-field"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "position": {
+                      "basis": "100px",
+                      "grow": 1,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "flex-end",
+                      "direction": "column",
+                      "justify": "center"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "justify": "center",
+                  "style": {
+                    "classes": "Utils/p-8"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "card"
+            },
+            "position": {
+              "basis": "300px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "hasTitle": true,
+              "style": {
+                "classes": "Utils/p-8"
+              },
+              "title": "Own ship data"
+            },
+            "type": "openbridge.manual.card"
+          },
+          {
+            "meta": {
+              "name": "card_0"
+            },
+            "position": {
+              "basis": "300px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "Utils/p-8",
+                "key": "value"
+              }
+            },
+            "type": "openbridge.manual.card"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "0px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "card"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "Utils/p-8"
+              }
+            },
+            "type": "openbridge.manual.card"
+          },
+          {
+            "meta": {
+              "name": "card_0"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "Utils/p-8",
+                "key": "value"
+              }
+            },
+            "type": "openbridge.manual.card"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "0px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "var(--container-backdrop-color)"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

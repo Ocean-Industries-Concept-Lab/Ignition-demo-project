@@ -2,15 +2,7 @@
   "pages": {
     "/": {
       "title": "Home",
-      "viewPath": "Page/Format"
-    },
-    "/alarms": {
-      "title": "Alarms",
-      "viewPath": "Page/Alarms"
-    },
-    "/charts": {
-      "title": "",
-      "viewPath": "Page/Charts"
+      "viewPath": "Page/CardBased"
     },
     "/ias": {
       "title": "IAS",
@@ -61,7 +53,7 @@
           "params": {},
           "path": "Header/Header"
         },
-        "viewPath": "Header/Header"
+        "viewPath": "Docks/Header"
       }
     ]
   }
