@@ -43,7 +43,7 @@
           "props.navMenuButtonPressed": {
             "onChange": {
               "enabled": null,
-              "script": "\tif (currentValue):\n\t\tsystem.perspective.openDock(\"menu\")\n\telse:\n\t\tsystem.perspective.closeDock(\"menu\")"
+              "script": "\n\tif (currentValue.getValue()):\n\t\tsystem.perspective.openDock(\"menu\")\n\telse:\n\t\tsystem.perspective.closeDock(\"menu\")"
             }
           },
           "props.pageName": {

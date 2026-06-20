@@ -1,0 +1,35 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "map"
+        },
+        "position": {
+          "basis": "400px"
+        },
+        "props": {
+          "init": {
+            "center": {
+              "lat": 62,
+              "lng": 9
+            },
+            "zoom": 3
+          },
+          "mapStyle": "dark"
+        },
+        "type": "openbridge.manual.map"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

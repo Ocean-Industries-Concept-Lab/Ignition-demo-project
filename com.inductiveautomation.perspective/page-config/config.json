@@ -8,6 +8,10 @@
       "title": "IAS",
       "viewPath": "Page/IAS"
     },
+    "/map": {
+      "title": "",
+      "viewPath": "Page/Map"
+    },
     "/maritime": {
       "title": "",
       "viewPath": "Page/Maritime"
@@ -23,13 +27,13 @@
       {
         "anchor": "fixed",
         "autoBreakpoint": 768,
-        "content": "push",
+        "content": "cover",
         "handle": "hide",
         "iconUrl": "",
         "id": "menu",
         "modal": false,
         "resizable": false,
-        "show": "visible",
+        "show": "onDemand",
         "size": 320,
         "viewParams": {},
         "viewPath": "Docks/Menu"
