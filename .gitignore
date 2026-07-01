@@ -2,7 +2,7 @@
 # Ignition 8.3 - Full Gateway Data Gitignore
 # ==========================================
 
-
+**/Page/**/resource.json
 
 # 1. Database & Cache Files
 **/db/
@@ -46,3 +46,6 @@ thumbnail.png
 
 # Claude
 docs/superpowers
+.mcp.json
+
+.env.local

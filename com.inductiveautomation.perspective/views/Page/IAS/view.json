@@ -14,12 +14,9 @@
         },
         "position": {
           "height": 85,
-          "rotate": {
-            "anchor": "50% 60%"
-          },
           "width": 65,
-          "x": 277,
-          "y": 223
+          "x": 97.5,
+          "y": 232.5
         },
         "props": {
           "open": true
@@ -33,8 +30,8 @@
         "position": {
           "height": 172,
           "width": 108,
-          "x": 116,
-          "y": 29
+          "x": 100,
+          "y": 30
         },
         "props": {
           "hasSetpoint": true,
@@ -58,8 +55,8 @@
         "position": {
           "height": 173,
           "width": 168,
-          "x": 240,
-          "y": 431
+          "x": 100,
+          "y": 350
         },
         "propConfig": {
           "props.value": {
@@ -87,8 +84,8 @@
         "position": {
           "height": 49,
           "width": 49,
-          "x": 383.5,
-          "y": 240.5
+          "x": 225.5,
+          "y": 250.5
         },
         "propConfig": {
           "props.open": {
@@ -100,7 +97,7 @@
               },
               "transforms": [
                 {
-                  "expression": "if({value}\u003d0,false,true)",
+                  "expression": "if({value}=0,false,true)",
                   "type": "expression"
                 }
               ],
@@ -132,8 +129,8 @@
         "position": {
           "height": 82,
           "width": 66,
-          "x": 275.5,
-          "y": 312.5
+          "x": 337,
+          "y": 234
         },
         "props": {
           "progress": true,
@@ -150,8 +147,8 @@
         "position": {
           "height": 82,
           "width": 66,
-          "x": 375,
-          "y": 312
+          "x": 457,
+          "y": 234
         },
         "propConfig": {
           "props.alert": {
@@ -179,8 +176,8 @@
         "position": {
           "height": 172,
           "width": 108,
-          "x": 215,
-          "y": 29
+          "x": 220,
+          "y": 30
         },
         "props": {
           "hasSetpoint": true,
@@ -201,10 +198,10 @@
           "name": "ObcInstrumentField_1"
         },
         "position": {
-          "height": 31,
-          "width": 196,
-          "x": 321,
-          "y": 29
+          "height": 55,
+          "width": 221,
+          "x": 344,
+          "y": 30
         },
         "props": {
           "hasSetpoint": true,
@@ -227,12 +224,9 @@
         },
         "position": {
           "height": 55,
-          "rotate": {
-            "anchor": "50% 39%"
-          },
           "width": 221,
-          "x": 323,
-          "y": 76
+          "x": 344,
+          "y": 95
         },
         "props": {
           "hasSetpoint": true,
@@ -257,8 +251,8 @@
         "position": {
           "height": 55,
           "width": 221,
-          "x": 473,
-          "y": 146
+          "x": 344,
+          "y": 160
         },
         "propConfig": {
           "props.value": {
@@ -294,8 +288,8 @@
         "position": {
           "height": 48,
           "width": 160,
-          "x": 491,
-          "y": 241.5
+          "x": 300,
+          "y": 375
         },
         "propConfig": {
           "props.value": {
@@ -318,12 +312,9 @@
         },
         "position": {
           "height": 48,
-          "rotate": {
-            "anchor": "50% 35%"
-          },
           "width": 160,
-          "x": 485,
-          "y": 330
+          "x": 300,
+          "y": 450
         },
         "propConfig": {
           "props.checked": {
@@ -350,8 +341,8 @@
         "position": {
           "height": 49,
           "width": 81.15,
-          "x": 91.71,
-          "y": 737
+          "x": 95.425,
+          "y": 605
         },
         "props": {
           "on": true,
@@ -367,8 +358,8 @@
         "position": {
           "height": 49,
           "width": 81.15,
-          "x": 180.65,
-          "y": 737
+          "x": 184.09,
+          "y": 605
         },
         "props": {
           "labelDirection": "left",
@@ -389,8 +380,8 @@
             "anchor": "50% 60%"
           },
           "width": 81.15,
-          "x": 269.6,
-          "y": 737
+          "x": 272.76,
+          "y": 605
         },
         "props": {
           "labelPosition": "bottom",
@@ -408,8 +399,8 @@
         "position": {
           "height": 49,
           "width": 81.15,
-          "x": 358.55,
-          "y": 737
+          "x": 361.43,
+          "y": 605
         },
         "props": {
           "labelDirection": "down",
@@ -426,13 +417,13 @@
           "name": "ObcMotor_3"
         },
         "position": {
-          "height": 49,
+          "height": 48,
           "rotate": {
             "anchor": "25% 25%"
           },
-          "width": 41,
-          "x": 116,
-          "y": 830
+          "width": 48,
+          "x": 112,
+          "y": 699
         },
         "props": {
           "alert": true,
@@ -450,13 +441,13 @@
           "name": "ObcMotor_4"
         },
         "position": {
-          "height": 49,
+          "height": 48,
           "rotate": {
             "anchor": "25% 25%"
           },
-          "width": 41,
-          "x": 116,
-          "y": 918
+          "width": 48,
+          "x": 112,
+          "y": 787
         },
         "props": {
           "alert": true,
@@ -473,13 +464,13 @@
           "name": "ObcMotor_5"
         },
         "position": {
-          "height": 49,
+          "height": 48,
           "rotate": {
             "anchor": "25% 25%"
           },
-          "width": 41,
-          "x": 248.5,
-          "y": 830
+          "width": 48,
+          "x": 245,
+          "y": 699
         },
         "props": {
           "alert": true,
@@ -497,13 +488,13 @@
           "name": "ObcMotor_6"
         },
         "position": {
-          "height": 49,
+          "height": 48,
           "rotate": {
             "anchor": "25% 25%"
           },
-          "width": 41,
-          "x": 248,
-          "y": 918
+          "width": 48,
+          "x": 245,
+          "y": 787
         },
         "props": {
           "alert": true,
@@ -521,13 +512,13 @@
           "name": "ObcMotor_7"
         },
         "position": {
-          "height": 44,
+          "height": 48,
           "rotate": {
             "anchor": "25% 37%"
           },
-          "width": 80,
-          "x": 353.5,
-          "y": 919
+          "width": 48,
+          "x": 378,
+          "y": 787
         },
         "props": {
           "alert": true,
@@ -545,13 +536,13 @@
           "name": "ObcMotor_8"
         },
         "position": {
-          "height": 44,
+          "height": 48,
           "rotate": {
             "anchor": "25% 37%"
           },
-          "width": 80,
-          "x": 353.5,
-          "y": 831
+          "width": 48,
+          "x": 378,
+          "y": 699
         },
         "props": {
           "alert": true,
@@ -569,13 +560,13 @@
           "name": "ObcMotor_9"
         },
         "position": {
-          "height": 44,
+          "height": 48,
           "rotate": {
             "anchor": "25% 37%"
           },
-          "width": 45,
-          "x": 115.5,
-          "y": 1005
+          "width": 48,
+          "x": 112,
+          "y": 875
         },
         "props": {
           "alert": true,
@@ -593,10 +584,10 @@
           "name": "ObcMotor_10"
         },
         "position": {
-          "height": 49,
-          "width": 41,
-          "x": 248.5,
-          "y": 1007
+          "height": 48,
+          "width": 48,
+          "x": 245,
+          "y": 875
         },
         "props": {
           "labelDirection": "left",
@@ -613,10 +604,10 @@
           "name": "ObcPump"
         },
         "position": {
-          "height": 18,
-          "width": 25,
-          "x": 383,
-          "y": 1020
+          "height": 48,
+          "width": 48,
+          "x": 378,
+          "y": 875
         },
         "props": {
           "labelPosition": "left",
