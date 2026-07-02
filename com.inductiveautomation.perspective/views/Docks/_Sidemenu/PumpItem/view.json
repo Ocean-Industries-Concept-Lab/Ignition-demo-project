@@ -1,0 +1,158 @@
+{
+  "custom": {},
+  "params": {
+    "on": false,
+    "speed": 20,
+    "tag": "#0000"
+  },
+  "propConfig": {
+    "params.on": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.speed": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 70,
+      "width": 377
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "icon"
+        },
+        "position": {
+          "basis": "24px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.icon.path": {
+            "binding": {
+              "config": {
+                "path": "view.params.on"
+              },
+              "transforms": [
+                {
+                  "fallback": "openbridge/forward",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": false,
+                      "output": "openbridge/stopped"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "icon": {},
+          "useColor": true
+        },
+        "type": "openbridge.manual.icon"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "paddingLeft": "8px"
+          },
+          "textStyle": {
+            "classes": "font/body text-color/element-neutral"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.on}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.speed}+\"%\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "font/body text-color/element-active"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "!{view.params.on}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "font/body text-color/element-inactive"
+          },
+          "text": "Off"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "padding": "16px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

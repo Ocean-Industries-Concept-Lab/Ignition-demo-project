@@ -9,17 +9,187 @@
           "name": "map"
         },
         "position": {
-          "basis": "400px"
+          "basis": "600px"
         },
         "props": {
+          "attribution": true,
           "init": {
             "center": {
-              "lat": 62,
-              "lng": 9
+              "lat": 60,
+              "lng": 8
             },
-            "zoom": 3
+            "zoom": 5
           },
-          "mapStyle": "dark"
+          "layers": {
+            "ui": {
+              "marker": [
+                {
+                  "enabled": true,
+                  "lat": 59.91,
+                  "lng": 10.75,
+                  "name": "oslo",
+                  "opacity": 1
+                },
+                {
+                  "enabled": true,
+                  "icon": {
+                    "color": "#cc0000",
+                    "path": "openbridge/ais-sar-vessel-iec",
+                    "rotate": "45",
+                    "size": {
+                      "height": 40,
+                      "width": 40
+                    }
+                  },
+                  "lat": 60.39,
+                  "lng": 5.32,
+                  "name": "bergen"
+                }
+              ],
+              "popup": [
+                {
+                  "content": {
+                    "text": "Trondheim — text popup"
+                  },
+                  "enabled": true,
+                  "height": 200,
+                  "lat": 63.43,
+                  "lng": 10.39,
+                  "pan": {
+                    "closeButton": true,
+                    "closeOnClick": true
+                  },
+                  "width": 240
+                }
+              ]
+            },
+            "vector": {
+              "circle": [
+                {
+                  "circles": [
+                    {
+                      "lat": 62.47,
+                      "lng": 6.15,
+                      "name": "alesund"
+                    }
+                  ],
+                  "fill": {
+                    "color": "#ce93d8",
+                    "enabled": true,
+                    "opacity": 0.5
+                  },
+                  "radius": 14,
+                  "stroke": {
+                    "color": "#8e24aa",
+                    "enabled": true,
+                    "opacity": 1,
+                    "weight": 2
+                  }
+                }
+              ],
+              "polygon": [
+                {
+                  "fill": {
+                    "color": "#34a853",
+                    "enabled": true,
+                    "opacity": 0.25
+                  },
+                  "polygons": [
+                    {
+                      "name": "area",
+                      "points": [
+                        {
+                          "lat": 61,
+                          "lng": 7
+                        },
+                        {
+                          "lat": 61,
+                          "lng": 9.5
+                        },
+                        {
+                          "lat": 62.5,
+                          "lng": 9.5
+                        },
+                        {
+                          "lat": 62.5,
+                          "lng": 7
+                        }
+                      ]
+                    }
+                  ],
+                  "stroke": {
+                    "color": "#0a7d28",
+                    "enabled": true,
+                    "opacity": 1,
+                    "weight": 2
+                  }
+                }
+              ],
+              "polyline": [
+                {
+                  "polylines": [
+                    {
+                      "name": "route",
+                      "points": [
+                        {
+                          "lat": 59.91,
+                          "lng": 10.75
+                        },
+                        {
+                          "lat": 63.43,
+                          "lng": 10.39
+                        },
+                        {
+                          "lat": 60.39,
+                          "lng": 5.32
+                        }
+                      ]
+                    }
+                  ],
+                  "stroke": {
+                    "color": "#1a73e8",
+                    "enabled": true,
+                    "opacity": 0.9,
+                    "weight": 4
+                  }
+                }
+              ],
+              "rectangle": [
+                {
+                  "fill": {
+                    "color": "#ffd54f",
+                    "enabled": true,
+                    "opacity": 0.3
+                  },
+                  "rectangles": [
+                    {
+                      "corner1": {
+                        "lat": 58,
+                        "lng": 6
+                      },
+                      "corner2": {
+                        "lat": 59,
+                        "lng": 8
+                      },
+                      "name": "box"
+                    }
+                  ],
+                  "stroke": {
+                    "color": "#b8860b",
+                    "enabled": true,
+                    "opacity": 1,
+                    "weight": 2
+                  }
+                }
+              ]
+            }
+          },
+          "mapStyle": "positron",
+          "zoom": {
+            "controls": true,
+            "max": 16,
+            "min": 2
+          }
         },
         "type": "openbridge.manual.map"
       }

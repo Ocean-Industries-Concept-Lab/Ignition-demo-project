@@ -1,0 +1,19 @@
+{
+  "scope": "G",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "onToolCalled.py"
+  ],
+  "attributes": {
+    "lastModificationSignature": "f7899c349df80711c5c28ae1104f28c53433077ca29a791aaa66c09f8f2afd5a",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-06-23T09:16:12Z"
+    },
+    "description": "Add/Modify ignition views",
+    "title": "View",
+    "parameters": []
+  }
+}

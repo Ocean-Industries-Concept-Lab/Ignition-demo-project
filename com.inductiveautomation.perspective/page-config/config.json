@@ -16,9 +16,34 @@
       "title": "",
       "viewPath": "Page/Maritime"
     },
+    "/process": {
+      "docks": {
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 320,
+            "viewParams": {},
+            "viewPath": "Docks/Sidemenu"
+          }
+        ]
+      },
+      "title": "Process Overview",
+      "viewPath": "Page/ProcessOverview"
+    },
     "/test": {
       "title": "",
       "viewPath": "Page/View"
+    },
+    "/tmp": {
+      "viewPath": "Page/Tmp"
     }
   },
   "sharedDocks": {

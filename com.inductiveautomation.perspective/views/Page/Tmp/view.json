@@ -1,0 +1,121 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "ObcAnalogValve"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 378,
+          "y": 249
+        },
+        "props": {
+          "labelDirection": "up",
+          "tag": 1221
+        },
+        "type": "automation.analog-valve.analog-valve"
+      },
+      {
+        "meta": {
+          "name": "ObcMotor"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 547,
+          "y": 234
+        },
+        "props": {
+          "alert": true,
+          "hasSpeed": true,
+          "on": true,
+          "speed": 2,
+          "speedUnit": "rpm"
+        },
+        "type": "automation.motor.motor"
+      },
+      {
+        "meta": {
+          "name": "ObcCompass"
+        },
+        "position": {
+          "height": 431,
+          "width": 409,
+          "x": 83,
+          "y": 406
+        },
+        "props": {
+          "hasRateOfTurnDegreesPerMinute": true,
+          "priority": "enhanced",
+          "priorityElements": [
+            "rot"
+          ],
+          "rateOfTurnDegreesPerMinute": 20,
+          "rotType": "bar",
+          "rotationsPerMinute": 12
+        },
+        "type": "navigation-instruments.compass.compass"
+      },
+      {
+        "meta": {
+          "name": "tab-row"
+        },
+        "position": {
+          "height": 48,
+          "width": 362,
+          "x": 223,
+          "y": 129
+        },
+        "props": {
+          "selectedTabId": 2,
+          "tabs": [
+            {
+              "badgeCount": 0,
+              "badgeIcon": {
+                "path": "openbridge/placeholder"
+              },
+              "badgeSize": "regular",
+              "badgeType": "regular",
+              "disabled": false,
+              "hasBadge": false,
+              "hasLeadingIcon": false,
+              "id": 1,
+              "leadingIcon": {
+                "path": "openbridge/placeholder"
+              },
+              "showLeadingBadgeIcon": false,
+              "title": "Hei"
+            },
+            {
+              "badgeCount": 0,
+              "badgeIcon": {
+                "path": "openbridge/placeholder"
+              },
+              "badgeSize": "regular",
+              "badgeType": "regular",
+              "disabled": false,
+              "hasBadge": false,
+              "hasLeadingIcon": false,
+              "id": 2,
+              "leadingIcon": {
+                "path": "openbridge/placeholder"
+              },
+              "showLeadingBadgeIcon": false,
+              "title": "world"
+            }
+          ]
+        },
+        "type": "openbridge.manual.tab-row"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

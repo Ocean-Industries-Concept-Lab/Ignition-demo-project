@@ -2,7 +2,10 @@
 # Ignition 8.3 - Full Gateway Data Gitignore
 # ==========================================
 
-**/Page/**/resource.json
+com.inductiveautomation.perspective/views/**/resource.json
+
+*.png
+.playwright-mcp
 
 # 1. Database & Cache Files
 **/db/

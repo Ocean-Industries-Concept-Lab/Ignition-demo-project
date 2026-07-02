@@ -1,0 +1,442 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 391
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "classes": "font/subtitle text-color/element-active"
+              },
+              "text": "Process Overview"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "button"
+                },
+                "position": {
+                  "basis": "0px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "props": {
+                  "fullWidth": true,
+                  "hasLeadingIcon": true,
+                  "label": "Enable",
+                  "leadingIcon": "openbridge/media-play"
+                },
+                "type": "openbridge.manual.button"
+              },
+              {
+                "meta": {
+                  "name": "button_0"
+                },
+                "position": {
+                  "basis": "0px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "props": {
+                  "fullWidth": true,
+                  "hasLeadingIcon": true,
+                  "label": "Full Auto",
+                  "leadingIcon": "openbridge/auto"
+                },
+                "type": "openbridge.manual.button"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "props": {
+              "style": {
+                "alignSelf": "stretch",
+                "gap": "8px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "alignItems": "center",
+          "direction": "column",
+          "style": {
+            "backgroundColor": "var(--container-global-color)",
+            "classes": "divider/bottom",
+            "gap": "8px",
+            "padding": 16
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "font/overline-new text-color/element-neutral",
+            "padding": "8px",
+            "textAlign": "center"
+          },
+          "text": "Devices"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexRepeater"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "elementPosition": {
+                "basis": "auto",
+                "grow": 0,
+                "shrink": 0
+              },
+              "elementStyle": {
+                "classes": "divider/bottom"
+              },
+              "instances": [
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "on": false,
+                  "speed": 20,
+                  "tag": "#2011"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "on": false,
+                  "speed": 20,
+                  "tag": "#2010"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "on": true,
+                  "speed": 100,
+                  "tag": "#2013"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "on": true,
+                  "speed": 90,
+                  "tag": "#2012"
+                }
+              ],
+              "path": "Docks/_Sidemenu/PumpItem",
+              "useDefaultViewHeight": false,
+              "useDefaultViewWidth": false
+            },
+            "type": "ia.display.flex-repeater"
+          },
+          {
+            "meta": {
+              "name": "FlexRepeater_0"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "elementPosition": {
+                "basis": "auto",
+                "grow": 0,
+                "shrink": 0
+              },
+              "elementStyle": {
+                "classes": "divider/bottom"
+              },
+              "instances": [
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1011"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1010"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1025"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": true,
+                  "speed": 20,
+                  "tag": "#1028"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": true,
+                  "speed": 20,
+                  "tag": "#1026"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": true,
+                  "speed": 20,
+                  "tag": "#1027"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1014"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1020"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1022"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#2017"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": true,
+                  "speed": 20,
+                  "tag": "#1015"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": true,
+                  "speed": 20,
+                  "tag": "#2016"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": true,
+                  "speed": 20,
+                  "tag": "#2018"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1032"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1031"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1030"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1029"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1024"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1033"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1012"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1013"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1019"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1021"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "open": false,
+                  "speed": 20,
+                  "tag": "#1023"
+                }
+              ],
+              "path": "Docks/_Sidemenu/DigitalValveItem",
+              "useDefaultViewHeight": false,
+              "useDefaultViewWidth": false
+            },
+            "type": "ia.display.flex-repeater"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": 0,
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "var(--container-background-color);"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

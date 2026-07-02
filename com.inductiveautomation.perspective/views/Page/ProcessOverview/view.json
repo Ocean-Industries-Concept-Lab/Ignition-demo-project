@@ -1,0 +1,868 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 1111,
+      "width": 1900
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Tank4010"
+        },
+        "position": {
+          "height": 220,
+          "width": 185,
+          "x": 185,
+          "y": 425
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 10000,
+          "medium": "normal",
+          "tag": "#4010",
+          "type": "atmospheric",
+          "value": 3000
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4011"
+        },
+        "position": {
+          "height": 220,
+          "width": 185,
+          "x": 388,
+          "y": 425
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 10000,
+          "medium": "normal",
+          "tag": "#4011",
+          "type": "atmospheric",
+          "value": 1000
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4012"
+        },
+        "position": {
+          "height": 220,
+          "width": 185,
+          "x": 588,
+          "y": 425
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 10000,
+          "medium": "normal",
+          "tag": "#4012",
+          "type": "atmospheric",
+          "value": 6000
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4013"
+        },
+        "position": {
+          "height": 220,
+          "width": 185,
+          "x": 788,
+          "y": 425
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 10000,
+          "medium": "normal",
+          "tag": "#4013",
+          "type": "atmospheric",
+          "value": 3000
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4014"
+        },
+        "position": {
+          "height": 220,
+          "width": 185,
+          "x": 1395,
+          "y": 415
+        },
+        "props": {
+          "chartData": [
+            {
+              "label": "0",
+              "value": 3000
+            },
+            {
+              "label": "1",
+              "value": 4500
+            },
+            {
+              "label": "2",
+              "value": 3800
+            },
+            {
+              "label": "3",
+              "value": 5200
+            },
+            {
+              "label": "4",
+              "value": 6000
+            },
+            {
+              "label": "5",
+              "value": 4800
+            },
+            {
+              "label": "6",
+              "value": 5500
+            },
+            {
+              "label": "7",
+              "value": 4200
+            },
+            {
+              "label": "8",
+              "value": 5800
+            },
+            {
+              "label": "9",
+              "value": 6500
+            },
+            {
+              "label": "10",
+              "value": 5000
+            },
+            {
+              "label": "11",
+              "value": 4400
+            },
+            {
+              "label": "12",
+              "value": 6200
+            },
+            {
+              "label": "13",
+              "value": 7000
+            },
+            {
+              "label": "14",
+              "value": 5800
+            },
+            {
+              "label": "15",
+              "value": 5200
+            },
+            {
+              "label": "16",
+              "value": 6600
+            },
+            {
+              "label": "17",
+              "value": 6000
+            },
+            {
+              "label": "18",
+              "value": 7200
+            },
+            {
+              "label": "19",
+              "value": 6800
+            },
+            {
+              "label": "20",
+              "value": 6300
+            },
+            {
+              "label": "21",
+              "value": 5500
+            },
+            {
+              "label": "22",
+              "value": 6000
+            },
+            {
+              "label": "23",
+              "value": 5800
+            },
+            {
+              "label": "24",
+              "value": 6600
+            },
+            {
+              "label": "25",
+              "value": 7400
+            },
+            {
+              "label": "26",
+              "value": 9000
+            }
+          ],
+          "chartMode": "graph-and-bar",
+          "hasCustomUnit": true,
+          "max": 10000,
+          "medium": "normal",
+          "priority": "enhanced",
+          "tag": "#4014",
+          "trend": "rising",
+          "type": "atmospheric",
+          "value": 9000
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4015"
+        },
+        "position": {
+          "height": 220,
+          "width": 185,
+          "x": 1583,
+          "y": 415
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 10000,
+          "medium": "normal",
+          "tag": "#4015",
+          "type": "atmospheric",
+          "value": 1000
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4016"
+        },
+        "position": {
+          "height": 220,
+          "width": 185,
+          "x": 1305,
+          "y": 665
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 10000,
+          "medium": "normal",
+          "tag": "#4016",
+          "type": "atmospheric",
+          "value": 1000
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4017"
+        },
+        "position": {
+          "height": 220,
+          "width": 185,
+          "x": 1490,
+          "y": 665
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 10000,
+          "medium": "normal",
+          "tag": "#4017",
+          "type": "atmospheric",
+          "value": 9500
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4018"
+        },
+        "position": {
+          "height": 220,
+          "width": 185,
+          "x": 1672,
+          "y": 665
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 10000,
+          "medium": "normal",
+          "tag": "#4018",
+          "type": "atmospheric",
+          "value": 1000
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank3011"
+        },
+        "position": {
+          "height": 95,
+          "width": 130,
+          "x": 483,
+          "y": 175
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 200,
+          "medium": "normal",
+          "static": true,
+          "tag": "#3011",
+          "value": 200,
+          "valueFractionDigits": 1
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank3012"
+        },
+        "position": {
+          "height": 95,
+          "width": 130,
+          "x": 743,
+          "y": 175
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 200,
+          "medium": "normal",
+          "static": true,
+          "tag": "#3012",
+          "value": 200,
+          "valueFractionDigits": 1
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank0000"
+        },
+        "position": {
+          "height": 120,
+          "width": 90,
+          "x": 1085,
+          "y": 780
+        },
+        "props": {
+          "compact": true,
+          "hasCustomUnit": true,
+          "tag": "#0000",
+          "unitText": "%",
+          "value": 90
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "DV1011"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 675,
+          "y": 76
+        },
+        "props": {
+          "hasTag": true,
+          "tag": "#1011"
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1010"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 375,
+          "y": 166
+        },
+        "props": {
+          "hasTag": true,
+          "tag": "#1010"
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1025"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1751,
+          "y": 145
+        },
+        "props": {
+          "hasTag": true,
+          "readoutPosition": "right",
+          "tag": "#1025"
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1028"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1366,
+          "y": 145
+        },
+        "props": {
+          "hasTag": true,
+          "open": true,
+          "readoutPosition": "right",
+          "tag": "#1028"
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1026"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1566,
+          "y": 145
+        },
+        "props": {
+          "hasTag": true,
+          "open": true,
+          "readoutPosition": "right",
+          "tag": "#1026"
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1027"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1486,
+          "y": 245
+        },
+        "props": {
+          "hasTag": true,
+          "open": true,
+          "readoutPosition": "right",
+          "tag": "#1027"
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1014"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 440,
+          "y": 841
+        },
+        "props": {
+          "hasTag": true,
+          "tag": "#1014"
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1020"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1490,
+          "y": 981
+        },
+        "props": {
+          "hasTag": true,
+          "tag": "#1020"
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1022"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1690,
+          "y": 981
+        },
+        "props": {
+          "hasTag": true,
+          "tag": "#1022"
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV2017"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 796,
+          "y": 1017
+        },
+        "props": {
+          "hasTag": true,
+          "tag": "#2017"
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1015"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 545,
+          "y": 946
+        },
+        "props": {
+          "hasTag": true,
+          "open": true,
+          "tag": "#1015"
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV2016"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 705,
+          "y": 946
+        },
+        "props": {
+          "hasTag": true,
+          "open": true,
+          "tag": "#2016"
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV2018"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1016,
+          "y": 945
+        },
+        "props": {
+          "hasTag": true,
+          "open": true,
+          "readoutPosition": "right",
+          "tag": "#2018"
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1032"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 253,
+          "y": 360
+        },
+        "props": {
+          "hasTag": true,
+          "readoutPosition": "right",
+          "tag": "#1032",
+          "vertical": true
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1031"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 456,
+          "y": 360
+        },
+        "props": {
+          "hasTag": true,
+          "readoutPosition": "right",
+          "tag": "#1031",
+          "vertical": true
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1030"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 656,
+          "y": 360
+        },
+        "props": {
+          "hasTag": true,
+          "readoutPosition": "right",
+          "tag": "#1030",
+          "vertical": true
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1029"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 856,
+          "y": 360
+        },
+        "props": {
+          "hasTag": true,
+          "readoutPosition": "right",
+          "tag": "#1029",
+          "vertical": true
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1024"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1661,
+          "y": 245
+        },
+        "props": {
+          "hasTag": true,
+          "readoutPosition": "right",
+          "tag": "#1024",
+          "vertical": true
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1033"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1020,
+          "y": 736
+        },
+        "props": {
+          "hasTag": true,
+          "tag": "#1033",
+          "vertical": true
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1012"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 350,
+          "y": 776
+        },
+        "props": {
+          "hasTag": true,
+          "tag": "#1012",
+          "vertical": true
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1013"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 350,
+          "y": 921
+        },
+        "props": {
+          "hasTag": true,
+          "tag": "#1013",
+          "vertical": true
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1019"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1366,
+          "y": 945
+        },
+        "props": {
+          "hasTag": true,
+          "readoutPosition": "right",
+          "tag": "#1019",
+          "vertical": true
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1021"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1566,
+          "y": 945
+        },
+        "props": {
+          "hasTag": true,
+          "readoutPosition": "right",
+          "tag": "#1021",
+          "vertical": true
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "DV1023"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1766,
+          "y": 945
+        },
+        "props": {
+          "hasTag": true,
+          "readoutPosition": "right",
+          "tag": "#1023",
+          "vertical": true
+        },
+        "type": "automation.digital-valve.digital-valve"
+      },
+      {
+        "meta": {
+          "name": "PU2011"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1106,
+          "y": 490
+        },
+        "props": {
+          "componentSize": "medium",
+          "direction": "forward-stopped",
+          "hasTag": true,
+          "tag": "#2011",
+          "variant": "double"
+        },
+        "type": "automation.pump.pump"
+      },
+      {
+        "meta": {
+          "name": "PU2010"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 116,
+          "y": 690
+        },
+        "props": {
+          "componentSize": "medium",
+          "direction": "forward-stopped",
+          "hasTag": true,
+          "tag": "#2010",
+          "variant": "double"
+        },
+        "type": "automation.pump.pump"
+      },
+      {
+        "meta": {
+          "name": "PU2013"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 621,
+          "y": 920
+        },
+        "props": {
+          "componentSize": "medium",
+          "hasSpeed": true,
+          "hasTag": true,
+          "on": true,
+          "speed": 100,
+          "speedUnit": "%",
+          "tag": "#2013",
+          "variant": "double"
+        },
+        "type": "automation.pump.pump"
+      },
+      {
+        "meta": {
+          "name": "PU2012"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 836,
+          "y": 920
+        },
+        "props": {
+          "componentSize": "medium",
+          "hasSpeed": true,
+          "hasTag": true,
+          "on": true,
+          "speed": 90,
+          "speedUnit": "%",
+          "tag": "#2012",
+          "variant": "double"
+        },
+        "type": "automation.pump.pump"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}
