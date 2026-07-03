@@ -312,12 +312,21 @@
           "x": 483,
           "y": 175
         },
+        "propConfig": {
+          "props.tag": {
+            "binding": {
+              "config": {
+                "path": "session.custom.hoverId"
+              },
+              "type": "property"
+            }
+          }
+        },
         "props": {
           "hasCustomUnit": true,
           "max": 200,
           "medium": "normal",
           "static": true,
-          "tag": "#3011",
           "value": 200,
           "valueFractionDigits": 1
         },
@@ -817,28 +826,6 @@
       },
       {
         "meta": {
-          "name": "PU2013"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 621,
-          "y": 920
-        },
-        "props": {
-          "componentSize": "medium",
-          "hasSpeed": true,
-          "hasTag": true,
-          "on": true,
-          "speed": 100,
-          "speedUnit": "%",
-          "tag": "#2013",
-          "variant": "double"
-        },
-        "type": "automation.pump.pump"
-      },
-      {
-        "meta": {
           "name": "PU2012"
         },
         "position": {
@@ -858,6 +845,27 @@
           "variant": "double"
         },
         "type": "automation.pump.pump"
+      },
+      {
+        "meta": {
+          "name": "pump"
+        },
+        "position": {
+          "height": 50,
+          "width": 46,
+          "x": 613,
+          "y": 900
+        },
+        "props": {
+          "params": {
+            "on": true,
+            "readoutPosition": "bottom",
+            "speed": 100,
+            "tag": 2013
+          },
+          "path": "Page/_ProcessOverview/pump"
+        },
+        "type": "ia.display.view"
       }
     ],
     "meta": {

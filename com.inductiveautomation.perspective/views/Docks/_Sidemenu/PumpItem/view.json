@@ -145,6 +145,17 @@
         "type": "ia.display.label"
       }
     ],
+    "events": {
+      "dom": {
+        "onMouseEnter": {
+          "config": {
+            "script": "    system.perspective.print(\"hover\")\n    system.perspective.print(self.view)\n    \n    self.session.custom.hoverId \u003d self.view.tag"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
     "meta": {
       "name": "root"
     },

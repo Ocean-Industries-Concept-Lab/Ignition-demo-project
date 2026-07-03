@@ -434,7 +434,8 @@
     "props": {
       "direction": "column",
       "style": {
-        "backgroundColor": "var(--container-background-color);"
+        "backgroundColor": "var(--container-background-color)",
+        "borderLeft": "1px solid var(--border-divider-color)"
       }
     },
     "type": "ia.container.flex"

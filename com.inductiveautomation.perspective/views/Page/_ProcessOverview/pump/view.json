@@ -1,0 +1,105 @@
+{
+  "custom": {},
+  "params": {
+    "on": true,
+    "readoutPosition": "bottom",
+    "speed": 100,
+    "tag": 2013
+  },
+  "propConfig": {
+    "params.on": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.readoutPosition": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.speed": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 56,
+      "width": 52
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PU2013"
+        },
+        "position": {
+          "height": 48,
+          "width": 48
+        },
+        "propConfig": {
+          "props.activated": {
+            "binding": {
+              "config": {
+                "expression": "{session.custom.hoverId}\u003d{view.params.tag}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.on": {
+            "binding": {
+              "config": {
+                "path": "view.params.on"
+              },
+              "type": "property"
+            }
+          },
+          "props.readoutPosition": {
+            "binding": {
+              "config": {
+                "path": "view.params.readoutPosition"
+              },
+              "type": "property"
+            }
+          },
+          "props.speed": {
+            "binding": {
+              "config": {
+                "path": "view.params.speed"
+              },
+              "type": "property"
+            }
+          },
+          "props.tag": {
+            "binding": {
+              "config": {
+                "expression": "\"#\"+{view.params.tag}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "componentSize": "medium",
+          "hasSpeed": true,
+          "hasTag": true,
+          "speedUnit": "%",
+          "variant": "double"
+        },
+        "type": "automation.pump.pump"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "utils/overflow-visible"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

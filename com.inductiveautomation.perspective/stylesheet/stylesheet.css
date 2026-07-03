@@ -11,3 +11,11 @@
     border-radius: var(--ui-components-card-border-radius-regular);
     overflow: hidden;
 }
+
+.psc-utils\/overflow-visible {
+	overflow: visible !important;
+}
+
+.view-parent:has(.psc-utils\/overflow-visible) {
+	overflow: visible !important;
+}
