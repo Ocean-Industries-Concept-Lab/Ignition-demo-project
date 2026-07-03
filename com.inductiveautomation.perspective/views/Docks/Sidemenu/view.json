@@ -1,15 +1,15 @@
 {
   "custom": {},
   "params": {
-    "faceplateType": null,
-    "tag": "#1234"
+    "faceplateType": "valve",
+    "tagpath": "[default]process/valve0"
   },
   "propConfig": {
     "params.faceplateType": {
       "paramDirection": "input",
       "persistent": true
     },
-    "params.tag": {
+    "params.tagpath": {
       "onChange": {
         "enabled": null,
         "script": "\tself.session.custom.hoverId\u003dcurrentValue"
@@ -120,26 +120,21 @@
           "position.display": {
             "binding": {
               "config": {
-                "expression": "{view.params.faceplateType}\u003d\"pump\" \u0026\u0026 {view.params.tag}!\u003dnull"
+                "expression": "{view.params.faceplateType}\u003d\"pump\" \u0026\u0026 {view.params.tagpath}!\u003dnull"
               },
               "type": "expr"
             }
           },
-          "props.params.tag": {
+          "props.params.tagPath": {
             "binding": {
               "config": {
-                "path": "view.params.tag"
+                "path": "view.params.tagpath"
               },
               "type": "property"
             }
           }
         },
         "props": {
-          "params": {
-            "mode": "manual",
-            "on": true,
-            "speed": 0
-          },
           "path": "Docks/_Sidemenu/PumpFacePlate"
         },
         "type": "ia.display.view"
@@ -155,26 +150,21 @@
           "position.display": {
             "binding": {
               "config": {
-                "expression": "{view.params.faceplateType}\u003d\"valve\" \u0026\u0026 {view.params.tag}!\u003dnull"
+                "expression": "{view.params.faceplateType}\u003d\"valve\" \u0026\u0026 {view.params.tagpath}!\u003dnull"
               },
               "type": "expr"
             }
           },
-          "props.params.tag": {
+          "props.params.tagPath": {
             "binding": {
               "config": {
-                "path": "view.params.tag"
+                "path": "view.params.tagpath"
               },
               "type": "property"
             }
           }
         },
         "props": {
-          "params": {
-            "mode": "manual",
-            "open": true,
-            "speed": 0
-          },
           "path": "Docks/_Sidemenu/DigitalValveFacePlate"
         },
         "type": "ia.display.view"
@@ -231,36 +221,28 @@
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "on": false,
-                  "speed": 20,
-                  "tag": "#2011"
+                  "tagpath": "[default]process/pump0"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "on": false,
-                  "speed": 20,
-                  "tag": "#2010"
+                  "tagpath": "[default]process/pump1"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "on": true,
-                  "speed": 100,
-                  "tag": "#2013"
+                  "tagpath": "[default]process/pump3"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "on": true,
-                  "speed": 90,
-                  "tag": "#2012"
+                  "tagpath": "[default]process/pump2"
                 }
               ],
               "path": "Docks/_Sidemenu/PumpItem",
@@ -292,216 +274,168 @@
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1011"
+                  "tagpath": "[default]process/valve10"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1010"
+                  "tagpath": "[default]process/valve11"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1025"
+                  "tagpath": "[default]process/valve12"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": true,
-                  "speed": 20,
-                  "tag": "#1028"
+                  "tagpath": "[default]process/valve13"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": true,
-                  "speed": 20,
-                  "tag": "#1026"
+                  "tagpath": "[default]process/valve14"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": true,
-                  "speed": 20,
-                  "tag": "#1027"
+                  "tagpath": "[default]process/valve15"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1014"
+                  "tagpath": "[default]process/valve16"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1020"
+                  "tagpath": "[default]process/valve17"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1022"
+                  "tagpath": "[default]process/valve18"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#2017"
+                  "tagpath": "[default]process/valve19"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": true,
-                  "speed": 20,
-                  "tag": "#1015"
+                  "tagpath": "[default]process/valve20"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": true,
-                  "speed": 20,
-                  "tag": "#2016"
+                  "tagpath": "[default]process/valve21"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": true,
-                  "speed": 20,
-                  "tag": "#2018"
+                  "tagpath": "[default]process/valve22"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1032"
+                  "tagpath": "[default]process/valve23"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1031"
+                  "tagpath": "[default]process/valve24"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1030"
+                  "tagpath": "[default]process/valve25"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1029"
+                  "tagpath": "[default]process/valve26"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1024"
+                  "tagpath": "[default]process/valve27"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1033"
+                  "tagpath": "[default]process/valve28"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1012"
+                  "tagpath": "[default]process/valve29"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1013"
+                  "tagpath": "[default]process/valve30"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1019"
+                  "tagpath": "[default]process/valve31"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1021"
+                  "tagpath": "[default]process/valve32"
                 },
                 {
                   "instancePosition": {},
                   "instanceStyle": {
                     "classes": ""
                   },
-                  "open": false,
-                  "speed": 20,
-                  "tag": "#1023"
+                  "tagpath": "[default]process/valve33"
                 }
               ],
               "path": "Docks/_Sidemenu/DigitalValveItem",
@@ -515,7 +449,7 @@
           "dom": {
             "onMouseLeave": {
               "config": {
-                "script": "\tself.session.custom.hoverId \u003d None"
+                "script": "\tif self.view.params.faceplateType \u003d\u003d \"null\" or self.view.params.faceplateType \u003d\u003d None:\n\t\tself.session.custom.hoverId \u003d None"
               },
               "scope": "G",
               "type": "script"

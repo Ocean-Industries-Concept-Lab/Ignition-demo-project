@@ -386,7 +386,7 @@
         },
         "props": {
           "params": {
-            "tag": "#1011"
+            "tagpath": "[default]process/valve11"
           },
           "path": "Page/_ProcessOverview/valve"
         },
@@ -404,7 +404,7 @@
         },
         "props": {
           "params": {
-            "tag": "#1010"
+            "tagpath": "[default]process/valve10"
           },
           "path": "Page/_ProcessOverview/valve"
         },
@@ -423,7 +423,7 @@
         "props": {
           "params": {
             "readoutPosition": "right",
-            "tag": "#1025"
+            "tagpath": "[default]process/valve25"
           },
           "path": "Page/_ProcessOverview/valve"
         },
@@ -441,9 +441,8 @@
         },
         "props": {
           "params": {
-            "open": true,
             "readoutPosition": "right",
-            "tag": "#1028"
+            "tagpath": "[default]process/valve28"
           },
           "path": "Page/_ProcessOverview/valve"
         },
@@ -461,9 +460,8 @@
         },
         "props": {
           "params": {
-            "open": true,
             "readoutPosition": "right",
-            "tag": "#1026"
+            "tagpath": "[default]process/valve26"
           },
           "path": "Page/_ProcessOverview/valve"
         },
@@ -481,9 +479,8 @@
         },
         "props": {
           "params": {
-            "open": true,
             "readoutPosition": "right",
-            "tag": "#1027"
+            "tagpath": "[default]process/valve27"
           },
           "path": "Page/_ProcessOverview/valve"
         },
@@ -501,7 +498,7 @@
         },
         "props": {
           "params": {
-            "tag": "#1014"
+            "tagpath": "[default]process/valve14"
           },
           "path": "Page/_ProcessOverview/valve"
         },
@@ -519,7 +516,7 @@
         },
         "props": {
           "params": {
-            "tag": "#1020"
+            "tagpath": "[default]process/valve20"
           },
           "path": "Page/_ProcessOverview/valve"
         },
@@ -537,7 +534,7 @@
         },
         "props": {
           "params": {
-            "tag": "#1022"
+            "tagpath": "[default]process/valve22"
           },
           "path": "Page/_ProcessOverview/valve"
         },
@@ -555,7 +552,7 @@
         },
         "props": {
           "params": {
-            "tag": "#2017"
+            "tagpath": "[default]process/valve17"
           },
           "path": "Page/_ProcessOverview/valve"
         },
@@ -573,8 +570,7 @@
         },
         "props": {
           "params": {
-            "open": true,
-            "tag": "#1015"
+            "tagpath": "[default]process/valve15"
           },
           "path": "Page/_ProcessOverview/valve"
         },
@@ -592,8 +588,7 @@
         },
         "props": {
           "params": {
-            "open": true,
-            "tag": "#2016"
+            "tagpath": "[default]process/valve16"
           },
           "path": "Page/_ProcessOverview/valve"
         },
@@ -611,9 +606,8 @@
         },
         "props": {
           "params": {
-            "open": true,
             "readoutPosition": "right",
-            "tag": "#2018"
+            "tagpath": "[default]process/valve18"
           },
           "path": "Page/_ProcessOverview/valve"
         },
@@ -632,7 +626,7 @@
         "props": {
           "params": {
             "readoutPosition": "right",
-            "tag": "#1032",
+            "tagpath": "[default]process/valve32",
             "vertical": true
           },
           "path": "Page/_ProcessOverview/valve"
@@ -652,7 +646,7 @@
         "props": {
           "params": {
             "readoutPosition": "right",
-            "tag": "#1031",
+            "tagpath": "[default]process/valve31",
             "vertical": true
           },
           "path": "Page/_ProcessOverview/valve"
@@ -672,7 +666,7 @@
         "props": {
           "params": {
             "readoutPosition": "right",
-            "tag": "#1030",
+            "tagpath": "[default]process/valve30",
             "vertical": true
           },
           "path": "Page/_ProcessOverview/valve"
@@ -692,7 +686,7 @@
         "props": {
           "params": {
             "readoutPosition": "right",
-            "tag": "#1029",
+            "tagpath": "[default]process/valve29",
             "vertical": true
           },
           "path": "Page/_ProcessOverview/valve"
@@ -712,7 +706,7 @@
         "props": {
           "params": {
             "readoutPosition": "right",
-            "tag": "#1024",
+            "tagpath": "[default]process/valve24",
             "vertical": true
           },
           "path": "Page/_ProcessOverview/valve"
@@ -731,7 +725,7 @@
         },
         "props": {
           "params": {
-            "tag": "#1033",
+            "tagpath": "[default]process/valve33",
             "vertical": true
           },
           "path": "Page/_ProcessOverview/valve"
@@ -750,7 +744,7 @@
         },
         "props": {
           "params": {
-            "tag": "#1012",
+            "tagpath": "[default]process/valve12",
             "vertical": true
           },
           "path": "Page/_ProcessOverview/valve"
@@ -769,7 +763,7 @@
         },
         "props": {
           "params": {
-            "tag": "#1013",
+            "tagpath": "[default]process/valve13",
             "vertical": true
           },
           "path": "Page/_ProcessOverview/valve"
@@ -789,7 +783,7 @@
         "props": {
           "params": {
             "readoutPosition": "right",
-            "tag": "#1019",
+            "tagpath": "[default]process/valve19",
             "vertical": true
           },
           "path": "Page/_ProcessOverview/valve"
@@ -809,7 +803,7 @@
         "props": {
           "params": {
             "readoutPosition": "right",
-            "tag": "#1021",
+            "tagpath": "[default]process/valve21",
             "vertical": true
           },
           "path": "Page/_ProcessOverview/valve"
@@ -829,7 +823,7 @@
         "props": {
           "params": {
             "readoutPosition": "right",
-            "tag": "#1023",
+            "tagpath": "[default]process/valve23",
             "vertical": true
           },
           "path": "Page/_ProcessOverview/valve"
@@ -850,7 +844,7 @@
           "params": {
             "componentSize": "medium",
             "direction": "forward-stopped",
-            "tag": "#2011",
+            "tagpath": "[default]process/pump0",
             "variant": "double"
           },
           "path": "Page/_ProcessOverview/pump"
@@ -871,7 +865,7 @@
           "params": {
             "componentSize": "medium",
             "direction": "forward-stopped",
-            "tag": "#2010",
+            "tagpath": "[default]process/pump1",
             "variant": "double"
           },
           "path": "Page/_ProcessOverview/pump"
@@ -892,10 +886,8 @@
           "params": {
             "componentSize": "medium",
             "hasSpeed": true,
-            "on": true,
-            "speed": 90,
             "speedUnit": "%",
-            "tag": "#2012",
+            "tagpath": "[default]process/pump2",
             "variant": "double"
           },
           "path": "Page/_ProcessOverview/pump"
@@ -914,10 +906,8 @@
         },
         "props": {
           "params": {
-            "on": true,
             "readoutPosition": "bottom",
-            "speed": 100,
-            "tag": "#2013"
+            "tagpath": "[default]process/pump3"
           },
           "path": "Page/_ProcessOverview/pump"
         },

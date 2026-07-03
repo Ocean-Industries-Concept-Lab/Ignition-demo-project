@@ -1,50 +1,31 @@
 {
-  "custom": {},
+  "custom": {
+    "tag": 2010
+  },
   "params": {
-    "componentSize": "medium",
-    "direction": "forward",
-    "hasSpeed": true,
-    "on": false,
     "readoutPosition": "bottom",
-    "speed": 0,
-    "speedUnit": "%",
-    "tag": "#2013",
-    "variant": "double"
+    "tagpath": "[default]process/pump0"
   },
   "propConfig": {
-    "params.componentSize": {
-      "paramDirection": "input",
-      "persistent": true
-    },
-    "params.direction": {
-      "paramDirection": "input",
-      "persistent": true
-    },
-    "params.hasSpeed": {
-      "paramDirection": "input",
-      "persistent": true
-    },
-    "params.on": {
-      "paramDirection": "input",
+    "custom.tag": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "1": "{view.params.tagpath}"
+          },
+          "tagPath": "{1}/pumpTag"
+        },
+        "type": "tag"
+      },
       "persistent": true
     },
     "params.readoutPosition": {
       "paramDirection": "input",
       "persistent": true
     },
-    "params.speed": {
-      "paramDirection": "input",
-      "persistent": true
-    },
-    "params.speedUnit": {
-      "paramDirection": "input",
-      "persistent": true
-    },
-    "params.tag": {
-      "paramDirection": "input",
-      "persistent": true
-    },
-    "params.variant": {
+    "params.tagpath": {
       "paramDirection": "input",
       "persistent": true
     }
@@ -66,7 +47,7 @@
                 "type": "open",
                 "viewParams": {
                   "faceplateType": "pump",
-                  "tag": "{view.params.tag}"
+                  "tagpath": "{view.params.tagpath}"
                 }
               },
               "scope": "C",
@@ -85,41 +66,49 @@
           "props.activated": {
             "binding": {
               "config": {
-                "expression": "{session.custom.hoverId}\u003d{view.params.tag}"
+                "expression": "{session.custom.hoverId}\u003d{view.params.tagpath}"
               },
               "type": "expr"
-            }
-          },
-          "props.componentSize": {
-            "binding": {
-              "config": {
-                "path": "view.params.componentSize"
-              },
-              "type": "property"
             }
           },
           "props.direction": {
             "binding": {
               "config": {
-                "path": "view.params.direction"
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "tagpath": "{view.params.tagpath}"
+                },
+                "tagPath": "{tagpath}/pumpOn"
               },
-              "type": "property"
-            }
-          },
-          "props.hasSpeed": {
-            "binding": {
-              "config": {
-                "path": "view.params.hasSpeed"
-              },
-              "type": "property"
+              "transforms": [
+                {
+                  "fallback": "forward-stopped",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "forward"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
             }
           },
           "props.on": {
             "binding": {
               "config": {
-                "path": "view.params.on"
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/pumpOn"
               },
-              "type": "property"
+              "type": "tag"
             }
           },
           "props.readoutPosition": {
@@ -133,38 +122,62 @@
           "props.speed": {
             "binding": {
               "config": {
-                "path": "view.params.speed"
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/pumpSpeed"
               },
-              "type": "property"
-            }
-          },
-          "props.speedUnit": {
-            "binding": {
-              "config": {
-                "path": "view.params.speedUnit"
-              },
-              "type": "property"
+              "type": "tag"
             }
           },
           "props.tag": {
             "binding": {
               "config": {
-                "expression": "{view.params.tag}"
-              },
-              "type": "expr"
-            }
-          },
-          "props.variant": {
-            "binding": {
-              "config": {
-                "path": "view.params.variant"
+                "path": "view.custom.tag"
               },
               "type": "property"
+            }
+          },
+          "props.badgeControl": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/pumpMode"
+              },
+              "transforms": [
+                {
+                  "fallback": "none",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "local",
+                      "output": "local"
+                    },
+                    {
+                      "input": "manual",
+                      "output": "manual"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
             }
           }
         },
         "props": {
-          "hasTag": true
+          "componentSize": "medium",
+          "hasSpeed": true,
+          "hasTag": true,
+          "speedUnit": "%",
+          "variant": "double"
         },
         "type": "automation.pump.pump"
       }

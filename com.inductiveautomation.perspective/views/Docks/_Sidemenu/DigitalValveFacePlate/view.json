@@ -1,10 +1,12 @@
 {
-  "custom": {},
+  "custom": {
+    "tag": "1000"
+  },
   "events": {
     "system": {
       "onStartup": {
         "config": {
-          "script": "\tself.session.custom.hoverId\u003dself.params.tag"
+          "script": "\tself.session.custom.hoverId\u003dself.view.params.tagPath"
         },
         "scope": "G",
         "type": "script"
@@ -12,25 +14,28 @@
     }
   },
   "params": {
-    "mode": "manual",
-    "open": true,
-    "speed": 0,
-    "tag": "#2100"
+    "tagPath": "[default]process/valve0"
   },
   "propConfig": {
-    "params.mode": {
-      "paramDirection": "input",
+    "custom.tag": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "1": "{view.params.tagPath}"
+          },
+          "tagPath": "{1}/valveTag"
+        },
+        "type": "tag"
+      },
       "persistent": true
     },
-    "params.open": {
-      "paramDirection": "input",
-      "persistent": true
-    },
-    "params.speed": {
-      "paramDirection": "input",
-      "persistent": true
-    },
-    "params.tag": {
+    "params.tagPath": {
+      "onChange": {
+        "enabled": null,
+        "script": "\tself.session.custom.hoverId\u003dcurrentValue"
+      },
       "paramDirection": "input",
       "persistent": true
     }
@@ -49,7 +54,7 @@
                     "type": "open",
                     "viewParams": {
                       "faceplateType": "null",
-                      "tag": "null"
+                      "tagpath": "null"
                     }
                   },
                   "scope": "C",
@@ -84,7 +89,7 @@
               "props.text": {
                 "binding": {
                   "config": {
-                    "expression": "\"Valve \"+{view.params.tag}"
+                    "expression": "\"Valve \"+{view.custom.tag}"
                   },
                   "type": "expr"
                 }
@@ -146,9 +151,14 @@
             "binding": {
               "config": {
                 "bidirectional": true,
-                "path": "view.params.open"
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagPath}"
+                },
+                "tagPath": "{1}/valveOpen"
               },
-              "type": "property"
+              "type": "tag"
             }
           }
         },
@@ -210,9 +220,14 @@
             "binding": {
               "config": {
                 "bidirectional": true,
-                "path": "view.params.mode"
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagPath}"
+                },
+                "tagPath": "{1}/valveMode"
               },
-              "type": "property"
+              "type": "tag"
             }
           }
         },

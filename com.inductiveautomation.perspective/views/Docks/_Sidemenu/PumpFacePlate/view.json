@@ -1,10 +1,12 @@
 {
-  "custom": {},
+  "custom": {
+    "tag": 2010
+  },
   "events": {
     "system": {
       "onStartup": {
         "config": {
-          "script": "\tself.session.custom.hoverId\u003dself.params.tag"
+          "script": "\tself.session.custom.hoverId\u003dself.view.params.tagPath"
         },
         "scope": "G",
         "type": "script"
@@ -12,25 +14,28 @@
     }
   },
   "params": {
-    "mode": "manual",
-    "on": true,
-    "speed": 0,
-    "tag": "#2100"
+    "tagPath": "[default]process/pump0"
   },
   "propConfig": {
-    "params.mode": {
-      "paramDirection": "input",
+    "custom.tag": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "1": "{view.params.tagPath}"
+          },
+          "tagPath": "{1}/pumpTag"
+        },
+        "type": "tag"
+      },
       "persistent": true
     },
-    "params.on": {
-      "paramDirection": "input",
-      "persistent": true
-    },
-    "params.speed": {
-      "paramDirection": "input",
-      "persistent": true
-    },
-    "params.tag": {
+    "params.tagPath": {
+      "onChange": {
+        "enabled": null,
+        "script": "\tself.session.custom.hoverId\u003dcurrentValue"
+      },
       "paramDirection": "input",
       "persistent": true
     }
@@ -49,7 +54,7 @@
                     "type": "open",
                     "viewParams": {
                       "faceplateType": "null",
-                      "tag": "null"
+                      "tagpath": "null"
                     }
                   },
                   "scope": "C",
@@ -84,7 +89,7 @@
               "props.text": {
                 "binding": {
                   "config": {
-                    "expression": "\"Motor \"+{view.params.tag}"
+                    "expression": "\"Motor \"+{view.custom.tag}"
                   },
                   "type": "expr"
                 }
@@ -146,9 +151,14 @@
             "binding": {
               "config": {
                 "bidirectional": true,
-                "path": "view.params.on"
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagPath}"
+                },
+                "tagPath": "{1}/pumpOn"
               },
-              "type": "property"
+              "type": "tag"
             }
           }
         },
@@ -189,7 +199,7 @@
           "props.disabled": {
             "binding": {
               "config": {
-                "expression": "{view.params.mode}!\u003d\"manual\" || !{view.params.on}"
+                "expression": "tag({view.params.tagPath}+\"/pumpMode\")!\u003d\"manual\" || !tag({view.params.tagPath}+\"/pumpOn\")"
               },
               "type": "expr"
             }
@@ -198,9 +208,14 @@
             "binding": {
               "config": {
                 "bidirectional": true,
-                "path": "view.params.speed"
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagPath}"
+                },
+                "tagPath": "{1}/pumpSpeed"
               },
-              "type": "property"
+              "type": "tag"
             }
           }
         },
@@ -248,9 +263,14 @@
             "binding": {
               "config": {
                 "bidirectional": true,
-                "path": "view.params.mode"
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagPath}"
+                },
+                "tagPath": "{1}/pumpMode"
               },
-              "type": "property"
+              "type": "tag"
             }
           }
         },

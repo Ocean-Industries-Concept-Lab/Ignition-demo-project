@@ -1,21 +1,32 @@
 {
-  "custom": {},
+  "custom": {
+    "tag": "1000"
+  },
   "params": {
-    "open": false,
     "readoutPosition": "bottom",
-    "tag": "#1011",
+    "tagpath": "[default]process/valve0",
     "vertical": false
   },
   "propConfig": {
-    "params.open": {
-      "paramDirection": "input",
+    "custom.tag": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "1": "{view.params.tagpath}"
+          },
+          "tagPath": "{1}/valveTag"
+        },
+        "type": "tag"
+      },
       "persistent": true
     },
     "params.readoutPosition": {
       "paramDirection": "input",
       "persistent": true
     },
-    "params.tag": {
+    "params.tagpath": {
       "paramDirection": "input",
       "persistent": true
     },
@@ -41,7 +52,7 @@
                 "type": "open",
                 "viewParams": {
                   "faceplateType": "valve",
-                  "tag": "{view.params.tag}"
+                  "tagpath": "{view.params.tagpath}"
                 }
               },
               "scope": "C",
@@ -60,17 +71,53 @@
           "props.activated": {
             "binding": {
               "config": {
-                "expression": "{session.custom.hoverId}\u003d{view.params.tag}"
+                "expression": "{session.custom.hoverId}\u003d{view.params.tagpath}"
               },
               "type": "expr"
+            }
+          },
+          "props.badgeControl": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/valveMode"
+              },
+              "transforms": [
+                {
+                  "fallback": "none",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "local",
+                      "output": "local"
+                    },
+                    {
+                      "input": "manual",
+                      "output": "manual"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
             }
           },
           "props.open": {
             "binding": {
               "config": {
-                "path": "view.params.open"
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/valveOpen"
               },
-              "type": "property"
+              "type": "tag"
             }
           },
           "props.readoutPosition": {
@@ -84,9 +131,9 @@
           "props.tag": {
             "binding": {
               "config": {
-                "expression": "{view.params.tag}"
+                "path": "view.custom.tag"
               },
-              "type": "expr"
+              "type": "property"
             }
           },
           "props.vertical": {

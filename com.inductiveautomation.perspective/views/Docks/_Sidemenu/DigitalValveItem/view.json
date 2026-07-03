@@ -1,20 +1,41 @@
 {
-  "custom": {},
+  "custom": {
+    "open": true,
+    "tag": "1000"
+  },
   "params": {
-    "open": false,
-    "speed": 20,
-    "tag": "#0000"
+    "tagpath": "[default]process/valve0"
   },
   "propConfig": {
-    "params.open": {
-      "paramDirection": "input",
+    "custom.open": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "1": "{view.params.tagpath}"
+          },
+          "tagPath": "{1}/valveOpen"
+        },
+        "type": "tag"
+      },
       "persistent": true
     },
-    "params.speed": {
-      "paramDirection": "input",
+    "custom.tag": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "1": "{view.params.tagpath}"
+          },
+          "tagPath": "{1}/valveTag"
+        },
+        "type": "tag"
+      },
       "persistent": true
     },
-    "params.tag": {
+    "params.tagpath": {
       "paramDirection": "input",
       "persistent": true
     }
@@ -39,7 +60,7 @@
           "props.icon.path": {
             "binding": {
               "config": {
-                "path": "view.params.open"
+                "path": "view.custom.open"
               },
               "transforms": [
                 {
@@ -77,9 +98,14 @@
           "props.text": {
             "binding": {
               "config": {
-                "path": "view.params.tag"
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/valveTag"
               },
-              "type": "property"
+              "type": "tag"
             }
           }
         },
@@ -105,7 +131,7 @@
           "props.icon.path": {
             "binding": {
               "config": {
-                "path": "view.params.open"
+                "path": "view.custom.open"
               },
               "transforms": [
                 {
@@ -127,7 +153,7 @@
           "props.style.classes": {
             "binding": {
               "config": {
-                "path": "view.params.open"
+                "path": "view.custom.open"
               },
               "transforms": [
                 {
@@ -163,7 +189,7 @@
           "position.display": {
             "binding": {
               "config": {
-                "expression": "{view.params.open}"
+                "expression": "{view.custom.open}"
               },
               "type": "expr"
             }
@@ -173,7 +199,7 @@
           "style": {
             "classes": "font/body text-color/element-active"
           },
-          "text": "On"
+          "text": "Open"
         },
         "type": "ia.display.label"
       },
@@ -185,7 +211,7 @@
           "position.display": {
             "binding": {
               "config": {
-                "expression": "!{view.params.open}"
+                "expression": "!{view.custom.open}"
               },
               "type": "expr"
             }
@@ -202,24 +228,24 @@
     ],
     "events": {
       "dom": {
-        "onPointerEnter": {
-          "config": {
-            "script": "\tself.session.custom.hoverId\u003dself.view.params.tag"
-          },
-          "scope": "G",
-          "type": "script"
-        },
         "onClick": {
           "config": {
             "id": "sidemenu",
             "type": "open",
             "viewParams": {
               "faceplateType": "valve",
-              "tag": "{view.params.tag}"
+              "tagpath": "{view.params.tagpath}"
             }
           },
           "scope": "C",
           "type": "dock"
+        },
+        "onPointerEnter": {
+          "config": {
+            "script": "\tself.session.custom.hoverId\u003dself.view.params.tagpath"
+          },
+          "scope": "G",
+          "type": "script"
         }
       }
     },
