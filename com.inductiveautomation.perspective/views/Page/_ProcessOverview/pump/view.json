@@ -71,6 +71,37 @@
               "type": "expr"
             }
           },
+          "props.badgeControl": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/pumpMode"
+              },
+              "transforms": [
+                {
+                  "fallback": "none",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "local",
+                      "output": "local"
+                    },
+                    {
+                      "input": "manual",
+                      "output": "manual"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.direction": {
             "binding": {
               "config": {
@@ -138,37 +169,6 @@
                 "path": "view.custom.tag"
               },
               "type": "property"
-            }
-          },
-          "props.badgeControl": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "indirect",
-                "references": {
-                  "1": "{view.params.tagpath}"
-                },
-                "tagPath": "{1}/pumpMode"
-              },
-              "transforms": [
-                {
-                  "fallback": "none",
-                  "inputType": "scalar",
-                  "mappings": [
-                    {
-                      "input": "local",
-                      "output": "local"
-                    },
-                    {
-                      "input": "manual",
-                      "output": "manual"
-                    }
-                  ],
-                  "outputType": "scalar",
-                  "type": "map"
-                }
-              ],
-              "type": "tag"
             }
           }
         },

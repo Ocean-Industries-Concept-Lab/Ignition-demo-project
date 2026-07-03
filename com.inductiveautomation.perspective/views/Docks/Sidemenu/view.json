@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "faceplateType": "valve",
+    "faceplateType": null,
     "tagpath": "[default]process/valve0"
   },
   "propConfig": {

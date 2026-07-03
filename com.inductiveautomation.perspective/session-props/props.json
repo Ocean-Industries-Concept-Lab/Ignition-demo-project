@@ -1,6 +1,6 @@
 {
   "custom": {
-    "hoverId": "[default]process/valve0"
+    "hoverId": "[default]process/pump0"
   },
   "propConfig": {
     "props.auth": {
