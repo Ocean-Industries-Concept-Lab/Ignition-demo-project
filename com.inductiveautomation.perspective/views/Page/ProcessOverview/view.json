@@ -318,6 +318,7 @@
               "config": {
                 "path": "session.custom.hoverId"
               },
+              "enabled": false,
               "type": "property"
             }
           }
@@ -327,6 +328,7 @@
           "max": 200,
           "medium": "normal",
           "static": true,
+          "tag": "#3011",
           "value": 200,
           "valueFractionDigits": 1
         },

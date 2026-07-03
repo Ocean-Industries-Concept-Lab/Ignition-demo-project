@@ -33,6 +33,22 @@
   "root": {
     "children": [
       {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "id": "sidemenu",
+                "type": "open",
+                "viewParams": {
+                  "faceplateType": "valve",
+                  "tag": "{view.params.tag}"
+                }
+              },
+              "scope": "C",
+              "type": "dock"
+            }
+          }
+        },
         "meta": {
           "name": "DV"
         },
@@ -44,7 +60,7 @@
           "props.activated": {
             "binding": {
               "config": {
-                "expression": "{session.custom.hoverId}={view.params.tag}"
+                "expression": "{session.custom.hoverId}\u003d{view.params.tag}"
               },
               "type": "expr"
             }

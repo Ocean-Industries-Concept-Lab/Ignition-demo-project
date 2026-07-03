@@ -146,6 +146,41 @@
       },
       {
         "meta": {
+          "name": "ValveFacePlate"
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.faceplateType}\u003d\"valve\" \u0026\u0026 {view.params.tag}!\u003dnull"
+              },
+              "type": "expr"
+            }
+          },
+          "props.params.tag": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "mode": "manual",
+            "open": true,
+            "speed": 0
+          },
+          "path": "Docks/_Sidemenu/DigitalValveFacePlate"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
           "name": "Label"
         },
         "position": {

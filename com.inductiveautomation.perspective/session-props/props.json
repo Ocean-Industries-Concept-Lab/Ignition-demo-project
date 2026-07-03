@@ -1,6 +1,6 @@
 {
   "custom": {
-    "hoverId": "#2100"
+    "hoverId": "#1234"
   },
   "propConfig": {
     "props.auth": {

@@ -204,10 +204,22 @@
       "dom": {
         "onPointerEnter": {
           "config": {
-            "script": "\tself.session.custom.hoverId\u003dself.view.custom.tag"
+            "script": "\tself.session.custom.hoverId\u003dself.view.params.tag"
           },
           "scope": "G",
           "type": "script"
+        },
+        "onClick": {
+          "config": {
+            "id": "sidemenu",
+            "type": "open",
+            "viewParams": {
+              "faceplateType": "valve",
+              "tag": "{view.params.tag}"
+            }
+          },
+          "scope": "C",
+          "type": "dock"
         }
       }
     },
