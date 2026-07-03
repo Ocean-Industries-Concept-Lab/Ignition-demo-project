@@ -1,12 +1,29 @@
 {
   "custom": {},
   "params": {
-    "on": true,
+    "componentSize": "medium",
+    "direction": "forward",
+    "hasSpeed": true,
+    "on": false,
     "readoutPosition": "bottom",
-    "speed": 100,
-    "tag": 2013
+    "speed": 0,
+    "speedUnit": "%",
+    "tag": "#2013",
+    "variant": "double"
   },
   "propConfig": {
+    "params.componentSize": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.direction": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.hasSpeed": {
+      "paramDirection": "input",
+      "persistent": true
+    },
     "params.on": {
       "paramDirection": "input",
       "persistent": true
@@ -19,7 +36,15 @@
       "paramDirection": "input",
       "persistent": true
     },
+    "params.speedUnit": {
+      "paramDirection": "input",
+      "persistent": true
+    },
     "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.variant": {
       "paramDirection": "input",
       "persistent": true
     }
@@ -33,6 +58,22 @@
   "root": {
     "children": [
       {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "id": "sidemenu",
+                "type": "open",
+                "viewParams": {
+                  "faceplateType": "pump",
+                  "tag": "{view.params.tag}"
+                }
+              },
+              "scope": "C",
+              "type": "dock"
+            }
+          }
+        },
         "meta": {
           "name": "PU2013"
         },
@@ -47,6 +88,30 @@
                 "expression": "{session.custom.hoverId}\u003d{view.params.tag}"
               },
               "type": "expr"
+            }
+          },
+          "props.componentSize": {
+            "binding": {
+              "config": {
+                "path": "view.params.componentSize"
+              },
+              "type": "property"
+            }
+          },
+          "props.direction": {
+            "binding": {
+              "config": {
+                "path": "view.params.direction"
+              },
+              "type": "property"
+            }
+          },
+          "props.hasSpeed": {
+            "binding": {
+              "config": {
+                "path": "view.params.hasSpeed"
+              },
+              "type": "property"
             }
           },
           "props.on": {
@@ -73,21 +138,33 @@
               "type": "property"
             }
           },
+          "props.speedUnit": {
+            "binding": {
+              "config": {
+                "path": "view.params.speedUnit"
+              },
+              "type": "property"
+            }
+          },
           "props.tag": {
             "binding": {
               "config": {
-                "expression": "\"#\"+{view.params.tag}"
+                "expression": "{view.params.tag}"
               },
               "type": "expr"
+            }
+          },
+          "props.variant": {
+            "binding": {
+              "config": {
+                "path": "view.params.variant"
+              },
+              "type": "property"
             }
           }
         },
         "props": {
-          "componentSize": "medium",
-          "hasSpeed": true,
-          "hasTag": true,
-          "speedUnit": "%",
-          "variant": "double"
+          "hasTag": true
         },
         "type": "automation.pump.pump"
       }

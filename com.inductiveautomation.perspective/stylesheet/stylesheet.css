@@ -19,3 +19,49 @@
 .view-parent:has(.psc-utils\/overflow-visible) {
 	overflow: visible !important;
 }
+
+.psc-style\/flat {
+    cursor: pointer;
+}
+
+.psc-style\/flat:focus {
+    outline: none;
+}
+
+.psc-style\/flat {
+    border-color: var(--flat-enabled-border-color);
+    background-color: var(--flat-enabled-background-color);
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    --base-border-color: var(--flat-enabled-border-color);
+    --base-background-color: var(--flat-enabled-background-color);
+}
+
+.psc-style\/flat.activated {
+    border-color: var(--flat-activated-border-color);
+    background-color: var(--flat-activated-background-color);
+    --base-border-color: var(--flat-activated-border-color);
+    --base-background-color: var(--flat-activated-background-color);
+}
+
+@media (hover:hover) {
+
+    .psc-style\/flat:hover {
+        border-color: var(--flat-hover-border-color);
+        background-color: var(--flat-hover-background-color);
+    }
+}
+
+.psc-style\/flat:active {
+    border-color: var(--flat-pressed-border-color);
+    background-color: var(--flat-pressed-background-color);
+}
+
+.psc-style\/flat:focus-visible {
+    outline-color: var(--border-focus-color);
+    outline-width: var(--global-size-spacing-border-weight-focusframe);
+    outline-style: solid;
+    border-color: var(--container-global-color);
+    z-index: 1;
+}

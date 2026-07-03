@@ -1,0 +1,101 @@
+{
+  "custom": {},
+  "params": {
+    "open": false,
+    "readoutPosition": "bottom",
+    "tag": "#1011",
+    "vertical": false
+  },
+  "propConfig": {
+    "params.open": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.readoutPosition": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.vertical": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 56,
+      "width": 52
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "DV"
+        },
+        "position": {
+          "height": 48,
+          "width": 48
+        },
+        "propConfig": {
+          "props.activated": {
+            "binding": {
+              "config": {
+                "expression": "{session.custom.hoverId}={view.params.tag}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.open": {
+            "binding": {
+              "config": {
+                "path": "view.params.open"
+              },
+              "type": "property"
+            }
+          },
+          "props.readoutPosition": {
+            "binding": {
+              "config": {
+                "path": "view.params.readoutPosition"
+              },
+              "type": "property"
+            }
+          },
+          "props.tag": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.tag}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.vertical": {
+            "binding": {
+              "config": {
+                "path": "view.params.vertical"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "hasTag": true
+        },
+        "type": "automation.digital-valve.digital-valve"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "utils/overflow-visible"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

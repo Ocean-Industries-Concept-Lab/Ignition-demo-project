@@ -383,10 +383,12 @@
           "y": 76
         },
         "props": {
-          "hasTag": true,
-          "tag": "#1011"
+          "params": {
+            "tag": "#1011"
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -399,10 +401,12 @@
           "y": 166
         },
         "props": {
-          "hasTag": true,
-          "tag": "#1010"
+          "params": {
+            "tag": "#1010"
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -415,11 +419,13 @@
           "y": 145
         },
         "props": {
-          "hasTag": true,
-          "readoutPosition": "right",
-          "tag": "#1025"
+          "params": {
+            "readoutPosition": "right",
+            "tag": "#1025"
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -432,12 +438,14 @@
           "y": 145
         },
         "props": {
-          "hasTag": true,
-          "open": true,
-          "readoutPosition": "right",
-          "tag": "#1028"
+          "params": {
+            "open": true,
+            "readoutPosition": "right",
+            "tag": "#1028"
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -450,12 +458,14 @@
           "y": 145
         },
         "props": {
-          "hasTag": true,
-          "open": true,
-          "readoutPosition": "right",
-          "tag": "#1026"
+          "params": {
+            "open": true,
+            "readoutPosition": "right",
+            "tag": "#1026"
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -468,12 +478,14 @@
           "y": 245
         },
         "props": {
-          "hasTag": true,
-          "open": true,
-          "readoutPosition": "right",
-          "tag": "#1027"
+          "params": {
+            "open": true,
+            "readoutPosition": "right",
+            "tag": "#1027"
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -486,10 +498,12 @@
           "y": 841
         },
         "props": {
-          "hasTag": true,
-          "tag": "#1014"
+          "params": {
+            "tag": "#1014"
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -502,10 +516,12 @@
           "y": 981
         },
         "props": {
-          "hasTag": true,
-          "tag": "#1020"
+          "params": {
+            "tag": "#1020"
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -518,10 +534,12 @@
           "y": 981
         },
         "props": {
-          "hasTag": true,
-          "tag": "#1022"
+          "params": {
+            "tag": "#1022"
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -534,10 +552,12 @@
           "y": 1017
         },
         "props": {
-          "hasTag": true,
-          "tag": "#2017"
+          "params": {
+            "tag": "#2017"
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -550,11 +570,13 @@
           "y": 946
         },
         "props": {
-          "hasTag": true,
-          "open": true,
-          "tag": "#1015"
+          "params": {
+            "open": true,
+            "tag": "#1015"
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -567,11 +589,13 @@
           "y": 946
         },
         "props": {
-          "hasTag": true,
-          "open": true,
-          "tag": "#2016"
+          "params": {
+            "open": true,
+            "tag": "#2016"
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -584,12 +608,14 @@
           "y": 945
         },
         "props": {
-          "hasTag": true,
-          "open": true,
-          "readoutPosition": "right",
-          "tag": "#2018"
+          "params": {
+            "open": true,
+            "readoutPosition": "right",
+            "tag": "#2018"
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -602,12 +628,14 @@
           "y": 360
         },
         "props": {
-          "hasTag": true,
-          "readoutPosition": "right",
-          "tag": "#1032",
-          "vertical": true
+          "params": {
+            "readoutPosition": "right",
+            "tag": "#1032",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -620,12 +648,14 @@
           "y": 360
         },
         "props": {
-          "hasTag": true,
-          "readoutPosition": "right",
-          "tag": "#1031",
-          "vertical": true
+          "params": {
+            "readoutPosition": "right",
+            "tag": "#1031",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -638,12 +668,14 @@
           "y": 360
         },
         "props": {
-          "hasTag": true,
-          "readoutPosition": "right",
-          "tag": "#1030",
-          "vertical": true
+          "params": {
+            "readoutPosition": "right",
+            "tag": "#1030",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -656,12 +688,14 @@
           "y": 360
         },
         "props": {
-          "hasTag": true,
-          "readoutPosition": "right",
-          "tag": "#1029",
-          "vertical": true
+          "params": {
+            "readoutPosition": "right",
+            "tag": "#1029",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -674,12 +708,14 @@
           "y": 245
         },
         "props": {
-          "hasTag": true,
-          "readoutPosition": "right",
-          "tag": "#1024",
-          "vertical": true
+          "params": {
+            "readoutPosition": "right",
+            "tag": "#1024",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -692,11 +728,13 @@
           "y": 736
         },
         "props": {
-          "hasTag": true,
-          "tag": "#1033",
-          "vertical": true
+          "params": {
+            "tag": "#1033",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -709,11 +747,13 @@
           "y": 776
         },
         "props": {
-          "hasTag": true,
-          "tag": "#1012",
-          "vertical": true
+          "params": {
+            "tag": "#1012",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -726,11 +766,13 @@
           "y": 921
         },
         "props": {
-          "hasTag": true,
-          "tag": "#1013",
-          "vertical": true
+          "params": {
+            "tag": "#1013",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -743,12 +785,14 @@
           "y": 945
         },
         "props": {
-          "hasTag": true,
-          "readoutPosition": "right",
-          "tag": "#1019",
-          "vertical": true
+          "params": {
+            "readoutPosition": "right",
+            "tag": "#1019",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -761,12 +805,14 @@
           "y": 945
         },
         "props": {
-          "hasTag": true,
-          "readoutPosition": "right",
-          "tag": "#1021",
-          "vertical": true
+          "params": {
+            "readoutPosition": "right",
+            "tag": "#1021",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -779,12 +825,14 @@
           "y": 945
         },
         "props": {
-          "hasTag": true,
-          "readoutPosition": "right",
-          "tag": "#1023",
-          "vertical": true
+          "params": {
+            "readoutPosition": "right",
+            "tag": "#1023",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
         },
-        "type": "automation.digital-valve.digital-valve"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -797,13 +845,15 @@
           "y": 490
         },
         "props": {
-          "componentSize": "medium",
-          "direction": "forward-stopped",
-          "hasTag": true,
-          "tag": "#2011",
-          "variant": "double"
+          "params": {
+            "componentSize": "medium",
+            "direction": "forward-stopped",
+            "tag": "#2011",
+            "variant": "double"
+          },
+          "path": "Page/_ProcessOverview/pump"
         },
-        "type": "automation.pump.pump"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -816,13 +866,15 @@
           "y": 690
         },
         "props": {
-          "componentSize": "medium",
-          "direction": "forward-stopped",
-          "hasTag": true,
-          "tag": "#2010",
-          "variant": "double"
+          "params": {
+            "componentSize": "medium",
+            "direction": "forward-stopped",
+            "tag": "#2010",
+            "variant": "double"
+          },
+          "path": "Page/_ProcessOverview/pump"
         },
-        "type": "automation.pump.pump"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -835,16 +887,18 @@
           "y": 920
         },
         "props": {
-          "componentSize": "medium",
-          "hasSpeed": true,
-          "hasTag": true,
-          "on": true,
-          "speed": 90,
-          "speedUnit": "%",
-          "tag": "#2012",
-          "variant": "double"
+          "params": {
+            "componentSize": "medium",
+            "hasSpeed": true,
+            "on": true,
+            "speed": 90,
+            "speedUnit": "%",
+            "tag": "#2012",
+            "variant": "double"
+          },
+          "path": "Page/_ProcessOverview/pump"
         },
-        "type": "automation.pump.pump"
+        "type": "ia.display.view"
       },
       {
         "meta": {
@@ -861,7 +915,7 @@
             "on": true,
             "readoutPosition": "bottom",
             "speed": 100,
-            "tag": 2013
+            "tag": "#2013"
           },
           "path": "Page/_ProcessOverview/pump"
         },

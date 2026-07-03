@@ -216,6 +216,7 @@
     },
     "props": {
       "style": {
+        "classes": "style/flat",
         "padding": "16px"
       }
     },

@@ -25,7 +25,7 @@
             "content": "push",
             "handle": "hide",
             "iconUrl": "",
-            "id": "",
+            "id": "sidemenu",
             "modal": false,
             "resizable": false,
             "show": "visible",

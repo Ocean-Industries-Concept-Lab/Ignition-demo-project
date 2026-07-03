@@ -1,0 +1,264 @@
+{
+  "custom": {},
+  "events": {
+    "system": {
+      "onStartup": {
+        "config": {
+          "script": "\tself.session.custom.hoverId\u003dself.params.tag"
+        },
+        "scope": "G",
+        "type": "script"
+      }
+    }
+  },
+  "params": {
+    "mode": "manual",
+    "open": true,
+    "speed": 0,
+    "tag": "#2100"
+  },
+  "propConfig": {
+    "params.mode": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.open": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.speed": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "id": "sidemenu",
+                    "type": "open",
+                    "viewParams": {
+                      "faceplateType": "null",
+                      "tag": "null"
+                    }
+                  },
+                  "scope": "C",
+                  "type": "dock"
+                }
+              }
+            },
+            "meta": {
+              "name": "icon-button"
+            },
+            "position": {
+              "basis": 0,
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "icon": {
+                "path": "openbridge/chevron-left-google"
+              },
+              "variant": "flat"
+            },
+            "type": "openbridge.manual.icon-button"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "\"Valve \"+{view.params.tag}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "font/overline-new text-color/element-neutral",
+                "padding": "8px"
+              },
+              "textStyle": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "font/overline-new text-color/element-neutral",
+                "padding": "8px"
+              },
+              "textStyle": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "48px"
+        },
+        "props": {
+          "alignItems": "center",
+          "justify": "flex-end"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "toggleButtonHorizontal"
+        },
+        "position": {
+          "basis": "87px"
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "view.params.open"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "options": [
+            {
+              "disabled": false,
+              "icon": {
+                "path": "openbridge/twoway-digital-closed"
+              },
+              "label": "Close",
+              "value": false
+            },
+            {
+              "disabled": false,
+              "icon": {
+                "path": "openbridge/twoway-digital-open"
+              },
+              "label": "Open",
+              "value": true
+            }
+          ],
+          "style": {
+            "classes": "divider/bottom",
+            "padding": "0 16px"
+          },
+          "type": "icon-text-under"
+        },
+        "type": "openbridge.manual.toggle-button-horizontal"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "font/overline-new text-color/element-neutral",
+            "padding": "16px"
+          },
+          "text": "Mode",
+          "textStyle": {
+            "textAlign": "left"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "toggleButtonHorizontal_0"
+        },
+        "position": {
+          "basis": "48px"
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "view.params.mode"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "options": [
+            {
+              "disabled": false,
+              "icon": {
+                "path": "openbridge/manual"
+              },
+              "key": "value",
+              "label": "Manual",
+              "value": "manual"
+            },
+            {
+              "disabled": false,
+              "icon": {
+                "path": "openbridge/local"
+              },
+              "label": "Local",
+              "value": "local"
+            },
+            {
+              "disabled": false,
+              "icon": {
+                "path": "openbridge/auto"
+              },
+              "label": "Auto",
+              "value": "auto"
+            }
+          ],
+          "style": {
+            "padding": "0 16px"
+          },
+          "type": "icon-text-under",
+          "variant": "normal"
+        },
+        "type": "openbridge.manual.toggle-button-horizontal"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

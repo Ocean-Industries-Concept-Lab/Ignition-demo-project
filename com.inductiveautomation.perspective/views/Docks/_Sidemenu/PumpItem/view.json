@@ -147,9 +147,21 @@
     ],
     "events": {
       "dom": {
+        "onClick": {
+          "config": {
+            "id": "sidemenu",
+            "type": "open",
+            "viewParams": {
+              "faceplateType": "pump",
+              "tag": "{view.params.tag}"
+            }
+          },
+          "scope": "C",
+          "type": "dock"
+        },
         "onMouseEnter": {
           "config": {
-            "script": "    system.perspective.print(\"hover\")\n    system.perspective.print(self.view)\n    \n    self.session.custom.hoverId \u003d self.view.tag"
+            "script": "    self.session.custom.hoverId \u003d self.view.params.tag"
           },
           "scope": "G",
           "type": "script"
@@ -161,6 +173,7 @@
     },
     "props": {
       "style": {
+        "classes": "style/flat",
         "padding": "16px"
       }
     },
