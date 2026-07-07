@@ -71,6 +71,51 @@
               "type": "expr"
             }
           },
+          "props.alert": {
+            "binding": {
+              "config": {
+                "expression": "tag({view.params.tagpath}+\"/Alarm Metrics.hasActive\") || (tag({view.params.tagpath}+\"/Alarm Metrics.clearUnackCount\") \u003e 0)"
+              },
+              "type": "expr"
+            }
+          },
+          "props.alertFrameMode": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "activeAcked": "tag({view.params.tagpath}+\"/Alarm Metrics.activeAckCount\")",
+                  "activeUnacked": "tag({view.params.tagpath}+\"/Alarm Metrics.activeUnackCount\")",
+                  "clearedAcked": "tag({view.params.tagpath}+\"/Alarm Metrics.clearUnackCount\")"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "    if value.activeUnacked \u003e 0:\n    \treturn \"unacked-active\"\n    elif value.activeAcked \u003e 0:\n    \treturn \"acked-active\"\n    else:\n\t\treturn \"unacked-rectified\"",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
+          "props.alertFrameStatus": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "highestActive": "tag({view.params.tagpath}+\"/Alarm Metrics.highestActivePriority\") ",
+                  "highestUnacked": "tag({view.params.tagpath}+\"/Alarm Metrics.highestUnackedPriority\") "
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\tif value.highestActive \u003e 0:\n\t\treturn \"level-\"+str(value.highestActive).lower()\n\telif value.highestUnacked \u003e 0:\n\t\treturn \"level-\"+str(value.highestUnacked).lower()\n\telse:\n\t\treturn \"level-low\"",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
           "props.badgeControl": {
             "binding": {
               "config": {

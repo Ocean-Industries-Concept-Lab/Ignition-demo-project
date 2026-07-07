@@ -4,6 +4,10 @@
       "title": "Home",
       "viewPath": "Page/CardBased"
     },
+    "/alerttmp": {
+      "title": "",
+      "viewPath": "Page/AlertTmp"
+    },
     "/ias": {
       "title": "IAS",
       "viewPath": "Page/IAS"

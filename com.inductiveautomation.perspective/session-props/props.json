@@ -1,6 +1,6 @@
 {
   "custom": {
-    "hoverId": "[default]process/pump0"
+    "hoverId": "value"
   },
   "propConfig": {
     "props.auth": {
@@ -70,8 +70,6 @@
     "geolocation": {},
     "locale": "en-US",
     "offline": {},
-    "securityLevels": [],
-    "theme": "light-cool",
     "timeZoneId": "Europe/Oslo"
   }
 }
