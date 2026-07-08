@@ -3,920 +3,3427 @@
   "params": {},
   "props": {
     "defaultSize": {
-      "height": 1111,
-      "width": 1900
+      "height": 1200,
+      "width": 2000
     }
   },
   "root": {
     "children": [
       {
-        "meta": {
-          "name": "Tank4010"
-        },
-        "position": {
-          "height": 220,
-          "width": 185,
-          "x": 185,
-          "y": 425
-        },
-        "props": {
-          "hasCustomUnit": true,
-          "max": 10000,
-          "medium": "normal",
-          "tag": "#4010",
-          "type": "atmospheric",
-          "value": 3000
-        },
-        "type": "automation.automation-tank.automation-tank"
-      },
-      {
-        "meta": {
-          "name": "Tank4011"
-        },
-        "position": {
-          "height": 220,
-          "width": 185,
-          "x": 388,
-          "y": 425
-        },
-        "props": {
-          "hasCustomUnit": true,
-          "max": 10000,
-          "medium": "normal",
-          "tag": "#4011",
-          "type": "atmospheric",
-          "value": 1000
-        },
-        "type": "automation.automation-tank.automation-tank"
-      },
-      {
-        "meta": {
-          "name": "Tank4012"
-        },
-        "position": {
-          "height": 220,
-          "width": 185,
-          "x": 588,
-          "y": 425
-        },
-        "props": {
-          "hasCustomUnit": true,
-          "max": 10000,
-          "medium": "normal",
-          "tag": "#4012",
-          "type": "atmospheric",
-          "value": 6000
-        },
-        "type": "automation.automation-tank.automation-tank"
-      },
-      {
-        "meta": {
-          "name": "Tank4013"
-        },
-        "position": {
-          "height": 220,
-          "width": 185,
-          "x": 788,
-          "y": 425
-        },
-        "props": {
-          "hasCustomUnit": true,
-          "max": 10000,
-          "medium": "normal",
-          "tag": "#4013",
-          "type": "atmospheric",
-          "value": 3000
-        },
-        "type": "automation.automation-tank.automation-tank"
-      },
-      {
-        "meta": {
-          "name": "Tank4014"
-        },
-        "position": {
-          "height": 220,
-          "width": 185,
-          "x": 1395,
-          "y": 415
-        },
-        "props": {
-          "chartData": [
-            {
-              "label": "0",
+        "children": [
+          {
+            "meta": {
+              "name": "Tank4010"
+            },
+            "position": {
+              "height": 220,
+              "width": 185,
+              "x": 185,
+              "y": 425
+            },
+            "props": {
+              "hasCustomUnit": true,
+              "max": 10000,
+              "medium": "normal",
+              "tag": "#4010",
+              "type": "atmospheric",
               "value": 3000
             },
-            {
-              "label": "1",
-              "value": 4500
+            "type": "automation.automation-tank.automation-tank"
+          },
+          {
+            "meta": {
+              "name": "Tank4011"
             },
-            {
-              "label": "2",
-              "value": 3800
+            "position": {
+              "height": 220,
+              "width": 185,
+              "x": 384,
+              "y": 425
             },
-            {
-              "label": "3",
-              "value": 5200
+            "props": {
+              "hasCustomUnit": true,
+              "max": 10000,
+              "medium": "normal",
+              "tag": "#4011",
+              "type": "atmospheric",
+              "value": 1000
             },
-            {
-              "label": "4",
+            "type": "automation.automation-tank.automation-tank"
+          },
+          {
+            "meta": {
+              "name": "Tank4012"
+            },
+            "position": {
+              "height": 220,
+              "width": 185,
+              "x": 593,
+              "y": 425
+            },
+            "props": {
+              "hasCustomUnit": true,
+              "max": 10000,
+              "medium": "normal",
+              "tag": "#4012",
+              "type": "atmospheric",
               "value": 6000
             },
-            {
-              "label": "5",
-              "value": 4800
+            "type": "automation.automation-tank.automation-tank"
+          },
+          {
+            "meta": {
+              "name": "Tank4013"
             },
-            {
-              "label": "6",
-              "value": 5500
+            "position": {
+              "height": 220,
+              "width": 185,
+              "x": 808,
+              "y": 425
             },
-            {
-              "label": "7",
-              "value": 4200
+            "props": {
+              "hasCustomUnit": true,
+              "max": 10000,
+              "medium": "normal",
+              "tag": "#4013",
+              "type": "atmospheric",
+              "value": 3000
             },
-            {
-              "label": "8",
-              "value": 5800
+            "type": "automation.automation-tank.automation-tank"
+          },
+          {
+            "meta": {
+              "name": "Tank4014"
             },
-            {
-              "label": "9",
-              "value": 6500
+            "position": {
+              "height": 220,
+              "width": 185,
+              "x": 1395,
+              "y": 415
             },
-            {
-              "label": "10",
-              "value": 5000
-            },
-            {
-              "label": "11",
-              "value": 4400
-            },
-            {
-              "label": "12",
-              "value": 6200
-            },
-            {
-              "label": "13",
-              "value": 7000
-            },
-            {
-              "label": "14",
-              "value": 5800
-            },
-            {
-              "label": "15",
-              "value": 5200
-            },
-            {
-              "label": "16",
-              "value": 6600
-            },
-            {
-              "label": "17",
-              "value": 6000
-            },
-            {
-              "label": "18",
-              "value": 7200
-            },
-            {
-              "label": "19",
-              "value": 6800
-            },
-            {
-              "label": "20",
-              "value": 6300
-            },
-            {
-              "label": "21",
-              "value": 5500
-            },
-            {
-              "label": "22",
-              "value": 6000
-            },
-            {
-              "label": "23",
-              "value": 5800
-            },
-            {
-              "label": "24",
-              "value": 6600
-            },
-            {
-              "label": "25",
-              "value": 7400
-            },
-            {
-              "label": "26",
+            "props": {
+              "chartData": [
+                {
+                  "label": "0",
+                  "value": 3000
+                },
+                {
+                  "label": "1",
+                  "value": 4500
+                },
+                {
+                  "label": "2",
+                  "value": 3800
+                },
+                {
+                  "label": "3",
+                  "value": 5200
+                },
+                {
+                  "label": "4",
+                  "value": 6000
+                },
+                {
+                  "label": "5",
+                  "value": 4800
+                },
+                {
+                  "label": "6",
+                  "value": 5500
+                },
+                {
+                  "label": "7",
+                  "value": 4200
+                },
+                {
+                  "label": "8",
+                  "value": 5800
+                },
+                {
+                  "label": "9",
+                  "value": 6500
+                },
+                {
+                  "label": "10",
+                  "value": 5000
+                },
+                {
+                  "label": "11",
+                  "value": 4400
+                },
+                {
+                  "label": "12",
+                  "value": 6200
+                },
+                {
+                  "label": "13",
+                  "value": 7000
+                },
+                {
+                  "label": "14",
+                  "value": 5800
+                },
+                {
+                  "label": "15",
+                  "value": 5200
+                },
+                {
+                  "label": "16",
+                  "value": 6600
+                },
+                {
+                  "label": "17",
+                  "value": 6000
+                },
+                {
+                  "label": "18",
+                  "value": 7200
+                },
+                {
+                  "label": "19",
+                  "value": 6800
+                },
+                {
+                  "label": "20",
+                  "value": 6300
+                },
+                {
+                  "label": "21",
+                  "value": 5500
+                },
+                {
+                  "label": "22",
+                  "value": 6000
+                },
+                {
+                  "label": "23",
+                  "value": 5800
+                },
+                {
+                  "label": "24",
+                  "value": 6600
+                },
+                {
+                  "label": "25",
+                  "value": 7400
+                },
+                {
+                  "label": "26",
+                  "value": 9000
+                }
+              ],
+              "chartMode": "graph-and-bar",
+              "hasCustomUnit": true,
+              "max": 10000,
+              "medium": "normal",
+              "priority": "enhanced",
+              "tag": "#4014",
+              "trend": "rising",
+              "type": "atmospheric",
               "value": 9000
-            }
-          ],
-          "chartMode": "graph-and-bar",
-          "hasCustomUnit": true,
-          "max": 10000,
-          "medium": "normal",
-          "priority": "enhanced",
-          "tag": "#4014",
-          "trend": "rising",
-          "type": "atmospheric",
-          "value": 9000
-        },
-        "type": "automation.automation-tank.automation-tank"
-      },
-      {
-        "meta": {
-          "name": "Tank4015"
-        },
-        "position": {
-          "height": 220,
-          "width": 185,
-          "x": 1583,
-          "y": 415
-        },
-        "props": {
-          "hasCustomUnit": true,
-          "max": 10000,
-          "medium": "normal",
-          "tag": "#4015",
-          "type": "atmospheric",
-          "value": 1000
-        },
-        "type": "automation.automation-tank.automation-tank"
-      },
-      {
-        "meta": {
-          "name": "Tank4016"
-        },
-        "position": {
-          "height": 220,
-          "width": 185,
-          "x": 1305,
-          "y": 665
-        },
-        "props": {
-          "hasCustomUnit": true,
-          "max": 10000,
-          "medium": "normal",
-          "tag": "#4016",
-          "type": "atmospheric",
-          "value": 1000
-        },
-        "type": "automation.automation-tank.automation-tank"
-      },
-      {
-        "meta": {
-          "name": "Tank4017"
-        },
-        "position": {
-          "height": 220,
-          "width": 185,
-          "x": 1490,
-          "y": 665
-        },
-        "props": {
-          "hasCustomUnit": true,
-          "max": 10000,
-          "medium": "normal",
-          "tag": "#4017",
-          "type": "atmospheric",
-          "value": 9500
-        },
-        "type": "automation.automation-tank.automation-tank"
-      },
-      {
-        "meta": {
-          "name": "Tank4018"
-        },
-        "position": {
-          "height": 220,
-          "width": 185,
-          "x": 1672,
-          "y": 665
-        },
-        "props": {
-          "hasCustomUnit": true,
-          "max": 10000,
-          "medium": "normal",
-          "tag": "#4018",
-          "type": "atmospheric",
-          "value": 1000
-        },
-        "type": "automation.automation-tank.automation-tank"
-      },
-      {
-        "meta": {
-          "name": "Tank3011"
-        },
-        "position": {
-          "height": 95,
-          "width": 130,
-          "x": 483,
-          "y": 175
-        },
-        "propConfig": {
-          "props.tag": {
-            "binding": {
-              "config": {
-                "path": "session.custom.hoverId"
+            },
+            "type": "automation.automation-tank.automation-tank"
+          },
+          {
+            "meta": {
+              "name": "Tank4015"
+            },
+            "position": {
+              "height": 220,
+              "width": 185,
+              "x": 1592.5,
+              "y": 415
+            },
+            "props": {
+              "hasCustomUnit": true,
+              "max": 10000,
+              "medium": "normal",
+              "tag": "#4015",
+              "type": "atmospheric",
+              "value": 1000
+            },
+            "type": "automation.automation-tank.automation-tank"
+          },
+          {
+            "meta": {
+              "name": "Tank4016"
+            },
+            "position": {
+              "height": 220,
+              "width": 185,
+              "x": 1297,
+              "y": 665
+            },
+            "props": {
+              "hasCustomUnit": true,
+              "max": 10000,
+              "medium": "normal",
+              "tag": "#4016",
+              "type": "atmospheric",
+              "value": 1000
+            },
+            "type": "automation.automation-tank.automation-tank"
+          },
+          {
+            "meta": {
+              "name": "Tank4017"
+            },
+            "position": {
+              "height": 220,
+              "width": 185,
+              "x": 1487.5,
+              "y": 665
+            },
+            "props": {
+              "hasCustomUnit": true,
+              "max": 10000,
+              "medium": "normal",
+              "tag": "#4017",
+              "type": "atmospheric",
+              "value": 9500
+            },
+            "type": "automation.automation-tank.automation-tank"
+          },
+          {
+            "meta": {
+              "name": "Tank4018"
+            },
+            "position": {
+              "height": 220,
+              "width": 185,
+              "x": 1675.5,
+              "y": 665
+            },
+            "props": {
+              "hasCustomUnit": true,
+              "max": 10000,
+              "medium": "normal",
+              "tag": "#4018",
+              "type": "atmospheric",
+              "value": 1000
+            },
+            "type": "automation.automation-tank.automation-tank"
+          },
+          {
+            "meta": {
+              "name": "Tank3011"
+            },
+            "position": {
+              "height": 95,
+              "width": 130,
+              "x": 488,
+              "y": 142.5
+            },
+            "propConfig": {
+              "props.tag": {
+                "binding": {
+                  "config": {
+                    "path": "session.custom.hoverId"
+                  },
+                  "enabled": false,
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "hasCustomUnit": true,
+              "max": 200,
+              "medium": "normal",
+              "static": true,
+              "tag": "#3011",
+              "value": 200,
+              "valueFractionDigits": 1
+            },
+            "type": "automation.automation-tank.automation-tank"
+          },
+          {
+            "meta": {
+              "name": "Tank3012"
+            },
+            "position": {
+              "height": 95,
+              "width": 130,
+              "x": 743,
+              "y": 142.5
+            },
+            "props": {
+              "hasCustomUnit": true,
+              "max": 200,
+              "medium": "normal",
+              "static": true,
+              "tag": "#3012",
+              "value": 200,
+              "valueFractionDigits": 1
+            },
+            "type": "automation.automation-tank.automation-tank"
+          },
+          {
+            "meta": {
+              "name": "Tank0000"
+            },
+            "position": {
+              "height": 173,
+              "width": 90,
+              "x": 1109,
+              "y": 774
+            },
+            "props": {
+              "compact": true,
+              "hasCustomUnit": true,
+              "tag": "#0000",
+              "unitText": "%",
+              "value": 90
+            },
+            "type": "automation.automation-tank.automation-tank"
+          },
+          {
+            "meta": {
+              "name": "DV1011"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 675,
+              "y": 76
+            },
+            "props": {
+              "params": {
+                "tagpath": "[default]process/valve11"
               },
-              "enabled": false,
-              "type": "property"
-            }
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1010"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 375,
+              "y": 166
+            },
+            "props": {
+              "params": {
+                "tagpath": "[default]process/valve10"
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1025"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 1751,
+              "y": 145
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "bottom",
+                "tagpath": "[default]process/valve25"
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1028"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 1366,
+              "y": 145
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "bottom",
+                "tagpath": "[default]process/valve28"
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1026"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 1566,
+              "y": 145
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "bottom",
+                "tagpath": "[default]process/valve26"
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1027"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 1463.5,
+              "y": 245
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "right",
+                "tagpath": "[default]process/valve27",
+                "vertical": true
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1014"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 423,
+              "y": 837
+            },
+            "props": {
+              "params": {
+                "tagpath": "[default]process/valve14"
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1020"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 1475,
+              "y": 1060
+            },
+            "props": {
+              "params": {
+                "tagpath": "[default]process/valve20"
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1022"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 1675.5,
+              "y": 1060
+            },
+            "props": {
+              "params": {
+                "tagpath": "[default]process/valve22"
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV2017"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 796,
+              "y": 1060
+            },
+            "props": {
+              "params": {
+                "tagpath": "[default]process/valve17"
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1015"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 545,
+              "y": 946
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "left",
+                "tagpath": "[default]process/valve15",
+                "vertical": true
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV2016"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 698.5,
+              "y": 966
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "right",
+                "tagpath": "[default]process/valve16",
+                "vertical": true
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV2018"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 1020,
+              "y": 946
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "right",
+                "tagpath": "[default]process/valve18",
+                "vertical": true
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1032"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 253.5,
+              "y": 336
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "right",
+                "tagpath": "[default]process/valve32",
+                "vertical": true
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1031"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 452.5,
+              "y": 336
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "right",
+                "tagpath": "[default]process/valve31",
+                "vertical": true
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1030"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 661.5,
+              "y": 336
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "right",
+                "tagpath": "[default]process/valve30",
+                "vertical": true
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1029"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 876.5,
+              "y": 336
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "right",
+                "tagpath": "[default]process/valve29",
+                "vertical": true
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1024"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 1661,
+              "y": 245
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "right",
+                "tagpath": "[default]process/valve24",
+                "vertical": true
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1033"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 1020,
+              "y": 736
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "right",
+                "tagpath": "[default]process/valve33",
+                "vertical": true
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1012"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 322,
+              "y": 789
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "right",
+                "tagpath": "[default]process/valve12",
+                "vertical": true
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1013"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 322,
+              "y": 962
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "right",
+                "tagpath": "[default]process/valve13",
+                "vertical": true
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1019"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 1365.5,
+              "y": 946
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "right",
+                "tagpath": "[default]process/valve19",
+                "vertical": true
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1021"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 1556,
+              "y": 946
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "right",
+                "tagpath": "[default]process/valve21",
+                "vertical": true
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DV1023"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 1744,
+              "y": 942
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "right",
+                "tagpath": "[default]process/valve23",
+                "vertical": true
+              },
+              "path": "Page/_ProcessOverview/valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "PU2011"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 1130,
+              "y": 487
+            },
+            "props": {
+              "params": {
+                "componentSize": "medium",
+                "direction": "forward-stopped",
+                "tagpath": "[default]process/pump0",
+                "variant": "double"
+              },
+              "path": "Page/_ProcessOverview/pump"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "PU2010"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 116,
+              "y": 690
+            },
+            "props": {
+              "params": {
+                "componentSize": "medium",
+                "direction": "forward-stopped",
+                "tagpath": "[default]process/pump1",
+                "variant": "double"
+              },
+              "path": "Page/_ProcessOverview/pump"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "PU2012"
+            },
+            "position": {
+              "height": 48,
+              "width": 48,
+              "x": 835,
+              "y": 899
+            },
+            "props": {
+              "params": {
+                "componentSize": "medium",
+                "hasSpeed": true,
+                "speedUnit": "%",
+                "tagpath": "[default]process/pump2",
+                "variant": "double"
+              },
+              "path": "Page/_ProcessOverview/pump"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "pump"
+            },
+            "position": {
+              "height": 50,
+              "width": 46,
+              "x": 613,
+              "y": 900
+            },
+            "props": {
+              "params": {
+                "readoutPosition": "bottom",
+                "tagpath": "[default]process/pump3"
+              },
+              "path": "Page/_ProcessOverview/pump"
+            },
+            "type": "ia.display.view"
           }
-        },
-        "props": {
-          "hasCustomUnit": true,
-          "max": 200,
-          "medium": "normal",
-          "static": true,
-          "tag": "#3011",
-          "value": 200,
-          "valueFractionDigits": 1
-        },
-        "type": "automation.automation-tank.automation-tank"
-      },
-      {
+        ],
         "meta": {
-          "name": "Tank3012"
+          "name": "Coord"
         },
         "position": {
-          "height": 95,
-          "width": 130,
-          "x": 743,
-          "y": 175
-        },
-        "props": {
-          "hasCustomUnit": true,
-          "max": 200,
-          "medium": "normal",
-          "static": true,
-          "tag": "#3012",
-          "value": 200,
-          "valueFractionDigits": 1
-        },
-        "type": "automation.automation-tank.automation-tank"
-      },
-      {
-        "meta": {
-          "name": "Tank0000"
-        },
-        "position": {
-          "height": 120,
-          "width": 90,
-          "x": 1085,
-          "y": 780
-        },
-        "props": {
-          "compact": true,
-          "hasCustomUnit": true,
-          "tag": "#0000",
-          "unitText": "%",
-          "value": 90
-        },
-        "type": "automation.automation-tank.automation-tank"
-      },
-      {
-        "meta": {
-          "name": "DV1011"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 675,
-          "y": 76
-        },
-        "props": {
-          "params": {
-            "tagpath": "[default]process/valve11"
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1010"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 375,
-          "y": 166
-        },
-        "props": {
-          "params": {
-            "tagpath": "[default]process/valve10"
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1025"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 1751,
-          "y": 145
-        },
-        "props": {
-          "params": {
-            "readoutPosition": "right",
-            "tagpath": "[default]process/valve25"
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1028"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 1366,
-          "y": 145
-        },
-        "props": {
-          "params": {
-            "readoutPosition": "right",
-            "tagpath": "[default]process/valve28"
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1026"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 1566,
-          "y": 145
-        },
-        "props": {
-          "params": {
-            "readoutPosition": "right",
-            "tagpath": "[default]process/valve26"
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1027"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 1486,
-          "y": 245
-        },
-        "props": {
-          "params": {
-            "readoutPosition": "right",
-            "tagpath": "[default]process/valve27"
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1014"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 440,
-          "y": 841
-        },
-        "props": {
-          "params": {
-            "tagpath": "[default]process/valve14"
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1020"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 1490,
-          "y": 981
-        },
-        "props": {
-          "params": {
-            "tagpath": "[default]process/valve20"
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1022"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 1690,
-          "y": 981
-        },
-        "props": {
-          "params": {
-            "tagpath": "[default]process/valve22"
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV2017"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 796,
-          "y": 1017
-        },
-        "props": {
-          "params": {
-            "tagpath": "[default]process/valve17"
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1015"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 545,
-          "y": 946
-        },
-        "props": {
-          "params": {
-            "tagpath": "[default]process/valve15"
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV2016"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 705,
-          "y": 946
-        },
-        "props": {
-          "params": {
-            "tagpath": "[default]process/valve16"
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV2018"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 1016,
-          "y": 945
-        },
-        "props": {
-          "params": {
-            "readoutPosition": "right",
-            "tagpath": "[default]process/valve18"
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1032"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 253,
-          "y": 360
-        },
-        "props": {
-          "params": {
-            "readoutPosition": "right",
-            "tagpath": "[default]process/valve32",
-            "vertical": true
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1031"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 456,
-          "y": 360
-        },
-        "props": {
-          "params": {
-            "readoutPosition": "right",
-            "tagpath": "[default]process/valve31",
-            "vertical": true
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1030"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 656,
-          "y": 360
-        },
-        "props": {
-          "params": {
-            "readoutPosition": "right",
-            "tagpath": "[default]process/valve30",
-            "vertical": true
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1029"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 856,
-          "y": 360
-        },
-        "props": {
-          "params": {
-            "readoutPosition": "right",
-            "tagpath": "[default]process/valve29",
-            "vertical": true
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1024"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 1661,
-          "y": 245
-        },
-        "props": {
-          "params": {
-            "readoutPosition": "right",
-            "tagpath": "[default]process/valve24",
-            "vertical": true
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1033"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 1020,
-          "y": 736
-        },
-        "props": {
-          "params": {
-            "tagpath": "[default]process/valve33",
-            "vertical": true
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1012"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 350,
-          "y": 776
-        },
-        "props": {
-          "params": {
-            "tagpath": "[default]process/valve12",
-            "vertical": true
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1013"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 350,
-          "y": 921
-        },
-        "props": {
-          "params": {
-            "tagpath": "[default]process/valve13",
-            "vertical": true
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1019"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 1366,
-          "y": 945
-        },
-        "props": {
-          "params": {
-            "readoutPosition": "right",
-            "tagpath": "[default]process/valve19",
-            "vertical": true
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1021"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 1566,
-          "y": 945
-        },
-        "props": {
-          "params": {
-            "readoutPosition": "right",
-            "tagpath": "[default]process/valve21",
-            "vertical": true
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DV1023"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 1766,
-          "y": 945
-        },
-        "props": {
-          "params": {
-            "readoutPosition": "right",
-            "tagpath": "[default]process/valve23",
-            "vertical": true
-          },
-          "path": "Page/_ProcessOverview/valve"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "PU2011"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 1106,
-          "y": 490
-        },
-        "props": {
-          "params": {
-            "componentSize": "medium",
-            "direction": "forward-stopped",
-            "tagpath": "[default]process/pump0",
-            "variant": "double"
-          },
-          "path": "Page/_ProcessOverview/pump"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "PU2010"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 116,
-          "y": 690
-        },
-        "props": {
-          "params": {
-            "componentSize": "medium",
-            "direction": "forward-stopped",
-            "tagpath": "[default]process/pump1",
-            "variant": "double"
-          },
-          "path": "Page/_ProcessOverview/pump"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "PU2012"
-        },
-        "position": {
-          "height": 48,
-          "width": 48,
-          "x": 836,
-          "y": 920
-        },
-        "props": {
-          "params": {
-            "componentSize": "medium",
-            "hasSpeed": true,
-            "speedUnit": "%",
-            "tagpath": "[default]process/pump2",
-            "variant": "double"
-          },
-          "path": "Page/_ProcessOverview/pump"
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "pump"
-        },
-        "position": {
-          "height": 50,
-          "width": 46,
-          "x": 613,
-          "y": 900
-        },
-        "props": {
-          "params": {
-            "readoutPosition": "bottom",
-            "tagpath": "[default]process/pump3"
-          },
-          "path": "Page/_ProcessOverview/pump"
-        },
-        "type": "ia.display.view"
+          "height": 1200,
+          "width": 2000,
+          "x": 0,
+          "y": 0
+        },
+        "type": "ia.container.coord"
       }
     ],
     "meta": {
       "name": "root"
     },
-    "type": "ia.container.coord"
+    "propConfig": {
+      "props.connections[12].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve11/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[13].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump1/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[16].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump1/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      }
+    },
+    "props": {
+      "connections": [
+        {
+          "from": {
+            "componentId": "DV1032",
+            "direction": "bottom",
+            "x": 277,
+            "y": 408
+          },
+          "id": "cmral5x0f0",
+          "path": [
+            {
+              "x": 277,
+              "y": 408
+            },
+            {
+              "x": 277,
+              "y": 432
+            },
+            {
+              "x": 277.25,
+              "y": 432
+            },
+            {
+              "x": 277.25,
+              "y": 401
+            },
+            {
+              "x": 277.5,
+              "y": 401
+            },
+            {
+              "x": 277.5,
+              "y": 425
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "Tank4010",
+            "direction": "top",
+            "x": 277.5,
+            "y": 425
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1032",
+            "direction": "top",
+            "x": 277,
+            "y": 360
+          },
+          "id": "cmral65eq1",
+          "path": [
+            {
+              "x": 277,
+              "y": 360
+            },
+            {
+              "x": 277,
+              "y": 292
+            },
+            {
+              "x": 1044,
+              "y": 292
+            },
+            {
+              "x": 1044,
+              "y": 736
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1033",
+            "direction": "top",
+            "x": 1044,
+            "y": 736
+          },
+          "value": "open-flow",
+          "viaPoints": [
+            {
+              "id": "cmrboj98f11",
+              "x": 476,
+              "y": 292
+            },
+            {
+              "id": "cmral9hva39",
+              "x": 685,
+              "y": 292
+            },
+            {
+              "id": "cmral9bik2f",
+              "x": 900,
+              "y": 292
+            },
+            {
+              "id": "cmralierde",
+              "x": 1044,
+              "y": 511
+            },
+            {
+              "id": "cmralaoe44y",
+              "x": 1044,
+              "y": 714
+            }
+          ]
+        },
+        {
+          "from": {
+            "componentId": "Tank4011",
+            "direction": "top",
+            "x": 476.5,
+            "y": 425
+          },
+          "id": "cmral6scl0",
+          "path": [
+            {
+              "x": 476.5,
+              "y": 425
+            },
+            {
+              "x": 476.5,
+              "y": 401
+            },
+            {
+              "x": 476,
+              "y": 401
+            },
+            {
+              "x": 476,
+              "y": 408
+            },
+            {
+              "x": 475.5,
+              "y": 408
+            },
+            {
+              "x": 475.5,
+              "y": 384
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1031",
+            "direction": "bottom",
+            "x": 475.5,
+            "y": 384
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "Tank4013",
+            "direction": "top",
+            "x": 900.5,
+            "y": 425
+          },
+          "id": "cmral6v7h2",
+          "path": [
+            {
+              "x": 900.5,
+              "y": 425
+            },
+            {
+              "x": 900.5,
+              "y": 425
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "Tank4013",
+            "direction": "top",
+            "x": 900.5,
+            "y": 425
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1029",
+            "direction": "bottom",
+            "x": 895.5,
+            "y": 384
+          },
+          "id": "cmral6zsx4",
+          "path": [
+            {
+              "x": 895.5,
+              "y": 384
+            },
+            {
+              "x": 895.5,
+              "y": 384
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1029",
+            "direction": "bottom",
+            "x": 895.5,
+            "y": 384
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "Tank4012",
+            "direction": "top",
+            "x": 685.5,
+            "y": 425
+          },
+          "id": "cmral7jma0",
+          "path": [
+            {
+              "x": 685.5,
+              "y": 425
+            },
+            {
+              "x": 685.5,
+              "y": 425
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "Tank4012",
+            "direction": "top",
+            "x": 685.5,
+            "y": 425
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "Tank4012",
+            "direction": "top",
+            "x": 685.5,
+            "y": 425
+          },
+          "id": "cmral7n8p4",
+          "path": [
+            {
+              "x": 685.5,
+              "y": 425
+            },
+            {
+              "x": 685.5,
+              "y": 401
+            },
+            {
+              "x": 685.25,
+              "y": 401
+            },
+            {
+              "x": 685.25,
+              "y": 408
+            },
+            {
+              "x": 685,
+              "y": 408
+            },
+            {
+              "x": 685,
+              "y": 384
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1030",
+            "direction": "bottom",
+            "x": 685,
+            "y": 384
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1029",
+            "direction": "bottom",
+            "x": 900,
+            "y": 384
+          },
+          "id": "cmral7o555",
+          "path": [
+            {
+              "x": 900,
+              "y": 384
+            },
+            {
+              "x": 900,
+              "y": 384
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1029",
+            "direction": "bottom",
+            "x": 900,
+            "y": 384
+          },
+          "value": "open-flow",
+          "viaPoints": [
+            {
+              "id": "cmral7qkoc",
+              "x": 900,
+              "y": 384
+            }
+          ]
+        },
+        {
+          "from": {
+            "componentId": "Tank4013",
+            "direction": "top",
+            "x": 900.5,
+            "y": 425
+          },
+          "id": "cmral7qkod",
+          "path": [
+            {
+              "x": 900.5,
+              "y": 425
+            },
+            {
+              "x": 900.5,
+              "y": 401
+            },
+            {
+              "x": 900.25,
+              "y": 401
+            },
+            {
+              "x": 900.25,
+              "y": 408
+            },
+            {
+              "x": 900,
+              "y": 408
+            },
+            {
+              "x": 900,
+              "y": 384
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmral7o555",
+              "viaPointId": "cmral7qkoc"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1030",
+            "direction": "top",
+            "x": 685.5,
+            "y": 336
+          },
+          "id": "cmral8utg0",
+          "path": [
+            {
+              "x": 685.5,
+              "y": 336
+            },
+            {
+              "x": 685.5,
+              "y": 336
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1030",
+            "direction": "top",
+            "x": 685.5,
+            "y": 336
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1029",
+            "direction": "top",
+            "x": 900.5,
+            "y": 336
+          },
+          "id": "cmral9bik2g",
+          "path": [
+            {
+              "x": 900.5,
+              "y": 336
+            },
+            {
+              "x": 900.5,
+              "y": 312
+            },
+            {
+              "x": 900.25,
+              "y": 312
+            },
+            {
+              "x": 900.25,
+              "y": 316
+            },
+            {
+              "x": 900,
+              "y": 316
+            },
+            {
+              "x": 900,
+              "y": 292
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmral65eq1",
+              "viaPointId": "cmral9bik2f"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1030",
+            "direction": "top",
+            "x": 685.5,
+            "y": 336
+          },
+          "id": "cmral9hvb3a",
+          "path": [
+            {
+              "x": 685.5,
+              "y": 336
+            },
+            {
+              "x": 685.5,
+              "y": 312
+            },
+            {
+              "x": 685.25,
+              "y": 312
+            },
+            {
+              "x": 685.25,
+              "y": 316
+            },
+            {
+              "x": 685,
+              "y": 316
+            },
+            {
+              "x": 685,
+              "y": 292
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmral65eq1",
+              "viaPointId": "cmral9hva39"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1011",
+            "direction": "right",
+            "x": 723,
+            "y": 100
+          },
+          "id": "cmrala28k3b",
+          "path": [
+            {
+              "x": 723,
+              "y": 100
+            },
+            {
+              "x": 808,
+              "y": 100
+            },
+            {
+              "x": 808,
+              "y": 175
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "Tank3012",
+            "direction": "top",
+            "x": 808,
+            "y": 175
+          },
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1011",
+            "direction": "left",
+            "x": 675,
+            "y": 100
+          },
+          "id": "cmrala6v73c",
+          "path": [
+            {
+              "x": 675,
+              "y": 100
+            },
+            {
+              "x": 140,
+              "y": 100
+            },
+            {
+              "x": 140,
+              "y": 678
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "PU2010",
+            "direction": "top",
+            "x": 140,
+            "y": 678
+          },
+          "viaPoints": [
+            {
+              "id": "cmralaamn3t",
+              "x": 334,
+              "y": 100
+            }
+          ]
+        },
+        {
+          "from": {
+            "componentId": "DV1010",
+            "direction": "left",
+            "x": 375,
+            "y": 190
+          },
+          "id": "cmralaamn3u",
+          "path": [
+            {
+              "x": 375,
+              "y": 190
+            },
+            {
+              "x": 334,
+              "y": 190
+            },
+            {
+              "x": 334,
+              "y": 100
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmrala6v73c",
+              "viaPointId": "cmralaamn3t"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1010",
+            "direction": "right",
+            "x": 423,
+            "y": 190
+          },
+          "id": "cmralae3k3v",
+          "path": [
+            {
+              "x": 423,
+              "y": 190
+            },
+            {
+              "x": 453,
+              "y": 190
+            },
+            {
+              "x": 453,
+              "y": 222.5
+            },
+            {
+              "x": 483,
+              "y": 222.5
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "Tank3011",
+            "direction": "left",
+            "x": 483,
+            "y": 222.5
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2010",
+            "direction": "right",
+            "x": 176,
+            "y": 714
+          },
+          "id": "cmralaoe44z",
+          "path": [
+            {
+              "x": 176,
+              "y": 714
+            },
+            {
+              "x": 1044,
+              "y": 714
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmral65eq1",
+              "viaPointId": "cmralaoe44y"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1033",
+            "direction": "bottom",
+            "x": 1044,
+            "y": 784
+          },
+          "id": "cmralbawi50",
+          "path": [
+            {
+              "x": 1044,
+              "y": 784
+            },
+            {
+              "x": 1044,
+              "y": 784
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1033",
+            "direction": "bottom",
+            "x": 1044,
+            "y": 784
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1033",
+            "direction": "bottom",
+            "x": 1044,
+            "y": 784
+          },
+          "id": "cmralbci052",
+          "path": [
+            {
+              "x": 1044,
+              "y": 784
+            },
+            {
+              "x": 1044,
+              "y": 897
+            },
+            {
+              "x": 1040,
+              "y": 897
+            },
+            {
+              "x": 1040,
+              "y": 945
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV2018",
+            "direction": "top",
+            "x": 1040,
+            "y": 945
+          },
+          "value": "open-flow",
+          "viaPoints": [
+            {
+              "id": "cmralq50118",
+              "x": 1044,
+              "y": 861
+            }
+          ]
+        },
+        {
+          "from": {
+            "componentId": "DV2018",
+            "direction": "bottom",
+            "x": 1040,
+            "y": 993
+          },
+          "id": "cmralbkqj53",
+          "path": [
+            {
+              "x": 1040,
+              "y": 993
+            },
+            {
+              "x": 1040,
+              "y": 993
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV2018",
+            "direction": "bottom",
+            "x": 1040,
+            "y": 993
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2011",
+            "direction": "left",
+            "x": 1139,
+            "y": 511
+          },
+          "id": "cmralierdf",
+          "path": [
+            {
+              "x": 1139,
+              "y": 511
+            },
+            {
+              "x": 1044,
+              "y": 511
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmral65eq1",
+              "viaPointId": "cmralierde"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1012",
+            "direction": "bottom",
+            "x": 346,
+            "y": 837
+          },
+          "id": "cmralns8t0",
+          "path": [
+            {
+              "x": 346,
+              "y": 837
+            },
+            {
+              "x": 346,
+              "y": 996
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1013",
+            "direction": "top",
+            "x": 346,
+            "y": 996
+          },
+          "value": "closed",
+          "viaPoints": [
+            {
+              "id": "cmram30g61t",
+              "x": 346,
+              "y": 861
+            }
+          ]
+        },
+        {
+          "from": {
+            "componentId": "DV1012",
+            "direction": "top",
+            "x": 346,
+            "y": 789
+          },
+          "id": "cmralo2iq1",
+          "path": [
+            {
+              "x": 346,
+              "y": 789
+            },
+            {
+              "x": 346,
+              "y": 744
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "free",
+            "x": 336,
+            "y": 744
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1013",
+            "direction": "bottom",
+            "x": 346,
+            "y": 1044
+          },
+          "id": "cmralo5wt2",
+          "path": [
+            {
+              "x": 346,
+              "y": 1044
+            },
+            {
+              "x": 346,
+              "y": 1104
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "free",
+            "x": 336,
+            "y": 1104
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1014",
+            "direction": "right",
+            "x": 471,
+            "y": 861
+          },
+          "id": "cmralq50119",
+          "path": [
+            {
+              "x": 471,
+              "y": 861
+            },
+            {
+              "x": 1044,
+              "y": 861
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmralbci052",
+              "viaPointId": "cmralq50118"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "open-flow",
+          "viaPoints": [
+            {
+              "id": "cmralqam22b",
+              "x": 569,
+              "y": 861
+            },
+            {
+              "id": "cmralun3h7",
+              "x": 638,
+              "y": 861
+            },
+            {
+              "id": "cmram7c4dv",
+              "x": 860,
+              "y": 861
+            }
+          ]
+        },
+        {
+          "from": {
+            "componentId": "DV1015",
+            "direction": "top",
+            "x": 569,
+            "y": 946
+          },
+          "id": "cmralqam22c",
+          "path": [
+            {
+              "x": 569,
+              "y": 946
+            },
+            {
+              "x": 569,
+              "y": 861
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmralq50119",
+              "viaPointId": "cmralqam22b"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1015",
+            "direction": "bottom",
+            "x": 569,
+            "y": 994
+          },
+          "id": "cmralqy5m2e",
+          "path": [
+            {
+              "x": 569,
+              "y": 994
+            },
+            {
+              "x": 569,
+              "y": 1177
+            },
+            {
+              "x": 1260,
+              "y": 1177
+            },
+            {
+              "x": 1260,
+              "y": 169
+            },
+            {
+              "x": 1366,
+              "y": 169
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1028",
+            "direction": "left",
+            "x": 1366,
+            "y": 169
+          },
+          "value": "open-flow",
+          "viaPoints": [
+            {
+              "id": "cmram80ri27",
+              "x": 722,
+              "y": 1177
+            },
+            {
+              "id": "cmralw4z0j",
+              "x": 1260,
+              "y": 861
+            }
+          ]
+        },
+        {
+          "from": {
+            "componentId": "pump",
+            "direction": "right",
+            "x": 673,
+            "y": 924
+          },
+          "id": "cmralufs40",
+          "path": [
+            {
+              "x": 673,
+              "y": 924
+            },
+            {
+              "x": 722.5,
+              "y": 924
+            },
+            {
+              "x": 722.5,
+              "y": 966
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV2016",
+            "direction": "top",
+            "x": 722.5,
+            "y": 966
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "pump",
+            "direction": "top",
+            "x": 637,
+            "y": 888
+          },
+          "id": "cmralun3h8",
+          "path": [
+            {
+              "x": 637,
+              "y": 888
+            },
+            {
+              "x": 637,
+              "y": 864
+            },
+            {
+              "x": 637.5,
+              "y": 864
+            },
+            {
+              "x": 637.5,
+              "y": 885
+            },
+            {
+              "x": 638,
+              "y": 885
+            },
+            {
+              "x": 638,
+              "y": 861
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmralq50119",
+              "viaPointId": "cmralun3h7"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "Tank0000",
+            "direction": "right",
+            "x": 1199,
+            "y": 861.5
+          },
+          "id": "cmralw4z0k",
+          "path": [
+            {
+              "x": 1199,
+              "y": 861.5
+            },
+            {
+              "x": 1229.5,
+              "y": 861.5
+            },
+            {
+              "x": 1229.5,
+              "y": 861
+            },
+            {
+              "x": 1260,
+              "y": 861
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmralqy5m2e",
+              "viaPointId": "cmralw4z0j"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "Tank0000",
+            "direction": "left",
+            "x": 1109,
+            "y": 861.5
+          },
+          "id": "cmralw7krt",
+          "path": [
+            {
+              "x": 1109,
+              "y": 861.5
+            },
+            {
+              "x": 1076.5,
+              "y": 861.5
+            },
+            {
+              "x": 1076.5,
+              "y": 861
+            },
+            {
+              "x": 1044,
+              "y": 861
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmralbci052",
+              "viaPointId": "cmralq50118"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2011",
+            "direction": "top",
+            "x": 1154,
+            "y": 475
+          },
+          "id": "cmralwet8u",
+          "path": [
+            {
+              "x": 1154,
+              "y": 475
+            },
+            {
+              "x": 1154,
+              "y": 384
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "free",
+            "x": 1152,
+            "y": 384
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "Tank4016",
+            "direction": "bottom",
+            "x": 1389.5,
+            "y": 885
+          },
+          "id": "cmralwpwdv",
+          "path": [
+            {
+              "x": 1389.5,
+              "y": 885
+            },
+            {
+              "x": 1389.5,
+              "y": 946
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1019",
+            "direction": "top",
+            "x": 1389.5,
+            "y": 946
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1020",
+            "direction": "right",
+            "x": 1523,
+            "y": 1084
+          },
+          "id": "cmralxgei2h",
+          "path": [
+            {
+              "x": 1523,
+              "y": 1084
+            },
+            {
+              "x": 1627,
+              "y": 1084
+            },
+            {
+              "x": 1627,
+              "y": 1081
+            },
+            {
+              "x": 1675,
+              "y": 1081
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1022",
+            "direction": "left",
+            "x": 1675,
+            "y": 1081
+          },
+          "value": "closed",
+          "viaPoints": [
+            {
+              "id": "cmraly7z0y",
+              "x": 1580,
+              "y": 1084
+            }
+          ]
+        },
+        {
+          "from": {
+            "componentId": "DV1021",
+            "direction": "bottom",
+            "x": 1580,
+            "y": 994
+          },
+          "id": "cmraly4n10",
+          "path": [
+            {
+              "x": 1580,
+              "y": 994
+            },
+            {
+              "x": 1580,
+              "y": 994
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1021",
+            "direction": "bottom",
+            "x": 1580,
+            "y": 994
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1021",
+            "direction": "bottom",
+            "x": 1580,
+            "y": 994
+          },
+          "id": "cmraly7z0z",
+          "path": [
+            {
+              "x": 1580,
+              "y": 994
+            },
+            {
+              "x": 1580,
+              "y": 1084
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmralxgei2h",
+              "viaPointId": "cmraly7z0y"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1021",
+            "direction": "top",
+            "x": 1580,
+            "y": 946
+          },
+          "id": "cmralyh9l10",
+          "path": [
+            {
+              "x": 1580,
+              "y": 946
+            },
+            {
+              "x": 1580,
+              "y": 885
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "Tank4017",
+            "direction": "bottom",
+            "x": 1580,
+            "y": 885
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "Tank4018",
+            "direction": "bottom",
+            "x": 1768,
+            "y": 885
+          },
+          "id": "cmralyjkj11",
+          "path": [
+            {
+              "x": 1768,
+              "y": 885
+            },
+            {
+              "x": 1768,
+              "y": 915.5
+            },
+            {
+              "x": 1775,
+              "y": 915.5
+            },
+            {
+              "x": 1775,
+              "y": 946
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1023",
+            "direction": "top",
+            "x": 1775,
+            "y": 946
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1022",
+            "direction": "right",
+            "x": 1723.5,
+            "y": 1084
+          },
+          "id": "cmralyr6a12",
+          "path": [
+            {
+              "x": 1723.5,
+              "y": 1084
+            },
+            {
+              "x": 1965,
+              "y": 1084
+            },
+            {
+              "x": 1965,
+              "y": 169
+            },
+            {
+              "x": 1799,
+              "y": 169
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1025",
+            "direction": "right",
+            "x": 1799,
+            "y": 169
+          },
+          "value": "closed",
+          "viaPoints": [
+            {
+              "id": "cmralz6ftl",
+              "x": 1768,
+              "y": 1084
+            }
+          ]
+        },
+        {
+          "from": {
+            "componentId": "DV1023",
+            "direction": "bottom",
+            "x": 1768,
+            "y": 996
+          },
+          "id": "cmralz6ftm",
+          "path": [
+            {
+              "x": 1768,
+              "y": 996
+            },
+            {
+              "x": 1768,
+              "y": 1084
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmralyr6a12",
+              "viaPointId": "cmralz6ftl"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1026",
+            "direction": "right",
+            "x": 1614,
+            "y": 169
+          },
+          "id": "cmralzknpn",
+          "path": [
+            {
+              "x": 1614,
+              "y": 169
+            },
+            {
+              "x": 1614,
+              "y": 169
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1026",
+            "direction": "right",
+            "x": 1614,
+            "y": 169
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1026",
+            "direction": "right",
+            "x": 1614,
+            "y": 169
+          },
+          "id": "cmralzn2zo",
+          "path": [
+            {
+              "x": 1614,
+              "y": 169
+            },
+            {
+              "x": 1751,
+              "y": 169
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1025",
+            "direction": "left",
+            "x": 1751,
+            "y": 169
+          },
+          "value": "closed",
+          "viaPoints": [
+            {
+              "id": "cmralzvp01f",
+              "x": 1685,
+              "y": 169
+            }
+          ]
+        },
+        {
+          "from": {
+            "componentId": "DV1024",
+            "direction": "top",
+            "x": 1685,
+            "y": 245
+          },
+          "id": "cmralzvp01g",
+          "path": [
+            {
+              "x": 1685,
+              "y": 245
+            },
+            {
+              "x": 1685,
+              "y": 169
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmralzn2zo",
+              "viaPointId": "cmralzvp01f"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1024",
+            "direction": "bottom",
+            "x": 1685,
+            "y": 293
+          },
+          "id": "cmralzz6f1h",
+          "path": [
+            {
+              "x": 1685,
+              "y": 293
+            },
+            {
+              "x": 1685,
+              "y": 367
+            },
+            {
+              "x": 1675.5,
+              "y": 367
+            },
+            {
+              "x": 1675.5,
+              "y": 415
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "Tank4015",
+            "direction": "top",
+            "x": 1675.5,
+            "y": 415
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1027",
+            "direction": "bottom",
+            "x": 1510,
+            "y": 293
+          },
+          "id": "cmram01yh1i",
+          "path": [
+            {
+              "x": 1510,
+              "y": 293
+            },
+            {
+              "x": 1510,
+              "y": 293
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1027",
+            "direction": "bottom",
+            "x": 1510,
+            "y": 293
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1027",
+            "direction": "top",
+            "x": 1510,
+            "y": 245
+          },
+          "id": "cmram0bzo1l",
+          "path": [
+            {
+              "x": 1510,
+              "y": 245
+            },
+            {
+              "x": 1510,
+              "y": 169
+            },
+            {
+              "x": 1414,
+              "y": 169
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1028",
+            "direction": "right",
+            "x": 1414,
+            "y": 169
+          },
+          "value": "open-flow",
+          "viaPoints": [
+            {
+              "id": "cmram2h05f",
+              "x": 1487.5,
+              "y": 169
+            }
+          ]
+        },
+        {
+          "from": {
+            "componentId": "DV1027",
+            "direction": "bottom",
+            "x": 1487.5,
+            "y": 293
+          },
+          "id": "cmram2cul1",
+          "path": [
+            {
+              "x": 1487.5,
+              "y": 293
+            },
+            {
+              "x": 1487.5,
+              "y": 415
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "Tank4014",
+            "direction": "top",
+            "x": 1487.5,
+            "y": 415
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1026",
+            "direction": "left",
+            "x": 1566,
+            "y": 169
+          },
+          "id": "cmram2h05g",
+          "path": [
+            {
+              "x": 1566,
+              "y": 169
+            },
+            {
+              "x": 1487.5,
+              "y": 169
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmram0bzo1l",
+              "viaPointId": "cmram2h05f"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1014",
+            "direction": "left",
+            "x": 423,
+            "y": 861
+          },
+          "id": "cmram30g61u",
+          "path": [
+            {
+              "x": 423,
+              "y": 861
+            },
+            {
+              "x": 346,
+              "y": 861
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmralns8t0",
+              "viaPointId": "cmram30g61t"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 908
+          },
+          "id": "cmram5sjz0",
+          "path": [
+            {
+              "x": 860,
+              "y": 908
+            },
+            {
+              "x": 860,
+              "y": 908
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 908
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "id": "cmram7c4dw",
+          "path": [
+            {
+              "x": 860,
+              "y": 887
+            },
+            {
+              "x": 860,
+              "y": 861
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmralq50119",
+              "viaPointId": "cmram7c4dv"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "pump",
+            "direction": "top",
+            "x": 637,
+            "y": 888
+          },
+          "id": "cmram7f44x",
+          "path": [
+            {
+              "x": 637,
+              "y": 888
+            },
+            {
+              "x": 637,
+              "y": 888
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "pump",
+            "direction": "top",
+            "x": 637,
+            "y": 888
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV2016",
+            "direction": "bottom",
+            "x": 722.5,
+            "y": 1014
+          },
+          "id": "cmram80ri28",
+          "path": [
+            {
+              "x": 722.5,
+              "y": 1014
+            },
+            {
+              "x": 722.5,
+              "y": 1129
+            },
+            {
+              "x": 722,
+              "y": 1129
+            },
+            {
+              "x": 722,
+              "y": 1177
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmralqy5m2e",
+              "viaPointId": "cmram80ri27"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "open-flow",
+          "viaPoints": [
+            {
+              "id": "cmram82my2l",
+              "x": 722.5,
+              "y": 1084
+            }
+          ]
+        },
+        {
+          "from": {
+            "componentId": "DV2017",
+            "direction": "left",
+            "x": 796,
+            "y": 1084
+          },
+          "id": "cmram82my2m",
+          "path": [
+            {
+              "x": 796,
+              "y": 1084
+            },
+            {
+              "x": 722.5,
+              "y": 1084
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmram80ri28",
+              "viaPointId": "cmram82my2l"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1019",
+            "direction": "bottom",
+            "x": 1389.5,
+            "y": 994
+          },
+          "id": "cmrbocquh0",
+          "path": [
+            {
+              "x": 1389.5,
+              "y": 994
+            },
+            {
+              "x": 1389.5,
+              "y": 994
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1019",
+            "direction": "bottom",
+            "x": 1389.5,
+            "y": 994
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1019",
+            "direction": "bottom",
+            "x": 1389.5,
+            "y": 994
+          },
+          "id": "cmrbocu5te",
+          "path": [
+            {
+              "x": 1389.5,
+              "y": 994
+            },
+            {
+              "x": 1389.5,
+              "y": 1084
+            },
+            {
+              "x": 844,
+              "y": 1084
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV2017",
+            "direction": "right",
+            "x": 844,
+            "y": 1084
+          },
+          "value": "open-flow",
+          "viaPoints": [
+            {
+              "id": "cmrbod21f18",
+              "x": 1389.5,
+              "y": 1084
+            },
+            {
+              "id": "cmrbodbcy1v",
+              "x": 1044,
+              "y": 1084
+            },
+            {
+              "id": "cmrbocyoku",
+              "x": 930,
+              "y": 1084
+            }
+          ]
+        },
+        {
+          "from": {
+            "componentId": "PU2012",
+            "direction": "right",
+            "x": 896,
+            "y": 923
+          },
+          "id": "cmrbocyokv",
+          "path": [
+            {
+              "x": 896,
+              "y": 923
+            },
+            {
+              "x": 930,
+              "y": 923
+            },
+            {
+              "x": 930,
+              "y": 1084
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmrbocu5te",
+              "viaPointId": "cmrbocyoku"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "closed",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1020",
+            "direction": "left",
+            "x": 1475,
+            "y": 1084
+          },
+          "id": "cmrbod21f19",
+          "path": [
+            {
+              "x": 1475,
+              "y": 1084
+            },
+            {
+              "x": 1389.5,
+              "y": 1084
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmrbocu5te",
+              "viaPointId": "cmrbod21f18"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV2018",
+            "direction": "bottom",
+            "x": 1044,
+            "y": 994
+          },
+          "id": "cmrbodbcy1w",
+          "path": [
+            {
+              "x": 1044,
+              "y": 994
+            },
+            {
+              "x": 1044,
+              "y": 1084
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmrbocu5te",
+              "viaPointId": "cmrbodbcy1v"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "id": "cmrbodgzt1x",
+          "path": [
+            {
+              "x": 860,
+              "y": 887
+            },
+            {
+              "x": 860,
+              "y": 887
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "id": "cmrbodmeb1y",
+          "path": [
+            {
+              "x": 860,
+              "y": 887
+            },
+            {
+              "x": 860,
+              "y": 887
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "id": "cmrbodngi1z",
+          "path": [
+            {
+              "x": 860,
+              "y": 887
+            },
+            {
+              "x": 860,
+              "y": 887
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "id": "cmrbodo7v20",
+          "path": [
+            {
+              "x": 860,
+              "y": 887
+            },
+            {
+              "x": 860,
+              "y": 887
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "id": "cmrbodp0w21",
+          "path": [
+            {
+              "x": 860,
+              "y": 887
+            },
+            {
+              "x": 860,
+              "y": 887
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "id": "cmrbodwcq22",
+          "path": [
+            {
+              "x": 860,
+              "y": 887
+            },
+            {
+              "x": 860,
+              "y": 887
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "id": "cmrbodwyb23",
+          "path": [
+            {
+              "x": 860,
+              "y": 887
+            },
+            {
+              "x": 860,
+              "y": 887
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "id": "cmrbodywd24",
+          "path": [
+            {
+              "x": 860,
+              "y": 887
+            },
+            {
+              "x": 860,
+              "y": 887
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "id": "cmrboe03825",
+          "path": [
+            {
+              "x": 860,
+              "y": 887
+            },
+            {
+              "x": 860,
+              "y": 887
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "id": "cmrboe0ud26",
+          "path": [
+            {
+              "x": 860,
+              "y": 887
+            },
+            {
+              "x": 860,
+              "y": 887
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "id": "cmrbogm7727",
+          "path": [
+            {
+              "x": 860,
+              "y": 887
+            },
+            {
+              "x": 860,
+              "y": 887
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 860,
+            "y": 887
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1031",
+            "direction": "top",
+            "x": 476.5,
+            "y": 336
+          },
+          "id": "cmrboiyb80",
+          "path": [
+            {
+              "x": 476.5,
+              "y": 336
+            },
+            {
+              "x": 476.5,
+              "y": 336
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "componentId": "DV1031",
+            "direction": "top",
+            "x": 476.5,
+            "y": 336
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        },
+        {
+          "from": {
+            "componentId": "DV1031",
+            "direction": "top",
+            "x": 476.5,
+            "y": 336
+          },
+          "id": "cmrboj98g12",
+          "path": [
+            {
+              "x": 476.5,
+              "y": 336
+            },
+            {
+              "x": 476.5,
+              "y": 312
+            },
+            {
+              "x": 476.25,
+              "y": 312
+            },
+            {
+              "x": 476.25,
+              "y": 316
+            },
+            {
+              "x": 476,
+              "y": 316
+            },
+            {
+              "x": 476,
+              "y": 292
+            }
+          ],
+          "size": "medium",
+          "to": {
+            "kind": "junction",
+            "ref": {
+              "connectionId": "cmral65eq1",
+              "viaPointId": "cmrboj98f11"
+            },
+            "x": 0,
+            "y": 0
+          },
+          "value": "open-flow",
+          "viaPoints": []
+        }
+      ],
+      "editable": false,
+      "style": {
+        "background": "var(--container-section-color)"
+      }
+    },
+    "type": "openbridge.manual.connector-diagram"
   }
 }

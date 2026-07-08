@@ -47,6 +47,7 @@
       "viewPath": "Page/View"
     },
     "/tmp": {
+      "title": "",
       "viewPath": "Page/Tmp"
     }
   },
