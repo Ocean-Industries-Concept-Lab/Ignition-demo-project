@@ -941,6 +941,78 @@
       "name": "root"
     },
     "propConfig": {
+      "props.connections[0].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve32/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[1].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve32/valveOpen} && {[default]process/valve33/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[2].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve31/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[4].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve29/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[6].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve30/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[7].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve29/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[9].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve30/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[10].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve29/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[11].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve30/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
       "props.connections[12].value": {
         "binding": {
           "config": {
@@ -957,10 +1029,450 @@
           "type": "expr"
         }
       },
+      "props.connections[14].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve10/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[15].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve10/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
       "props.connections[16].value": {
         "binding": {
           "config": {
             "expression": "if({[default]process/pump1/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[17].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve33/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[18].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve33/valveOpen} && {[default]process/valve18/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[19].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve18/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[20].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump0/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[21].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve12/valveOpen} && {[default]process/valve13/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[22].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve12/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[23].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve13/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[24].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve14/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[25].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve15/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[26].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve15/valveOpen} && {[default]process/valve28/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[27].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump3/pumpOn} && {[default]process/valve16/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[28].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump3/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[31].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump0/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[32].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve19/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[33].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve20/valveOpen} && {[default]process/valve22/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[34].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve21/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[35].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve21/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[36].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve21/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[37].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve23/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[38].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve22/valveOpen} && {[default]process/valve25/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[39].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve23/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[40].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve26/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[41].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve26/valveOpen} && {[default]process/valve25/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[42].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve24/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[43].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve24/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[44].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve27/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[45].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve27/valveOpen} && {[default]process/valve28/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[46].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve27/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[47].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve26/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[48].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve14/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[49].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump2/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[50].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump2/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[51].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump3/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[52].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve16/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[53].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve17/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[54].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve19/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[55].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve19/valveOpen} && {[default]process/valve17/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[56].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump2/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[57].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve20/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[58].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve18/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[59].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump2/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[60].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump2/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[61].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump2/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[62].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump2/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[63].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump2/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[64].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump2/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[65].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump2/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[66].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump2/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[67].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump2/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[68].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump2/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[69].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/pump2/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[70].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve31/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[71].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve31/valveOpen},\"open-flow\",\"closed\")"
           },
           "type": "expr"
         }
