@@ -33,7 +33,7 @@
             "modal": false,
             "resizable": false,
             "show": "visible",
-            "size": 320,
+            "size": 500,
             "viewParams": {},
             "viewPath": "Docks/Sidemenu"
           }

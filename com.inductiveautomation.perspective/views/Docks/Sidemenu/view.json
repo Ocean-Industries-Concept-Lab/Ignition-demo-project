@@ -114,7 +114,8 @@
           "name": "MotorFacePlate"
         },
         "position": {
-          "basis": "320px"
+          "grow": 1,
+          "shrink": 0
         },
         "propConfig": {
           "position.display": {
@@ -135,7 +136,8 @@
           }
         },
         "props": {
-          "path": "Docks/_Sidemenu/PumpFacePlate"
+          "path": "Docks/_Sidemenu/PumpFacePlate",
+          "useDefaultViewHeight": true
         },
         "type": "ia.display.view"
       },
@@ -144,7 +146,8 @@
           "name": "ValveFacePlate"
         },
         "position": {
-          "basis": "320px"
+          "grow": 1,
+          "shrink": 0
         },
         "propConfig": {
           "position.display": {
@@ -165,7 +168,8 @@
           }
         },
         "props": {
-          "path": "Docks/_Sidemenu/DigitalValveFacePlate"
+          "path": "Docks/_Sidemenu/DigitalValveFacePlate",
+          "useDefaultViewHeight": true
         },
         "type": "ia.display.view"
       },

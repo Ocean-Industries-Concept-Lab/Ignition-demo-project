@@ -949,54 +949,6 @@
           "type": "expr"
         }
       },
-      "props.connections[1].value": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve32/valveOpen} && {[default]process/valve33/valveOpen},\"open-flow\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections[2].value": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve31/valveOpen},\"open-flow\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections[4].value": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve29/valveOpen},\"open-flow\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections[6].value": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve30/valveOpen},\"open-flow\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections[7].value": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve29/valveOpen},\"open-flow\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections[9].value": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve30/valveOpen},\"open-flow\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
       "props.connections[10].value": {
         "binding": {
           "config": {
@@ -1064,7 +1016,7 @@
       "props.connections[18].value": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve33/valveOpen} && {[default]process/valve18/valveOpen},\"open-flow\",\"closed\")"
+            "expression": "if({[default]process/valve33/valveOpen} \u0026\u0026 {[default]process/valve18/valveOpen},\"open-flow\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1073,6 +1025,14 @@
         "binding": {
           "config": {
             "expression": "if({[default]process/valve18/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[1].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve32/valveOpen} \u0026\u0026 {[default]process/valve33/valveOpen},\"open-flow\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1088,7 +1048,7 @@
       "props.connections[21].value": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve12/valveOpen} && {[default]process/valve13/valveOpen},\"open-flow\",\"closed\")"
+            "expression": "if({[default]process/valve12/valveOpen} \u0026\u0026 {[default]process/valve13/valveOpen},\"open-flow\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1128,7 +1088,7 @@
       "props.connections[26].value": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve15/valveOpen} && {[default]process/valve28/valveOpen},\"open-flow\",\"closed\")"
+            "expression": "if({[default]process/valve15/valveOpen} \u0026\u0026 {[default]process/valve28/valveOpen},\"open-flow\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1136,7 +1096,7 @@
       "props.connections[27].value": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/pump3/pumpOn} && {[default]process/valve16/valveOpen},\"open-flow\",\"closed\")"
+            "expression": "if({[default]process/pump3/pumpOn} \u0026\u0026 {[default]process/valve16/valveOpen},\"open-flow\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1145,6 +1105,14 @@
         "binding": {
           "config": {
             "expression": "if({[default]process/pump3/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[2].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve31/valveOpen},\"open-flow\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1168,7 +1136,7 @@
       "props.connections[33].value": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve20/valveOpen} && {[default]process/valve22/valveOpen},\"open-flow\",\"closed\")"
+            "expression": "if({[default]process/valve20/valveOpen} \u0026\u0026 {[default]process/valve22/valveOpen},\"open-flow\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1208,7 +1176,7 @@
       "props.connections[38].value": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve22/valveOpen} && {[default]process/valve25/valveOpen},\"open-flow\",\"closed\")"
+            "expression": "if({[default]process/valve22/valveOpen} \u0026\u0026 {[default]process/valve25/valveOpen},\"open-flow\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1232,7 +1200,7 @@
       "props.connections[41].value": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve26/valveOpen} && {[default]process/valve25/valveOpen},\"open-flow\",\"closed\")"
+            "expression": "if({[default]process/valve26/valveOpen} \u0026\u0026 {[default]process/valve25/valveOpen},\"open-flow\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1264,7 +1232,7 @@
       "props.connections[45].value": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve27/valveOpen} && {[default]process/valve28/valveOpen},\"open-flow\",\"closed\")"
+            "expression": "if({[default]process/valve27/valveOpen} \u0026\u0026 {[default]process/valve28/valveOpen},\"open-flow\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1297,6 +1265,14 @@
         "binding": {
           "config": {
             "expression": "if({[default]process/pump2/pumpOn},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[4].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve29/valveOpen},\"open-flow\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1344,7 +1320,7 @@
       "props.connections[55].value": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve19/valveOpen} && {[default]process/valve17/valveOpen},\"open-flow\",\"closed\")"
+            "expression": "if({[default]process/valve19/valveOpen} \u0026\u0026 {[default]process/valve17/valveOpen},\"open-flow\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1461,6 +1437,14 @@
           "type": "expr"
         }
       },
+      "props.connections[6].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve30/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
       "props.connections[70].value": {
         "binding": {
           "config": {
@@ -1473,6 +1457,22 @@
         "binding": {
           "config": {
             "expression": "if({[default]process/valve31/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[7].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve29/valveOpen},\"open-flow\",\"closed\")"
+          },
+          "type": "expr"
+        }
+      },
+      "props.connections[9].value": {
+        "binding": {
+          "config": {
+            "expression": "if({[default]process/valve30/valveOpen},\"open-flow\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1521,7 +1521,6 @@
             "x": 277.5,
             "y": 425
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -1557,7 +1556,6 @@
             "x": 1044,
             "y": 736
           },
-          "value": "open-flow",
           "viaPoints": [
             {
               "id": "cmrboj98f11",
@@ -1627,7 +1625,6 @@
             "x": 475.5,
             "y": 384
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -1683,7 +1680,6 @@
             "x": 895.5,
             "y": 384
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -1755,7 +1751,6 @@
             "x": 685,
             "y": 384
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -1783,7 +1778,6 @@
             "x": 900,
             "y": 384
           },
-          "value": "open-flow",
           "viaPoints": [
             {
               "id": "cmral7qkoc",
@@ -1864,7 +1858,6 @@
             "x": 685.5,
             "y": 336
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -1911,7 +1904,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -1958,7 +1950,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -2061,7 +2052,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -2097,7 +2087,6 @@
             "x": 483,
             "y": 222.5
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -2155,7 +2144,6 @@
             "x": 1044,
             "y": 784
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -2191,7 +2179,6 @@
             "x": 1040,
             "y": 945
           },
-          "value": "open-flow",
           "viaPoints": [
             {
               "id": "cmralq50118",
@@ -2225,7 +2212,6 @@
             "x": 1040,
             "y": 993
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -2256,7 +2242,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -2284,7 +2269,6 @@
             "x": 346,
             "y": 996
           },
-          "value": "closed",
           "viaPoints": [
             {
               "id": "cmram30g61t",
@@ -2317,7 +2301,6 @@
             "x": 336,
             "y": 744
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -2344,7 +2327,6 @@
             "x": 336,
             "y": 1104
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -2375,7 +2357,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "open-flow",
           "viaPoints": [
             {
               "id": "cmralqam22b",
@@ -2422,7 +2403,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -2462,7 +2442,6 @@
             "x": 1366,
             "y": 169
           },
-          "value": "open-flow",
           "viaPoints": [
             {
               "id": "cmram80ri27",
@@ -2505,7 +2484,6 @@
             "x": 722.5,
             "y": 966
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -2552,7 +2530,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -2657,7 +2634,6 @@
             "x": 1152,
             "y": 384
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -2685,7 +2661,6 @@
             "x": 1389.5,
             "y": 946
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -2721,7 +2696,6 @@
             "x": 1675,
             "y": 1081
           },
-          "value": "closed",
           "viaPoints": [
             {
               "id": "cmraly7z0y",
@@ -2755,7 +2729,6 @@
             "x": 1580,
             "y": 994
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -2786,7 +2759,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -2814,7 +2786,6 @@
             "x": 1580,
             "y": 885
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -2850,7 +2821,6 @@
             "x": 1775,
             "y": 946
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -2886,7 +2856,6 @@
             "x": 1799,
             "y": 169
           },
-          "value": "closed",
           "viaPoints": [
             {
               "id": "cmralz6ftl",
@@ -2923,7 +2892,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -2951,7 +2919,6 @@
             "x": 1614,
             "y": 169
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -2979,7 +2946,6 @@
             "x": 1751,
             "y": 169
           },
-          "value": "closed",
           "viaPoints": [
             {
               "id": "cmralzvp01f",
@@ -3016,7 +2982,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -3052,7 +3017,6 @@
             "x": 1675.5,
             "y": 415
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -3080,7 +3044,6 @@
             "x": 1510,
             "y": 293
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -3112,7 +3075,6 @@
             "x": 1414,
             "y": 169
           },
-          "value": "open-flow",
           "viaPoints": [
             {
               "id": "cmram2h05f",
@@ -3146,7 +3108,6 @@
             "x": 1487.5,
             "y": 415
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3177,7 +3138,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3208,7 +3168,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -3236,7 +3195,6 @@
             "x": 860,
             "y": 908
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3267,7 +3225,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -3295,7 +3252,6 @@
             "x": 637,
             "y": 888
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3334,7 +3290,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "open-flow",
           "viaPoints": [
             {
               "id": "cmram82my2l",
@@ -3371,7 +3326,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3399,7 +3353,6 @@
             "x": 1389.5,
             "y": 994
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3431,7 +3384,6 @@
             "x": 844,
             "y": 1084
           },
-          "value": "open-flow",
           "viaPoints": [
             {
               "id": "cmrbod21f18",
@@ -3482,7 +3434,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "closed",
           "viaPoints": []
         },
         {
@@ -3513,7 +3464,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3544,7 +3494,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3572,7 +3521,6 @@
             "x": 860,
             "y": 887
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3600,7 +3548,6 @@
             "x": 860,
             "y": 887
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3628,7 +3575,6 @@
             "x": 860,
             "y": 887
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3656,7 +3602,6 @@
             "x": 860,
             "y": 887
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3684,7 +3629,6 @@
             "x": 860,
             "y": 887
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3712,7 +3656,6 @@
             "x": 860,
             "y": 887
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3740,7 +3683,6 @@
             "x": 860,
             "y": 887
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3768,7 +3710,6 @@
             "x": 860,
             "y": 887
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3796,7 +3737,6 @@
             "x": 860,
             "y": 887
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3824,7 +3764,6 @@
             "x": 860,
             "y": 887
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3852,7 +3791,6 @@
             "x": 860,
             "y": 887
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3880,7 +3818,6 @@
             "x": 476.5,
             "y": 336
           },
-          "value": "open-flow",
           "viaPoints": []
         },
         {
@@ -3927,7 +3864,6 @@
             "x": 0,
             "y": 0
           },
-          "value": "open-flow",
           "viaPoints": []
         }
       ],

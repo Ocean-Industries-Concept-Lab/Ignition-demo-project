@@ -14,6 +14,7 @@
     }
   },
   "params": {
+    "tab": "home",
     "tagPath": "[default]process/pump0"
   },
   "propConfig": {
@@ -31,6 +32,10 @@
       },
       "persistent": true
     },
+    "params.tab": {
+      "paramDirection": "input",
+      "persistent": true
+    },
     "params.tagPath": {
       "onChange": {
         "enabled": null,
@@ -40,7 +45,11 @@
       "persistent": true
     }
   },
-  "props": {},
+  "props": {
+    "defaultSize": {
+      "width": 498
+    }
+  },
   "root": {
     "children": [
       {
@@ -89,7 +98,7 @@
               "props.text": {
                 "binding": {
                   "config": {
-                    "expression": "\"Motor \"+{view.custom.tag}"
+                    "expression": "\"Pump \"+{view.custom.tag}"
                   },
                   "type": "expr"
                 }
@@ -131,7 +140,8 @@
           "name": "FlexContainer"
         },
         "position": {
-          "basis": "48px"
+          "basis": "48px",
+          "shrink": 0
         },
         "props": {
           "alignItems": "center",
@@ -140,175 +150,331 @@
         "type": "ia.container.flex"
       },
       {
+        "children": [
+          {
+            "meta": {
+              "name": "toggleButtonHorizontal"
+            },
+            "position": {
+              "basis": "48px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{1}/pumpOn"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "options": [
+                {
+                  "disabled": false,
+                  "icon": {
+                    "path": "openbridge/media-stop"
+                  },
+                  "label": "Stop",
+                  "value": false
+                },
+                {
+                  "disabled": false,
+                  "icon": {
+                    "path": "openbridge/media-play"
+                  },
+                  "label": "Run",
+                  "value": true
+                }
+              ],
+              "style": {
+                "padding": "0 16px"
+              },
+              "type": "icon-text-under"
+            },
+            "type": "openbridge.manual.toggle-button-horizontal"
+          },
+          {
+            "meta": {
+              "name": "stepper-box"
+            },
+            "position": {
+              "basis": "86px"
+            },
+            "propConfig": {
+              "props.disabled": {
+                "binding": {
+                  "config": {
+                    "expression": "tag({view.params.tagPath}+\"/pumpMode\")!\u003d\"manual\" || !tag({view.params.tagPath}+\"/pumpOn\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{1}/pumpSpeed"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "helperText": "Speed",
+              "stepDown": 5,
+              "stepUp": 5,
+              "style": {
+                "classes": "divider/bottom",
+                "padding": "8px"
+              },
+              "type": "left-right",
+              "unit": "%"
+            },
+            "type": "openbridge.manual.stepperbox"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "font/overline-new text-color/element-neutral",
+                "padding": "16px"
+              },
+              "text": "Mode",
+              "textStyle": {
+                "textAlign": "left"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "toggleButtonHorizontal_0"
+            },
+            "position": {
+              "basis": "48px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{1}/pumpMode"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "options": [
+                {
+                  "disabled": false,
+                  "icon": {
+                    "path": "openbridge/manual"
+                  },
+                  "key": "value",
+                  "label": "Manual",
+                  "value": "manual"
+                },
+                {
+                  "disabled": false,
+                  "icon": {
+                    "path": "openbridge/local"
+                  },
+                  "label": "Local",
+                  "value": "local"
+                },
+                {
+                  "disabled": false,
+                  "icon": {
+                    "path": "openbridge/auto"
+                  },
+                  "label": "Auto",
+                  "value": "auto"
+                }
+              ],
+              "style": {
+                "padding": "0 16px"
+              },
+              "type": "icon-text-under",
+              "variant": "normal"
+            },
+            "type": "openbridge.manual.toggle-button-horizontal"
+          }
+        ],
         "meta": {
-          "name": "toggleButtonHorizontal"
+          "name": "FlexContainer_0"
         },
         "position": {
-          "basis": "48px"
+          "grow": 1,
+          "shrink": 0
         },
         "propConfig": {
-          "props.value": {
+          "position.display": {
             "binding": {
               "config": {
-                "bidirectional": true,
-                "fallbackDelay": 2.5,
-                "mode": "indirect",
-                "references": {
-                  "1": "{view.params.tagPath}"
-                },
-                "tagPath": "{1}/pumpOn"
+                "expression": "{view.params.tab} \u003d \"home\""
               },
-              "type": "tag"
+              "type": "expr"
             }
           }
         },
         "props": {
-          "options": [
-            {
-              "disabled": false,
-              "icon": {
-                "path": "openbridge/media-stop"
-              },
-              "label": "Stop",
-              "value": false
-            },
-            {
-              "disabled": false,
-              "icon": {
-                "path": "openbridge/media-play"
-              },
-              "label": "Run",
-              "value": true
-            }
-          ],
-          "style": {
-            "padding": "0 16px"
-          },
-          "type": "icon-text-under"
+          "direction": "column"
         },
-        "type": "openbridge.manual.toggle-button-horizontal"
+        "type": "ia.container.flex"
       },
       {
         "meta": {
-          "name": "stepper-box"
+          "name": "alertList"
         },
         "position": {
-          "basis": "86px"
+          "grow": 1
         },
         "propConfig": {
-          "props.disabled": {
+          "position.display": {
             "binding": {
               "config": {
-                "expression": "tag({view.params.tagPath}+\"/pumpMode\")!\u003d\"manual\" || !tag({view.params.tagPath}+\"/pumpOn\")"
+                "expression": "{view.params.tab}\u003d\"alerts\""
               },
               "type": "expr"
             }
           },
-          "props.value": {
+          "props.filter.conditions.source": {
             "binding": {
               "config": {
-                "bidirectional": true,
-                "fallbackDelay": 2.5,
-                "mode": "indirect",
-                "references": {
-                  "1": "{view.params.tagPath}"
-                },
-                "tagPath": "{1}/pumpSpeed"
+                "expression": "\"*\"+replace({view.params.tagPath},\"[default]\",\"\")+\"/*\""
               },
-              "type": "tag"
+              "type": "expr"
             }
           }
         },
         "props": {
-          "helperText": "Speed",
-          "stepDown": 5,
-          "stepUp": 5,
-          "style": {
-            "classes": "divider/bottom",
-            "padding": "8px"
+          "emptyDescription": "\n",
+          "emptyTitle": "No active or unacknowledge alerts",
+          "filter": {
+            "conditions": {}
           },
-          "type": "left-right",
-          "unit": "%"
+          "style": {
+            "overflow": "auto"
+          }
         },
-        "type": "openbridge.manual.stepperbox"
+        "type": "openbridge.manual.alert-list"
       },
       {
         "meta": {
-          "name": "Label_0"
+          "name": "tab-row"
         },
         "position": {
           "shrink": 0
         },
-        "props": {
-          "style": {
-            "classes": "font/overline-new text-color/element-neutral",
-            "padding": "16px"
-          },
-          "text": "Mode",
-          "textStyle": {
-            "textAlign": "left"
-          }
-        },
-        "type": "ia.display.label"
-      },
-      {
-        "meta": {
-          "name": "toggleButtonHorizontal_0"
-        },
-        "position": {
-          "basis": "48px"
-        },
         "propConfig": {
-          "props.value": {
+          "props.selectedTabId": {
             "binding": {
               "config": {
                 "bidirectional": true,
-                "fallbackDelay": 2.5,
-                "mode": "indirect",
-                "references": {
-                  "1": "{view.params.tagPath}"
-                },
-                "tagPath": "{1}/pumpMode"
+                "path": "view.params.tab"
               },
-              "type": "tag"
+              "type": "property"
+            }
+          },
+          "props.tabs[1].badges": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "count": "tag({view.params.tagPath}+\"/Alarm Metrics.activeAckCount\")+\ntag({view.params.tagPath}+\"/Alarm Metrics.activeUnackCount\")+\ntag({view.params.tagPath}+\"/Alarm Metrics.clearUnackCount\")\n",
+                  "typeActive": "tag({view.params.tagPath}+\"/Alarm Metrics.highestActivePriority\")",
+                  "typeUnack": "tag({view.params.tagPath}+\"/Alarm Metrics.highestUnackedPriority\")"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\tcat \u003d None\n\tif value.typeActive is not None:\n\t\tcat \u003d value.typeActive\n\telse:\n\t\tcat \u003d value.typeUnack\n\tif cat is None or value.count \u003c\u003d 0:\n\t\treturn []\n\tcat \u003d \"level-\"+str(cat).lower()\n\treturn [{\"type\": cat, \"count\": value.count}]",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
+          "props.tabs[1].badges[0].type": {
+            "binding": {
+              "config": {
+                "expression": "\"level\" + lower(tag({view.params.tagPath}+\"/Alarm Metrics.highestActivePriority\"))"
+              },
+              "type": "expr"
             }
           }
         },
         "props": {
-          "options": [
-            {
-              "disabled": false,
-              "icon": {
-                "path": "openbridge/manual"
-              },
-              "key": "value",
-              "label": "Manual",
-              "value": "manual"
-            },
-            {
-              "disabled": false,
-              "icon": {
-                "path": "openbridge/local"
-              },
-              "label": "Local",
-              "value": "local"
-            },
-            {
-              "disabled": false,
-              "icon": {
-                "path": "openbridge/auto"
-              },
-              "label": "Auto",
-              "value": "auto"
-            }
-          ],
+          "centerContent": true,
           "style": {
-            "padding": "0 16px"
+            "classes": "divider/top"
           },
-          "type": "icon-text-under",
-          "variant": "normal"
+          "tabs": [
+            {
+              "badgeCount": 0,
+              "badgeIcon": {
+                "path": "openbridge/placeholder"
+              },
+              "badgeSize": "regular",
+              "badgeType": "regular",
+              "badges": [],
+              "disabled": false,
+              "hasBadge": false,
+              "hasLeadingIcon": true,
+              "id": "home",
+              "leadingIcon": {
+                "path": "openbridge/dashboard"
+              },
+              "showLeadingBadgeIcon": false,
+              "showSubtitle": false,
+              "subtitle": "",
+              "title": ""
+            },
+            {
+              "badgeCount": 0,
+              "badgeIcon": {
+                "path": "openbridge/placeholder"
+              },
+              "badgeSize": "regular",
+              "badgeType": "regular",
+              "disabled": false,
+              "hasBadge": false,
+              "hasLeadingIcon": true,
+              "id": "alerts",
+              "leadingIcon": {
+                "path": "openbridge/alert-list"
+              },
+              "showLeadingBadgeIcon": false,
+              "showSubtitle": false,
+              "subtitle": "",
+              "title": ""
+            }
+          ]
         },
-        "type": "openbridge.manual.toggle-button-horizontal"
+        "type": "openbridge.manual.tab-row"
       }
     ],
     "meta": {

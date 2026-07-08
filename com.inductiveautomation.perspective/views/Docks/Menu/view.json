@@ -26,9 +26,9 @@
               "path": "/"
             },
             {
-              "icon": "ias",
-              "label": "IAS",
-              "path": "/ias"
+              "icon": "pipe-cross",
+              "label": "Process overview",
+              "path": "/process"
             },
             {
               "children": [
