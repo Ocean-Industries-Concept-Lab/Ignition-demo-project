@@ -65,11 +65,11 @@
     }
   },
   "props": {
-    "address": "127.0.0.1",
+    "address": "213.161.248.226",
     "device": {},
     "geolocation": {},
     "locale": "en-US",
     "offline": {},
-    "timeZoneId": "Europe/Oslo"
+    "timeZoneId": "Etc/UTC"
   }
 }

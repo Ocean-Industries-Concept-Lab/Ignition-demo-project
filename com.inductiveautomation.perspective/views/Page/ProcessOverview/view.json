@@ -940,6 +940,9 @@
     "meta": {
       "name": "root"
     },
+    "position": {
+      "width": "2000px"
+    },
     "propConfig": {
       "props.connections[0].value": {
         "binding": {
@@ -3868,8 +3871,11 @@
         }
       ],
       "editable": false,
+      "key": "value",
       "style": {
-        "background": "var(--container-section-color)"
+        "background": "var(--container-section-color)",
+        "height": "1200px",
+        "width": "2000px"
       }
     },
     "type": "openbridge.manual.connector-diagram"

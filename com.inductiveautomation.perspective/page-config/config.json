@@ -1,12 +1,34 @@
 {
   "pages": {
     "/": {
-      "title": "Home",
-      "viewPath": "Page/CardBased"
+      "docks": {
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "sidemenu",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 500,
+            "viewParams": {},
+            "viewPath": "Docks/Sidemenu"
+          }
+        ]
+      },
+      "title": "Process Overview",
+      "viewPath": "Page/ProcessOverview"
     },
     "/alerttmp": {
       "title": "",
       "viewPath": "Page/AlertTmp"
+    },
+    "/card": {
+      "title": "Home",
+      "viewPath": "Page/CardBased"
     },
     "/ias": {
       "title": "IAS",
@@ -29,7 +51,7 @@
             "content": "push",
             "handle": "hide",
             "iconUrl": "",
-            "id": "sidemenu",
+            "id": "",
             "modal": false,
             "resizable": false,
             "show": "visible",
@@ -39,8 +61,8 @@
           }
         ]
       },
-      "title": "Process Overview",
-      "viewPath": "Page/ProcessOverview"
+      "title": "",
+      "viewPath": "Page/Process"
     },
     "/test": {
       "title": "",

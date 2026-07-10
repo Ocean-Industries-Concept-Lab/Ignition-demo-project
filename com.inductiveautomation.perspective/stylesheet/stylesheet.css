@@ -16,7 +16,7 @@
 	overflow: visible !important;
 }
 
-.view-parent:has(.psc-utils\/overflow-visible) {
+.view-parent:has(> .psc-utils\/overflow-visible) {
 	overflow: visible !important;
 }
 
@@ -171,3 +171,5 @@
   ::-webkit-scrollbar-button:vertical:end:increment {
     background-image: var(--icon-02-chevron-down);
   }
+
+
