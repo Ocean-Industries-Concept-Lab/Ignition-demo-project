@@ -136,8 +136,7 @@
           }
         },
         "props": {
-          "path": "Docks/_Sidemenu/PumpFacePlate",
-          "useDefaultViewHeight": true
+          "path": "Docks/_Sidemenu/PumpFacePlate"
         },
         "type": "ia.display.view"
       },
@@ -168,8 +167,7 @@
           }
         },
         "props": {
-          "path": "Docks/_Sidemenu/DigitalValveFacePlate",
-          "useDefaultViewHeight": true
+          "path": "Docks/_Sidemenu/DigitalValveFacePlate"
         },
         "type": "ia.display.view"
       },

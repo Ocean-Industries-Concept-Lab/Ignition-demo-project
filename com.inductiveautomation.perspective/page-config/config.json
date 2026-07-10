@@ -22,9 +22,9 @@
       "title": "Process Overview",
       "viewPath": "Page/ProcessOverview"
     },
-    "/alerttmp": {
+    "/alerts": {
       "title": "",
-      "viewPath": "Page/AlertTmp"
+      "viewPath": "Page/Alerts"
     },
     "/card": {
       "title": "Home",
@@ -41,32 +41,6 @@
     "/maritime": {
       "title": "",
       "viewPath": "Page/Maritime"
-    },
-    "/process": {
-      "docks": {
-        "right": [
-          {
-            "anchor": "fixed",
-            "autoBreakpoint": 480,
-            "content": "push",
-            "handle": "hide",
-            "iconUrl": "",
-            "id": "",
-            "modal": false,
-            "resizable": false,
-            "show": "visible",
-            "size": 500,
-            "viewParams": {},
-            "viewPath": "Docks/Sidemenu"
-          }
-        ]
-      },
-      "title": "",
-      "viewPath": "Page/Process"
-    },
-    "/process2": {
-      "title": "",
-      "viewPath": "Page/Process2"
     },
     "/test": {
       "title": "",

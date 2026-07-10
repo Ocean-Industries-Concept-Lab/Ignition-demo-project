@@ -9,7 +9,11 @@
       "persistent": true
     }
   },
-  "props": {},
+  "props": {
+    "defaultSize": {
+      "width": 1639
+    }
+  },
   "root": {
     "children": [
       {
@@ -25,18 +29,13 @@
           }
         },
         "meta": {
-          "name": "alertList"
+          "name": "alertListPage"
         },
         "position": {
-          "basis": "400px",
-          "grow": 1
+          "grow": 1,
+          "shrink": 0
         },
-        "props": {
-          "style": {
-            "overflow": "auto"
-          }
-        },
-        "type": "openbridge.manual.alert-list"
+        "type": "openbridge.manual.alert-list-page"
       },
       {
         "meta": {
@@ -62,6 +61,11 @@
               },
               "type": "property"
             }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "divider/left"
           }
         },
         "type": "openbridge.manual.alert-detail"
