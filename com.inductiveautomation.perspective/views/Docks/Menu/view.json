@@ -22,13 +22,13 @@
           "items": [
             {
               "icon": "home",
-              "label": "Home",
+              "label": "Process overview",
               "path": "/"
             },
             {
-              "icon": "pipe-cross",
-              "label": "Process overview",
-              "path": "/process"
+              "icon": "dashboard",
+              "label": "Dashboard",
+              "path": "/card"
             },
             {
               "children": [

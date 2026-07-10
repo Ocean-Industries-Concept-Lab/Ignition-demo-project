@@ -227,9 +227,9 @@
           "props.tag": {
             "binding": {
               "config": {
-                "path": "view.custom.tag"
+                "expression": "tostr({view.custom.tag})"
               },
-              "type": "property"
+              "type": "expr"
             }
           }
         },
