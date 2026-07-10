@@ -174,6 +174,14 @@
               "type": "tag"
             }
           },
+          "props.hasTag": {
+            "binding": {
+              "config": {
+                "path": "session.custom.showTag"
+              },
+              "type": "property"
+            }
+          },
           "props.on": {
             "binding": {
               "config": {
@@ -191,6 +199,14 @@
             "binding": {
               "config": {
                 "path": "view.params.readoutPosition"
+              },
+              "type": "property"
+            }
+          },
+          "props.showReadoutStack": {
+            "binding": {
+              "config": {
+                "path": "session.custom.showReadout"
               },
               "type": "property"
             }
@@ -220,7 +236,6 @@
         "props": {
           "componentSize": "medium",
           "hasSpeed": true,
-          "hasTag": true,
           "speedUnit": "%",
           "variant": "double"
         },

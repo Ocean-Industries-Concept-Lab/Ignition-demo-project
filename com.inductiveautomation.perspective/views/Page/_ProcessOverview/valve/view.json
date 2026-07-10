@@ -1,6 +1,6 @@
 {
   "custom": {
-    "tag": null
+    "tag": "1000"
   },
   "params": {
     "readoutPosition": "bottom",
@@ -107,6 +107,14 @@
               "type": "tag"
             }
           },
+          "props.hasTag": {
+            "binding": {
+              "config": {
+                "path": "session.custom.showTag"
+              },
+              "type": "property"
+            }
+          },
           "props.open": {
             "binding": {
               "config": {
@@ -128,6 +136,14 @@
               "type": "property"
             }
           },
+          "props.showReadoutStack": {
+            "binding": {
+              "config": {
+                "path": "session.custom.showReadout"
+              },
+              "type": "property"
+            }
+          },
           "props.tag": {
             "binding": {
               "config": {
@@ -144,9 +160,6 @@
               "type": "property"
             }
           }
-        },
-        "props": {
-          "hasTag": true
         },
         "type": "automation.digital-valve.digital-valve"
       }

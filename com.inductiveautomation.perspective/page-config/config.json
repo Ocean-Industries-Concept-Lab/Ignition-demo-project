@@ -42,6 +42,10 @@
       "title": "Process Overview",
       "viewPath": "Page/ProcessOverview"
     },
+    "/process2": {
+      "title": "",
+      "viewPath": "Page/Process2"
+    },
     "/test": {
       "title": "",
       "viewPath": "Page/View"

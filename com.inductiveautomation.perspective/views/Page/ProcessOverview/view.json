@@ -930,9 +930,7 @@
         },
         "position": {
           "height": 1200,
-          "width": 2000,
-          "x": 0,
-          "y": 0
+          "width": 2000
         },
         "type": "ia.container.coord"
       }

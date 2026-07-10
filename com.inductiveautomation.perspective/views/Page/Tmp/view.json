@@ -111,6 +111,63 @@
           ]
         },
         "type": "openbridge.manual.tab-row"
+      },
+      {
+        "meta": {
+          "name": "automationTank"
+        },
+        "position": {
+          "height": 173,
+          "width": 168,
+          "x": 512,
+          "y": 475
+        },
+        "props": {
+          "readout": [
+            {
+              "hasDegree": true,
+              "label": "Temperature",
+              "numberFormat": "#,##.00",
+              "unit": "C",
+              "value": 12
+            }
+          ]
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "ObcReadout"
+        },
+        "position": {
+          "height": 100,
+          "width": 64,
+          "x": 125,
+          "y": 254
+        },
+        "props": {
+          "numberFormat": "#,##0.2",
+          "srcOptions": {
+            "hasAlert": true
+          },
+          "value": 100,
+          "valueOptions": {
+            "hasAlert": true
+          }
+        },
+        "type": "navigation-instruments.readout.readout"
+      },
+      {
+        "meta": {
+          "name": "ObcReadoutListItem"
+        },
+        "position": {
+          "height": 30,
+          "width": 158,
+          "x": 191,
+          "y": 79
+        },
+        "type": "navigation-instruments.readout-list-item.readout-list-item"
       }
     ],
     "meta": {

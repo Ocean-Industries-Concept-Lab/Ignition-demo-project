@@ -1,6 +1,8 @@
 {
   "custom": {
-    "hoverId": "[default]process/valve0"
+    "hoverId": "[default]process/valve0",
+    "showReadout": true,
+    "showTag": false
   },
   "propConfig": {
     "props.auth": {
@@ -65,7 +67,7 @@
     }
   },
   "props": {
-    "address": "127.0.0.1",
+    "address": "[0:0:0:0:0:0:0:1]",
     "device": {},
     "geolocation": {},
     "locale": "en-US",
