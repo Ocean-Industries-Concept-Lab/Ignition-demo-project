@@ -65,7 +65,7 @@
             {
               "enabled": true,
               "name": "getNextUrl",
-              "script": "\treturn\n\tif tagPath.getSource() \u003d\u003d \"default\":\n\t\treturn \"/\"\n\treturn \"/maritime\"\n"
+              "script": "\n\tif tagPath.getSource() \u003d\u003d \"default\":\n\t\treturn \"/\"\n\treturn \"/maritime\"\n"
             }
           ],
           "messageHandlers": []
