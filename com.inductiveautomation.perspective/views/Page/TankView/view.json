@@ -1,0 +1,125 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 490,
+      "width": 760
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Tank4016"
+        },
+        "position": {
+          "height": 374.5,
+          "width": 219,
+          "x": 10.5,
+          "y": 28.5
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 1000,
+          "medium": "normal",
+          "readout": [
+            {
+              "hasDegree": true,
+              "label": "Temperature",
+              "numberFormat": "#,##0",
+              "unit": "C",
+              "value": 15
+            },
+            {
+              "hasDegree": false,
+              "label": "Preasure",
+              "numberFormat": "#,##0",
+              "unit": "mPa",
+              "value": 1200
+            }
+          ],
+          "tag": "#4016",
+          "type": "atmospheric",
+          "value": 100
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4017"
+        },
+        "position": {
+          "height": 374.5,
+          "width": 228,
+          "x": 246,
+          "y": 28.5
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 1000,
+          "medium": "normal",
+          "readout": [
+            {
+              "hasDegree": true,
+              "label": "Temperature",
+              "numberFormat": "#,##0",
+              "unit": "C",
+              "value": 15
+            },
+            {
+              "hasDegree": false,
+              "label": "Preasure",
+              "numberFormat": "#,##0",
+              "unit": "mPa",
+              "value": 1200
+            }
+          ],
+          "tag": "#4017",
+          "type": "atmospheric",
+          "value": 950
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4018"
+        },
+        "position": {
+          "height": 384,
+          "width": 216,
+          "x": 492,
+          "y": 24
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 1000,
+          "medium": "normal",
+          "readout": [
+            {
+              "hasDegree": true,
+              "label": "Temperature",
+              "numberFormat": "#,##0",
+              "unit": "C",
+              "value": 15
+            },
+            {
+              "hasDegree": false,
+              "label": "Preasure",
+              "numberFormat": "#,##0",
+              "unit": "mPa",
+              "value": 1200
+            }
+          ],
+          "tag": "#4018",
+          "type": "atmospheric"
+        },
+        "type": "automation.automation-tank.automation-tank"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "openbridge.manual.connector-diagram"
+  }
+}

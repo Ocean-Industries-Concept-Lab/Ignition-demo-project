@@ -26,6 +26,10 @@
       "title": "",
       "viewPath": "Page/Alerts"
     },
+    "/alerts/:alarmId": {
+      "title": "",
+      "viewPath": "Page/Alerts"
+    },
     "/card": {
       "title": "Home",
       "viewPath": "Page/CardBased"
@@ -34,21 +38,13 @@
       "title": "IAS",
       "viewPath": "Page/IAS"
     },
-    "/map": {
-      "title": "",
-      "viewPath": "Page/Map"
-    },
     "/maritime": {
       "title": "",
       "viewPath": "Page/Maritime"
     },
-    "/test": {
-      "title": "",
-      "viewPath": "Page/View"
-    },
     "/tmp": {
       "title": "",
-      "viewPath": "Page/Tmp"
+      "viewPath": "Page/tmp"
     }
   },
   "sharedDocks": {

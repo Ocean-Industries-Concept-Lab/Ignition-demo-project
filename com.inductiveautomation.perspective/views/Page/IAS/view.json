@@ -97,7 +97,7 @@
               },
               "transforms": [
                 {
-                  "expression": "if({value}=0,false,true)",
+                  "expression": "if({value}\u003d0,false,true)",
                   "type": "expression"
                 }
               ],

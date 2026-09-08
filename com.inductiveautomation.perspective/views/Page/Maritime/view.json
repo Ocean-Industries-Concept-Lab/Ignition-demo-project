@@ -440,6 +440,19 @@
           "x": 98,
           "y": 629
         },
+        "propConfig": {
+          "props.checked": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[Sample_Tags]Writeable/WriteableBoolean2"
+              },
+              "type": "tag"
+            }
+          }
+        },
         "props": {
           "label": "Fun"
         },

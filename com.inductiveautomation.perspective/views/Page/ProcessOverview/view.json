@@ -15,7 +15,7 @@
   "props": {
     "defaultSize": {
       "height": 1200,
-      "width": 2000
+      "width": 2200
     }
   },
   "root": {
@@ -108,7 +108,7 @@
           "height": 220,
           "width": 180,
           "x": 1398,
-          "y": 420
+          "y": 334
         },
         "props": {
           "chartData": [
@@ -241,7 +241,40 @@
           "height": 220,
           "width": 248,
           "x": 1592,
-          "y": 415
+          "y": 334
+        },
+        "propConfig": {
+          "props.chartData": {
+            "binding": {
+              "config": {
+                "aggregate": "MinMax",
+                "avoidScanClassValidation": true,
+                "dateRange": {
+                  "mostRecent": "1",
+                  "mostRecentUnits": "HOUR"
+                },
+                "enableValueCache": true,
+                "ignoreBadQuality": false,
+                "polling": {
+                  "enabled": false,
+                  "rate": "30"
+                },
+                "preventInterpolation": false,
+                "returnFormat": "Wide",
+                "returnSize": {
+                  "numRows": "100",
+                  "type": "FIXED"
+                },
+                "tags": [
+                  {
+                    "path": "[Sample_Tags]Sine/Sine0"
+                  }
+                ],
+                "valueFormat": "DATASET"
+              },
+              "type": "tag-history"
+            }
+          }
         },
         "props": {
           "hasCustomUnit": true,
@@ -261,7 +294,7 @@
           "height": 220,
           "width": 144,
           "x": 1344,
-          "y": 672
+          "y": 706
         },
         "props": {
           "hasCustomUnit": true,
@@ -281,7 +314,7 @@
           "height": 220,
           "width": 144,
           "x": 1512,
-          "y": 672
+          "y": 706
         },
         "props": {
           "hasCustomUnit": true,
@@ -301,7 +334,7 @@
           "height": 220,
           "width": 144,
           "x": 1692,
-          "y": 672
+          "y": 706
         },
         "props": {
           "hasCustomUnit": true,
@@ -319,8 +352,8 @@
         "position": {
           "height": 95,
           "width": 130,
-          "x": 488,
-          "y": 142.5
+          "x": 415,
+          "y": 108.5
         },
         "propConfig": {
           "props.tag": {
@@ -351,8 +384,8 @@
         "position": {
           "height": 95,
           "width": 130,
-          "x": 743,
-          "y": 142.5
+          "x": 751,
+          "y": 144.5
         },
         "props": {
           "hasCustomUnit": true,
@@ -409,8 +442,8 @@
         "position": {
           "height": 48,
           "width": 48,
-          "x": 375,
-          "y": 166
+          "x": 312,
+          "y": 132
         },
         "props": {
           "params": {
@@ -466,7 +499,7 @@
           "height": 48,
           "width": 48,
           "x": 1464,
-          "y": 240
+          "y": 228
         },
         "props": {
           "params": {
@@ -699,7 +732,7 @@
           "height": 48,
           "width": 48,
           "x": 1692,
-          "y": 252
+          "y": 228
         },
         "props": {
           "params": {
@@ -779,7 +812,7 @@
           "height": 48,
           "width": 48,
           "x": 1392,
-          "y": 948
+          "y": 972
         },
         "props": {
           "params": {
@@ -799,7 +832,7 @@
           "height": 48,
           "width": 48,
           "x": 1560,
-          "y": 948
+          "y": 972
         },
         "props": {
           "params": {
@@ -819,7 +852,7 @@
           "height": 48,
           "width": 48,
           "x": 1740,
-          "y": 948
+          "y": 972
         },
         "props": {
           "params": {
@@ -958,7 +991,7 @@
       "props.connections.cmrdvoycg36.state": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve31/valveOpen} \u0026\u0026 {[default]process/valve32/valveOpen},\"open\",\"closed\")"
+            "expression": "if({[default]process/valve31/valveOpen} && {[default]process/valve32/valveOpen},\"open\",\"closed\")"
           },
           "type": "expr"
         }
@@ -982,7 +1015,7 @@
       "props.connections.cmremfcc822.state": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve33/valveOpen} \u0026\u0026 {[default]process/valve18/valveOpen},\"open\",\"closed\")"
+            "expression": "if({[default]process/valve33/valveOpen} && {[default]process/valve18/valveOpen},\"open\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1014,7 +1047,7 @@
       "props.connections.cmremqzdi2.state": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve11/valveOpen} \u0026\u0026 {[default]process/pump1/pumpOn},\"open\",\"closed\")"
+            "expression": "if({[default]process/valve11/valveOpen} && {[default]process/pump1/pumpOn},\"open\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1025,6 +1058,33 @@
             "expression": "if({[default]process/valve10/valveOpen},\"open\",\"closed\")"
           },
           "type": "expr"
+        }
+      },
+      "props.connections.cmremruh547.mediumColor": {
+        "binding": {
+          "config": {
+            "fallbackDelay": 2.5,
+            "mode": "direct",
+            "tagPath": "[Sample_Tags]Writeable/WriteableDouble1"
+          },
+          "transforms": [
+            {
+              "fallback": "blue",
+              "inputType": "range",
+              "mappings": [
+                {
+                  "input": {
+                    "max": 10,
+                    "min": 0
+                  },
+                  "output": "Yellow"
+                }
+              ],
+              "outputType": "scalar",
+              "type": "map"
+            }
+          ],
+          "type": "tag"
         }
       },
       "props.connections.cmremruh547.state": {
@@ -1046,7 +1106,7 @@
       "props.connections.cmrems30749.state": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve12/valveOpen} \u0026\u0026 {[default]process/valve13/valveOpen},\"open\",\"closed\")"
+            "expression": "if({[default]process/valve12/valveOpen} && {[default]process/valve13/valveOpen},\"open\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1070,7 +1130,7 @@
       "props.connections.cmremslgb6b.state": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve14/valveOpen} \u0026\u0026 {[default]process/pump2/pumpOn},\"open\",\"closed\")"
+            "expression": "if({[default]process/valve14/valveOpen} && {[default]process/pump2/pumpOn},\"open\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1094,7 +1154,7 @@
       "props.connections.cmren3la88j.state": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve16/valveOpen} \u0026\u0026 {[default]process/pump3/pumpOn},\"open\",\"closed\")"
+            "expression": "if({[default]process/valve16/valveOpen} && {[default]process/pump3/pumpOn},\"open\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1110,7 +1170,7 @@
       "props.connections.cmren44vja0.state": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve15/valveOpen} \u0026\u0026 {[default]process/valve28/valveOpen},\"open\",\"closed\")"
+            "expression": "if({[default]process/valve15/valveOpen} && {[default]process/valve28/valveOpen},\"open\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1142,7 +1202,7 @@
       "props.connections.cmren6k8hc8.state": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve21/valveOpen} \u0026\u0026 {[default]process/valve20/valveOpen},\"open\",\"closed\")"
+            "expression": "if({[default]process/valve21/valveOpen} && {[default]process/valve20/valveOpen},\"open\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1158,7 +1218,7 @@
       "props.connections.cmren72l1d7.state": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve28/valveOpen} \u0026\u0026 {[default]process/valve26/valveOpen},\"open\",\"closed\")"
+            "expression": "if({[default]process/valve28/valveOpen} && {[default]process/valve26/valveOpen},\"open\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1254,7 +1314,7 @@
       "props.connections.cmrenpp0df5.state": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve26/valveOpen} \u0026\u0026 {[default]process/valve24/valveOpen},\"open\",\"closed\")"
+            "expression": "if({[default]process/valve26/valveOpen} && {[default]process/valve24/valveOpen},\"open\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1262,7 +1322,7 @@
       "props.connections.cmrenq6p2f6.state": {
         "binding": {
           "config": {
-            "expression": "if({[default]process/valve23/valveOpen} \u0026\u0026 {[default]process/valve22/valveOpen},\"open\",\"closed\")"
+            "expression": "if({[default]process/valve23/valveOpen} && {[default]process/valve22/valveOpen},\"open\",\"closed\")"
           },
           "type": "expr"
         }
@@ -1348,16 +1408,24 @@
           "mediumColor": "Blue",
           "size": "inherit",
           "to": {
+            "kind": "node",
+            "nodeId": "cmrdvp0wj3q"
+          },
+          "viaPoints": []
+        },
+        "cmrdvoycg36_cmrdvp0wj3q": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmrdvp0wj3q"
+          },
+          "mediumColor": "Blue",
+          "size": "inherit",
+          "state": "open",
+          "to": {
             "componentId": "DV1032",
             "direction": "top"
           },
-          "viaPoints": [
-            {
-              "id": "cmrdvp0wj3q",
-              "x": 468,
-              "y": 289
-            }
-          ]
+          "viaPoints": []
         },
         "cmrdvp0wj3r": {
           "from": {
@@ -1367,19 +1435,24 @@
           "mediumColor": "Blue",
           "size": "inherit",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmrdvoycg36",
-              "viaPointId": "cmrdvp0wj3q"
-            }
+            "kind": "node",
+            "nodeId": "cmremh2qa2m"
           },
-          "viaPoints": [
-            {
-              "id": "cmremh2qa2m",
-              "x": 660,
-              "y": 289
-            }
-          ]
+          "viaPoints": []
+        },
+        "cmrdvp0wj3r_cmremh2qa2m": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmremh2qa2m"
+          },
+          "mediumColor": "Blue",
+          "size": "inherit",
+          "state": "open",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrdvp0wj3q"
+          },
+          "viaPoints": []
         },
         "cmremebs10": {
           "from": {
@@ -1402,16 +1475,24 @@
           "mediumColor": "Blue",
           "size": "inherit",
           "to": {
+            "kind": "node",
+            "nodeId": "cmremslgb6a"
+          },
+          "viaPoints": []
+        },
+        "cmremfcc822_cmremslgb6a": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmremslgb6a"
+          },
+          "mediumColor": "Blue",
+          "size": "inherit",
+          "state": "open",
+          "to": {
             "componentId": "DV2018",
             "direction": "top"
           },
-          "viaPoints": [
-            {
-              "id": "cmremslgb6a",
-              "x": 1044,
-              "y": 861
-            }
-          ]
+          "viaPoints": []
         },
         "cmremh2qb2n": {
           "from": {
@@ -1426,38 +1507,71 @@
             },
             {
               "x": 1044,
-              "y": 289
-            },
-            {
-              "x": 660,
-              "y": 289
+              "y": 720
             }
           ],
           "size": "inherit",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmrdvp0wj3r",
-              "viaPointId": "cmremh2qa2m"
-            }
+            "kind": "node",
+            "nodeId": "cmremruh546"
           },
-          "viaPoints": [
+          "viaPoints": []
+        },
+        "cmremh2qb2n_cmremh6542z": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmremh6542z"
+          },
+          "mediumColor": "Blue",
+          "size": "inherit",
+          "state": "open",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmremh2qa2m"
+          },
+          "viaPoints": []
+        },
+        "cmremh2qb2n_cmremruh546": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmremruh546"
+          },
+          "mediumColor": "Blue",
+          "size": "inherit",
+          "state": "open",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmren9u78if"
+          },
+          "viaPoints": []
+        },
+        "cmremh2qb2n_cmren9u78if": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmren9u78if"
+          },
+          "mediumColor": "Blue",
+          "path": [
             {
-              "id": "cmremruh546",
-              "x": 1044,
-              "y": 720
-            },
-            {
-              "id": "cmren9u78if",
               "x": 1044,
               "y": 504
             },
             {
-              "id": "cmremh6542z",
+              "x": 1044,
+              "y": 289
+            },
+            {
               "x": 852,
               "y": 289
             }
-          ]
+          ],
+          "size": "inherit",
+          "state": "open",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmremh6542z"
+          },
+          "viaPoints": []
         },
         "cmremh65530": {
           "from": {
@@ -1467,11 +1581,8 @@
           "mediumColor": "Blue",
           "size": "inherit",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmremh2qb2n",
-              "viaPointId": "cmremh6542z"
-            }
+            "kind": "node",
+            "nodeId": "cmremh6542z"
           },
           "viaPoints": []
         },
@@ -1480,46 +1591,13 @@
             "componentId": "Tank3012",
             "direction": "top"
           },
-          "mediumColor": "Cyan",
+          "mediumColor": "Blue",
           "size": "inherit",
           "to": {
             "componentId": "DV1011",
             "direction": "right"
           },
           "viaPoints": []
-        },
-        "cmremqzdi2": {
-          "from": {
-            "componentId": "DV1011",
-            "direction": "left"
-          },
-          "mediumColor": "Blue",
-          "path": [
-            {
-              "x": 681,
-              "y": 100
-            },
-            {
-              "x": 120,
-              "y": 100
-            },
-            {
-              "x": 120,
-              "y": 694
-            }
-          ],
-          "size": "inherit",
-          "to": {
-            "componentId": "PU2010",
-            "direction": "top"
-          },
-          "viaPoints": [
-            {
-              "id": "cmremr73g36",
-              "x": 324,
-              "y": 100
-            }
-          ]
         },
         "cmremr73g37": {
           "from": {
@@ -1529,11 +1607,8 @@
           "mediumColor": "Blue",
           "size": "inherit",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmremqzdi2",
-              "viaPointId": "cmremr73g36"
-            }
+            "kind": "node",
+            "nodeId": "cmsdg71ow32"
           },
           "viaPoints": []
         },
@@ -1542,14 +1617,10 @@
             "componentId": "PU2010",
             "direction": "right"
           },
-          "mediumColor": "Blue",
           "size": "inherit",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmremh2qb2n",
-              "viaPointId": "cmremruh546"
-            }
+            "kind": "node",
+            "nodeId": "cmremruh546"
           },
           "viaPoints": []
         },
@@ -1576,16 +1647,24 @@
           "mediumColor": "Orange",
           "size": "inherit",
           "to": {
+            "kind": "node",
+            "nodeId": "cmremsf6x4n"
+          },
+          "viaPoints": []
+        },
+        "cmrems30749_cmremsf6x4n": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmremsf6x4n"
+          },
+          "mediumColor": "Orange",
+          "size": "inherit",
+          "state": "closed",
+          "to": {
             "componentId": "DV1013",
             "direction": "top"
           },
-          "viaPoints": [
-            {
-              "id": "cmremsf6x4n",
-              "x": 336,
-              "y": 861
-            }
-          ]
+          "viaPoints": []
         },
         "cmremscmg4a": {
           "from": {
@@ -1610,11 +1689,8 @@
           "mediumColor": "Orange",
           "size": "inherit",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmrems30749",
-              "viaPointId": "cmremsf6x4n"
-            }
+            "kind": "node",
+            "nodeId": "cmremsf6x4n"
           },
           "viaPoints": []
         },
@@ -1630,6 +1706,29 @@
               "y": 861
             },
             {
+              "x": 564,
+              "y": 861
+            }
+          ],
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrentddwfg"
+          },
+          "viaPoints": []
+        },
+        "cmremslgb6b_cmremso3p6u": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmremso3p6u"
+          },
+          "mediumColor": "Orange",
+          "path": [
+            {
+              "x": 637,
+              "y": 861
+            },
+            {
               "x": 859,
               "y": 861
             },
@@ -1639,22 +1738,26 @@
             }
           ],
           "size": "inherit",
+          "state": "open",
           "to": {
             "componentId": "PU2012",
             "direction": "top"
           },
-          "viaPoints": [
-            {
-              "id": "cmrentddwfg",
-              "x": 564,
-              "y": 861
-            },
-            {
-              "id": "cmremso3p6u",
-              "x": 637,
-              "y": 861
-            }
-          ]
+          "viaPoints": []
+        },
+        "cmremslgb6b_cmrentddwfg": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmrentddwfg"
+          },
+          "mediumColor": "Orange",
+          "size": "inherit",
+          "state": "open",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmremso3p6u"
+          },
+          "viaPoints": []
         },
         "cmremso3q6v": {
           "from": {
@@ -1664,11 +1767,8 @@
           "mediumColor": "Orange",
           "size": "inherit",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmremslgb6b",
-              "viaPointId": "cmremso3p6u"
-            }
+            "kind": "node",
+            "nodeId": "cmremso3p6u"
           },
           "viaPoints": []
         },
@@ -1681,11 +1781,8 @@
           "size": "inherit",
           "state": "closed",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmremfcc822",
-              "viaPointId": "cmremslgb6a"
-            }
+            "kind": "node",
+            "nodeId": "cmremslgb6a"
           },
           "viaPoints": []
         },
@@ -1697,11 +1794,8 @@
           "mediumColor": "Orange",
           "size": "inherit",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmremslgb6b",
-              "viaPointId": "cmrentddwfg"
-            }
+            "kind": "node",
+            "nodeId": "cmrentddwfg"
           },
           "viaPoints": []
         },
@@ -1731,6 +1825,29 @@
             },
             {
               "x": 720,
+              "y": 1084
+            }
+          ],
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrentgq9g3"
+          },
+          "viaPoints": []
+        },
+        "cmren3tkg9y_cmrentgq9g3": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmrentgq9g3"
+          },
+          "mediumColor": "Orange",
+          "path": [
+            {
+              "x": 720,
+              "y": 1084
+            },
+            {
+              "x": 720,
               "y": 1154
             },
             {
@@ -1739,20 +1856,12 @@
             }
           ],
           "size": "inherit",
+          "state": "open",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmren44vja0",
-              "viaPointId": "cmren62k2al"
-            }
+            "kind": "node",
+            "nodeId": "cmren62k2al"
           },
-          "viaPoints": [
-            {
-              "id": "cmrentgq9g3",
-              "x": 720,
-              "y": 1084
-            }
-          ]
+          "viaPoints": []
         },
         "cmren44vja0": {
           "from": {
@@ -1770,6 +1879,29 @@
               "y": 1154
             },
             {
+              "x": 722.5,
+              "y": 1154
+            }
+          ],
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmren62k2al"
+          },
+          "viaPoints": []
+        },
+        "cmren44vja0_cmren62k2al": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmren62k2al"
+          },
+          "mediumColor": "Orange",
+          "path": [
+            {
+              "x": 722.5,
+              "y": 1154
+            },
+            {
               "x": 1221,
               "y": 1154
             },
@@ -1783,17 +1915,12 @@
             }
           ],
           "size": "inherit",
+          "state": "open",
           "to": {
             "componentId": "DV1028",
             "direction": "left"
           },
-          "viaPoints": [
-            {
-              "id": "cmren62k2al",
-              "x": 722.5,
-              "y": 1154
-            }
-          ]
+          "viaPoints": []
         },
         "cmren64usbb": {
           "from": {
@@ -1803,11 +1930,8 @@
           "mediumColor": "Orange",
           "size": "inherit",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmren3tkg9y",
-              "viaPointId": "cmrentgq9g3"
-            }
+            "kind": "node",
+            "nodeId": "cmrentgq9g3"
           },
           "viaPoints": []
         },
@@ -1845,16 +1969,24 @@
           "mediumColor": "Indigo",
           "size": "inherit",
           "to": {
+            "kind": "node",
+            "nodeId": "cmren6lxbcu"
+          },
+          "viaPoints": []
+        },
+        "cmren6k8hc8_cmren6lxbcu": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmren6lxbcu"
+          },
+          "mediumColor": "Indigo",
+          "size": "inherit",
+          "state": "open",
+          "to": {
             "componentId": "DV1020",
             "direction": "right"
           },
-          "viaPoints": [
-            {
-              "id": "cmren6lxbcu",
-              "x": 1580,
-              "y": 1084
-            }
-          ]
+          "viaPoints": []
         },
         "cmren6lxbcv": {
           "from": {
@@ -1864,11 +1996,8 @@
           "mediumColor": "Indigo",
           "size": "inherit",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmren6k8hc8",
-              "viaPointId": "cmren6lxbcu"
-            }
+            "kind": "node",
+            "nodeId": "cmren6lxbcu"
           },
           "viaPoints": []
         },
@@ -1880,16 +2009,24 @@
           "mediumColor": "Orange",
           "size": "inherit",
           "to": {
+            "kind": "node",
+            "nodeId": "cmreng87ymq"
+          },
+          "viaPoints": []
+        },
+        "cmren72l1d7_cmreng87ymq": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmreng87ymq"
+          },
+          "mediumColor": "Orange",
+          "size": "inherit",
+          "state": "open",
+          "to": {
             "componentId": "DV1026",
             "direction": "left"
           },
-          "viaPoints": [
-            {
-              "id": "cmreng87ymq",
-              "x": 1488,
-              "y": 168
-            }
-          ]
+          "viaPoints": []
         },
         "cmren74k7dx": {
           "from": {
@@ -1899,11 +2036,8 @@
           "mediumColor": "Orange",
           "size": "inherit",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmren72l1d7",
-              "viaPointId": "cmreng87ymq"
-            }
+            "kind": "node",
+            "nodeId": "cmreng87ymq"
           },
           "viaPoints": []
         },
@@ -1954,11 +2088,8 @@
           "mediumColor": "Blue",
           "size": "inherit",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmremh2qb2n",
-              "viaPointId": "cmren9u78if"
-            }
+            "kind": "node",
+            "nodeId": "cmren9u78if"
           },
           "viaPoints": []
         },
@@ -1990,6 +2121,25 @@
             {
               "x": 1044,
               "y": 1084
+            }
+          ],
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrenny3ue2"
+          },
+          "viaPoints": []
+        },
+        "cmrenmdkr76_cmrenny3ue2": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmrenny3ue2"
+          },
+          "mediumColor": "Blue",
+          "path": [
+            {
+              "x": 1044,
+              "y": 1084
             },
             {
               "x": 1044,
@@ -1997,19 +2147,14 @@
             }
           ],
           "size": "inherit",
+          "state": "open",
           "to": {
             "kind": "free",
             "terminal": "none",
             "x": 1044,
             "y": 1084
           },
-          "viaPoints": [
-            {
-              "id": "cmrenny3ue2",
-              "x": 1044,
-              "y": 1084
-            }
-          ]
+          "viaPoints": []
         },
         "cmrenmms38b": {
           "from": {
@@ -2019,18 +2164,26 @@
           "mediumColor": "Orange",
           "size": "inherit",
           "to": {
+            "kind": "node",
+            "nodeId": "cmrenmq138w"
+          },
+          "viaPoints": []
+        },
+        "cmrenmms38b_cmrenmq138w": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmrenmq138w"
+          },
+          "mediumColor": "Orange",
+          "size": "inherit",
+          "state": "open",
+          "to": {
             "kind": "free",
             "terminal": "none",
             "x": 1044,
             "y": 1084
           },
-          "viaPoints": [
-            {
-              "id": "cmrenmq138w",
-              "x": 938.6666870117188,
-              "y": 1084
-            }
-          ]
+          "viaPoints": []
         },
         "cmrenmq138x": {
           "from": {
@@ -2040,11 +2193,8 @@
           "mediumColor": "Orange",
           "size": "inherit",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmrenmms38b",
-              "viaPointId": "cmrenmq138w"
-            }
+            "kind": "node",
+            "nodeId": "cmrenmq138w"
           },
           "viaPoints": []
         },
@@ -2056,19 +2206,24 @@
           "mediumColor": "Indigo",
           "size": "inherit",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmrenmdkr76",
-              "viaPointId": "cmrenny3ue2"
-            }
+            "kind": "node",
+            "nodeId": "cmreno09aeg"
           },
-          "viaPoints": [
-            {
-              "id": "cmreno09aeg",
-              "x": 1416,
-              "y": 1084
-            }
-          ]
+          "viaPoints": []
+        },
+        "cmrenny3ue3_cmreno09aeg": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmreno09aeg"
+          },
+          "mediumColor": "Indigo",
+          "size": "inherit",
+          "state": "open",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrenny3ue2"
+          },
+          "viaPoints": []
         },
         "cmreno09beh": {
           "from": {
@@ -2078,11 +2233,8 @@
           "mediumColor": "Indigo",
           "size": "inherit",
           "to": {
-            "kind": "junction",
-            "ref": {
-              "connectionId": "cmrenny3ue3",
-              "viaPointId": "cmreno09aeg"
-            }
+            "kind": "node",
+            "nodeId": "cmreno09aeg"
           },
           "viaPoints": []
         },
@@ -2111,16 +2263,122 @@
             "direction": "right"
           },
           "viaPoints": []
+        },
+        "cmsdg6of919": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmsdg71ow32"
+          },
+          "mediumColor": "Blue",
+          "size": "inherit",
+          "state": "open",
+          "to": {
+            "componentId": "PU2010",
+            "direction": "top"
+          },
+          "viaPoints": []
+        },
+        "cmsdj674t6y": {
+          "from": {
+            "componentId": "DV1011",
+            "direction": "left"
+          },
+          "mediumColor": "Blue",
+          "size": "inherit",
+          "state": "open",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmsdg71ow32"
+          },
+          "viaPoints": []
         }
       },
       "gridSize": 12,
+      "minimap": {
+        "enabled": true
+      },
+      "nodes": {
+        "cmrdvp0wj3q": {
+          "x": 468,
+          "y": 289
+        },
+        "cmremh2qa2m": {
+          "x": 660,
+          "y": 289
+        },
+        "cmremh6542z": {
+          "x": 852,
+          "y": 289
+        },
+        "cmremruh546": {
+          "x": 1044,
+          "y": 720
+        },
+        "cmremsf6x4n": {
+          "x": 336,
+          "y": 861
+        },
+        "cmremslgb6a": {
+          "x": 1044,
+          "y": 861
+        },
+        "cmremso3p6u": {
+          "x": 637,
+          "y": 861
+        },
+        "cmren62k2al": {
+          "x": 722.5,
+          "y": 1154
+        },
+        "cmren6lxbcu": {
+          "x": 1580,
+          "y": 1084
+        },
+        "cmren9u78if": {
+          "x": 1044,
+          "y": 504
+        },
+        "cmreng87ymq": {
+          "x": 1488,
+          "y": 168
+        },
+        "cmrenmq138w": {
+          "x": 938.6666870117188,
+          "y": 1084
+        },
+        "cmrenny3ue2": {
+          "x": 1044,
+          "y": 1084
+        },
+        "cmreno09aeg": {
+          "x": 1416,
+          "y": 1084
+        },
+        "cmrentddwfg": {
+          "x": 564,
+          "y": 861
+        },
+        "cmrentgq9g3": {
+          "x": 720,
+          "y": 1084
+        },
+        "cmsdg71ow32": {
+          "x": 287,
+          "y": 100
+        }
+      },
       "showReadout": true,
       "showTag": true,
+      "style": {
+        "backgroundColor": "var(--container-section-color)"
+      },
       "userToolbar": {
         "mediumColors": [
           {
             "color": "Blue",
-            "label": "Water"
+            "id": "neutral",
+            "label": "Water",
+            "size": "medium"
           },
           {
             "color": "Orange",
@@ -2131,6 +2389,53 @@
             "label": "Mix"
           }
         ]
+      },
+      "zones": {
+        "zms4z3ino0": {
+          "detailView": "",
+          "h": 420,
+          "label": "",
+          "viewParams": {},
+          "w": 804,
+          "x": 156,
+          "y": 252
+        },
+        "zms4z5him1": {
+          "detailView": "",
+          "h": 456,
+          "label": "",
+          "viewParams": {},
+          "w": 624,
+          "x": 1260,
+          "y": 132
+        },
+        "zms4zdhmf2": {
+          "detailView": "",
+          "h": 444,
+          "label": "",
+          "viewParams": {},
+          "w": 672,
+          "x": 288,
+          "y": 744
+        },
+        "zms4zdymg3": {
+          "detailView": "",
+          "h": 180,
+          "label": "",
+          "viewParams": {},
+          "w": 672,
+          "x": 252,
+          "y": 60
+        },
+        "zms4zfih44": {
+          "detailView": "Page/TankView",
+          "h": 468,
+          "label": "Group 2",
+          "viewParams": {},
+          "w": 624,
+          "x": 1260,
+          "y": 672
+        }
       }
     },
     "type": "openbridge.manual.connector-diagram"

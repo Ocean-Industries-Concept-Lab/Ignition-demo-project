@@ -169,6 +169,7 @@
     },
     "props": {
       "style": {
+        "backgroundColor": "#C0C0C000",
         "classes": "utils/overflow-visible"
       }
     },

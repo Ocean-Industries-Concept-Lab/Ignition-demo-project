@@ -22,6 +22,20 @@
   "root": {
     "children": [
       {
+        "events": {
+          "component": {
+            "onSignInClick": {
+              "config": {},
+              "scope": "C",
+              "type": "login"
+            },
+            "onSignOutClick": {
+              "config": {},
+              "scope": "C",
+              "type": "logout"
+            }
+          }
+        },
         "meta": {
           "name": "topbar"
         },
@@ -40,6 +54,14 @@
               "type": "tag"
             }
           },
+          "props.isLoggedIn": {
+            "binding": {
+              "config": {
+                "path": "session.props.auth.authenticated"
+              },
+              "type": "property"
+            }
+          },
           "props.navMenuButtonPressed": {
             "onChange": {
               "enabled": null,
@@ -53,11 +75,22 @@
               },
               "type": "property"
             }
+          },
+          "props.userFullName": {
+            "binding": {
+              "config": {
+                "path": "session.props.auth.user.userName"
+              },
+              "type": "property"
+            }
           }
         },
         "props": {
           "alertPath": "/alerts",
-          "appName": "Demo"
+          "appName": "Demo",
+          "navMenuButtonPressed": true,
+          "showAlertSilenceButton": false,
+          "showUserButton": true
         },
         "type": "openbridge.manual.topbar"
       }
