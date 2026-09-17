@@ -47,21 +47,7 @@
         "scripts": {
           "customMethods": [],
           "extensionFunctions": [
-            {
-              "enabled": true,
-              "name": "getCustomColumns",
-              "script": "\treturn {\"hello\": \"world\", \"hi\": \"morten\"}\n"
-            },
-            {
-              "enabled": true,
-              "name": "getCustomFilters",
-              "script": "\tif tagPath is None:\n\t\treturn {}\n\tsource \u003d tagPath.getSource()\n\tif not source:\n\t\treturn {}\n\tif tagPath.getPathLength() \u003c 1:\n\t\treturn {\"source\": source}\n\treturn {\"source\": [source, tagPath.getPathComponent(0)]}\n"
-            },
-            {
-              "enabled": true,
-              "name": "getCustomData",
-              "script": "\treturn [[{\u0027label\u0027: \u0027Data\u0027, \u0027value\u0027: \u0027Extra\u0027}]]\n"
-            },
+
             {
               "enabled": true,
               "name": "getNextUrl",

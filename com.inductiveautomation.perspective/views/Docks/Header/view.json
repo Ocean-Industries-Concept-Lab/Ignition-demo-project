@@ -62,12 +62,6 @@
               "type": "property"
             }
           },
-          "props.navMenuButtonPressed": {
-            "onChange": {
-              "enabled": null,
-              "script": "\n\tif (currentValue.getValue()):\n\t\tsystem.perspective.openDock(\"menu\")\n\telse:\n\t\tsystem.perspective.closeDock(\"menu\")"
-            }
-          },
           "props.pageName": {
             "binding": {
               "config": {
@@ -88,7 +82,9 @@
         "props": {
           "alertPath": "/alerts",
           "appName": "Demo",
-          "navMenuButtonPressed": true,
+          "bindNavMenuToDock": true,
+          "bindUserButtonToAuth": true,
+          "navDock": "menu",
           "showAlertSilenceButton": false,
           "showUserButton": true
         },

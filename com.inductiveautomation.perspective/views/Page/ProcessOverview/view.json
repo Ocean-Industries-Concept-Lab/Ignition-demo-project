@@ -956,110 +956,6 @@
       "y": 0
     },
     "propConfig": {
-      "props.connections.cmrdgx8vj0.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve32/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmrdvmfpp0.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve31/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmrdvmnra1.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve30/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmrdvo3ms5.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve10/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmrdvoycg36.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve31/valveOpen} && {[default]process/valve32/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmrdvp0wj3r.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve30/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmremebs10.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve29/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmremfcc822.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve33/valveOpen} && {[default]process/valve18/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmremh2qb2n.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve33/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmremh65530.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve29/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmremqwov1.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve11/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmremqzdi2.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve11/valveOpen} && {[default]process/pump1/pumpOn},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmremr73g37.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve10/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
       "props.connections.cmremruh547.mediumColor": {
         "binding": {
           "config": {
@@ -1085,246 +981,6 @@
             }
           ],
           "type": "tag"
-        }
-      },
-      "props.connections.cmremruh547.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/pump1/pumpOn},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmrems10h48.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve12/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmrems30749.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve12/valveOpen} && {[default]process/valve13/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmremscmg4a.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve13/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmremsf6y4o.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve14/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmremslgb6b.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve14/valveOpen} && {[default]process/pump2/pumpOn},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmremso3q6v.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/pump3/pumpOn},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren3f9y8h.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve15/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren3la88j.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve16/valveOpen} && {[default]process/pump3/pumpOn},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren3tkg9y.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve16/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren44vja0.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve15/valveOpen} && {[default]process/valve28/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren64usbb.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve17/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren6gmzc6.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve19/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren6ih7c7.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve21/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren6k8hc8.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve21/valveOpen} && {[default]process/valve20/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren6lxbcv.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve22/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren72l1d7.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve28/valveOpen} && {[default]process/valve26/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren74k7dx.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve27/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren75yldy.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve27/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren78dndz.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve24/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren7qb1f8.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve23/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren86w5gz.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/pump0/pumpOn},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmren89srh0.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/pump0/pumpOn},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmrenmdkr76.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve18/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmrenmms38b.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve17/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmrenmq138x.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/pump2/pumpOn},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmrenny3ue3.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve20/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmreno09beh.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve19/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmrenpp0df5.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve26/valveOpen} && {[default]process/valve24/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
-        }
-      },
-      "props.connections.cmrenq6p2f6.state": {
-        "binding": {
-          "config": {
-            "expression": "if({[default]process/valve23/valveOpen} && {[default]process/valve22/valveOpen},\"open\",\"closed\")"
-          },
-          "type": "expr"
         }
       },
       "props.userToolbar.showReadout": {
@@ -1420,7 +1076,6 @@
           },
           "mediumColor": "Blue",
           "size": "inherit",
-          "state": "open",
           "to": {
             "componentId": "DV1032",
             "direction": "top"
@@ -1447,7 +1102,6 @@
           },
           "mediumColor": "Blue",
           "size": "inherit",
-          "state": "open",
           "to": {
             "kind": "node",
             "nodeId": "cmrdvp0wj3q"
@@ -1487,7 +1141,6 @@
           },
           "mediumColor": "Blue",
           "size": "inherit",
-          "state": "open",
           "to": {
             "componentId": "DV2018",
             "direction": "top"
@@ -1524,7 +1177,6 @@
           },
           "mediumColor": "Blue",
           "size": "inherit",
-          "state": "open",
           "to": {
             "kind": "node",
             "nodeId": "cmremh2qa2m"
@@ -1538,7 +1190,6 @@
           },
           "mediumColor": "Blue",
           "size": "inherit",
-          "state": "open",
           "to": {
             "kind": "node",
             "nodeId": "cmren9u78if"
@@ -1566,7 +1217,6 @@
             }
           ],
           "size": "inherit",
-          "state": "open",
           "to": {
             "kind": "node",
             "nodeId": "cmremh6542z"
@@ -1659,7 +1309,6 @@
           },
           "mediumColor": "Orange",
           "size": "inherit",
-          "state": "closed",
           "to": {
             "componentId": "DV1013",
             "direction": "top"
@@ -1738,7 +1387,6 @@
             }
           ],
           "size": "inherit",
-          "state": "open",
           "to": {
             "componentId": "PU2012",
             "direction": "top"
@@ -1752,7 +1400,6 @@
           },
           "mediumColor": "Orange",
           "size": "inherit",
-          "state": "open",
           "to": {
             "kind": "node",
             "nodeId": "cmremso3p6u"
@@ -1779,7 +1426,6 @@
           },
           "mediumColor": "Blue",
           "size": "inherit",
-          "state": "closed",
           "to": {
             "kind": "node",
             "nodeId": "cmremslgb6a"
@@ -1856,7 +1502,6 @@
             }
           ],
           "size": "inherit",
-          "state": "open",
           "to": {
             "kind": "node",
             "nodeId": "cmren62k2al"
@@ -1915,7 +1560,6 @@
             }
           ],
           "size": "inherit",
-          "state": "open",
           "to": {
             "componentId": "DV1028",
             "direction": "left"
@@ -1981,7 +1625,6 @@
           },
           "mediumColor": "Indigo",
           "size": "inherit",
-          "state": "open",
           "to": {
             "componentId": "DV1020",
             "direction": "right"
@@ -2021,7 +1664,6 @@
           },
           "mediumColor": "Orange",
           "size": "inherit",
-          "state": "open",
           "to": {
             "componentId": "DV1026",
             "direction": "left"
@@ -2130,32 +1772,6 @@
           },
           "viaPoints": []
         },
-        "cmrenmdkr76_cmrenny3ue2": {
-          "from": {
-            "kind": "node",
-            "nodeId": "cmrenny3ue2"
-          },
-          "mediumColor": "Blue",
-          "path": [
-            {
-              "x": 1044,
-              "y": 1084
-            },
-            {
-              "x": 1044,
-              "y": 1084
-            }
-          ],
-          "size": "inherit",
-          "state": "open",
-          "to": {
-            "kind": "free",
-            "terminal": "none",
-            "x": 1044,
-            "y": 1084
-          },
-          "viaPoints": []
-        },
         "cmrenmms38b": {
           "from": {
             "componentId": "DV2017",
@@ -2176,12 +1792,9 @@
           },
           "mediumColor": "Orange",
           "size": "inherit",
-          "state": "open",
           "to": {
-            "kind": "free",
-            "terminal": "none",
-            "x": 1044,
-            "y": 1084
+            "kind": "node",
+            "nodeId": "cmrenny3ue2"
           },
           "viaPoints": []
         },
@@ -2218,7 +1831,6 @@
           },
           "mediumColor": "Indigo",
           "size": "inherit",
-          "state": "open",
           "to": {
             "kind": "node",
             "nodeId": "cmrenny3ue2"
@@ -2267,14 +1879,26 @@
         "cmsdg6of919": {
           "from": {
             "kind": "node",
+            "nodeId": "cmsdg6of918"
+          },
+          "mediumColor": "Blue",
+          "size": "inherit",
+          "to": {
+            "componentId": "PU2010",
+            "direction": "top"
+          },
+          "viaPoints": []
+        },
+        "cmsdg71ox33": {
+          "from": {
+            "kind": "node",
             "nodeId": "cmsdg71ow32"
           },
           "mediumColor": "Blue",
           "size": "inherit",
-          "state": "open",
           "to": {
-            "componentId": "PU2010",
-            "direction": "top"
+            "kind": "node",
+            "nodeId": "cmsdg6of918"
           },
           "viaPoints": []
         },
@@ -2285,7 +1909,6 @@
           },
           "mediumColor": "Blue",
           "size": "inherit",
-          "state": "open",
           "to": {
             "kind": "node",
             "nodeId": "cmsdg71ow32"
@@ -2331,7 +1954,7 @@
           "y": 1154
         },
         "cmren6lxbcu": {
-          "x": 1580,
+          "x": 1584,
           "y": 1084
         },
         "cmren9u78if": {
@@ -2361,6 +1984,10 @@
         "cmrentgq9g3": {
           "x": 720,
           "y": 1084
+        },
+        "cmsdg6of918": {
+          "x": 287,
+          "y": 100
         },
         "cmsdg71ow32": {
           "x": 287,

@@ -37,8 +37,8 @@
   },
   "props": {
     "defaultSize": {
-      "height": 56,
-      "width": 52
+      "height": 40,
+      "width": 40
     }
   },
   "root": {
@@ -64,8 +64,10 @@
           "name": "DV"
         },
         "position": {
-          "height": 48,
-          "width": 48
+          "height": 40,
+          "width": 40,
+          "x": 4,
+          "y": 4
         },
         "propConfig": {
           "props.activated": {
@@ -137,6 +139,14 @@
             }
           },
           "props.showReadoutStack": {
+            "binding": {
+              "config": {
+                "expression": "{session.custom.showTag} || {session.custom.showReadout}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.showStatus": {
             "binding": {
               "config": {
                 "path": "session.custom.showReadout"

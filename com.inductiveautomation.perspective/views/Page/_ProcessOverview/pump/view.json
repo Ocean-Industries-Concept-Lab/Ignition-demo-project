@@ -206,6 +206,14 @@
           "props.showReadoutStack": {
             "binding": {
               "config": {
+                "expression": "{session.custom.showReadout} || {session.custom.showTag}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.showStatus": {
+            "binding": {
+              "config": {
                 "path": "session.custom.showReadout"
               },
               "type": "property"
