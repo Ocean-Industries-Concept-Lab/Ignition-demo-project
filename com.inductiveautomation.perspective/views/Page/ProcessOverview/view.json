@@ -956,31 +956,10 @@
       "y": 0
     },
     "propConfig": {
-      "props.connections.cmremruh547.mediumColor": {
-        "binding": {
-          "config": {
-            "fallbackDelay": 2.5,
-            "mode": "direct",
-            "tagPath": "[Sample_Tags]Writeable/WriteableDouble1"
-          },
-          "transforms": [
-            {
-              "fallback": "blue",
-              "inputType": "range",
-              "mappings": [
-                {
-                  "input": {
-                    "max": 10,
-                    "min": 0
-                  },
-                  "output": "Yellow"
-                }
-              ],
-              "outputType": "scalar",
-              "type": "map"
-            }
-          ],
-          "type": "tag"
+      "props.userToolbar.rightPanelOpen": {
+        "onChange": {
+          "enabled": null,
+          "script": "\t# Only a toolbar click (origin Browser) drives the dock. Writes from the\n\t# rightPanelOpen message handler just sync the button to a dock that a\n\t# pump/valve already opened, and must not re-open it without its params.\n\tif currentValue is None or origin !\u003d \u0027Browser\u0027:\n\t\treturn\n\tsessionId \u003d self.session.props.id\n\tpageId \u003d self.page.props.pageId\n\tif currentValue.value:\n\t\tsystem.perspective.openDock(\u0027sidemenu\u0027, sessionId, pageId)\n\telse:\n\t\tsystem.perspective.closeDock(\u0027sidemenu\u0027, sessionId, pageId)"
         }
       },
       "props.userToolbar.showReadout": {
@@ -1009,9 +988,9 @@
             "componentId": "DV1032",
             "direction": "bottom",
             "x": 276,
-            "y": 384
+            "y": 378
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "componentId": "Tank4010",
@@ -1026,9 +1005,9 @@
             "componentId": "DV1031",
             "direction": "bottom",
             "x": 468,
-            "y": 384
+            "y": 378
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "componentId": "Tank4011",
@@ -1043,9 +1022,9 @@
             "componentId": "DV1030",
             "direction": "bottom",
             "x": 660,
-            "y": 384
+            "y": 378
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "componentId": "Tank4012",
@@ -1062,12 +1041,12 @@
             "x": 420,
             "y": 155.5
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "componentId": "DV1010",
             "direction": "right",
-            "x": 360,
+            "x": 354,
             "y": 156
           },
           "viaPoints": []
@@ -1077,9 +1056,9 @@
             "componentId": "DV1031",
             "direction": "top",
             "x": 468,
-            "y": 336
+            "y": 342
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1096,13 +1075,13 @@
             "x": 468,
             "y": 289
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "componentId": "DV1032",
             "direction": "top",
             "x": 276,
-            "y": 336
+            "y": 342
           },
           "viaPoints": []
         },
@@ -1111,9 +1090,9 @@
             "componentId": "DV1030",
             "direction": "top",
             "x": 660,
-            "y": 336
+            "y": 342
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1130,7 +1109,7 @@
             "x": 660,
             "y": 289
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1145,9 +1124,9 @@
             "componentId": "DV1029",
             "direction": "bottom",
             "x": 852,
-            "y": 384
+            "y": 378
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "componentId": "Tank4013",
@@ -1162,32 +1141,15 @@
             "componentId": "DV1033",
             "direction": "bottom",
             "x": 1044,
-            "y": 792
+            "y": 786
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "kind": "node",
-            "nodeId": "cmremslgb6a",
+            "nodeId": "cmumlvpinv",
             "x": 1044,
-            "y": 861
-          },
-          "viaPoints": []
-        },
-        "cmremfcc822_cmremslgb6a": {
-          "from": {
-            "kind": "node",
-            "nodeId": "cmremslgb6a",
-            "x": 1044,
-            "y": 861
-          },
-          "mediumColor": "Blue",
-          "size": "inherit",
-          "to": {
-            "componentId": "DV2018",
-            "direction": "top",
-            "x": 1044,
-            "y": 946
+            "y": 839
           },
           "viaPoints": []
         },
@@ -1196,9 +1158,9 @@
             "componentId": "DV1033",
             "direction": "top",
             "x": 1044,
-            "y": 744
+            "y": 750
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "path": [
             {
               "x": 1044,
@@ -1225,7 +1187,7 @@
             "x": 852,
             "y": 289
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1242,7 +1204,7 @@
             "x": 1044,
             "y": 720
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1259,7 +1221,7 @@
             "x": 1044,
             "y": 504
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "path": [
             {
               "x": 1044,
@@ -1288,9 +1250,9 @@
             "componentId": "DV1029",
             "direction": "top",
             "x": 852,
-            "y": 336
+            "y": 342
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1307,12 +1269,12 @@
             "x": 816,
             "y": 149.5
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "componentId": "DV1011",
             "direction": "right",
-            "x": 723,
+            "x": 717,
             "y": 100
           },
           "viaPoints": []
@@ -1321,10 +1283,10 @@
           "from": {
             "componentId": "DV1010",
             "direction": "left",
-            "x": 312,
+            "x": 318,
             "y": 156
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1356,9 +1318,9 @@
             "componentId": "DV1012",
             "direction": "top",
             "x": 336,
-            "y": 792
+            "y": 798
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "kind": "free",
@@ -1373,9 +1335,9 @@
             "componentId": "DV1012",
             "direction": "bottom",
             "x": 336,
-            "y": 840
+            "y": 834
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1392,13 +1354,13 @@
             "x": 336,
             "y": 861
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "componentId": "DV1013",
             "direction": "top",
             "x": 336,
-            "y": 996
+            "y": 1002
           },
           "viaPoints": []
         },
@@ -1407,9 +1369,9 @@
             "componentId": "DV1013",
             "direction": "bottom",
             "x": 336,
-            "y": 1044
+            "y": 1038
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "kind": "free",
@@ -1423,10 +1385,10 @@
           "from": {
             "componentId": "DV1014",
             "direction": "left",
-            "x": 423,
+            "x": 429,
             "y": 861
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1440,20 +1402,10 @@
           "from": {
             "componentId": "DV1014",
             "direction": "right",
-            "x": 471,
+            "x": 465,
             "y": 861
           },
-          "mediumColor": "Orange",
-          "path": [
-            {
-              "x": 465,
-              "y": 861
-            },
-            {
-              "x": 564,
-              "y": 861
-            }
-          ],
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1470,7 +1422,7 @@
             "x": 637,
             "y": 861
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "path": [
             {
               "x": 637,
@@ -1501,7 +1453,7 @@
             "x": 564,
             "y": 861
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1518,7 +1470,7 @@
             "x": 636,
             "y": 900
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1528,31 +1480,14 @@
           },
           "viaPoints": []
         },
-        "cmremtc4s7p": {
-          "from": {
-            "componentId": "Tank0000",
-            "direction": "left",
-            "x": 1097,
-            "y": 839
-          },
-          "mediumColor": "Blue",
-          "size": "inherit",
-          "to": {
-            "kind": "node",
-            "nodeId": "cmremslgb6a",
-            "x": 1044,
-            "y": 861
-          },
-          "viaPoints": []
-        },
         "cmren3f9y8h": {
           "from": {
             "componentId": "DV1015",
             "direction": "top",
             "x": 564,
-            "y": 996
+            "y": 1002
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1567,9 +1502,9 @@
             "componentId": "DV2016",
             "direction": "top",
             "x": 720,
-            "y": 996
+            "y": 1002
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "componentId": "pump",
@@ -1584,19 +1519,9 @@
             "componentId": "DV2016",
             "direction": "bottom",
             "x": 720,
-            "y": 1044
+            "y": 1038
           },
-          "mediumColor": "Orange",
-          "path": [
-            {
-              "x": 720,
-              "y": 1038
-            },
-            {
-              "x": 720,
-              "y": 1084
-            }
-          ],
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1613,7 +1538,7 @@
             "x": 720,
             "y": 1084
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "path": [
             {
               "x": 720,
@@ -1642,9 +1567,9 @@
             "componentId": "DV1015",
             "direction": "bottom",
             "x": 564,
-            "y": 1044
+            "y": 1038
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "path": [
             {
               "x": 569,
@@ -1675,7 +1600,7 @@
             "x": 722.5,
             "y": 1154
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "path": [
             {
               "x": 722.5,
@@ -1698,7 +1623,7 @@
           "to": {
             "componentId": "DV1028",
             "direction": "left",
-            "x": 1308,
+            "x": 1314,
             "y": 168
           },
           "viaPoints": []
@@ -1707,10 +1632,10 @@
           "from": {
             "componentId": "DV2017",
             "direction": "left",
-            "x": 796,
+            "x": 802,
             "y": 1084
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1725,9 +1650,9 @@
             "componentId": "DV1019",
             "direction": "top",
             "x": 1416,
-            "y": 972
+            "y": 978
           },
-          "mediumColor": "Indigo",
+          "mediumId": "product",
           "size": "inherit",
           "to": {
             "componentId": "Tank4016",
@@ -1742,9 +1667,9 @@
             "componentId": "DV1021",
             "direction": "top",
             "x": 1584,
-            "y": 972
+            "y": 978
           },
-          "mediumColor": "Indigo",
+          "mediumId": "product",
           "size": "inherit",
           "to": {
             "componentId": "Tank4017",
@@ -1759,9 +1684,9 @@
             "componentId": "DV1021",
             "direction": "bottom",
             "x": 1584,
-            "y": 1020
+            "y": 1014
           },
-          "mediumColor": "Indigo",
+          "mediumId": "product",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1778,12 +1703,12 @@
             "x": 1584,
             "y": 1084
           },
-          "mediumColor": "Indigo",
+          "mediumId": "product",
           "size": "inherit",
           "to": {
             "componentId": "DV1020",
             "direction": "right",
-            "x": 1523,
+            "x": 1517,
             "y": 1084
           },
           "viaPoints": []
@@ -1792,10 +1717,10 @@
           "from": {
             "componentId": "DV1022",
             "direction": "left",
-            "x": 1675.5,
+            "x": 1681.5,
             "y": 1084
           },
-          "mediumColor": "Indigo",
+          "mediumId": "product",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1809,10 +1734,10 @@
           "from": {
             "componentId": "DV1028",
             "direction": "right",
-            "x": 1356,
+            "x": 1350,
             "y": 168
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1829,12 +1754,12 @@
             "x": 1488,
             "y": 168
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "componentId": "DV1026",
             "direction": "left",
-            "x": 1560,
+            "x": 1566,
             "y": 168
           },
           "viaPoints": []
@@ -1844,9 +1769,9 @@
             "componentId": "DV1027",
             "direction": "top",
             "x": 1488,
-            "y": 228
+            "y": 234
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1861,9 +1786,9 @@
             "componentId": "DV1027",
             "direction": "bottom",
             "x": 1488,
-            "y": 276
+            "y": 270
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "componentId": "Tank4014",
@@ -1878,9 +1803,9 @@
             "componentId": "DV1024",
             "direction": "bottom",
             "x": 1716,
-            "y": 276
+            "y": 270
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "componentId": "Tank4015",
@@ -1895,9 +1820,9 @@
             "componentId": "DV1023",
             "direction": "top",
             "x": 1764,
-            "y": 972
+            "y": 978
           },
-          "mediumColor": "Indigo",
+          "mediumId": "product",
           "size": "inherit",
           "to": {
             "componentId": "Tank4018",
@@ -1914,7 +1839,7 @@
             "x": 1104,
             "y": 504
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1931,7 +1856,7 @@
             "x": 1128,
             "y": 480
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "kind": "free",
@@ -1945,19 +1870,9 @@
             "componentId": "DV2018",
             "direction": "bottom",
             "x": 1044,
-            "y": 994
+            "y": 988
           },
-          "mediumColor": "Blue",
-          "path": [
-            {
-              "x": 1044,
-              "y": 988
-            },
-            {
-              "x": 1044,
-              "y": 1084
-            }
-          ],
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1971,10 +1886,10 @@
           "from": {
             "componentId": "DV2017",
             "direction": "right",
-            "x": 844,
+            "x": 838,
             "y": 1084
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -1991,7 +1906,7 @@
             "x": 938.6666870117188,
             "y": 1084
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -2008,7 +1923,7 @@
             "x": 883,
             "y": 923
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -2022,10 +1937,10 @@
           "from": {
             "componentId": "DV1020",
             "direction": "left",
-            "x": 1475,
+            "x": 1481,
             "y": 1084
           },
-          "mediumColor": "Indigo",
+          "mediumId": "product",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -2042,7 +1957,7 @@
             "x": 1416,
             "y": 1084
           },
-          "mediumColor": "Indigo",
+          "mediumId": "product",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -2057,9 +1972,9 @@
             "componentId": "DV1019",
             "direction": "bottom",
             "x": 1416,
-            "y": 1020
+            "y": 1014
           },
-          "mediumColor": "Indigo",
+          "mediumId": "product",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -2073,16 +1988,16 @@
           "from": {
             "componentId": "DV1026",
             "direction": "right",
-            "x": 1608,
+            "x": 1602,
             "y": 168
           },
-          "mediumColor": "Orange",
+          "mediumId": "warm",
           "size": "inherit",
           "to": {
             "componentId": "DV1024",
             "direction": "top",
             "x": 1716,
-            "y": 228
+            "y": 234
           },
           "viaPoints": []
         },
@@ -2091,14 +2006,14 @@
             "componentId": "DV1023",
             "direction": "bottom",
             "x": 1764,
-            "y": 1020
+            "y": 1014
           },
-          "mediumColor": "Indigo",
+          "mediumId": "product",
           "size": "inherit",
           "to": {
             "componentId": "DV1022",
             "direction": "right",
-            "x": 1723.5,
+            "x": 1717.5,
             "y": 1084
           },
           "viaPoints": []
@@ -2110,7 +2025,7 @@
             "x": 287,
             "y": 100
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "componentId": "PU2010",
@@ -2127,7 +2042,7 @@
             "x": 287,
             "y": 100
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -2141,10 +2056,10 @@
           "from": {
             "componentId": "DV1011",
             "direction": "left",
-            "x": 675,
+            "x": 681,
             "y": 100
           },
-          "mediumColor": "Blue",
+          "mediumId": "neutral",
           "size": "inherit",
           "to": {
             "kind": "node",
@@ -2153,12 +2068,44 @@
             "y": 100
           },
           "viaPoints": []
+        },
+        "cmumlvpinw": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmumlvpinv",
+            "x": 1044,
+            "y": 839
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "componentId": "DV2018",
+            "direction": "top",
+            "x": 1044,
+            "y": 952
+          },
+          "viaPoints": []
+        },
+        "cmumlvpinx": {
+          "from": {
+            "componentId": "Tank0000",
+            "direction": "left",
+            "x": 1097,
+            "y": 839
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "state": "open",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmumlvpinv",
+            "x": 1044,
+            "y": 839
+          },
+          "viaPoints": []
         }
       },
       "gridSize": 12,
-      "minimap": {
-        "enabled": true
-      },
       "nodes": {
         "cmrdvp0wj3q": {
           "x": 468,
@@ -2178,10 +2125,6 @@
         },
         "cmremsf6x4n": {
           "x": 336,
-          "y": 861
-        },
-        "cmremslgb6a": {
-          "x": 1044,
           "y": 861
         },
         "cmremso3p6u": {
@@ -2231,6 +2174,10 @@
         "cmsdg71ow32": {
           "x": 287,
           "y": 100
+        },
+        "cmumlvpinv": {
+          "x": 1044,
+          "y": 839
         }
       },
       "showReadout": true,
@@ -2239,22 +2186,8 @@
         "backgroundColor": "var(--container-section-color)"
       },
       "userToolbar": {
-        "mediumColors": [
-          {
-            "color": "Blue",
-            "id": "neutral",
-            "label": "Water",
-            "size": "medium"
-          },
-          {
-            "color": "Orange",
-            "label": "Oil"
-          },
-          {
-            "color": "Indigo",
-            "label": "Mix"
-          }
-        ]
+        "showRightPanelOpenButton": true,
+        "showZoomToggle": true
       },
       "zones": {
         "zms4z3ino0": {
@@ -2303,6 +2236,19 @@
           "y": 672
         }
       }
+    },
+    "scripts": {
+      "customMethods": [],
+      "extensionFunctions": null,
+      "messageHandlers": [
+        {
+          "messageType": "rightPanelOpen",
+          "pageScope": true,
+          "script": "\tself.props.userToolbar.rightPanelOpen \u003d payload[\u0027open\u0027]",
+          "sessionScope": false,
+          "viewScope": false
+        }
+      ]
     },
     "type": "openbridge.manual.connector-diagram"
   }

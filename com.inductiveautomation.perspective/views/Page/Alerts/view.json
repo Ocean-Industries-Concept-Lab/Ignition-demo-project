@@ -47,7 +47,6 @@
         "scripts": {
           "customMethods": [],
           "extensionFunctions": [
-
             {
               "enabled": true,
               "name": "getNextUrl",

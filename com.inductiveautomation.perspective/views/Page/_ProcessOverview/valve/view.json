@@ -46,18 +46,27 @@
       {
         "events": {
           "dom": {
-            "onClick": {
-              "config": {
-                "id": "sidemenu",
-                "type": "open",
-                "viewParams": {
-                  "faceplateType": "valve",
-                  "tagpath": "{view.params.tagpath}"
-                }
+            "onClick": [
+              {
+                "config": {
+                  "id": "sidemenu",
+                  "type": "open",
+                  "viewParams": {
+                    "faceplateType": "valve",
+                    "tagpath": "{view.params.tagpath}"
+                  }
+                },
+                "scope": "C",
+                "type": "dock"
               },
-              "scope": "C",
-              "type": "dock"
-            }
+              {
+                "config": {
+                  "script": "\tsystem.perspective.sendMessage(\u0027rightPanelOpen\u0027, payload\u003d{\u0027open\u0027: True}, scope\u003d\u0027page\u0027)"
+                },
+                "scope": "G",
+                "type": "script"
+              }
+            ]
           }
         },
         "meta": {

@@ -12,7 +12,7 @@
             "id": "sidemenu",
             "modal": false,
             "resizable": false,
-            "show": "visible",
+            "show": "onDemand",
             "size": 500,
             "viewParams": {},
             "viewPath": "Docks/Sidemenu"
@@ -41,10 +41,6 @@
     "/maritime": {
       "title": "",
       "viewPath": "Page/Maritime"
-    },
-    "/tmp": {
-      "title": "",
-      "viewPath": "Page/tmp"
     }
   },
   "sharedDocks": {
