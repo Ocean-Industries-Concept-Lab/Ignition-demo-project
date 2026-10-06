@@ -19,6 +19,17 @@
         "props": {
           "alertListPageName": "Page/Alarms",
           "companyImageUrl": "https://openbridge-demo.web.app/companylogo-day.png",
+          "footerItems": [
+            {
+              "alerts": {},
+              "children": [],
+              "icon": {
+                "path": "openbridge/support-google"
+              },
+              "label": "Help",
+              "path": "http://docs.openstudio.no"
+            }
+          ],
           "items": [
             {
               "icon": "home",
