@@ -2,6 +2,6 @@
   "title": "OpenBridge",
   "description": "",
   "enabled": true,
-  "inheritable": false,
+  "inheritable": true,
   "parent": ""
 }
