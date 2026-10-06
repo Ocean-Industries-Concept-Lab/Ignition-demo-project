@@ -1,0 +1,53 @@
+name: Release
+
+# Builds an Ignition project zip that the Designer / Gateway can import directly:
+# project.json and the module folders at the zip root, with no repo wrapper folder
+# and no non-project files (.claude, README.md, scripts, ...).
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release tag, e.g. v1.0.0"
+        required: true
+        type: string
+      prerelease:
+        description: "Mark as pre-release"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ inputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build project zip
+        run: |
+          set -euo pipefail
+          zip_name="OpenBridge_demo_${VERSION}.zip"
+          # project.json + every top-level non-hidden folder (module folders such as
+          # com.inductiveautomation.perspective, ignition, ...).
+          mapfile -t dirs < <(git ls-tree --name-only -d HEAD | grep -v '^\.')
+          git archive --format=zip -o "$zip_name" HEAD project.json "${dirs[@]}"
+
+          # Sanity check: project.json must be at the zip root.
+          unzip -l "$zip_name" | awk '{print $4}' | grep -qx 'project.json'
+          unzip -l "$zip_name" | tail -n 1
+          echo "ZIP_NAME=$zip_name" >> "$GITHUB_ENV"
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$VERSION" "$ZIP_NAME" \
+            --target "$GITHUB_SHA" \
+            --title "$VERSION" \
+            --generate-notes \
+            ${{ inputs.prerelease && '--prerelease' || '' }}
