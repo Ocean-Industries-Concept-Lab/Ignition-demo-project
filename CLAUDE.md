@@ -32,6 +32,7 @@ curl -s -X POST http://localhost:8088/data/api/v1/scan/projects \
 - Do NOT `touch` files and wait for the periodic scan, edit via the Gateway Web UI, or hand-edit a
   resource.json `lastModificationSignature` (the scan recomputes it).
 - The **`ignition-scan-projects` skill** covers this in full — use it after any resource edit.
+- If a client page shows **"Trial Expired"** (2-hour trial), use the **`ignition-reset-trial` skill**.
 - `./restart_gateway.sh` does a full Gateway restart (`../../../ignition.sh restart`) — only needed
   for module/config-level changes, not resource edits.
 

@@ -16,9 +16,20 @@
         "position": {
           "basis": "160px"
         },
+        "propConfig": {
+          "props.companyImageUrl": {
+            "binding": {
+              "config": {
+                "expression": "\"/system/images/Logo/\"+{session.custom.palette}+\".svg\""
+              },
+              "type": "expr"
+            }
+          }
+        },
         "props": {
           "alertListPageName": "Page/Alarms",
-          "companyImageUrl": "https://openbridge-demo.web.app/companylogo-day.png",
+          "companyImageAlt": "OpenStudio logo",
+          "companyUrl": "https://openstudio.no",
           "footerItems": [
             {
               "alerts": {},

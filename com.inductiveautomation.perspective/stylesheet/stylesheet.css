@@ -173,3 +173,20 @@
   }
 
 
+
+/* Floating device faceplate (Page/_ProcessOverview/faceplatePopup) */
+#popup-faceplate {
+    border: none;
+    border-radius: var(--ui-components-elevated-card-border-radius);
+    box-shadow: var(--shadow-floating);
+    overflow: hidden;
+}
+
+/* Faceplate device preview: keep the pipes hidden until the device symbol itself is shown,
+   so pipes and symbol appear in the same frame. */
+#popup-faceplate .obc-connector-diagram-component canvas {
+    visibility: hidden;
+}
+#popup-faceplate .obc-connector-diagram-component:has([data-component^="automation."]:not([style*="visibility: hidden"])) canvas {
+    visibility: visible;
+}

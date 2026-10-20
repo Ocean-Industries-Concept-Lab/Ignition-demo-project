@@ -1,6 +1,7 @@
 {
   "custom": {
     "hoverId": "[default]process/valve0",
+    "palette": "day",
     "showReadout": true,
     "showTag": false
   },

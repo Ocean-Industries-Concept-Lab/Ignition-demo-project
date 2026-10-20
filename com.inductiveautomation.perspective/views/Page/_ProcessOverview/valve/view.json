@@ -5,7 +5,8 @@
   "params": {
     "readoutPosition": "bottom",
     "tagpath": "[default]process/valve0",
-    "vertical": false
+    "vertical": false,
+    "showLabels": false
   },
   "propConfig": {
     "custom.tag": {
@@ -33,6 +34,10 @@
     "params.vertical": {
       "paramDirection": "input",
       "persistent": true
+    },
+    "params.showLabels": {
+      "paramDirection": "input",
+      "persistent": true
     }
   },
   "props": {
@@ -46,31 +51,18 @@
       {
         "events": {
           "dom": {
-            "onClick": [
-              {
-                "config": {
-                  "id": "sidemenu",
-                  "type": "open",
-                  "viewParams": {
-                    "faceplateType": "valve",
-                    "tagpath": "{view.params.tagpath}"
-                  }
-                },
-                "scope": "C",
-                "type": "dock"
+            "onClick": {
+              "config": {
+                "script": "\tsystem.perspective.sendMessage('deviceClicked', payload={'faceplateType': 'valve', 'tagpath': self.view.params.tagpath, 'x': event.clientX, 'y': event.clientY}, scope='page')"
               },
-              {
-                "config": {
-                  "script": "\tsystem.perspective.sendMessage(\u0027rightPanelOpen\u0027, payload\u003d{\u0027open\u0027: True}, scope\u003d\u0027page\u0027)"
-                },
-                "scope": "G",
-                "type": "script"
-              }
-            ]
+              "scope": "G",
+              "type": "script"
+            }
           }
         },
         "meta": {
-          "name": "DV"
+          "name": "DV",
+          "visible": false
         },
         "position": {
           "height": 40,
@@ -82,7 +74,7 @@
           "props.activated": {
             "binding": {
               "config": {
-                "expression": "{session.custom.hoverId}\u003d{view.params.tagpath}"
+                "expression": "{session.custom.hoverId}={view.params.tagpath}"
               },
               "type": "expr"
             }
@@ -121,9 +113,9 @@
           "props.hasTag": {
             "binding": {
               "config": {
-                "path": "session.custom.showTag"
+                "expression": "{view.params.showLabels} || {session.custom.showTag}"
               },
-              "type": "property"
+              "type": "expr"
             }
           },
           "props.open": {
@@ -150,7 +142,7 @@
           "props.showReadoutStack": {
             "binding": {
               "config": {
-                "expression": "{session.custom.showTag} || {session.custom.showReadout}"
+                "expression": "{view.params.showLabels} || {session.custom.showReadout} || {session.custom.showTag}"
               },
               "type": "expr"
             }
@@ -158,9 +150,9 @@
           "props.showStatus": {
             "binding": {
               "config": {
-                "path": "session.custom.showReadout"
+                "expression": "{view.params.showLabels} || {session.custom.showReadout}"
               },
-              "type": "property"
+              "type": "expr"
             }
           },
           "props.tag": {
@@ -177,6 +169,14 @@
                 "path": "view.params.vertical"
               },
               "type": "property"
+            }
+          },
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "!isNull({this.props.open})"
+              },
+              "type": "expr"
             }
           }
         },

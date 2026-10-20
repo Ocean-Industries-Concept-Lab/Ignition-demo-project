@@ -1,0 +1,38 @@
+[
+  {
+    "id": "neutral",
+    "color": "Blue",
+    "label": "Water",
+    "size": "medium"
+  },
+  {
+    "id": "warm",
+    "color": "Orange",
+    "label": "Premix",
+    "size": "medium"
+  },
+  {
+    "id": "product",
+    "color": "Indigo",
+    "label": "Product",
+    "size": "medium"
+  },
+  {
+    "id": "alum",
+    "color": "Orange",
+    "label": "Alum",
+    "size": "medium"
+  },
+  {
+    "id": "steam",
+    "color": "Red",
+    "label": "Steam",
+    "size": "medium"
+  },
+  {
+    "id": "cip",
+    "color": "Green",
+    "label": "CIP",
+    "size": "medium"
+  }
+]

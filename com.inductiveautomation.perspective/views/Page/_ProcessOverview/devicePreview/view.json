@@ -1,0 +1,151 @@
+{
+  "custom": {},
+  "params": {
+    "device": null,
+    "pipes": [],
+    "viewMode": "regular",
+    "width": 528,
+    "height": 152
+  },
+  "propConfig": {
+    "params.device": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.pipes": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.viewMode": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.width": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.height": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 152,
+      "width": 528
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Device",
+          "visible": false
+        },
+        "position": {
+          "height": 48,
+          "width": 48
+        },
+        "propConfig": {
+          "position.x": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.width} / 2 - 24"
+              },
+              "type": "expr"
+            }
+          },
+          "position.y": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.height} / 2 - 32"
+              },
+              "type": "expr"
+            }
+          },
+          "props.path": {
+            "binding": {
+              "config": {
+                "expression": "try(if({this.props.params.showLabels}, {view.params.device.path}, \"\"), \"\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.params": {
+            "binding": {
+              "config": {
+                "path": "view.params.device.params"
+              },
+              "transforms": [
+                {
+                  "code": "\t# Tag and readout are always shown in the preview, regardless of the toolbar toggles.\n\tif not value:\n\t\treturn {}\n\tparams = dict((k, value[k]) for k in value.keys())\n\tparams['showLabels'] = True\n\treturn params",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "len({this.props.path}) > 0"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "pointerEvents": "none"
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "propConfig": {
+      "props.connections": {
+        "binding": {
+          "config": {
+            "struct": {
+              "pipes": "{view.params.pipes}",
+              "devicePath": "{./Device.props.path}"
+            },
+            "waitOnAll": true
+          },
+          "transforms": [
+            {
+              "code": "\tif not value['devicePath']:\n\t\treturn {}\n\tw, h = self.view.params.width, self.view.params.height\n\tcx, cy = w / 2, h / 2 - 8\n\tends = {'left': (0, cy), 'right': (w, cy), 'top': (cx, 0), 'bottom': (cx, h)}\n\tconns = {}\n\tfor i, pipe in enumerate(value['pipes'] or []):\n\t\tx, y = ends[pipe['side']]\n\t\tconns['pipe%d' % i] = {\n\t\t\t'from': {'kind': 'component', 'componentId': 'Device', 'direction': pipe['side']},\n\t\t\t'to': {'kind': 'free', 'x': x, 'y': y},\n\t\t\t'mediumId': pipe['mediumId'], 'size': 'inherit', 'viaPoints': []}\n\treturn conns",
+              "type": "script"
+            }
+          ],
+          "type": "expr-struct"
+        }
+      },
+      "props.viewMode": {
+        "binding": {
+          "config": {
+            "path": "view.params.viewMode"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "editable": false,
+      "showUserToolbar": false,
+      "style": {
+        "backgroundColor": "var(--container-section-color)",
+        "borderRadius": "8px",
+        "overflow": "hidden"
+      }
+    },
+    "type": "openbridge.manual.connector-diagram"
+  }
+}

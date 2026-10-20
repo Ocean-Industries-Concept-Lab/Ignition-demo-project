@@ -4,7 +4,8 @@
   },
   "params": {
     "readoutPosition": "bottom",
-    "tagpath": "[default]process/pump0"
+    "tagpath": "[default]process/pump0",
+    "showLabels": false
   },
   "propConfig": {
     "custom.tag": {
@@ -28,6 +29,10 @@
     "params.tagpath": {
       "paramDirection": "input",
       "persistent": true
+    },
+    "params.showLabels": {
+      "paramDirection": "input",
+      "persistent": true
     }
   },
   "props": {
@@ -41,31 +46,18 @@
       {
         "events": {
           "dom": {
-            "onClick": [
-              {
-                "config": {
-                  "id": "sidemenu",
-                  "type": "open",
-                  "viewParams": {
-                    "faceplateType": "pump",
-                    "tagpath": "{view.params.tagpath}"
-                  }
-                },
-                "scope": "C",
-                "type": "dock"
+            "onClick": {
+              "config": {
+                "script": "\tsystem.perspective.sendMessage('deviceClicked', payload={'faceplateType': 'pump', 'tagpath': self.view.params.tagpath, 'x': event.clientX, 'y': event.clientY}, scope='page')"
               },
-              {
-                "config": {
-                  "script": "\tsystem.perspective.sendMessage(\u0027rightPanelOpen\u0027, payload\u003d{\u0027open\u0027: True}, scope\u003d\u0027page\u0027)"
-                },
-                "scope": "G",
-                "type": "script"
-              }
-            ]
+              "scope": "G",
+              "type": "script"
+            }
           }
         },
         "meta": {
-          "name": "PU2013"
+          "name": "PU2013",
+          "visible": false
         },
         "position": {
           "height": 48,
@@ -75,7 +67,7 @@
           "props.activated": {
             "binding": {
               "config": {
-                "expression": "{session.custom.hoverId}\u003d{view.params.tagpath}"
+                "expression": "{session.custom.hoverId}={view.params.tagpath}"
               },
               "type": "expr"
             }
@@ -83,7 +75,7 @@
           "props.alert": {
             "binding": {
               "config": {
-                "expression": "tag({view.params.tagpath}+\"/Alarm Metrics.hasActive\") || (tag({view.params.tagpath}+\"/Alarm Metrics.clearUnackCount\") \u003e 0)"
+                "expression": "tag({view.params.tagpath}+\"/Alarm Metrics.hasActive\") || (tag({view.params.tagpath}+\"/Alarm Metrics.clearUnackCount\") > 0)"
               },
               "type": "expr"
             }
@@ -100,7 +92,7 @@
               },
               "transforms": [
                 {
-                  "code": "    if value.activeUnacked \u003e 0:\n    \treturn \"unacked-active\"\n    elif value.activeAcked \u003e 0:\n    \treturn \"acked-active\"\n    else:\n\t\treturn \"unacked-rectified\"",
+                  "code": "    if value.activeUnacked > 0:\n    \treturn \"unacked-active\"\n    elif value.activeAcked > 0:\n    \treturn \"acked-active\"\n    else:\n\t\treturn \"unacked-rectified\"",
                   "type": "script"
                 }
               ],
@@ -118,7 +110,7 @@
               },
               "transforms": [
                 {
-                  "code": "\tif value.highestActive \u003e 0:\n\t\treturn \"level-\"+str(value.highestActive).lower()\n\telif value.highestUnacked \u003e 0:\n\t\treturn \"level-\"+str(value.highestUnacked).lower()\n\telse:\n\t\treturn \"level-low\"",
+                  "code": "\tif value.highestActive > 0:\n\t\treturn \"level-\"+str(value.highestActive).lower()\n\telif value.highestUnacked > 0:\n\t\treturn \"level-\"+str(value.highestUnacked).lower()\n\telse:\n\t\treturn \"level-low\"",
                   "type": "script"
                 }
               ],
@@ -186,9 +178,9 @@
           "props.hasTag": {
             "binding": {
               "config": {
-                "path": "session.custom.showTag"
+                "expression": "{view.params.showLabels} || {session.custom.showTag}"
               },
-              "type": "property"
+              "type": "expr"
             }
           },
           "props.on": {
@@ -215,7 +207,7 @@
           "props.showReadoutStack": {
             "binding": {
               "config": {
-                "expression": "{session.custom.showReadout} || {session.custom.showTag}"
+                "expression": "{view.params.showLabels} || {session.custom.showReadout} || {session.custom.showTag}"
               },
               "type": "expr"
             }
@@ -223,9 +215,9 @@
           "props.showStatus": {
             "binding": {
               "config": {
-                "path": "session.custom.showReadout"
+                "expression": "{view.params.showLabels} || {session.custom.showReadout}"
               },
-              "type": "property"
+              "type": "expr"
             }
           },
           "props.speed": {
@@ -245,6 +237,14 @@
             "binding": {
               "config": {
                 "expression": "tostr({view.custom.tag})"
+              },
+              "type": "expr"
+            }
+          },
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "!isNull({this.props.on})"
               },
               "type": "expr"
             }

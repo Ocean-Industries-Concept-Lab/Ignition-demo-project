@@ -230,19 +230,14 @@
       "dom": {
         "onClick": {
           "config": {
-            "id": "sidemenu",
-            "type": "open",
-            "viewParams": {
-              "faceplateType": "valve",
-              "tagpath": "{view.params.tagpath}"
-            }
+            "script": "\t# Same route as a click on the symbol, so the faceplate gets its device preview.\n\tsystem.perspective.sendMessage('deviceClicked', payload={'faceplateType': 'valve', 'tagpath': self.view.params.tagpath}, scope='page')"
           },
-          "scope": "C",
-          "type": "dock"
+          "scope": "G",
+          "type": "script"
         },
         "onPointerEnter": {
           "config": {
-            "script": "\tself.session.custom.hoverId\u003dself.view.params.tagpath"
+            "script": "\tself.session.custom.hoverId=self.view.params.tagpath"
           },
           "scope": "G",
           "type": "script"

@@ -70,6 +70,15 @@
               "type": "property"
             }
           },
+          "props.palette": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "session.custom.palette"
+              },
+              "type": "property"
+            }
+          },
           "props.userFullName": {
             "binding": {
               "config": {
@@ -80,8 +89,10 @@
           }
         },
         "props": {
+          "alertMessageBreakpointPx": 1150,
           "alertPath": "/alerts",
           "appName": "Demo",
+          "appTitleBreakpointPx": 1200,
           "bindNavMenuToDock": true,
           "bindUserButtonToAuth": true,
           "navDock": "menu",

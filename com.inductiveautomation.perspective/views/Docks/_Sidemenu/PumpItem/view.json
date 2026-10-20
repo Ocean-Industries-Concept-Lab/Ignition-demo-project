@@ -190,19 +190,14 @@
       "dom": {
         "onClick": {
           "config": {
-            "id": "sidemenu",
-            "type": "open",
-            "viewParams": {
-              "faceplateType": "pump",
-              "tagpath": "{view.params.tagpath}"
-            }
+            "script": "\t# Same route as a click on the symbol, so the faceplate gets its device preview.\n\tsystem.perspective.sendMessage('deviceClicked', payload={'faceplateType': 'pump', 'tagpath': self.view.params.tagpath}, scope='page')"
           },
-          "scope": "C",
-          "type": "dock"
+          "scope": "G",
+          "type": "script"
         },
         "onMouseEnter": {
           "config": {
-            "script": "    self.session.custom.hoverId \u003d self.view.params.tagpath"
+            "script": "    self.session.custom.hoverId = self.view.params.tagpath"
           },
           "scope": "G",
           "type": "script"

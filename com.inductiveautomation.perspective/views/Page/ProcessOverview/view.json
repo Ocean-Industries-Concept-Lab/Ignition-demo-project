@@ -31,6 +31,7 @@
           "y": 432
         },
         "props": {
+          "clickable": false,
           "hasCustomUnit": true,
           "max": 10000,
           "medium": "normal",
@@ -51,6 +52,7 @@
           "y": 432
         },
         "props": {
+          "clickable": false,
           "hasCustomUnit": true,
           "max": 10000,
           "medium": "normal",
@@ -71,6 +73,7 @@
           "y": 432
         },
         "props": {
+          "clickable": false,
           "hasCustomUnit": true,
           "max": 10000,
           "medium": "normal",
@@ -91,6 +94,7 @@
           "y": 432
         },
         "props": {
+          "clickable": false,
           "hasCustomUnit": true,
           "max": 10000,
           "medium": "normal",
@@ -222,6 +226,7 @@
             }
           ],
           "chartMode": "graph-and-bar",
+          "clickable": false,
           "hasCustomUnit": true,
           "max": 10000,
           "medium": "normal",
@@ -277,6 +282,7 @@
           }
         },
         "props": {
+          "clickable": false,
           "hasCustomUnit": true,
           "max": 30000,
           "medium": "normal",
@@ -297,6 +303,7 @@
           "y": 706
         },
         "props": {
+          "clickable": false,
           "hasCustomUnit": true,
           "max": 1000,
           "medium": "normal",
@@ -317,6 +324,7 @@
           "y": 706
         },
         "props": {
+          "clickable": false,
           "hasCustomUnit": true,
           "max": 1000,
           "medium": "normal",
@@ -337,6 +345,7 @@
           "y": 706
         },
         "props": {
+          "clickable": false,
           "hasCustomUnit": true,
           "max": 1000,
           "medium": "normal",
@@ -367,6 +376,7 @@
           }
         },
         "props": {
+          "clickable": false,
           "hasCustomUnit": true,
           "max": 200,
           "medium": "normal",
@@ -388,6 +398,7 @@
           "y": 144.5
         },
         "props": {
+          "clickable": false,
           "hasCustomUnit": true,
           "max": 200,
           "medium": "normal",
@@ -409,6 +420,7 @@
           "y": 792
         },
         "props": {
+          "clickable": false,
           "compact": true,
           "hasCustomUnit": true,
           "tag": "#0000",
@@ -959,7 +971,7 @@
       "props.userToolbar.rightPanelOpen": {
         "onChange": {
           "enabled": null,
-          "script": "\t# Only a toolbar click (origin Browser) drives the dock. Writes from the\n\t# rightPanelOpen message handler just sync the button to a dock that a\n\t# pump/valve already opened, and must not re-open it without its params.\n\tif currentValue is None or origin !\u003d \u0027Browser\u0027:\n\t\treturn\n\tsessionId \u003d self.session.props.id\n\tpageId \u003d self.page.props.pageId\n\tif currentValue.value:\n\t\tsystem.perspective.openDock(\u0027sidemenu\u0027, sessionId, pageId)\n\telse:\n\t\tsystem.perspective.closeDock(\u0027sidemenu\u0027, sessionId, pageId)"
+          "script": "\t# Only a toolbar click (origin Browser) drives the dock. Writes from the\n\t# rightPanelOpen message handler just sync the button to a dock that a\n\t# pump/valve already opened, and must not re-open it without its params.\n\tif currentValue is None or origin != 'Browser':\n\t\treturn\n\tsessionId = self.session.props.id\n\tpageId = self.page.props.pageId\n\tif currentValue.value:\n\t\tsystem.perspective.closePopup('faceplate', sessionId, pageId)\n\t\tsystem.perspective.openDock('sidemenu', sessionId, pageId)\n\telse:\n\t\tsystem.perspective.closeDock('sidemenu', sessionId, pageId)"
         }
       },
       "props.userToolbar.showReadout": {
@@ -2189,6 +2201,9 @@
         "showRightPanelOpenButton": true,
         "showZoomToggle": true
       },
+      "view": {
+        "panZoom": true
+      },
       "zones": {
         "zms4z3ino0": {
           "detailView": "",
@@ -2244,7 +2259,14 @@
         {
           "messageType": "rightPanelOpen",
           "pageScope": true,
-          "script": "\tself.props.userToolbar.rightPanelOpen \u003d payload[\u0027open\u0027]",
+          "script": "\tself.props.userToolbar.rightPanelOpen = payload['open']\n\tif payload['open']:\n\t\tsystem.perspective.closePopup('faceplate')",
+          "sessionScope": false,
+          "viewScope": false
+        },
+        {
+          "messageType": "deviceClicked",
+          "pageScope": true,
+          "script": "\t# Right panel open, or a screen too narrow to float a popup -> show the faceplate in the\n\t# side dock (full width on small screens); otherwise float a popup by the symbol.\n\tparams = {'faceplateType': payload['faceplateType'], 'tagpath': payload['tagpath']}\n\tsessionId = self.session.props.id\n\tpageId = self.page.props.pageId\n\t# Fixed popup height per type, so it doesn't grow while its contents load.\n\twidth, gap, margin = 560, 40, 8\n\theight = 464 if payload['faceplateType'] == 'pump' else 392\n\tviewport = self.page.props.dimensions.viewport\n\tvw, vh = viewport.width or 1920, viewport.height or 1080\n\tcompact = vw < width + 2 * margin\n\tdef plain(obj):\n\t\tif hasattr(obj, 'keys'):\n\t\t\treturn dict((k, plain(obj[k])) for k in obj.keys())\n\t\tif obj is None or isinstance(obj, (basestring, bool, int, long, float)):\n\t\t\treturn obj\n\t\treturn [plain(item) for item in obj]\n\n\tdef devicePreview(tagpath, previewWidth=528):\n\t\t# Same embedded view + params as the clicked symbol, plus a pipe stub per connected side.\n\t\tfor child in self.getChildren():\n\t\t\tpath = getattr(child.props, 'path', None)\n\t\t\tdeviceParams = plain(getattr(child.props, 'params', None))\n\t\t\tif path and deviceParams and deviceParams.get('tagpath') == tagpath:\n\t\t\t\tbreak\n\t\telse:\n\t\t\treturn None\n\t\tpipes, sides = [], set()\n\t\tfor conn in plain(self.props.connections).values():\n\t\t\tfor end in (conn['from'], conn['to']):\n\t\t\t\tside = end.get('direction')\n\t\t\t\tif end.get('componentId') == child.meta.name and side not in sides:\n\t\t\t\t\tsides.add(side)\n\t\t\t\t\tpipes.append({'side': side, 'mediumId': conn.get('mediumId')})\n\t\treturn {'device': {'path': path, 'params': deviceParams}, 'pipes': pipes,\n\t\t\t'viewMode': self.props.viewMode, 'width': previewWidth, 'height': 152}\n\n\tif compact or self.props.userToolbar.rightPanelOpen:\n\t\tdock = {'size': vw, 'content': 'cover'} if compact else {'size': 500, 'content': 'push'}\n\t\t# Preview spans the faceplate body (16px padding each side).\n\t\tparams['preview'] = devicePreview(payload['tagpath'], dock['size'] - 32)\n\t\tsystem.perspective.alterDock('sidemenu', dock, sessionId, pageId)\n\t\tsystem.perspective.openDock('sidemenu', sessionId, pageId, params)\n\t\tself.props.userToolbar.rightPanelOpen = True\n\t\treturn\n\tx, y = payload['x'], payload['y']\n\tleft = min(max(x - width / 2, margin), vw - width - margin)\n\tif y + gap + height <= vh - margin:\n\t\ttop = y + gap\n\telif y - gap - height >= margin:\n\t\ttop = y - gap - height\n\telse:\n\t\ttop = min(max(y - height / 2, margin), vh - height - margin)\n\t\tleft = x + gap if x + gap + width <= vw - margin else x - gap - width\n\tsystem.perspective.openPopup('faceplate', 'Page/_ProcessOverview/faceplatePopup',\n\t\tparams={'faceplateType': params['faceplateType'], 'tagPath': params['tagpath'],\n\t\t\t'preview': devicePreview(payload['tagpath'])},\n\t\tposition={'left': left, 'top': top, 'width': width, 'height': height}, showCloseIcon=False, draggable=False,\n\t\tresizable=False, modal=False, viewportBound=True, sessionId=sessionId, pageId=pageId)",
           "sessionScope": false,
           "viewScope": false
         }

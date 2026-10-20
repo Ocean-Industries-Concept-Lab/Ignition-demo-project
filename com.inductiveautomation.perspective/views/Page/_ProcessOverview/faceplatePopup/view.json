@@ -1,0 +1,588 @@
+{
+  "custom": {
+    "tag": 2010
+  },
+  "events": {
+    "system": {
+      "onShutdown": {
+        "config": {
+          "script": "\tif self.session.custom.hoverId \u003d\u003d self.view.params.tagPath:\n\t\tself.session.custom.hoverId \u003d None"
+        },
+        "scope": "G",
+        "type": "script"
+      },
+      "onStartup": {
+        "config": {
+          "script": "\tself.session.custom.hoverId \u003d self.view.params.tagPath"
+        },
+        "scope": "G",
+        "type": "script"
+      }
+    }
+  },
+  "params": {
+    "docked": false,
+    "faceplateType": "pump",
+    "preview": null,
+    "tagPath": "[default]process/pump0"
+  },
+  "propConfig": {
+    "custom.tag": {
+      "binding": {
+        "config": {
+          "expression": "tag({view.params.tagPath} + \"/\" + {view.params.faceplateType} + \"Tag\")"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.docked": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.faceplateType": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.preview": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagPath": {
+      "onChange": {
+        "enabled": null,
+        "script": "\tself.session.custom.hoverId \u003d currentValue"
+      },
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 350,
+      "width": 560
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\t# Back to the dock\u0027s device list.\n\tsystem.perspective.openDock(\u0027sidemenu\u0027, params\u003d{\u0027faceplateType\u0027: None, \u0027tagpath\u0027: None, \u0027preview\u0027: None})"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Back"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.docked}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "icon": {
+                "path": "openbridge/chevron-left-google"
+              },
+              "variant": "flat"
+            },
+            "type": "openbridge.manual.icon-button"
+          },
+          {
+            "meta": {
+              "name": "Name"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "if({view.params.faceplateType}\u003d\"pump\", \"Pump\", \"Valve\")"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "font/title text-color/element-neutral"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Tag"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "\"#\" + {view.custom.tag}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "font/body text-color/element-neutral"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tsessionId \u003d self.session.props.id\n\tpageId \u003d self.page.props.pageId\n\tdef plain(obj):\n\t\tif hasattr(obj, \u0027keys\u0027):\n\t\t\treturn dict((k, plain(obj[k])) for k in obj.keys())\n\t\tif obj is None or isinstance(obj, (basestring, bool, int, long, float)):\n\t\t\treturn obj\n\t\treturn [plain(item) for item in obj]\n\n\tpreview \u003d plain(self.view.params.preview)\n\tif preview:\n\t\t# Re-fit from the popup\u0027s width to the 500px dock\u0027s body (16px padding each side).\n\t\tpreview[\u0027width\u0027] \u003d 468\n\tparams \u003d {\u0027faceplateType\u0027: self.view.params.faceplateType, \u0027tagpath\u0027: self.view.params.tagPath, \u0027preview\u0027: preview}\n\tsystem.perspective.alterDock(\u0027sidemenu\u0027, {\u0027size\u0027: 500, \u0027content\u0027: \u0027push\u0027}, sessionId, pageId)\n\tsystem.perspective.openDock(\u0027sidemenu\u0027, sessionId, pageId, params)\n\tsystem.perspective.sendMessage(\u0027rightPanelOpen\u0027, payload\u003d{\u0027open\u0027: True}, scope\u003d\u0027page\u0027)\n\tsystem.perspective.closePopup(\u0027faceplate\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Expand"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "!{view.params.docked}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "icon": {
+                "path": "openbridge/expand"
+              },
+              "variant": "flat"
+            },
+            "type": "openbridge.manual.icon-button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tsystem.perspective.closePopup(\u0027faceplate\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Close"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "!{view.params.docked}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "icon": {
+                "path": "openbridge/close-google"
+              },
+              "variant": "flat"
+            },
+            "type": "openbridge.manual.icon-button"
+          }
+        ],
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "64px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "!isNull({view.params.faceplateType})"
+              },
+              "type": "expr"
+            }
+          },
+          "props.style.padding": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.docked}, \"0 8px\", \"0 8px 0 24px\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "alignItems": "center",
+          "style": {
+            "classes": "divider/bottom",
+            "gap": "12px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Preview"
+            },
+            "position": {
+              "basis": "152px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "!isNull({view.params.preview})"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.preview"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "path": "Page/_ProcessOverview/devicePreview"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "RunStop"
+                },
+                "position": {
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "1": "{view.params.tagPath}"
+                        },
+                        "tagPath": "{1}/pumpOn"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "options": [
+                    {
+                      "disabled": false,
+                      "icon": {
+                        "path": "openbridge/media-stop"
+                      },
+                      "label": "Stop",
+                      "value": false
+                    },
+                    {
+                      "disabled": false,
+                      "icon": {
+                        "path": "openbridge/media-play"
+                      },
+                      "label": "Run",
+                      "value": true
+                    }
+                  ],
+                  "style": {
+                    "paddingInline": "8px"
+                  },
+                  "type": "text-icon"
+                },
+                "type": "openbridge.manual.toggle-button-horizontal"
+              },
+              {
+                "meta": {
+                  "name": "Speed"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.disabled": {
+                    "binding": {
+                      "config": {
+                        "expression": "tag({view.params.tagPath}+\"/pumpMode\")!\u003d\"manual\" || !tag({view.params.tagPath}+\"/pumpOn\")"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "1": "{view.params.tagPath}"
+                        },
+                        "tagPath": "{1}/pumpSpeed"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "helperText": "Speed",
+                  "stepDown": 5,
+                  "stepUp": 5,
+                  "type": "left-right",
+                  "unit": "%"
+                },
+                "type": "openbridge.manual.stepperbox"
+              }
+            ],
+            "meta": {
+              "name": "PumpControls"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.faceplateType}\u003d\"pump\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "gap": "16px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "OpenClose"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "1": "{view.params.tagPath}"
+                        },
+                        "tagPath": "{1}/valveOpen"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "options": [
+                    {
+                      "disabled": false,
+                      "icon": {
+                        "path": "openbridge/twoway-digital-closed",
+                        "useCssColor": true
+                      },
+                      "label": "Close",
+                      "value": false
+                    },
+                    {
+                      "disabled": false,
+                      "icon": {
+                        "path": "openbridge/twoway-digital-open",
+                        "useCssColor": true
+                      },
+                      "label": "Open",
+                      "value": true
+                    }
+                  ],
+                  "style": {
+                    "paddingInline": 8
+                  },
+                  "type": "text-icon"
+                },
+                "type": "openbridge.manual.toggle-button-horizontal"
+              }
+            ],
+            "meta": {
+              "name": "ValveControls"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.faceplateType}\u003d\"valve\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "gap": "16px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "Mode"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagPath}",
+                      "2": "{view.params.faceplateType}"
+                    },
+                    "tagPath": "{1}/{2}Mode"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "options": [
+                {
+                  "disabled": false,
+                  "icon": {
+                    "path": "openbridge/manual"
+                  },
+                  "key": "value",
+                  "label": "Manual",
+                  "value": "manual"
+                },
+                {
+                  "disabled": false,
+                  "icon": {
+                    "path": "openbridge/local"
+                  },
+                  "label": "Local",
+                  "value": "local"
+                },
+                {
+                  "disabled": false,
+                  "icon": {
+                    "path": "openbridge/auto"
+                  },
+                  "label": "Auto",
+                  "value": "auto"
+                }
+              ],
+              "style": {
+                "paddingInline": 8
+              },
+              "variant": "normal"
+            },
+            "type": "openbridge.manual.toggle-button-horizontal"
+          }
+        ],
+        "meta": {
+          "name": "Body"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "!isNull({view.params.faceplateType})"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "gap": "16px",
+            "padding": "24px 16px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "var(--container-background-color)"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

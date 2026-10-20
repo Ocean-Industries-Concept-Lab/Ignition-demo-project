@@ -34,6 +34,10 @@
       "title": "Home",
       "viewPath": "Page/CardBased"
     },
+    "/data-center": {
+      "title": "Data Center",
+      "viewPath": "Page/DataCenter"
+    },
     "/ias": {
       "title": "IAS",
       "viewPath": "Page/IAS"
