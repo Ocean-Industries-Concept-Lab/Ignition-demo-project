@@ -279,7 +279,7 @@
             "position": {
               "basis": "400px",
               "grow": 1,
-              "shrink": 0
+              "shrink": 1
             },
             "props": {
               "hasTitle": true,
@@ -552,7 +552,7 @@
             "position": {
               "basis": "400px",
               "grow": 1,
-              "shrink": 0
+              "shrink": 1
             },
             "props": {
               "hasTitle": true,
@@ -590,12 +590,15 @@
                     "position": {
                       "basis": "66.86px",
                       "grow": 1,
-                      "shrink": 0
+                      "shrink": 1
                     },
                     "props": {
                       "on": true,
                       "speedInPercent": 50,
-                      "tag": "W1"
+                      "tag": "W1",
+                      "style": {
+                        "minWidth": 0
+                      }
                     },
                     "type": "automation.pump.pump"
                   },
@@ -606,13 +609,16 @@
                     "position": {
                       "basis": "66.86px",
                       "grow": 1,
-                      "shrink": 0
+                      "shrink": 1
                     },
                     "props": {
                       "on": true,
                       "progress": true,
                       "speedInPercent": 20,
-                      "tag": "W2"
+                      "tag": "W2",
+                      "style": {
+                        "minWidth": 0
+                      }
                     },
                     "type": "automation.pump.pump"
                   },
@@ -623,10 +629,13 @@
                     "position": {
                       "basis": "66.86px",
                       "grow": 1,
-                      "shrink": 0
+                      "shrink": 1
                     },
                     "props": {
-                      "tag": "W3"
+                      "tag": "W3",
+                      "style": {
+                        "minWidth": 0
+                      }
                     },
                     "type": "automation.pump.pump"
                   },
@@ -637,13 +646,16 @@
                     "position": {
                       "basis": "66.86px",
                       "grow": 1,
-                      "shrink": 0
+                      "shrink": 1
                     },
                     "props": {
                       "alert": true,
                       "alertFrameStatus": "warning",
                       "alertFrameType": "large-side-flip",
-                      "tag": "W2"
+                      "tag": "W2",
+                      "style": {
+                        "minWidth": 0
+                      }
                     },
                     "type": "automation.pump.pump"
                   }
@@ -655,8 +667,10 @@
                   "alignItems": "center",
                   "justify": "space-around",
                   "style": {
-                    "classes": "utils/p-16"
-                  }
+                    "classes": "utils/p-16",
+                    "overflow": "visible"
+                  },
+                  "wrap": "nowrap"
                 },
                 "type": "ia.container.flex"
               }
@@ -667,7 +681,7 @@
             "position": {
               "basis": "400px",
               "grow": 1,
-              "shrink": 0
+              "shrink": 1
             },
             "props": {
               "hasTitle": true,
@@ -783,7 +797,7 @@
             "position": {
               "basis": "400px",
               "grow": 1,
-              "shrink": 0
+              "shrink": 1
             },
             "props": {
               "hasTitle": true,
