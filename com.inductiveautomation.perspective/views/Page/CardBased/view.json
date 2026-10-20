@@ -278,8 +278,7 @@
             },
             "position": {
               "basis": "400px",
-              "grow": 1,
-              "shrink": 1
+              "grow": 1
             },
             "props": {
               "hasTitle": true,
@@ -551,8 +550,7 @@
             },
             "position": {
               "basis": "400px",
-              "grow": 1,
-              "shrink": 1
+              "grow": 1
             },
             "props": {
               "hasTitle": true,
@@ -568,14 +566,13 @@
           "name": "FlexContainer"
         },
         "position": {
-          "basis": "auto",
           "grow": 1,
           "shrink": 0
         },
-        "type": "ia.container.flex",
         "props": {
           "wrap": "wrap"
-        }
+        },
+        "type": "ia.container.flex"
       },
       {
         "children": [
@@ -588,17 +585,16 @@
                       "name": "ObcPump"
                     },
                     "position": {
-                      "basis": "66.86px",
-                      "grow": 1,
-                      "shrink": 1
+                      "shrink": 0
                     },
                     "props": {
                       "on": true,
+                      "positioning": "button",
                       "speedInPercent": 50,
-                      "tag": "W1",
                       "style": {
                         "minWidth": 0
-                      }
+                      },
+                      "tag": "W1"
                     },
                     "type": "automation.pump.pump"
                   },
@@ -607,18 +603,17 @@
                       "name": "ObcPump_0"
                     },
                     "position": {
-                      "basis": "66.86px",
-                      "grow": 1,
-                      "shrink": 1
+                      "shrink": 0
                     },
                     "props": {
                       "on": true,
+                      "positioning": "button",
                       "progress": true,
                       "speedInPercent": 20,
-                      "tag": "W2",
                       "style": {
                         "minWidth": 0
-                      }
+                      },
+                      "tag": "W2"
                     },
                     "type": "automation.pump.pump"
                   },
@@ -627,15 +622,14 @@
                       "name": "ObcPump_1"
                     },
                     "position": {
-                      "basis": "66.86px",
-                      "grow": 1,
-                      "shrink": 1
+                      "shrink": 0
                     },
                     "props": {
-                      "tag": "W3",
+                      "positioning": "button",
                       "style": {
                         "minWidth": 0
-                      }
+                      },
+                      "tag": "W3"
                     },
                     "type": "automation.pump.pump"
                   },
@@ -644,18 +638,17 @@
                       "name": "ObcPump_2"
                     },
                     "position": {
-                      "basis": "66.86px",
-                      "grow": 1,
-                      "shrink": 1
+                      "shrink": 0
                     },
                     "props": {
                       "alert": true,
                       "alertFrameStatus": "warning",
                       "alertFrameType": "large-side-flip",
-                      "tag": "W2",
+                      "positioning": "button",
                       "style": {
                         "minWidth": 0
-                      }
+                      },
+                      "tag": "W2"
                     },
                     "type": "automation.pump.pump"
                   }
@@ -669,8 +662,7 @@
                   "style": {
                     "classes": "utils/p-16",
                     "overflow": "visible"
-                  },
-                  "wrap": "nowrap"
+                  }
                 },
                 "type": "ia.container.flex"
               }
@@ -680,8 +672,7 @@
             },
             "position": {
               "basis": "400px",
-              "grow": 1,
-              "shrink": 1
+              "grow": 1
             },
             "props": {
               "hasTitle": true,
@@ -796,8 +787,7 @@
             },
             "position": {
               "basis": "400px",
-              "grow": 1,
-              "shrink": 1
+              "grow": 1
             },
             "props": {
               "hasTitle": true,
@@ -813,14 +803,13 @@
           "name": "FlexContainer_0"
         },
         "position": {
-          "basis": "auto",
           "grow": 1,
           "shrink": 0
         },
-        "type": "ia.container.flex",
         "props": {
           "wrap": "wrap"
-        }
+        },
+        "type": "ia.container.flex"
       }
     ],
     "meta": {
