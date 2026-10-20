@@ -277,7 +277,7 @@
               "name": "card"
             },
             "position": {
-              "basis": "300px",
+              "basis": "400px",
               "grow": 1,
               "shrink": 0
             },
@@ -550,7 +550,7 @@
               "name": "card_0"
             },
             "position": {
-              "basis": "300px",
+              "basis": "400px",
               "grow": 1,
               "shrink": 0
             },
@@ -568,11 +568,14 @@
           "name": "FlexContainer"
         },
         "position": {
-          "basis": "0px",
+          "basis": "auto",
           "grow": 1,
           "shrink": 0
         },
-        "type": "ia.container.flex"
+        "type": "ia.container.flex",
+        "props": {
+          "wrap": "wrap"
+        }
       },
       {
         "children": [
@@ -662,7 +665,7 @@
               "name": "card"
             },
             "position": {
-              "basis": "0px",
+              "basis": "400px",
               "grow": 1,
               "shrink": 0
             },
@@ -778,7 +781,7 @@
               "name": "card_0"
             },
             "position": {
-              "basis": "0px",
+              "basis": "400px",
               "grow": 1,
               "shrink": 0
             },
@@ -796,11 +799,14 @@
           "name": "FlexContainer_0"
         },
         "position": {
-          "basis": "0px",
+          "basis": "auto",
           "grow": 1,
           "shrink": 0
         },
-        "type": "ia.container.flex"
+        "type": "ia.container.flex",
+        "props": {
+          "wrap": "wrap"
+        }
       }
     ],
     "meta": {
@@ -810,7 +816,8 @@
       "direction": "column",
       "style": {
         "backgroundColor": "var(--container-backdrop-color)",
-        "classes": "utils/p-8"
+        "classes": "utils/p-8",
+        "overflowY": "auto"
       }
     },
     "type": "ia.container.flex"
