@@ -1,7 +1,12 @@
 {
   "custom": {},
   "params": {},
-  "props": {},
+  "props": {
+    "defaultSize": {
+      "height": 1041,
+      "width": 1680
+    }
+  },
   "root": {
     "children": [
       {
@@ -11,264 +16,182 @@
               {
                 "children": [
                   {
-                    "children": [
-                      {
-                        "meta": {
-                          "name": "ObcInstrumentField"
-                        },
-                        "propConfig": {
-                          "props.value": {
-                            "binding": {
-                              "config": {
-                                "fallbackDelay": 2.5,
-                                "mode": "direct",
-                                "publishInitial": false,
-                                "tagPath": "[default]Project/Thrust"
-                              },
-                              "type": "tag"
-                            }
-                          }
-                        },
-                        "props": {
-                          "hasValue": true,
-                          "maxDigits": 3,
-                          "size": "enhanced",
-                          "tag": "HDG",
-                          "unit": "DEG"
-                        },
-                        "type": "navigation-instruments.instrument-field.instrument-field"
-                      },
-                      {
-                        "meta": {
-                          "name": "ObcInstrumentField_0"
-                        },
-                        "propConfig": {
-                          "props.value": {
-                            "binding": {
-                              "config": {
-                                "fallbackDelay": 2.5,
-                                "mode": "direct",
-                                "publishInitial": false,
-                                "tagPath": "[default]Project/ThrustSet"
-                              },
-                              "type": "tag"
-                            }
-                          }
-                        },
-                        "props": {
-                          "hasValue": true,
-                          "maxDigits": 3,
-                          "size": "enhanced",
-                          "tag": "COG",
-                          "unit": "DEG"
-                        },
-                        "type": "navigation-instruments.instrument-field.instrument-field"
-                      },
-                      {
-                        "meta": {
-                          "name": "ObcInstrumentField_1"
-                        },
-                        "propConfig": {
-                          "props.value": {
-                            "binding": {
-                              "config": {
-                                "fallbackDelay": 2.5,
-                                "mode": "direct",
-                                "publishInitial": false,
-                                "tagPath": "[default]Project/Thrust"
-                              },
-                              "type": "tag"
-                            }
-                          }
-                        },
-                        "props": {
-                          "hasValue": true,
-                          "maxDigits": 3,
-                          "size": "enhanced",
-                          "tag": "ROT",
-                          "unit": "DEG/min"
-                        },
-                        "type": "navigation-instruments.instrument-field.instrument-field"
-                      }
-                    ],
                     "meta": {
-                      "name": "FlexContainer"
+                      "name": "automationTank"
                     },
                     "position": {
-                      "basis": "100px",
-                      "grow": 1,
+                      "basis": "150px",
                       "shrink": 0
                     },
                     "props": {
-                      "alignItems": "flex-end",
-                      "direction": "column",
-                      "justify": "center"
+                      "chartData": {
+                        "xValues": [
+                          0,
+                          1,
+                          2,
+                          3
+                        ],
+                        "yValues": [
+                          90,
+                          90,
+                          91,
+                          92
+                        ]
+                      },
+                      "chartMode": "graph-and-bar",
+                      "style": {
+                        "maxHeight": 300
+                      },
+                      "trend": "rising",
+                      "value": 92
                     },
-                    "type": "ia.container.flex"
+                    "type": "automation.automation-tank.automation-tank"
                   },
                   {
                     "meta": {
-                      "name": "ObcCompass"
+                      "name": "automationTank_1"
+                    },
+                    "position": {
+                      "basis": "150px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "chartData": {
+                        "xValues": [
+                          0,
+                          1,
+                          2,
+                          3
+                        ],
+                        "yValues": [
+                          90,
+                          90,
+                          91,
+                          92
+                        ]
+                      },
+                      "style": {
+                        "maxHeight": 300
+                      },
+                      "trend": "fast-falling",
+                      "type": "atmospheric",
+                      "value": 50
+                    },
+                    "type": "automation.automation-tank.automation-tank"
+                  },
+                  {
+                    "meta": {
+                      "name": "automationTank_2"
+                    },
+                    "position": {
+                      "basis": "150px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "chartData": {
+                        "xValues": [
+                          0,
+                          1,
+                          2,
+                          3
+                        ],
+                        "yValues": [
+                          90,
+                          90,
+                          91,
+                          92
+                        ]
+                      },
+                      "style": {
+                        "maxHeight": 300
+                      },
+                      "trend": "fast-falling",
+                      "type": "battery",
+                      "value": 50
+                    },
+                    "type": "automation.automation-tank.automation-tank"
+                  },
+                  {
+                    "meta": {
+                      "name": "automationTank_0"
+                    },
+                    "position": {
+                      "basis": "120px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "chartData": {
+                        "xValues": [
+                          0,
+                          1,
+                          2,
+                          3
+                        ],
+                        "yValues": [
+                          90,
+                          90,
+                          91,
+                          92
+                        ]
+                      },
+                      "compact": true,
+                      "style": {
+                        "alignSelf": "center",
+                        "maxHeight": 240
+                      },
+                      "trend": "rising",
+                      "value": 92
+                    },
+                    "type": "automation.automation-tank.automation-tank"
+                  },
+                  {
+                    "meta": {
+                      "name": "automationTank_3"
                     },
                     "position": {
                       "basis": "300px",
-                      "grow": 10
-                    },
-                    "propConfig": {
-                      "props.courseOverGround": {
-                        "binding": {
-                          "config": {
-                            "fallbackDelay": 2.5,
-                            "mode": "direct",
-                            "publishInitial": false,
-                            "tagPath": "[default]Project/ThrustSet"
-                          },
-                          "type": "tag"
-                        }
-                      },
-                      "props.heading": {
-                        "binding": {
-                          "config": {
-                            "fallbackDelay": 2.5,
-                            "mode": "direct",
-                            "tagPath": "[default]Project/Thrust"
-                          },
-                          "previewEnabled": false,
-                          "type": "tag"
-                        }
-                      },
-                      "props.headingSetPoint": {
-                        "binding": {
-                          "config": {
-                            "fallbackDelay": 2.5,
-                            "mode": "direct",
-                            "publishInitial": false,
-                            "tagPath": "[default]Project/Thrust"
-                          },
-                          "type": "tag"
-                        }
-                      },
-                      "props.vesselImage": {
-                        "binding": {
-                          "config": {
-                            "fallbackDelay": 2.5,
-                            "mode": "direct",
-                            "tagPath": "[default]Project/VesselType"
-                          },
-                          "transforms": [
-                            {
-                              "expression": "{value}+\"-top\"",
-                              "type": "expression"
-                            }
-                          ],
-                          "type": "tag"
-                        }
-                      }
-                    },
-                    "props": {
-                      "currentFromDirection": 45,
-                      "currentSpeed": 1,
-                      "rotAtZeroDeadband": 1,
-                      "windFromDirection": 15,
-                      "windSpeed": 2
-                    },
-                    "type": "navigation-instruments.compass.compass"
-                  },
-                  {
-                    "children": [
-                      {
-                        "meta": {
-                          "name": "Label_0"
-                        },
-                        "props": {
-                          "style": {
-                            "alignSelf": "stretch",
-                            "classes": "font/label text-color/element-neutral"
-                          },
-                          "text": "Wind"
-                        },
-                        "type": "ia.display.label"
-                      },
-                      {
-                        "meta": {
-                          "name": "ObcInstrumentField_2"
-                        },
-                        "propConfig": {
-                          "props.value": {
-                            "binding": {
-                              "config": {
-                                "fallbackDelay": 2.5,
-                                "mode": "direct",
-                                "tagPath": "[default]Project/Thrust"
-                              },
-                              "enabled": false,
-                              "type": "tag"
-                            }
-                          }
-                        },
-                        "props": {
-                          "hasValue": true,
-                          "maxDigits": 3,
-                          "neutralColor": true,
-                          "size": "enhanced",
-                          "tag": "Speed",
-                          "unit": "m/s",
-                          "value": 5
-                        },
-                        "type": "navigation-instruments.instrument-field.instrument-field"
-                      },
-                      {
-                        "meta": {
-                          "name": "ObcInstrumentField_3"
-                        },
-                        "propConfig": {
-                          "props.value": {
-                            "binding": {
-                              "config": {
-                                "fallbackDelay": 2.5,
-                                "mode": "direct",
-                                "publishInitial": false,
-                                "tagPath": "[default]Project/ThrustSet"
-                              },
-                              "type": "tag"
-                            }
-                          }
-                        },
-                        "props": {
-                          "hasValue": true,
-                          "maxDigits": 3,
-                          "neutralColor": true,
-                          "size": "enhanced",
-                          "tag": "Direction",
-                          "unit": "DEG"
-                        },
-                        "type": "navigation-instruments.instrument-field.instrument-field"
-                      }
-                    ],
-                    "meta": {
-                      "name": "FlexContainer_0"
-                    },
-                    "position": {
-                      "basis": "100px",
-                      "grow": 1,
                       "shrink": 0
                     },
                     "props": {
-                      "alignItems": "flex-end",
-                      "direction": "column",
-                      "justify": "center"
+                      "chartData": {
+                        "xValues": [
+                          0,
+                          1,
+                          2,
+                          3
+                        ],
+                        "yValues": [
+                          90,
+                          90,
+                          91,
+                          92
+                        ]
+                      },
+                      "chartMode": "graph-and-bar",
+                      "orientation": "horizontal",
+                      "style": {
+                        "alignSelf": "baseline",
+                        "maxHeight": "120px"
+                      },
+                      "trend": "rising",
+                      "type": "pressurized",
+                      "value": 92
                     },
-                    "type": "ia.container.flex"
+                    "type": "automation.automation-tank.automation-tank"
                   }
                 ],
                 "meta": {
                   "name": "FlexContainer"
                 },
                 "props": {
+                  "alignContent": "center",
                   "justify": "center",
                   "style": {
-                    "classes": "utils/p-16"
-                  }
+                    "classes": "utils/flexWrapBalance utils/p-16",
+                    "gap": "16px",
+                    "margin": "auto"
+                  },
+                  "wrap": "wrap"
                 },
                 "type": "ia.container.flex"
               }
@@ -285,7 +208,7 @@
               "style": {
                 "classes": "utils/p-8"
               },
-              "title": "Own ship data"
+              "title": "Tank"
             },
             "type": "openbridge.manual.card"
           },
@@ -297,238 +220,449 @@
                     "children": [
                       {
                         "meta": {
-                          "name": "Label_1"
+                          "name": "ObcDigitalThreewayValve"
+                        },
+                        "position": {
+                          "basis": "48px"
                         },
                         "props": {
-                          "style": {
-                            "alignSelf": "stretch",
-                            "classes": "font/label text-color/element-neutral"
-                          },
-                          "text": "Roll"
+                          "open1": true,
+                          "open2": true,
+                          "showReadoutStack": false
                         },
-                        "type": "ia.display.label"
+                        "type": "automation.digital-threeway-valve.digital-threeway-valve"
                       },
                       {
                         "meta": {
-                          "name": "ObcInstrumentField_4"
+                          "name": "ObcNonReturnValve"
                         },
-                        "propConfig": {
-                          "props.value": {
-                            "binding": {
-                              "config": {
-                                "fallbackDelay": 2.5,
-                                "mode": "direct",
-                                "tagPath": "[Sample_Tags]Ramp/Ramp9"
-                              },
-                              "transforms": [
-                                {
-                                  "expression": "sin({value}*.3+2)*15",
-                                  "type": "expression"
-                                }
-                              ],
-                              "type": "tag"
-                            }
-                          }
+                        "position": {
+                          "basis": "48px"
                         },
                         "props": {
-                          "hasSrc": 4445.4275,
-                          "hasValue": true,
-                          "maxDigits": 0,
-                          "neutralColor": true,
-                          "size": "enhanced",
-                          "tag": "Roll",
-                          "unit": "DEG"
+                          "showReadoutStack": false
                         },
-                        "type": "navigation-instruments.instrument-field.instrument-field"
+                        "type": "automation.non-return-valve.non-return-valve"
                       },
                       {
                         "meta": {
-                          "name": "ObcInstrumentField_5"
+                          "name": "ObcValve"
                         },
-                        "propConfig": {
-                          "props.value": {
-                            "binding": {
-                              "config": {
-                                "fallbackDelay": 2.5,
-                                "mode": "direct",
-                                "tagPath": "[default]Project/ThrustSet"
-                              },
-                              "enabled": false,
-                              "type": "tag"
-                            }
-                          }
+                        "position": {
+                          "basis": "48px"
                         },
                         "props": {
-                          "hasValue": true,
-                          "maxDigits": 3,
-                          "neutralColor": true,
-                          "size": "enhanced",
-                          "tag": "Max roll",
-                          "unit": "DEG",
-                          "value": 15
+                          "handle": "electro-hydraulic",
+                          "open": true,
+                          "showReadoutStack": false,
+                          "valveType": "digital"
                         },
-                        "type": "navigation-instruments.instrument-field.instrument-field"
+                        "type": "automation.valve.valve"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcValve_4"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "handle": "motor",
+                          "open": true,
+                          "showReadoutStack": false,
+                          "valveType": "digital"
+                        },
+                        "type": "automation.valve.valve"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcValve_3"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "handle": "solenoid",
+                          "open": true,
+                          "showReadoutStack": false,
+                          "valveType": "digital"
+                        },
+                        "type": "automation.valve.valve"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcValve_2"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "handle": "pneumatic",
+                          "open": true,
+                          "showReadoutStack": false,
+                          "valveType": "digital"
+                        },
+                        "type": "automation.valve.valve"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcValve_0"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "handle": "manual",
+                          "open": true,
+                          "showReadoutStack": false,
+                          "static": true,
+                          "valveType": "digital"
+                        },
+                        "type": "automation.valve.valve"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcValve_1"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "handle": "manual",
+                          "showReadoutStack": false,
+                          "static": true,
+                          "valveType": "digital"
+                        },
+                        "type": "automation.valve.valve"
                       }
                     ],
                     "meta": {
                       "name": "FlexContainer"
                     },
-                    "position": {
-                      "basis": "100px",
-                      "grow": 1,
-                      "shrink": 0
-                    },
                     "props": {
-                      "alignItems": "flex-end",
-                      "direction": "column",
-                      "justify": "center"
+                      "alignContent": "center",
+                      "justify": "center",
+                      "style": {
+                        "classes": "utils/flexWrapBalance utils/p-16",
+                        "gap": "16px"
+                      },
+                      "wrap": "wrap"
                     },
                     "type": "ia.container.flex"
-                  },
-                  {
-                    "meta": {
-                      "name": "ObcPitchRoll"
-                    },
-                    "position": {
-                      "basis": "300px",
-                      "grow": 10
-                    },
-                    "propConfig": {
-                      "props.pitch": {
-                        "binding": {
-                          "config": {
-                            "fallbackDelay": 2.5,
-                            "mode": "direct",
-                            "tagPath": "[Sample_Tags]Ramp/Ramp9"
-                          },
-                          "enabled": false,
-                          "transforms": [
-                            {
-                              "expression": "sin({value}*.3)*4",
-                              "type": "expression"
-                            }
-                          ],
-                          "type": "tag"
-                        }
-                      },
-                      "props.roll": {
-                        "binding": {
-                          "config": {
-                            "fallbackDelay": 2.5,
-                            "mode": "direct",
-                            "tagPath": "[Sample_Tags]Ramp/Ramp9"
-                          },
-                          "transforms": [
-                            {
-                              "expression": "sin({value}*.3+2)*15",
-                              "type": "expression"
-                            }
-                          ],
-                          "type": "tag"
-                        }
-                      }
-                    },
-                    "props": {
-                      "hasMaxPitchAdvice": true,
-                      "hasMaxRollAdvice": true,
-                      "maxAvgPitch": 4,
-                      "maxAvgRoll": 15,
-                      "maxPitchAdvice": 10,
-                      "maxRollAdvice": 10,
-                      "minAvgPitch": -4,
-                      "minAvgRoll": -15,
-                      "pitch": 1,
-                      "triggerRollAdvice": true
-                    },
-                    "type": "navigation-instruments.pitch-roll.pitch-roll"
                   },
                   {
                     "children": [
                       {
                         "meta": {
-                          "name": "Label_0"
+                          "name": "ObcDigitalThreewayValve"
+                        },
+                        "position": {
+                          "basis": "48px"
                         },
                         "props": {
-                          "style": {
-                            "alignSelf": "stretch",
-                            "classes": "font/label text-color/element-neutral"
-                          },
-                          "text": "Pitch"
+                          "open1": true,
+                          "open2": true,
+                          "showReadoutStack": false,
+                          "variant": "flat"
                         },
-                        "type": "ia.display.label"
+                        "type": "automation.digital-threeway-valve.digital-threeway-valve"
                       },
                       {
                         "meta": {
-                          "name": "ObcInstrumentField_2"
+                          "name": "ObcNonReturnValve"
                         },
-                        "propConfig": {
-                          "props.value": {
-                            "binding": {
-                              "config": {
-                                "fallbackDelay": 2.5,
-                                "mode": "direct",
-                                "tagPath": "[Sample_Tags]Ramp/Ramp9"
-                              },
-                              "transforms": [
-                                {
-                                  "expression": "sin({value}*.3)*4",
-                                  "type": "expression"
-                                }
-                              ],
-                              "type": "tag"
-                            }
-                          }
+                        "position": {
+                          "basis": "48px"
                         },
                         "props": {
-                          "hasValue": true,
-                          "maxDigits": 0,
-                          "neutralColor": true,
-                          "size": "enhanced",
-                          "tag": "Pitch",
-                          "unit": "DEG"
+                          "showReadoutStack": false,
+                          "variant": "flat"
                         },
-                        "type": "navigation-instruments.instrument-field.instrument-field"
+                        "type": "automation.non-return-valve.non-return-valve"
                       },
                       {
                         "meta": {
-                          "name": "ObcInstrumentField_3"
+                          "name": "ObcValve"
                         },
-                        "propConfig": {
-                          "props.value": {
-                            "binding": {
-                              "config": {
-                                "fallbackDelay": 2.5,
-                                "mode": "direct",
-                                "publishInitial": false,
-                                "tagPath": "[default]Project/ThrustSet"
-                              },
-                              "type": "tag"
-                            }
-                          }
+                        "position": {
+                          "basis": "48px"
                         },
                         "props": {
-                          "hasValue": true,
-                          "maxDigits": 3,
-                          "neutralColor": true,
-                          "size": "enhanced",
-                          "tag": "Max pitch",
-                          "unit": "DEG"
+                          "handle": "electro-hydraulic",
+                          "open": true,
+                          "showReadoutStack": false,
+                          "valveType": "digital",
+                          "variant": "flat"
                         },
-                        "type": "navigation-instruments.instrument-field.instrument-field"
+                        "type": "automation.valve.valve"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcValve_4"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "handle": "motor",
+                          "open": true,
+                          "showReadoutStack": false,
+                          "valveType": "digital",
+                          "variant": "flat"
+                        },
+                        "type": "automation.valve.valve"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcValve_3"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "handle": "solenoid",
+                          "open": true,
+                          "showReadoutStack": false,
+                          "valveType": "digital",
+                          "variant": "flat"
+                        },
+                        "type": "automation.valve.valve"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcValve_2"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "handle": "pneumatic",
+                          "open": true,
+                          "showReadoutStack": false,
+                          "valveType": "digital",
+                          "variant": "flat"
+                        },
+                        "type": "automation.valve.valve"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcValve_0"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "handle": "manual",
+                          "open": true,
+                          "showReadoutStack": false,
+                          "static": true,
+                          "valveType": "digital",
+                          "variant": "flat"
+                        },
+                        "type": "automation.valve.valve"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcValve_1"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "handle": "manual",
+                          "showReadoutStack": false,
+                          "static": true,
+                          "valveType": "digital",
+                          "variant": "flat"
+                        },
+                        "type": "automation.valve.valve"
                       }
                     ],
                     "meta": {
-                      "name": "FlexContainer_0"
-                    },
-                    "position": {
-                      "basis": "100px",
-                      "grow": 1,
-                      "shrink": 0
+                      "name": "FlexContainer_3"
                     },
                     "props": {
-                      "alignItems": "flex-end",
-                      "direction": "column",
-                      "justify": "center"
+                      "alignContent": "center",
+                      "justify": "center",
+                      "style": {
+                        "classes": "utils/flexWrapBalance utils/p-16",
+                        "gap": "16px"
+                      },
+                      "wrap": "wrap"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "ObcConverter"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "on": true,
+                          "showReadoutStack": false,
+                          "variant": "flat"
+                        },
+                        "type": "automation.converter.converter"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcConverter_0"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "alternativeIcon": "converterAcdc",
+                          "on": true,
+                          "showReadoutStack": false,
+                          "variant": "flat"
+                        },
+                        "type": "automation.converter.converter"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcFilter"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "on": true,
+                          "showReadoutStack": false,
+                          "variant": "flat"
+                        },
+                        "type": "automation.filter.filter"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcTransformer"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "on": true,
+                          "showReadoutStack": false,
+                          "variant": "flat"
+                        },
+                        "type": "automation.transformer.transformer"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcGround"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "alternativeIcon": "ground3",
+                          "on": true,
+                          "showReadoutStack": false,
+                          "variant": "flat"
+                        },
+                        "type": "automation.ground.ground"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcMosfet"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "on": true,
+                          "showReadoutStack": false,
+                          "variant": "flat"
+                        },
+                        "type": "automation.mosfet.mosfet"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcDiodes"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "on": true,
+                          "showReadoutStack": false,
+                          "variant": "flat"
+                        },
+                        "type": "automation.diodes.diodes"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcResistor"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "on": true,
+                          "showReadoutStack": false,
+                          "variant": "flat"
+                        },
+                        "type": "automation.resistor.resistor"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_1"
+                    },
+                    "props": {
+                      "alignContent": "center",
+                      "justify": "center",
+                      "style": {
+                        "classes": "utils/flexWrapBalance utils/p-16",
+                        "gap": "16px"
+                      },
+                      "wrap": "wrap"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "ObcFan"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "on": true,
+                          "showReadoutStack": false
+                        },
+                        "type": "automation.fan.fan"
+                      },
+                      {
+                        "meta": {
+                          "name": "ObcDamper"
+                        },
+                        "position": {
+                          "basis": "48px"
+                        },
+                        "props": {
+                          "on": true,
+                          "showReadoutStack": false
+                        },
+                        "type": "automation.damper.damper"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_2"
+                    },
+                    "props": {
+                      "alignContent": "center",
+                      "justify": "center",
+                      "style": {
+                        "classes": "utils/flexWrapBalance utils/p-16",
+                        "gap": "16px"
+                      },
+                      "wrap": "wrap"
                     },
                     "type": "ia.container.flex"
                   }
@@ -537,10 +671,14 @@
                   "name": "FlexContainer"
                 },
                 "props": {
+                  "alignContent": "center",
+                  "direction": "column",
                   "justify": "center",
                   "style": {
-                    "classes": "utils/p-16"
-                  }
+                    "classes": "utils/flexWrapBalance utils/p-16",
+                    "gap": ""
+                  },
+                  "wrap": "wrap"
                 },
                 "type": "ia.container.flex"
               }
@@ -557,7 +695,7 @@
               "style": {
                 "classes": "utils/p-8"
               },
-              "title": "Motion"
+              "title": "Some variations"
             },
             "type": "openbridge.manual.card"
           }
@@ -588,9 +726,11 @@
                       "shrink": 0
                     },
                     "props": {
+                      "hasSpeed": true,
                       "on": true,
-                      "positioning": "button",
+                      "speed": 50,
                       "speedInPercent": 50,
+                      "speedUnit": "%",
                       "style": {
                         "minWidth": 0
                       },
@@ -606,10 +746,12 @@
                       "shrink": 0
                     },
                     "props": {
+                      "hasSpeed": true,
                       "on": true,
-                      "positioning": "button",
                       "progress": true,
+                      "speed": 20,
                       "speedInPercent": 20,
+                      "speedUnit": "l/h",
                       "style": {
                         "minWidth": 0
                       },
@@ -625,7 +767,6 @@
                       "shrink": 0
                     },
                     "props": {
-                      "positioning": "button",
                       "style": {
                         "minWidth": 0
                       },
@@ -635,16 +776,150 @@
                   },
                   {
                     "meta": {
+                      "name": "ObcPump_5"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "badgeAlert": "silence",
+                      "badgeCommandLocked": "command-locked",
+                      "badgeControl": "manual",
+                      "hasSpeed": true,
+                      "on": true,
+                      "showReadoutStack": false,
+                      "speed": 20,
+                      "speedInPercent": 20,
+                      "speedUnit": "%",
+                      "style": {
+                        "minWidth": 0
+                      },
+                      "tag": "W2"
+                    },
+                    "type": "automation.pump.pump"
+                  },
+                  {
+                    "meta": {
+                      "name": "ObcPump_6"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "hasSpeed": true,
+                      "on": true,
+                      "showReadoutStack": false,
+                      "speed": 20,
+                      "speedInPercent": 20,
+                      "speedUnit": "%",
+                      "style": {
+                        "minWidth": 0
+                      },
+                      "tag": "W2",
+                      "variant": "double"
+                    },
+                    "type": "automation.pump.pump"
+                  },
+                  {
+                    "meta": {
+                      "name": "ObcPump_7"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "hasSpeed": true,
+                      "on": true,
+                      "showReadoutStack": false,
+                      "speed": 20,
+                      "speedInPercent": 20,
+                      "speedUnit": "%",
+                      "style": {
+                        "minWidth": 0
+                      },
+                      "tag": "W2",
+                      "variant": "forward"
+                    },
+                    "type": "automation.pump.pump"
+                  },
+                  {
+                    "meta": {
+                      "name": "ObcPump_8"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "hasSpeed": true,
+                      "on": true,
+                      "showReadoutStack": false,
+                      "speed": 20,
+                      "speedInPercent": 20,
+                      "speedUnit": "%",
+                      "style": {
+                        "minWidth": 0
+                      },
+                      "tag": "W2",
+                      "variant": "flat"
+                    },
+                    "type": "automation.pump.pump"
+                  },
+                  {
+                    "meta": {
                       "name": "ObcPump_2"
                     },
                     "position": {
+                      "basis": "77px",
                       "shrink": 0
                     },
                     "props": {
                       "alert": true,
                       "alertFrameStatus": "warning",
                       "alertFrameType": "large-side-flip",
-                      "positioning": "button",
+                      "style": {
+                        "minWidth": 0
+                      },
+                      "tag": "W2"
+                    },
+                    "type": "automation.pump.pump"
+                  },
+                  {
+                    "meta": {
+                      "name": "ObcPump_3"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "componentSize": "medium",
+                      "hasSpeed": true,
+                      "on": true,
+                      "showReadoutStack": false,
+                      "speed": 20,
+                      "speedInPercent": 20,
+                      "speedUnit": "%",
+                      "style": {
+                        "minWidth": 0
+                      },
+                      "tag": "W2"
+                    },
+                    "type": "automation.pump.pump"
+                  },
+                  {
+                    "meta": {
+                      "name": "ObcPump_4"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "componentSize": "large",
+                      "hasSpeed": true,
+                      "on": true,
+                      "showReadoutStack": false,
+                      "speed": 20,
+                      "speedInPercent": 20,
+                      "speedUnit": "%",
                       "style": {
                         "minWidth": 0
                       },
@@ -657,12 +932,17 @@
                   "name": "FlexContainer"
                 },
                 "props": {
+                  "alignContent": "center",
                   "alignItems": "center",
                   "justify": "space-around",
                   "style": {
-                    "classes": "utils/p-16",
-                    "overflow": "visible"
-                  }
+                    "classes": "utils/flexWrapBalance",
+                    "flexWrap": "balance",
+                    "gap": 16,
+                    "overflow": "visible",
+                    "padding": 32
+                  },
+                  "wrap": "wrap"
                 },
                 "type": "ia.container.flex"
               }
@@ -677,9 +957,9 @@
             "props": {
               "hasTitle": true,
               "style": {
-                "classes": "utils/p-8"
+                "classes": "utils/flexWrapBalance utils/p-8"
               },
-              "title": "Water pumps"
+              "title": "Customization"
             },
             "type": "openbridge.manual.card"
           },
@@ -689,59 +969,12 @@
                 "children": [
                   {
                     "meta": {
-                      "name": "ObcSpeedGauge"
+                      "name": "ObcGaugeRadial_0"
                     },
                     "position": {
-                      "basis": "313px",
-                      "grow": 10
+                      "basis": "256px"
                     },
                     "propConfig": {
-                      "props.speed": {
-                        "binding": {
-                          "config": {
-                            "fallbackDelay": 2.5,
-                            "mode": "direct",
-                            "tagPath": "[Sample_Tags]Sine/Sine4"
-                          },
-                          "transforms": [
-                            {
-                              "expression": "{value}+100",
-                              "type": "expression"
-                            }
-                          ],
-                          "type": "tag"
-                        }
-                      }
-                    },
-                    "props": {
-                      "maxSpeed": 200,
-                      "minSpeed": -40,
-                      "tickmarkInterval": 50
-                    },
-                    "type": "navigation-instruments.speed-gauge.speed-gauge"
-                  },
-                  {
-                    "meta": {
-                      "name": "ObcInstrumentField"
-                    },
-                    "position": {
-                      "align": "center",
-                      "basis": "111px",
-                      "grow": 1,
-                      "shrink": 0
-                    },
-                    "propConfig": {
-                      "props.setpoint": {
-                        "binding": {
-                          "config": {
-                            "fallbackDelay": 2.5,
-                            "mode": "direct",
-                            "tagPath": ""
-                          },
-                          "enabled": false,
-                          "type": "tag"
-                        }
-                      },
                       "props.value": {
                         "binding": {
                           "config": {
@@ -760,14 +993,113 @@
                       }
                     },
                     "props": {
-                      "hasValue": true,
-                      "maxDigits": 5,
-                      "neutralColor": true,
-                      "size": "enhanced",
-                      "tag": "Pressure",
+                      "advices": [
+                        {
+                          "maxValue": 150,
+                          "minValue": 100,
+                          "type": "caution"
+                        }
+                      ],
+                      "hasReadout": true,
+                      "label": "Pressure",
+                      "maxValue": 150,
+                      "primaryTickmarkInterval": 0,
+                      "showLabels": true,
+                      "type": "bar",
                       "unit": "hPa"
                     },
-                    "type": "navigation-instruments.instrument-field.instrument-field"
+                    "type": "navigation-instruments.gauge-radial.gauge-radial"
+                  },
+                  {
+                    "meta": {
+                      "name": "ObcBarVertical"
+                    },
+                    "position": {
+                      "basis": "108px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Sine/Sine4"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}+100",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "advices": [
+                        {
+                          "hinted": false,
+                          "max": 150,
+                          "min": 100,
+                          "type": "caution"
+                        }
+                      ],
+                      "autoAtSetpointDeadband": 10,
+                      "hasSetpoint": true,
+                      "key": "value",
+                      "maxValue": 150,
+                      "setpoint": 110,
+                      "style": {
+                        "alignSelf": "center",
+                        "height": "100%",
+                        "maxHeight": "256px"
+                      }
+                    },
+                    "type": "building-blocks.bar-vertical.bar-vertical"
+                  },
+                  {
+                    "meta": {
+                      "name": "ObcBarHorizontal"
+                    },
+                    "position": {
+                      "basis": "320px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Sine/Sine4"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}+100",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "advices": [
+                        {
+                          "hinted": false,
+                          "max": 150,
+                          "min": 100,
+                          "type": "caution"
+                        }
+                      ],
+                      "autoAtSetpointDeadband": 10,
+                      "hasSetpoint": true,
+                      "maxValue": 150,
+                      "setpoint": 110,
+                      "style": {
+                        "alignSelf": "center"
+                      }
+                    },
+                    "type": "building-blocks.bar-horizontal.bar-horizontal"
                   }
                 ],
                 "meta": {
@@ -776,7 +1108,8 @@
                 "props": {
                   "justify": "center",
                   "style": {
-                    "classes": "utils/p-16"
+                    "classes": "utils/p-16",
+                    "gap": 16
                   }
                 },
                 "type": "ia.container.flex"
@@ -807,6 +1140,7 @@
           "shrink": 0
         },
         "props": {
+          "justify": "space-around",
           "wrap": "wrap"
         },
         "type": "ia.container.flex"

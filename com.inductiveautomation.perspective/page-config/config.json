@@ -45,6 +45,10 @@
     "/maritime": {
       "title": "",
       "viewPath": "Page/Maritime"
+    },
+    "/norvar": {
+      "title": "Norvar",
+      "viewPath": "Page/Norvar"
     }
   },
   "sharedDocks": {

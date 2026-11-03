@@ -75,11 +75,6 @@
               "icon": "command-shared",
               "label": "Group",
               "path": ""
-            },
-            {
-              "icon": "input-devices-google",
-              "label": "UI components",
-              "path": "/maritime"
             }
           ]
         },

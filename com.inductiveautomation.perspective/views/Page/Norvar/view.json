@@ -1,0 +1,3340 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1366
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "var(--container-backdrop-color)",
+        "classes": "utils/p-8",
+        "overflowY": "auto"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Cards"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "wrap": "wrap",
+          "style": {
+            "gap": "8px"
+          }
+        },
+        "children": [
+          {
+            "type": "openbridge.manual.card",
+            "meta": {
+              "name": "cardValves"
+            },
+            "position": {
+              "basis": "600px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "hasTitle": true,
+              "title": "Norvar - Valves",
+              "style": {
+                "classes": "utils/p-8",
+                "overflow": "visible"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.container.flex",
+                "meta": {
+                  "name": "Matrix"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "center",
+                  "alignItems": "center",
+                  "style": {
+                    "classes": "utils/p-16",
+                    "gap": "24px",
+                    "overflow": "visible"
+                  }
+                },
+                "children": [
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "rowClosed"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "manualClosed"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "manual",
+                          "open": false,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "motorClosed"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "motor",
+                          "open": false,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "pneumaticClosed"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "pneumatic",
+                          "open": false,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "hydraulicClosed"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "hydraulic",
+                          "open": false,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "solenoidClosed"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "solenoid",
+                          "open": false,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "controlClosed"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "control",
+                          "open": false,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "rowOpen"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "manualOpen"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "manual",
+                          "open": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "motorOpen"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "motor",
+                          "open": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "pneumaticOpen"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "pneumatic",
+                          "open": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "hydraulicOpen"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "hydraulic",
+                          "open": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "solenoidOpen"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "solenoid",
+                          "open": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "controlOpen"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "control",
+                          "open": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "rowAlarm"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "manualAlarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "manual",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "motorAlarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "motor",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "pneumaticAlarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "pneumatic",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "hydraulicAlarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "hydraulic",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "solenoidAlarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "solenoid",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "controlAlarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "control",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "rowMiddle"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "manualMiddle"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "manual",
+                          "progress": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "motorMiddle"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "motor",
+                          "progress": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "pneumaticMiddle"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "pneumatic",
+                          "progress": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "hydraulicMiddle"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "hydraulic",
+                          "progress": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "solenoidMiddle"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "solenoid",
+                          "progress": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-valve.norvar-valve",
+                        "meta": {
+                          "name": "controlMiddle"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "actuator": "control",
+                          "progress": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "openbridge.manual.card",
+            "meta": {
+              "name": "cardMapSymbols"
+            },
+            "position": {
+              "basis": "600px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "hasTitle": true,
+              "title": "Norvar - Map Symbols",
+              "style": {
+                "classes": "utils/p-8",
+                "overflow": "visible"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.container.flex",
+                "meta": {
+                  "name": "Matrix"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "center",
+                  "alignItems": "center",
+                  "style": {
+                    "classes": "utils/p-16",
+                    "gap": "24px",
+                    "overflow": "visible"
+                  }
+                },
+                "children": [
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "variant_regular"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "culvert-with-grate_regular"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "culvert-with-grate",
+                          "variant": "regular",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "culvert_regular"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "culvert",
+                          "variant": "regular",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "precipitation-station_regular"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "precipitation-station",
+                          "variant": "regular",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "watercourse-metering-station_regular"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "watercourse-metering-station",
+                          "variant": "regular",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "discharge_regular"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "discharge",
+                          "variant": "regular",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "variant_flat"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "culvert-with-grate_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "culvert-with-grate",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "culvert_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "culvert",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "precipitation-station_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "precipitation-station",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "watercourse-metering-station_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "watercourse-metering-station",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "discharge_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "discharge",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "stateRunning"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "culvert-with-grate_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "culvert-with-grate",
+                          "variant": "regular",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "culvert_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "culvert",
+                          "variant": "regular",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "precipitation-station_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "precipitation-station",
+                          "variant": "regular",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "watercourse-metering-station_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "watercourse-metering-station",
+                          "variant": "regular",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "discharge_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "discharge",
+                          "variant": "regular",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "stateAlarm"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "culvert-with-grate_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "culvert-with-grate",
+                          "variant": "regular",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "culvert_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "culvert",
+                          "variant": "regular",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "precipitation-station_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "precipitation-station",
+                          "variant": "regular",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "watercourse-metering-station_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "watercourse-metering-station",
+                          "variant": "regular",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "discharge_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "discharge",
+                          "variant": "regular",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "stateUnmonitored"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "culvert-with-grate_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "culvert-with-grate",
+                          "variant": "regular",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "culvert_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "culvert",
+                          "variant": "regular",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "precipitation-station_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "precipitation-station",
+                          "variant": "regular",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "watercourse-metering-station_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "watercourse-metering-station",
+                          "variant": "regular",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-map-symbol.norvar-map-symbol",
+                        "meta": {
+                          "name": "discharge_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "symbolType": "discharge",
+                          "variant": "regular",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "openbridge.manual.card",
+            "meta": {
+              "name": "cardWastewater"
+            },
+            "position": {
+              "basis": "600px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "hasTitle": true,
+              "title": "Norvar - Wastewater Station",
+              "style": {
+                "classes": "utils/p-8",
+                "overflow": "visible"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.container.flex",
+                "meta": {
+                  "name": "Matrix"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "center",
+                  "alignItems": "center",
+                  "style": {
+                    "classes": "utils/p-16",
+                    "gap": "24px",
+                    "overflow": "visible"
+                  }
+                },
+                "children": [
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "variant_regular"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "detention-basin_regular"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "detention-basin",
+                          "variant": "regular",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "pump-station_regular"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "pump-station",
+                          "variant": "regular",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "treatment-plant_regular"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "treatment-plant",
+                          "variant": "regular",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "metering-station_regular"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "metering-station",
+                          "variant": "regular",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "discharge_regular"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "discharge",
+                          "variant": "regular",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "overflow_regular"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "overflow",
+                          "variant": "regular",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "manhole_regular"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "manhole",
+                          "variant": "regular",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "variant_flat"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "detention-basin_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "detention-basin",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "pump-station_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "pump-station",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "treatment-plant_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "treatment-plant",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "metering-station_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "metering-station",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "discharge_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "discharge",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "overflow_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "overflow",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "manhole_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "manhole",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "stateRunning"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "detention-basin_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "detention-basin",
+                          "variant": "regular",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "pump-station_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "pump-station",
+                          "variant": "regular",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "treatment-plant_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "treatment-plant",
+                          "variant": "regular",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "metering-station_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "metering-station",
+                          "variant": "regular",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "discharge_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "discharge",
+                          "variant": "regular",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "overflow_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "overflow",
+                          "variant": "regular",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "manhole_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "manhole",
+                          "variant": "regular",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "stateAlarm"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "detention-basin_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "detention-basin",
+                          "variant": "regular",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "pump-station_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "pump-station",
+                          "variant": "regular",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "treatment-plant_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "treatment-plant",
+                          "variant": "regular",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "metering-station_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "metering-station",
+                          "variant": "regular",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "discharge_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "discharge",
+                          "variant": "regular",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "overflow_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "overflow",
+                          "variant": "regular",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "manhole_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "manhole",
+                          "variant": "regular",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "stateUnmonitored"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "detention-basin_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "detention-basin",
+                          "variant": "regular",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "pump-station_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "pump-station",
+                          "variant": "regular",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "treatment-plant_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "treatment-plant",
+                          "variant": "regular",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "metering-station_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "metering-station",
+                          "variant": "regular",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "discharge_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "discharge",
+                          "variant": "regular",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "overflow_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "overflow",
+                          "variant": "regular",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "manhole_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "manhole",
+                          "variant": "regular",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "stateStatic"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "detention-basin_Static"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "detention-basin",
+                          "variant": "regular",
+                          "state": "ready",
+                          "static": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "pump-station_Static"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "pump-station",
+                          "variant": "regular",
+                          "state": "ready",
+                          "static": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "treatment-plant_Static"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "treatment-plant",
+                          "variant": "regular",
+                          "state": "ready",
+                          "static": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "metering-station_Static"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "metering-station",
+                          "variant": "regular",
+                          "state": "ready",
+                          "static": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "discharge_Static"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "discharge",
+                          "variant": "regular",
+                          "state": "ready",
+                          "static": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "overflow_Static"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "overflow",
+                          "variant": "regular",
+                          "state": "ready",
+                          "static": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-wastewater-station.norvar-wastewater-station",
+                        "meta": {
+                          "name": "manhole_Static"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "manhole",
+                          "variant": "regular",
+                          "state": "ready",
+                          "static": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "openbridge.manual.card",
+            "meta": {
+              "name": "cardWater"
+            },
+            "position": {
+              "basis": "600px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "hasTitle": true,
+              "title": "Norvar - Water Station",
+              "style": {
+                "classes": "utils/p-8",
+                "overflow": "visible"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.container.flex",
+                "meta": {
+                  "name": "Matrix"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "center",
+                  "alignItems": "center",
+                  "style": {
+                    "classes": "utils/p-16",
+                    "gap": "24px",
+                    "overflow": "visible"
+                  }
+                },
+                "children": [
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "variant_square"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "reservoir_square"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "reservoir",
+                          "variant": "square",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "pump-station_square"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "pump-station",
+                          "variant": "square",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "treatment-plant_square"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "treatment-plant",
+                          "variant": "square",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "metering-station_square"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "metering-station",
+                          "variant": "square",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "reduction-chamber_square"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "reduction-chamber",
+                          "variant": "square",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "dam_square"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "dam",
+                          "variant": "square",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "overflow_square"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "overflow",
+                          "variant": "square",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "manhole_square"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "manhole",
+                          "variant": "square",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "variant_flat"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "reservoir_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "reservoir",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "pump-station_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "pump-station",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "treatment-plant_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "treatment-plant",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "metering-station_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "metering-station",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "reduction-chamber_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "reduction-chamber",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "dam_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "dam",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "overflow_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "overflow",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "manhole_flat"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "manhole",
+                          "variant": "flat",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "stateRunning"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "reservoir_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "reservoir",
+                          "variant": "square",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "pump-station_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "pump-station",
+                          "variant": "square",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "treatment-plant_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "treatment-plant",
+                          "variant": "square",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "metering-station_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "metering-station",
+                          "variant": "square",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "reduction-chamber_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "reduction-chamber",
+                          "variant": "square",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "dam_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "dam",
+                          "variant": "square",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "overflow_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "overflow",
+                          "variant": "square",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "manhole_Running"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "manhole",
+                          "variant": "square",
+                          "state": "running",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "stateAlarm"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "reservoir_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "reservoir",
+                          "variant": "square",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "pump-station_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "pump-station",
+                          "variant": "square",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "treatment-plant_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "treatment-plant",
+                          "variant": "square",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "metering-station_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "metering-station",
+                          "variant": "square",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "reduction-chamber_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "reduction-chamber",
+                          "variant": "square",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "dam_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "dam",
+                          "variant": "square",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "overflow_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "overflow",
+                          "variant": "square",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "manhole_Alarm"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "manhole",
+                          "variant": "square",
+                          "state": "ready",
+                          "alert": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "stateUnmonitored"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "reservoir_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "reservoir",
+                          "variant": "square",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "pump-station_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "pump-station",
+                          "variant": "square",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "treatment-plant_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "treatment-plant",
+                          "variant": "square",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "metering-station_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "metering-station",
+                          "variant": "square",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "reduction-chamber_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "reduction-chamber",
+                          "variant": "square",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "dam_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "dam",
+                          "variant": "square",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "overflow_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "overflow",
+                          "variant": "square",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "manhole_Unmonitored"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "manhole",
+                          "variant": "square",
+                          "state": "unmonitored",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "stateStatic"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "style": {
+                        "gap": "16px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "reservoir_Static"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "reservoir",
+                          "variant": "square",
+                          "state": "ready",
+                          "static": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "pump-station_Static"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "pump-station",
+                          "variant": "square",
+                          "state": "ready",
+                          "static": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "treatment-plant_Static"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "treatment-plant",
+                          "variant": "square",
+                          "state": "ready",
+                          "static": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "metering-station_Static"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "metering-station",
+                          "variant": "square",
+                          "state": "ready",
+                          "static": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "reduction-chamber_Static"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "reduction-chamber",
+                          "variant": "square",
+                          "state": "ready",
+                          "static": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "dam_Static"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "dam",
+                          "variant": "square",
+                          "state": "ready",
+                          "static": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "overflow_Static"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "overflow",
+                          "variant": "square",
+                          "state": "ready",
+                          "static": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      },
+                      {
+                        "type": "automation.norvar-water-station.norvar-water-station",
+                        "meta": {
+                          "name": "manhole_Static"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "positioning": "button",
+                          "showReadoutStack": false,
+                          "alertFrameType": "regular",
+                          "stationType": "manhole",
+                          "variant": "square",
+                          "state": "ready",
+                          "static": true,
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

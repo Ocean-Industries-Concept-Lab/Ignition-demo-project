@@ -45,6 +45,11 @@
     --base-background-color: var(--flat-activated-background-color);
 }
 
+.psc-utils\/flexWrapBalance {
+	flex-wrap: wrap; /* fallback */
+	flex-wrap: balance !important;
+}
+
 @media (hover:hover) {
 
     .psc-style\/flat:hover {
