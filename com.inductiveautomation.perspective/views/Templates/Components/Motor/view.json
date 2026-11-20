@@ -1,0 +1,41 @@
+{
+  "custom": {},
+  "params": {
+    "on": true
+  },
+  "propConfig": {
+    "params.on": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 48,
+      "width": 48
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "ObcMotor"
+        },
+        "position": {
+          "height": 48,
+          "width": 48
+        },
+        "type": "automation.motor.motor"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "utils/processComponent"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

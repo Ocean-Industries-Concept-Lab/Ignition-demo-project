@@ -12,12 +12,18 @@
     overflow: hidden;
 }
 
-.psc-utils\/overflow-visible {
+.psc-utils\/overflow-visible,
+.psc-utils\/processComponent {
 	overflow: visible !important;
 }
 
-.view-parent:has(> .psc-utils\/overflow-visible) {
+.view-parent:has(> .psc-utils\/overflow-visible),
+.view-parent:has(> .psc-utils\/processComponent) {
 	overflow: visible !important;
+}
+
+.psc-utils\/processComponent {
+	background: transparent;
 }
 
 .psc-style\/flat {
