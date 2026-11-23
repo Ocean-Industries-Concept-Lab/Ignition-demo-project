@@ -51,3 +51,11 @@ docs/superpowers
 .mcp.json
 
 .env.local
+
+# Config page card images
+!demos/*/preview.png
+!templates/*/preview.png
+!tutorials/*/preview.png
+
+# IDEA files
+/.idea/
