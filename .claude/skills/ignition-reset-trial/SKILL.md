@@ -27,7 +27,7 @@ Credentials (local dev Gateway): **username `admin`, password `admin`**.
    Click **"Reset Trial"**. (Never click "Activate Ignition".)
 6. Verify: a new snapshot shows **`Trial Mode`** with a timer near **`1:59:59`**.
 7. Reload any open Perspective client page
-   (`http://localhost:8088/data/perspective/client/OpenBridge_demo/<page>`) — an already-open
+   (`http://localhost:8088/data/perspective/client/<project>/<page>`) — an already-open
    client keeps showing "Trial Expired" until reloaded.
 
 ## Notes

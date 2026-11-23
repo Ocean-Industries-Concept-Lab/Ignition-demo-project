@@ -1,0 +1,9 @@
+{
+  "base": {
+    "style": {
+      "borderLeftColor": "var(--border-divider-color)",
+      "borderLeftStyle": "solid",
+      "borderLeftWidth": "1px"
+    }
+  }
+}

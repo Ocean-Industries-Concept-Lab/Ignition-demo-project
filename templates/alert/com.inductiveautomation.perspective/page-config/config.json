@@ -1,0 +1,12 @@
+{
+  "pages": {
+    "/alerts": {
+      "title": "",
+      "viewPath": "Page/Alerts"
+    },
+    "/alerts/:alarmId": {
+      "title": "",
+      "viewPath": "Page/Alerts"
+    }
+  }
+}

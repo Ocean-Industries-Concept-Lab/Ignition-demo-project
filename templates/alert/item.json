@@ -1,0 +1,10 @@
+{
+  "id": "alert",
+  "kind": "template",
+  "title": "Alert template",
+  "description": "A full-page alert list with tabs for unacknowledged, active, shelved and historical alerts, plus search and acknowledging several alerts at once.",
+  "projectName": "OpenBridge_Alert_template",
+  "runnable": false,
+  "image": "preview.png",
+  "imageAlt": "Example alert view built with the OpenBridge template"
+}

@@ -1,0 +1,1859 @@
+{
+  "name": "",
+  "tagType": "Provider",
+  "tags": [
+    {
+      "name": "Project",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "dataType": "String",
+          "name": "icon",
+          "tagType": "AtomicTag",
+          "value": "home",
+          "valueSource": "memory"
+        },
+        {
+          "alarms": [
+            {
+              "label": "Valve 13 is stuck",
+              "name": "Valve 13 is stuck",
+              "priority": "High",
+              "setpointA": 1.0
+            }
+          ],
+          "dataType": "Boolean",
+          "defaultValue": false,
+          "name": "valveError",
+          "tagType": "AtomicTag",
+          "value": false,
+          "valueSource": "memory"
+        },
+        {
+          "dataType": "Boolean",
+          "defaultValue": false,
+          "name": "valveProgress",
+          "tagType": "AtomicTag",
+          "value": false,
+          "valueSource": "memory"
+        },
+        {
+          "dataType": "Float8",
+          "defaultValue": 0.0,
+          "name": "ValvePosition",
+          "tagType": "AtomicTag",
+          "value": 41.0,
+          "valueSource": "memory"
+        },
+        {
+          "dataType": "String",
+          "defaultValue": "car-ferry",
+          "name": "VesselType",
+          "tagType": "AtomicTag",
+          "value": "car-ferry",
+          "valueSource": "memory"
+        },
+        {
+          "dataType": "Float8",
+          "defaultValue": 65.0,
+          "name": "Thrust",
+          "tagType": "AtomicTag",
+          "value": 15.0,
+          "valueSource": "memory"
+        },
+        {
+          "dataType": "Float8",
+          "defaultValue": 36.0,
+          "name": "ThrustSet",
+          "tagType": "AtomicTag",
+          "value": 81.0,
+          "valueSource": "memory"
+        },
+        {
+          "dataType": "Float8",
+          "defaultValue": 95.0,
+          "name": "Angle",
+          "tagType": "AtomicTag",
+          "value": 100.0,
+          "valueSource": "memory"
+        },
+        {
+          "dataType": "Boolean",
+          "defaultValue": true,
+          "name": "valveClosed",
+          "tagType": "AtomicTag",
+          "value": true,
+          "valueSource": "memory"
+        }
+      ]
+    },
+    {
+      "name": "process",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "name": "valve36",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1036
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve7",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1007
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve21",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1021
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": false
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag",
+              "value": "manual"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve5",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1005
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve37",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1037
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve48",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1048
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "pump1",
+          "parameters": {
+            "id": {
+              "dataType": "Integer",
+              "value": 2001
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "pumpTag",
+              "tagType": "AtomicTag",
+              "value": 2011
+            },
+            {
+              "name": "pumpOn",
+              "tagType": "AtomicTag",
+              "value": true
+            },
+            {
+              "name": "pumpMode",
+              "tagType": "AtomicTag",
+              "value": "manual"
+            },
+            {
+              "name": "pumpSpeed",
+              "tagType": "AtomicTag",
+              "value": 50.0
+            }
+          ],
+          "typeId": "Pump"
+        },
+        {
+          "name": "valve4",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1004
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve45",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1045
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve40",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1040
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve31",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1031
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": false
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve28",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1028
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": true
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve38",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1038
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve26",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1026
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": true
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "pump2",
+          "parameters": {
+            "id": {
+              "dataType": "Integer",
+              "value": 2002
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "pumpTag",
+              "tagType": "AtomicTag",
+              "value": 2012
+            },
+            {
+              "name": "pumpOn",
+              "tagType": "AtomicTag",
+              "value": false
+            },
+            {
+              "name": "pumpMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "pumpSpeed",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "Pump"
+        },
+        {
+          "name": "valve42",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1042
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "pump5",
+          "parameters": {
+            "id": {
+              "dataType": "Integer",
+              "value": 2005
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "pumpMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "pumpSpeed",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "pumpTag",
+              "tagType": "AtomicTag",
+              "value": 2015
+            },
+            {
+              "name": "pumpOn",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "Pump"
+        },
+        {
+          "name": "valve3",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1003
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve30",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1030
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": true
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag",
+              "value": "manual"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve29",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1029
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": false
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag",
+              "value": "auto"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve16",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1016
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve12",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1012
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag",
+              "value": "auto"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": true
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve47",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1047
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve27",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1027
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": true
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve24",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1024
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": false
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve14",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1014
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": true
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve18",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1018
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "pump3",
+          "parameters": {
+            "id": {
+              "dataType": "Integer",
+              "value": 2003
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "pumpSpeed",
+              "tagType": "AtomicTag",
+              "value": 75.0
+            },
+            {
+              "name": "pumpTag",
+              "tagType": "AtomicTag",
+              "value": 2013
+            },
+            {
+              "name": "pumpOn",
+              "tagType": "AtomicTag",
+              "value": true
+            },
+            {
+              "name": "pumpMode",
+              "tagType": "AtomicTag",
+              "value": "manual"
+            }
+          ],
+          "typeId": "Pump"
+        },
+        {
+          "name": "valve11",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1011
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": true
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag",
+              "value": "auto"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve46",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1046
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "pump0",
+          "parameters": {
+            "id": {
+              "dataType": "Integer",
+              "value": 2000
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "pumpTag",
+              "tagType": "AtomicTag",
+              "value": 2010
+            },
+            {
+              "engUnit": "%",
+              "name": "pumpSpeed",
+              "tagType": "AtomicTag",
+              "value": 95.0
+            },
+            {
+              "name": "pumpMode",
+              "tagType": "AtomicTag",
+              "value": "manual"
+            },
+            {
+              "name": "pumpOn",
+              "tagType": "AtomicTag",
+              "value": false
+            }
+          ],
+          "typeId": "Pump"
+        },
+        {
+          "name": "valve1",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1001
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve6",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1006
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve9",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1009
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve15",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1015
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag",
+              "value": "auto"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": true
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve49",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1049
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve32",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1032
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag",
+              "value": "auto"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": false
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "pump4",
+          "parameters": {
+            "id": {
+              "dataType": "Integer",
+              "value": 2004
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "pumpSpeed",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "pumpOn",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "pumpMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "pumpTag",
+              "tagType": "AtomicTag",
+              "value": 2014
+            }
+          ],
+          "typeId": "Pump"
+        },
+        {
+          "name": "valve8",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1008
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve39",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1039
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve25",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1025
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": false
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve33",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1033
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": true
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve22",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1022
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": false
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve2",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1002
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve19",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1019
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": false
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve41",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1041
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve20",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1020
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": false
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve44",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1044
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve17",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1017
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": false
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve43",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1043
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve50",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1050
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve13",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1013
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": true
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve10",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1010
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": false
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag",
+              "value": "local"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve34",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1034
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve23",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1023
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": false
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve0",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1000
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag",
+              "value": false
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag",
+              "value": "auto"
+            }
+          ],
+          "typeId": "ValveUDT"
+        },
+        {
+          "name": "valve35",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 1035
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "valveMode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "valveOpen",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "ValveUDT"
+        }
+      ]
+    },
+    {
+      "name": "Ramp",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "alarms": [
+            {
+              "displayPath": "Ramp High Alarm",
+              "label": "High Alarm",
+              "mode": "AboveValue",
+              "name": "High Alarm",
+              "setpointA": 9.0
+            }
+          ],
+          "dataType": "Float8",
+          "expression": "-10 + (toMillis(now(1000)) % 300000) / 15000.0",
+          "name": "Ramp3",
+          "tagType": "AtomicTag",
+          "valueSource": "expr"
+        },
+        {
+          "dataType": "Float8",
+          "expression": "(toMillis(now(1000)) % 4000000) / 800.0",
+          "name": "Ramp9",
+          "tagType": "AtomicTag",
+          "valueSource": "expr"
+        }
+      ]
+    },
+    {
+      "name": "Sine",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "dataType": "Int4",
+          "expression": "toInt(20 * sin(2 * 3.14159265 * (toMillis(now(1000)) % 100000) / 100000.0))",
+          "name": "Sine4",
+          "tagType": "AtomicTag",
+          "valueSource": "expr"
+        }
+      ]
+    },
+    {
+      "name": "Writeable",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "dataType": "Boolean",
+          "name": "WriteableBoolean1",
+          "tagType": "AtomicTag",
+          "value": false,
+          "valueSource": "memory",
+          "alarms": [
+            {
+              "displayPath": "Alarm Fault",
+              "label": "Fault",
+              "name": "Fault",
+              "setpointA": 1.0
+            }
+          ]
+        },
+        {
+          "dataType": "Boolean",
+          "name": "WriteableBoolean2",
+          "tagType": "AtomicTag",
+          "value": false,
+          "valueSource": "memory",
+          "alarms": [
+            {
+              "label": "Fun",
+              "mode": "WhenTrue",
+              "name": "Fun",
+              "notes": "Fun is activated"
+            }
+          ]
+        },
+        {
+          "dataType": "Float8",
+          "name": "WriteableDouble1",
+          "tagType": "AtomicTag",
+          "value": 0.0,
+          "valueSource": "memory",
+          "alarms": [
+            {
+              "ackNotesReqd": true,
+              "label": "",
+              "mode": "AboveValue",
+              "name": "AckNoe required",
+              "notes": "Hello",
+              "setpointA": 1.0
+            }
+          ]
+        },
+        {
+          "dataType": "String",
+          "name": "WriteableString1",
+          "tagType": "AtomicTag",
+          "value": "",
+          "valueSource": "memory"
+        }
+      ]
+    },
+    {
+      "name": "_types_",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "name": "Motor",
+          "tagType": "UdtType",
+          "tags": [
+            {
+              "dataType": "Boolean",
+              "name": "Running",
+              "tagType": "AtomicTag",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Float8",
+              "name": "Speed",
+              "tagType": "AtomicTag",
+              "valueSource": "memory"
+            },
+            {
+              "name": "Id",
+              "tagType": "AtomicTag",
+              "valueSource": "memory"
+            },
+            {
+              "name": "New Tag",
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "ns=1;s=[Sample_Device]_Meta:Sine/Sine{InstanceName}"
+              },
+              "opcServer": "Ignition OPC UA Server",
+              "tagType": "AtomicTag",
+              "valueSource": "opc"
+            }
+          ]
+        },
+        {
+          "name": "ValveUDT",
+          "parameters": {
+            "valveId": {
+              "dataType": "Integer",
+              "value": 0
+            }
+          },
+          "tagType": "UdtType",
+          "tags": [
+            {
+              "dataType": "String",
+              "defaultValue": "",
+              "name": "valveTag",
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "ns=1;s=[Sample_Device]_Meta:Writeable/WriteableString{valveId}"
+              },
+              "opcServer": "Ignition OPC UA Server",
+              "tagType": "AtomicTag",
+              "value": {
+                "bindType": "parameter",
+                "binding": "{valveId}"
+              },
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "defaultValue": true,
+              "name": "valveOpen",
+              "opcItemPath": {
+                "bindType": "parameter",
+                "binding": "ns=1;s=[Sample_Device]_Meta:Writeable/WriteableInteger{valveId}"
+              },
+              "opcServer": "Ignition OPC UA Server",
+              "tagType": "AtomicTag",
+              "value": true,
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "String",
+              "defaultValue": "auto",
+              "name": "valveMode",
+              "tagType": "AtomicTag",
+              "value": "auto",
+              "valueSource": "memory"
+            }
+          ]
+        },
+        {
+          "CommonExtra": "World",
+          "name": "Pump",
+          "parameters": {
+            "id": {
+              "dataType": "Integer",
+              "value": 2000
+            }
+          },
+          "tagType": "UdtType",
+          "tags": [
+            {
+              "alarms": [
+                {
+                  "label": "Alarm",
+                  "mode": "AboveValue",
+                  "name": "Alarm",
+                  "setpointA": 80.0
+                },
+                {
+                  "label": "Pump speed high",
+                  "mode": "AboveValue",
+                  "name": "Pump speed high",
+                  "notes": {
+                    "bindType": "Expression",
+                    "value": "\"Motor \"+{id}+\" speed above high\""
+                  },
+                  "priority": "Medium",
+                  "setpointA": 80.0
+                },
+                {
+                  "ackNotesReqd": true,
+                  "label": "Pump speed highhigh",
+                  "mode": "AboveValue",
+                  "name": "Pump speed highhigh",
+                  "notes": {
+                    "bindType": "Expression",
+                    "value": "\"Motor \"+{id}+\" speed above highhigh\""
+                  },
+                  "priority": "High",
+                  "setpointA": 90.0
+                }
+              ],
+              "dataType": "Float8",
+              "defaultValue": 20.0,
+              "extra": "hello",
+              "name": "pumpSpeed",
+              "tagType": "AtomicTag",
+              "value": 20.0,
+              "valueSource": "memory"
+            },
+            {
+              "name": "pumpTag",
+              "tagType": "AtomicTag",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "defaultValue": false,
+              "name": "pumpOn",
+              "tagType": "AtomicTag",
+              "value": false,
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "String",
+              "defaultValue": "auto",
+              "name": "pumpMode",
+              "tagType": "AtomicTag",
+              "value": "auto",
+              "valueSource": "memory"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "pages": {
+    "/": {
+      "docks": {
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "sidemenu",
+            "modal": false,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 500,
+            "viewParams": {},
+            "viewPath": "Docks/Sidemenu"
+          }
+        ]
+      },
+      "title": "Process Overview",
+      "viewPath": "Page/ProcessOverview"
+    },
+    "/connector": {
+      "title": "Connector",
+      "viewPath": "Page/Connector"
+    }
+  }
+}

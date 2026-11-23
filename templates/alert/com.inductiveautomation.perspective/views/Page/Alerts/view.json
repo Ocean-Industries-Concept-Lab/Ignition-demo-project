@@ -1,0 +1,59 @@
+{
+  "custom": {},
+  "params": {
+    "alarmId": null
+  },
+  "propConfig": {
+    "params.alarmId": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1639
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onItemClick": {
+              "config": {
+                "script": "\tself.view.params.alarmId \u003d event.alarmId"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "alertListPage"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "filter": {
+            "states": {
+              "clearAcked": true
+            }
+          },
+          "mode": "active"
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": [],
+          "messageHandlers": []
+        },
+        "type": "openbridge.manual.alert-list-page"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

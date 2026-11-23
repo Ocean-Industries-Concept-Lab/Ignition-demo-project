@@ -1,0 +1,263 @@
+{
+  "custom": {
+    "open": false,
+    "tag": "1000"
+  },
+  "params": {
+    "tagpath": "[default]process/valve0"
+  },
+  "propConfig": {
+    "custom.open": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "1": "{view.params.tagpath}"
+          },
+          "tagPath": "{1}/valveOpen"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.tag": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "1": "{view.params.tagpath}"
+          },
+          "tagPath": "{1}/valveTag"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.tagpath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 70,
+      "width": 377
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "icon"
+        },
+        "position": {
+          "basis": "24px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.icon.path": {
+            "binding": {
+              "config": {
+                "path": "view.custom.open"
+              },
+              "transforms": [
+                {
+                  "fallback": "openbridge/twoway-digital-open",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": false,
+                      "output": "openbridge/twoway-digital-closed"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "icon": {},
+          "useColor": true
+        },
+        "type": "openbridge.manual.icon"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/valveTag"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "paddingLeft": "8px"
+          },
+          "textStyle": {
+            "classes": "font/body text-color/element-neutral"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "icon_0"
+        },
+        "position": {
+          "basis": "24px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.icon.path": {
+            "binding": {
+              "config": {
+                "path": "view.custom.open"
+              },
+              "transforms": [
+                {
+                  "fallback": "openbridge/on",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": false,
+                      "output": "openbridge/off"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.custom.open"
+              },
+              "transforms": [
+                {
+                  "fallback": "text-color/element-active",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": false,
+                      "output": "text-color/element-inactive"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "icon": {},
+          "paddingLeft": "2px",
+          "style": {},
+          "width": "24px"
+        },
+        "type": "openbridge.manual.icon"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.open}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "font/body text-color/element-active"
+          },
+          "text": "Open"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "!{view.custom.open}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "font/body text-color/element-inactive"
+          },
+          "text": "Off"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "id": "sidemenu",
+            "type": "open",
+            "viewParams": {
+              "faceplateType": "valve",
+              "tagpath": "{view.params.tagpath}"
+            }
+          },
+          "scope": "C",
+          "type": "dock"
+        },
+        "onPointerEnter": {
+          "config": {
+            "script": "\tself.session.custom.hoverId\u003dself.view.params.tagpath"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "style/flat",
+        "padding": "16px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

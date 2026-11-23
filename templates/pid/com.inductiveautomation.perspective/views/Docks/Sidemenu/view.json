@@ -1,0 +1,497 @@
+{
+  "custom": {},
+  "params": {
+    "faceplateType": null,
+    "tagpath": "[default]process/valve0"
+  },
+  "propConfig": {
+    "params.faceplateType": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagpath": {
+      "onChange": {
+        "enabled": null,
+        "script": "\tself.session.custom.hoverId\u003dcurrentValue"
+      },
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 391
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "classes": "font/subtitle text-color/element-active"
+              },
+              "text": "Process Overview"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "button"
+                },
+                "position": {
+                  "basis": "0px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "props": {
+                  "fullWidth": true,
+                  "hasLeadingIcon": true,
+                  "label": "Enable",
+                  "leadingIcon": "openbridge/media-play"
+                },
+                "type": "openbridge.manual.button"
+              },
+              {
+                "meta": {
+                  "name": "button_0"
+                },
+                "position": {
+                  "basis": "0px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "props": {
+                  "fullWidth": true,
+                  "hasLeadingIcon": true,
+                  "label": "Full Auto",
+                  "leadingIcon": "openbridge/auto"
+                },
+                "type": "openbridge.manual.button"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "props": {
+              "style": {
+                "alignSelf": "stretch",
+                "gap": "8px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "alignItems": "center",
+          "direction": "column",
+          "style": {
+            "backgroundColor": "var(--container-global-color)",
+            "classes": "divider/bottom",
+            "gap": "8px",
+            "padding": 16
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "MotorFacePlate"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.faceplateType}\u003d\"pump\" \u0026\u0026 {view.params.tagpath}!\u003dnull"
+              },
+              "type": "expr"
+            }
+          },
+          "props.params.tagPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.tagpath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Docks/_Sidemenu/PumpFacePlate"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "ValveFacePlate"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.faceplateType}\u003d\"valve\" \u0026\u0026 {view.params.tagpath}!\u003dnull"
+              },
+              "type": "expr"
+            }
+          },
+          "props.params.tagPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.tagpath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Docks/_Sidemenu/DigitalValveFacePlate"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.faceplateType}\u003dnull||{view.params.faceplateType}\u003d\"null\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "font/overline-new text-color/element-neutral",
+            "padding": "8px",
+            "textAlign": "center"
+          },
+          "text": "Devices"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexRepeater"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "elementPosition": {
+                "basis": "auto",
+                "grow": 0,
+                "shrink": 0
+              },
+              "elementStyle": {
+                "classes": "divider/bottom"
+              },
+              "instances": [
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/pump0"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/pump1"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/pump3"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/pump2"
+                }
+              ],
+              "path": "Docks/_Sidemenu/PumpItem",
+              "useDefaultViewHeight": false,
+              "useDefaultViewWidth": false
+            },
+            "type": "ia.display.flex-repeater"
+          },
+          {
+            "meta": {
+              "name": "FlexRepeater_0"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "elementPosition": {
+                "basis": "auto",
+                "grow": 0,
+                "shrink": 0
+              },
+              "elementStyle": {
+                "classes": "divider/bottom"
+              },
+              "instances": [
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve10"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve11"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve12"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve13"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve14"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve15"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve16"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve17"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve18"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve19"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve20"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve21"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve22"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve23"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve24"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve25"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve26"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve27"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve28"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve29"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve30"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve31"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve32"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "tagpath": "[default]process/valve33"
+                }
+              ],
+              "path": "Docks/_Sidemenu/DigitalValveItem",
+              "useDefaultViewHeight": false,
+              "useDefaultViewWidth": false
+            },
+            "type": "ia.display.flex-repeater"
+          }
+        ],
+        "events": {
+          "dom": {
+            "onMouseLeave": {
+              "config": {
+                "script": "\tif self.view.params.faceplateType \u003d\u003d \"null\" or self.view.params.faceplateType \u003d\u003d None:\n\t\tself.session.custom.hoverId \u003d None"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": 0,
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.faceplateType}\u003dnull||{view.params.faceplateType}\u003d\"null\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "var(--container-background-color)",
+        "borderLeft": "1px solid var(--border-divider-color)"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

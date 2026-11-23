@@ -1,0 +1,223 @@
+{
+  "custom": {
+    "on": false,
+    "speed": 20,
+    "tag": 2010
+  },
+  "params": {
+    "tagpath": "[default]process/pump0"
+  },
+  "propConfig": {
+    "custom.on": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "1": "{view.params.tagpath}"
+          },
+          "tagPath": "{1}/pumpOn"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.speed": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "1": "{view.params.tagpath}"
+          },
+          "tagPath": "{1}/pumpSpeed"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.tag": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "1": "{view.params.tagpath}"
+          },
+          "tagPath": "{1}/pumpTag"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.tagpath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 70,
+      "width": 377
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "icon"
+        },
+        "position": {
+          "basis": "24px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.icon.path": {
+            "binding": {
+              "config": {
+                "path": "view.custom.on"
+              },
+              "transforms": [
+                {
+                  "fallback": "openbridge/forward",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": false,
+                      "output": "openbridge/stopped"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "icon": {},
+          "useColor": true
+        },
+        "type": "openbridge.manual.icon"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/pumpTag"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "paddingLeft": "8px"
+          },
+          "textStyle": {
+            "classes": "font/body text-color/element-neutral"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.on}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.speed}+\"%\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "font/body text-color/element-active"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "!{view.custom.on}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "font/body text-color/element-inactive"
+          },
+          "text": "Off"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "id": "sidemenu",
+            "type": "open",
+            "viewParams": {
+              "faceplateType": "pump",
+              "tagpath": "{view.params.tagpath}"
+            }
+          },
+          "scope": "C",
+          "type": "dock"
+        },
+        "onMouseEnter": {
+          "config": {
+            "script": "    self.session.custom.hoverId \u003d self.view.params.tagpath"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "style/flat",
+        "padding": "16px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

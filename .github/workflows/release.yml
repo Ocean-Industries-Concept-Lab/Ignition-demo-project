@@ -1,8 +1,7 @@
 name: Release
 
-# Builds an Ignition project zip that the Designer / Gateway can import directly:
-# project.json and the module folders at the zip root, with no repo wrapper folder
-# and no non-project files (.claude, README.md, scripts, ...).
+# Publishes OpenBridge_content_<version>.zip, which the OpenBridge module bundles, and
+# OpenBridge_demo_<version>.zip, the full demo as a project the Gateway can import directly.
 
 on:
   workflow_dispatch:
@@ -28,25 +27,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build project zip
+      - name: Test the catalog build
+        run: python3 -I scripts/test_build_catalog.py
+
+      - name: Build release assets
         run: |
           set -euo pipefail
-          zip_name="OpenBridge_demo_${VERSION}.zip"
-          # project.json + every top-level non-hidden folder (module folders such as
-          # com.inductiveautomation.perspective, ignition, ...).
-          mapfile -t dirs < <(git ls-tree --name-only -d HEAD | grep -v '^\.')
-          git archive --format=zip -o "$zip_name" HEAD project.json "${dirs[@]}"
-
-          # Sanity check: project.json must be at the zip root.
-          unzip -l "$zip_name" | awk '{print $4}' | grep -qx 'project.json'
-          unzip -l "$zip_name" | tail -n 1
-          echo "ZIP_NAME=$zip_name" >> "$GITHUB_ENV"
+          python3 -I scripts/build_catalog.py --version "$VERSION" --out dist
+          unzip -l "dist/OpenBridge_content_${VERSION}.zip" | awk '{print $4}' | grep -qx 'catalog.json'
+          unzip -l "dist/OpenBridge_demo_${VERSION}.zip" | awk '{print $4}' | grep -qx 'project.json'
 
       - name: Create GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "$VERSION" "$ZIP_NAME" \
+          gh release create "$VERSION" \
+            "dist/OpenBridge_content_${VERSION}.zip" \
+            "dist/OpenBridge_demo_${VERSION}.zip" \
             --target "$GITHUB_SHA" \
             --title "$VERSION" \
             --generate-notes \

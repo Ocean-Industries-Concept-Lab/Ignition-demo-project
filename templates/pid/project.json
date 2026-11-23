@@ -1,0 +1,7 @@
+{
+  "title": "OpenBridge P&ID template",
+  "description": "Installed from the OpenBridge Config page. Set it as the parent project of your project to use its views.",
+  "enabled": true,
+  "inheritable": true,
+  "parent": ""
+}

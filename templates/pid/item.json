@@ -1,0 +1,10 @@
+{
+  "id": "pid",
+  "kind": "template",
+  "title": "P&ID template",
+  "description": "A process overview with tanks, pumps and valves connected by pipes, and a side panel that lists the devices and opens pump and valve faceplates with mode controls and alerts. Also includes a separate connector diagram page.",
+  "projectName": "OpenBridge_PID_template",
+  "runnable": false,
+  "image": "preview.png",
+  "imageAlt": "Example P&ID view built with the OpenBridge template"
+}

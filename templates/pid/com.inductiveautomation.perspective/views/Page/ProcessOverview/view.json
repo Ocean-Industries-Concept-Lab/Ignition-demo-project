@@ -1,0 +1,2255 @@
+{
+  "custom": {
+    "showReadout": false,
+    "showTag": false
+  },
+  "params": {},
+  "propConfig": {
+    "custom.showReadout": {
+      "persistent": true
+    },
+    "custom.showTag": {
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1200,
+      "width": 2200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Tank4010"
+        },
+        "position": {
+          "height": 216,
+          "width": 168,
+          "x": 192,
+          "y": 432
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 10000,
+          "medium": "normal",
+          "tag": "#4010",
+          "type": "atmospheric",
+          "value": 3000
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4011"
+        },
+        "position": {
+          "height": 216,
+          "width": 168,
+          "x": 384,
+          "y": 432
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 10000,
+          "medium": "normal",
+          "tag": "#4011",
+          "type": "atmospheric",
+          "value": 1000
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4012"
+        },
+        "position": {
+          "height": 216,
+          "width": 168,
+          "x": 576,
+          "y": 432
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 10000,
+          "medium": "normal",
+          "tag": "#4012",
+          "type": "atmospheric",
+          "value": 6000
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4013"
+        },
+        "position": {
+          "height": 216,
+          "width": 168,
+          "x": 768,
+          "y": 432
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 10000,
+          "medium": "normal",
+          "tag": "#4013",
+          "type": "atmospheric",
+          "value": 3000
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4014"
+        },
+        "position": {
+          "height": 220,
+          "width": 180,
+          "x": 1398,
+          "y": 334
+        },
+        "props": {
+          "chartData": [
+            {
+              "label": "0",
+              "value": 3000
+            },
+            {
+              "label": "1",
+              "value": 4500
+            },
+            {
+              "label": "2",
+              "value": 3800
+            },
+            {
+              "label": "3",
+              "value": 5200
+            },
+            {
+              "label": "4",
+              "value": 6000
+            },
+            {
+              "label": "5",
+              "value": 4800
+            },
+            {
+              "label": "6",
+              "value": 5500
+            },
+            {
+              "label": "7",
+              "value": 4200
+            },
+            {
+              "label": "8",
+              "value": 5800
+            },
+            {
+              "label": "9",
+              "value": 6500
+            },
+            {
+              "label": "10",
+              "value": 5000
+            },
+            {
+              "label": "11",
+              "value": 4400
+            },
+            {
+              "label": "12",
+              "value": 6200
+            },
+            {
+              "label": "13",
+              "value": 7000
+            },
+            {
+              "label": "14",
+              "value": 5800
+            },
+            {
+              "label": "15",
+              "value": 5200
+            },
+            {
+              "label": "16",
+              "value": 6600
+            },
+            {
+              "label": "17",
+              "value": 6000
+            },
+            {
+              "label": "18",
+              "value": 7200
+            },
+            {
+              "label": "19",
+              "value": 6800
+            },
+            {
+              "label": "20",
+              "value": 6300
+            },
+            {
+              "label": "21",
+              "value": 5500
+            },
+            {
+              "label": "22",
+              "value": 6000
+            },
+            {
+              "label": "23",
+              "value": 5800
+            },
+            {
+              "label": "24",
+              "value": 6600
+            },
+            {
+              "label": "25",
+              "value": 7400
+            },
+            {
+              "label": "26",
+              "value": 9000
+            }
+          ],
+          "chartMode": "graph-and-bar",
+          "hasCustomUnit": true,
+          "max": 10000,
+          "medium": "normal",
+          "priority": "enhanced",
+          "tag": "#4014",
+          "trend": "rising",
+          "type": "atmospheric",
+          "value": 9000
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4015"
+        },
+        "position": {
+          "height": 220,
+          "width": 248,
+          "x": 1592,
+          "y": 334
+        },
+        "propConfig": {
+          "props.chartData": {
+            "binding": {
+              "config": {
+                "aggregate": "MinMax",
+                "avoidScanClassValidation": true,
+                "dateRange": {
+                  "mostRecent": "1",
+                  "mostRecentUnits": "HOUR"
+                },
+                "enableValueCache": true,
+                "ignoreBadQuality": false,
+                "polling": {
+                  "enabled": false,
+                  "rate": "30"
+                },
+                "preventInterpolation": false,
+                "returnFormat": "Wide",
+                "returnSize": {
+                  "numRows": "100",
+                  "type": "FIXED"
+                },
+                "tags": [
+                  {
+                    "path": "[Sample_Tags]Sine/Sine0"
+                  }
+                ],
+                "valueFormat": "DATASET"
+              },
+              "type": "tag-history"
+            }
+          }
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 30000,
+          "medium": "normal",
+          "tag": "#4015",
+          "type": "atmospheric",
+          "value": 25000
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4016"
+        },
+        "position": {
+          "height": 220,
+          "width": 144,
+          "x": 1344,
+          "y": 706
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 1000,
+          "medium": "normal",
+          "tag": "#4016",
+          "type": "atmospheric",
+          "value": 100
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4017"
+        },
+        "position": {
+          "height": 220,
+          "width": 144,
+          "x": 1512,
+          "y": 706
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 1000,
+          "medium": "normal",
+          "tag": "#4017",
+          "type": "atmospheric",
+          "value": 950
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank4018"
+        },
+        "position": {
+          "height": 220,
+          "width": 144,
+          "x": 1692,
+          "y": 706
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 1000,
+          "medium": "normal",
+          "tag": "#4018",
+          "type": "atmospheric"
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank3011"
+        },
+        "position": {
+          "height": 95,
+          "width": 130,
+          "x": 415,
+          "y": 118
+        },
+        "propConfig": {
+          "props.tag": {
+            "binding": {
+              "config": {
+                "path": "session.custom.hoverId"
+              },
+              "enabled": false,
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 200,
+          "medium": "normal",
+          "static": true,
+          "tag": "#3011",
+          "value": 200,
+          "valueFractionDigits": 1
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank3012"
+        },
+        "position": {
+          "height": 95,
+          "width": 130,
+          "x": 751,
+          "y": 144.5
+        },
+        "props": {
+          "hasCustomUnit": true,
+          "max": 200,
+          "medium": "normal",
+          "static": true,
+          "tag": "#3012",
+          "value": 200,
+          "valueFractionDigits": 1
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "Tank0000"
+        },
+        "position": {
+          "height": 138,
+          "width": 72,
+          "x": 1092,
+          "y": 792
+        },
+        "props": {
+          "compact": true,
+          "hasCustomUnit": true,
+          "tag": "#0000",
+          "unitText": "%",
+          "value": 90
+        },
+        "type": "automation.automation-tank.automation-tank"
+      },
+      {
+        "meta": {
+          "name": "DV1011"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 675,
+          "y": 76
+        },
+        "props": {
+          "params": {
+            "tagpath": "[default]process/valve11"
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1010"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 312,
+          "y": 132
+        },
+        "props": {
+          "params": {
+            "tagpath": "[default]process/valve10"
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1028"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1308,
+          "y": 144
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "bottom",
+            "tagpath": "[default]process/valve28"
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1026"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1560,
+          "y": 144
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "bottom",
+            "tagpath": "[default]process/valve26"
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1027"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1464,
+          "y": 228
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "right",
+            "tagpath": "[default]process/valve27",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1014"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 423,
+          "y": 837
+        },
+        "props": {
+          "params": {
+            "tagpath": "[default]process/valve14"
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1020"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1475,
+          "y": 1060
+        },
+        "props": {
+          "params": {
+            "tagpath": "[default]process/valve20"
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1022"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1675.5,
+          "y": 1060
+        },
+        "props": {
+          "params": {
+            "tagpath": "[default]process/valve22"
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV2017"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 796,
+          "y": 1060
+        },
+        "props": {
+          "params": {
+            "tagpath": "[default]process/valve17"
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1015"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 540,
+          "y": 996
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "left",
+            "tagpath": "[default]process/valve15",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV2016"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 696,
+          "y": 996
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "right",
+            "tagpath": "[default]process/valve16",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV2018"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1020,
+          "y": 946
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "right",
+            "tagpath": "[default]process/valve18",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1032"
+        },
+        "position": {
+          "height": 48,
+          "state": "open",
+          "width": 48,
+          "x": 252,
+          "y": 336
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "right",
+            "tagpath": "[default]process/valve32",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1031"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 444,
+          "y": 336
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "right",
+            "tagpath": "[default]process/valve31",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1030"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 636,
+          "y": 336
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "right",
+            "tagpath": "[default]process/valve30",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1029"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 828,
+          "y": 336
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "right",
+            "tagpath": "[default]process/valve29",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1024"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1692,
+          "y": 228
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "right",
+            "tagpath": "[default]process/valve24",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1033"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1020,
+          "y": 744
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "right",
+            "tagpath": "[default]process/valve33",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1012"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 312,
+          "y": 792
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "right",
+            "tagpath": "[default]process/valve12",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1013"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 312,
+          "y": 996
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "right",
+            "tagpath": "[default]process/valve13",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1019"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1392,
+          "y": 972
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "right",
+            "tagpath": "[default]process/valve19",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1021"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1560,
+          "y": 972
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "right",
+            "tagpath": "[default]process/valve21",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DV1023"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1740,
+          "y": 972
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "right",
+            "tagpath": "[default]process/valve23",
+            "vertical": true
+          },
+          "path": "Page/_ProcessOverview/valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PU2011"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 1104,
+          "y": 480
+        },
+        "props": {
+          "params": {
+            "componentSize": "medium",
+            "direction": "forward-stopped",
+            "tagpath": "[default]process/pump0",
+            "variant": "double"
+          },
+          "path": "Page/_ProcessOverview/pump"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PU2010"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 96,
+          "y": 696
+        },
+        "props": {
+          "params": {
+            "componentSize": "medium",
+            "direction": "forward-stopped",
+            "tagpath": "[default]process/pump1",
+            "variant": "double"
+          },
+          "path": "Page/_ProcessOverview/pump"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PU2012"
+        },
+        "position": {
+          "height": 48,
+          "width": 48,
+          "x": 835,
+          "y": 899
+        },
+        "props": {
+          "params": {
+            "componentSize": "medium",
+            "hasSpeed": true,
+            "speedUnit": "%",
+            "tagpath": "[default]process/pump2",
+            "variant": "double"
+          },
+          "path": "Page/_ProcessOverview/pump"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "pump"
+        },
+        "position": {
+          "height": 50,
+          "width": 46,
+          "x": 613,
+          "y": 900
+        },
+        "props": {
+          "params": {
+            "readoutPosition": "bottom",
+            "tagpath": "[default]process/pump3"
+          },
+          "path": "Page/_ProcessOverview/pump"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "propConfig": {
+      "props.userToolbar.rightPanelOpen": {
+        "onChange": {
+          "enabled": null,
+          "script": "\t# Only a toolbar click (origin Browser) drives the dock. Writes from the\n\t# rightPanelOpen message handler just sync the button to a dock that a\n\t# pump/valve already opened, and must not re-open it without its params.\n\tif currentValue is None or origin !\u003d \u0027Browser\u0027:\n\t\treturn\n\tsessionId \u003d self.session.props.id\n\tpageId \u003d self.page.props.pageId\n\tif currentValue.value:\n\t\tsystem.perspective.openDock(\u0027sidemenu\u0027, sessionId, pageId)\n\telse:\n\t\tsystem.perspective.closeDock(\u0027sidemenu\u0027, sessionId, pageId)"
+        }
+      },
+      "props.userToolbar.showReadout": {
+        "binding": {
+          "config": {
+            "bidirectional": true,
+            "path": "session.custom.showReadout"
+          },
+          "type": "property"
+        }
+      },
+      "props.userToolbar.showTag": {
+        "binding": {
+          "config": {
+            "bidirectional": true,
+            "path": "session.custom.showTag"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "connections": {
+        "cmrdgx8vj0": {
+          "from": {
+            "componentId": "DV1032",
+            "direction": "bottom",
+            "x": 276,
+            "y": 378
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "componentId": "Tank4010",
+            "direction": "top",
+            "x": 276,
+            "y": 437
+          },
+          "viaPoints": []
+        },
+        "cmrdvmfpp0": {
+          "from": {
+            "componentId": "DV1031",
+            "direction": "bottom",
+            "x": 468,
+            "y": 378
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "componentId": "Tank4011",
+            "direction": "top",
+            "x": 468,
+            "y": 437
+          },
+          "viaPoints": []
+        },
+        "cmrdvmnra1": {
+          "from": {
+            "componentId": "DV1030",
+            "direction": "bottom",
+            "x": 660,
+            "y": 378
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "componentId": "Tank4012",
+            "direction": "top",
+            "x": 660,
+            "y": 437
+          },
+          "viaPoints": []
+        },
+        "cmrdvo3ms5": {
+          "from": {
+            "componentId": "Tank3011",
+            "direction": "left",
+            "x": 420,
+            "y": 155.5
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "componentId": "DV1010",
+            "direction": "right",
+            "x": 354,
+            "y": 156
+          },
+          "viaPoints": []
+        },
+        "cmrdvoycg36": {
+          "from": {
+            "componentId": "DV1031",
+            "direction": "top",
+            "x": 468,
+            "y": 342
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrdvp0wj3q",
+            "x": 468,
+            "y": 289
+          },
+          "viaPoints": []
+        },
+        "cmrdvoycg36_cmrdvp0wj3q": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmrdvp0wj3q",
+            "x": 468,
+            "y": 289
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "componentId": "DV1032",
+            "direction": "top",
+            "x": 276,
+            "y": 342
+          },
+          "viaPoints": []
+        },
+        "cmrdvp0wj3r": {
+          "from": {
+            "componentId": "DV1030",
+            "direction": "top",
+            "x": 660,
+            "y": 342
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmremh2qa2m",
+            "x": 660,
+            "y": 289
+          },
+          "viaPoints": []
+        },
+        "cmrdvp0wj3r_cmremh2qa2m": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmremh2qa2m",
+            "x": 660,
+            "y": 289
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrdvp0wj3q",
+            "x": 468,
+            "y": 289
+          },
+          "viaPoints": []
+        },
+        "cmremebs10": {
+          "from": {
+            "componentId": "DV1029",
+            "direction": "bottom",
+            "x": 852,
+            "y": 378
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "componentId": "Tank4013",
+            "direction": "top",
+            "x": 852,
+            "y": 437
+          },
+          "viaPoints": []
+        },
+        "cmremfcc822": {
+          "from": {
+            "componentId": "DV1033",
+            "direction": "bottom",
+            "x": 1044,
+            "y": 786
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmumlvpinv",
+            "x": 1044,
+            "y": 839
+          },
+          "viaPoints": []
+        },
+        "cmremh2qb2n": {
+          "from": {
+            "componentId": "DV1033",
+            "direction": "top",
+            "x": 1044,
+            "y": 750
+          },
+          "mediumId": "neutral",
+          "path": [
+            {
+              "x": 1044,
+              "y": 774
+            },
+            {
+              "x": 1044,
+              "y": 720
+            }
+          ],
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmremruh546",
+            "x": 1044,
+            "y": 720
+          },
+          "viaPoints": []
+        },
+        "cmremh2qb2n_cmremh6542z": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmremh6542z",
+            "x": 852,
+            "y": 289
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmremh2qa2m",
+            "x": 660,
+            "y": 289
+          },
+          "viaPoints": []
+        },
+        "cmremh2qb2n_cmremruh546": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmremruh546",
+            "x": 1044,
+            "y": 720
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmren9u78if",
+            "x": 1044,
+            "y": 504
+          },
+          "viaPoints": []
+        },
+        "cmremh2qb2n_cmren9u78if": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmren9u78if",
+            "x": 1044,
+            "y": 504
+          },
+          "mediumId": "neutral",
+          "path": [
+            {
+              "x": 1044,
+              "y": 504
+            },
+            {
+              "x": 1044,
+              "y": 289
+            },
+            {
+              "x": 852,
+              "y": 289
+            }
+          ],
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmremh6542z",
+            "x": 852,
+            "y": 289
+          },
+          "viaPoints": []
+        },
+        "cmremh65530": {
+          "from": {
+            "componentId": "DV1029",
+            "direction": "top",
+            "x": 852,
+            "y": 342
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmremh6542z",
+            "x": 852,
+            "y": 289
+          },
+          "viaPoints": []
+        },
+        "cmremqwov1": {
+          "from": {
+            "componentId": "Tank3012",
+            "direction": "top",
+            "x": 816,
+            "y": 149.5
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "componentId": "DV1011",
+            "direction": "right",
+            "x": 717,
+            "y": 100
+          },
+          "viaPoints": []
+        },
+        "cmremr73g37": {
+          "from": {
+            "componentId": "DV1010",
+            "direction": "left",
+            "x": 318,
+            "y": 156
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmsdg71ow32",
+            "x": 287,
+            "y": 100
+          },
+          "viaPoints": []
+        },
+        "cmremruh547": {
+          "from": {
+            "componentId": "PU2010",
+            "direction": "right",
+            "x": 144,
+            "y": 720
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmremruh546",
+            "x": 1044,
+            "y": 720
+          },
+          "viaPoints": []
+        },
+        "cmrems10h48": {
+          "from": {
+            "componentId": "DV1012",
+            "direction": "top",
+            "x": 336,
+            "y": 798
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "kind": "free",
+            "terminal": "arrow-in",
+            "x": 336,
+            "y": 756
+          },
+          "viaPoints": []
+        },
+        "cmrems30749": {
+          "from": {
+            "componentId": "DV1012",
+            "direction": "bottom",
+            "x": 336,
+            "y": 834
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmremsf6x4n",
+            "x": 336,
+            "y": 861
+          },
+          "viaPoints": []
+        },
+        "cmrems30749_cmremsf6x4n": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmremsf6x4n",
+            "x": 336,
+            "y": 861
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "componentId": "DV1013",
+            "direction": "top",
+            "x": 336,
+            "y": 1002
+          },
+          "viaPoints": []
+        },
+        "cmremscmg4a": {
+          "from": {
+            "componentId": "DV1013",
+            "direction": "bottom",
+            "x": 336,
+            "y": 1038
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "kind": "free",
+            "terminal": "arrow-in",
+            "x": 336,
+            "y": 1068
+          },
+          "viaPoints": []
+        },
+        "cmremsf6y4o": {
+          "from": {
+            "componentId": "DV1014",
+            "direction": "left",
+            "x": 429,
+            "y": 861
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmremsf6x4n",
+            "x": 336,
+            "y": 861
+          },
+          "viaPoints": []
+        },
+        "cmremslgb6b": {
+          "from": {
+            "componentId": "DV1014",
+            "direction": "right",
+            "x": 465,
+            "y": 861
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrentddwfg",
+            "x": 564,
+            "y": 861
+          },
+          "viaPoints": []
+        },
+        "cmremslgb6b_cmremso3p6u": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmremso3p6u",
+            "x": 637,
+            "y": 861
+          },
+          "mediumId": "warm",
+          "path": [
+            {
+              "x": 637,
+              "y": 861
+            },
+            {
+              "x": 859,
+              "y": 861
+            },
+            {
+              "x": 859,
+              "y": 897
+            }
+          ],
+          "size": "inherit",
+          "to": {
+            "componentId": "PU2012",
+            "direction": "top",
+            "x": 859,
+            "y": 899
+          },
+          "viaPoints": []
+        },
+        "cmremslgb6b_cmrentddwfg": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmrentddwfg",
+            "x": 564,
+            "y": 861
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmremso3p6u",
+            "x": 637,
+            "y": 861
+          },
+          "viaPoints": []
+        },
+        "cmremso3q6v": {
+          "from": {
+            "componentId": "pump",
+            "direction": "top",
+            "x": 636,
+            "y": 900
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmremso3p6u",
+            "x": 637,
+            "y": 861
+          },
+          "viaPoints": []
+        },
+        "cmren3f9y8h": {
+          "from": {
+            "componentId": "DV1015",
+            "direction": "top",
+            "x": 564,
+            "y": 1002
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrentddwfg",
+            "x": 564,
+            "y": 861
+          },
+          "viaPoints": []
+        },
+        "cmren3la88j": {
+          "from": {
+            "componentId": "DV2016",
+            "direction": "top",
+            "x": 720,
+            "y": 1002
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "componentId": "pump",
+            "direction": "right",
+            "x": 659,
+            "y": 925
+          },
+          "viaPoints": []
+        },
+        "cmren3tkg9y": {
+          "from": {
+            "componentId": "DV2016",
+            "direction": "bottom",
+            "x": 720,
+            "y": 1038
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrentgq9g3",
+            "x": 720,
+            "y": 1084
+          },
+          "viaPoints": []
+        },
+        "cmren3tkg9y_cmrentgq9g3": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmrentgq9g3",
+            "x": 720,
+            "y": 1084
+          },
+          "mediumId": "warm",
+          "path": [
+            {
+              "x": 720,
+              "y": 1084
+            },
+            {
+              "x": 720,
+              "y": 1154
+            },
+            {
+              "x": 722.5,
+              "y": 1154
+            }
+          ],
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmren62k2al",
+            "x": 722.5,
+            "y": 1154
+          },
+          "viaPoints": []
+        },
+        "cmren44vja0": {
+          "from": {
+            "componentId": "DV1015",
+            "direction": "bottom",
+            "x": 564,
+            "y": 1038
+          },
+          "mediumId": "warm",
+          "path": [
+            {
+              "x": 569,
+              "y": 988
+            },
+            {
+              "x": 569,
+              "y": 1154
+            },
+            {
+              "x": 722.5,
+              "y": 1154
+            }
+          ],
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmren62k2al",
+            "x": 722.5,
+            "y": 1154
+          },
+          "viaPoints": []
+        },
+        "cmren44vja0_cmren62k2al": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmren62k2al",
+            "x": 722.5,
+            "y": 1154
+          },
+          "mediumId": "warm",
+          "path": [
+            {
+              "x": 722.5,
+              "y": 1154
+            },
+            {
+              "x": 1221,
+              "y": 1154
+            },
+            {
+              "x": 1221,
+              "y": 169
+            },
+            {
+              "x": 1372,
+              "y": 169
+            }
+          ],
+          "size": "inherit",
+          "to": {
+            "componentId": "DV1028",
+            "direction": "left",
+            "x": 1314,
+            "y": 168
+          },
+          "viaPoints": []
+        },
+        "cmren64usbb": {
+          "from": {
+            "componentId": "DV2017",
+            "direction": "left",
+            "x": 802,
+            "y": 1084
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrentgq9g3",
+            "x": 720,
+            "y": 1084
+          },
+          "viaPoints": []
+        },
+        "cmren6gmzc6": {
+          "from": {
+            "componentId": "DV1019",
+            "direction": "top",
+            "x": 1416,
+            "y": 978
+          },
+          "mediumId": "product",
+          "size": "inherit",
+          "to": {
+            "componentId": "Tank4016",
+            "direction": "bottom",
+            "x": 1416,
+            "y": 921
+          },
+          "viaPoints": []
+        },
+        "cmren6ih7c7": {
+          "from": {
+            "componentId": "DV1021",
+            "direction": "top",
+            "x": 1584,
+            "y": 978
+          },
+          "mediumId": "product",
+          "size": "inherit",
+          "to": {
+            "componentId": "Tank4017",
+            "direction": "bottom",
+            "x": 1584,
+            "y": 921
+          },
+          "viaPoints": []
+        },
+        "cmren6k8hc8": {
+          "from": {
+            "componentId": "DV1021",
+            "direction": "bottom",
+            "x": 1584,
+            "y": 1014
+          },
+          "mediumId": "product",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmren6lxbcu",
+            "x": 1584,
+            "y": 1084
+          },
+          "viaPoints": []
+        },
+        "cmren6k8hc8_cmren6lxbcu": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmren6lxbcu",
+            "x": 1584,
+            "y": 1084
+          },
+          "mediumId": "product",
+          "size": "inherit",
+          "to": {
+            "componentId": "DV1020",
+            "direction": "right",
+            "x": 1517,
+            "y": 1084
+          },
+          "viaPoints": []
+        },
+        "cmren6lxbcv": {
+          "from": {
+            "componentId": "DV1022",
+            "direction": "left",
+            "x": 1681.5,
+            "y": 1084
+          },
+          "mediumId": "product",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmren6lxbcu",
+            "x": 1584,
+            "y": 1084
+          },
+          "viaPoints": []
+        },
+        "cmren72l1d7": {
+          "from": {
+            "componentId": "DV1028",
+            "direction": "right",
+            "x": 1350,
+            "y": 168
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmreng87ymq",
+            "x": 1488,
+            "y": 168
+          },
+          "viaPoints": []
+        },
+        "cmren72l1d7_cmreng87ymq": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmreng87ymq",
+            "x": 1488,
+            "y": 168
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "componentId": "DV1026",
+            "direction": "left",
+            "x": 1566,
+            "y": 168
+          },
+          "viaPoints": []
+        },
+        "cmren74k7dx": {
+          "from": {
+            "componentId": "DV1027",
+            "direction": "top",
+            "x": 1488,
+            "y": 234
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmreng87ymq",
+            "x": 1488,
+            "y": 168
+          },
+          "viaPoints": []
+        },
+        "cmren75yldy": {
+          "from": {
+            "componentId": "DV1027",
+            "direction": "bottom",
+            "x": 1488,
+            "y": 270
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "componentId": "Tank4014",
+            "direction": "top",
+            "x": 1488,
+            "y": 339
+          },
+          "viaPoints": []
+        },
+        "cmren78dndz": {
+          "from": {
+            "componentId": "DV1024",
+            "direction": "bottom",
+            "x": 1716,
+            "y": 270
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "componentId": "Tank4015",
+            "direction": "top",
+            "x": 1716,
+            "y": 339
+          },
+          "viaPoints": []
+        },
+        "cmren7qb1f8": {
+          "from": {
+            "componentId": "DV1023",
+            "direction": "top",
+            "x": 1764,
+            "y": 978
+          },
+          "mediumId": "product",
+          "size": "inherit",
+          "to": {
+            "componentId": "Tank4018",
+            "direction": "bottom",
+            "x": 1764,
+            "y": 921
+          },
+          "viaPoints": []
+        },
+        "cmren86w5gz": {
+          "from": {
+            "componentId": "PU2011",
+            "direction": "left",
+            "x": 1104,
+            "y": 504
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmren9u78if",
+            "x": 1044,
+            "y": 504
+          },
+          "viaPoints": []
+        },
+        "cmren89srh0": {
+          "from": {
+            "componentId": "PU2011",
+            "direction": "top",
+            "x": 1128,
+            "y": 480
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "kind": "free",
+            "x": 1128,
+            "y": 384
+          },
+          "viaPoints": []
+        },
+        "cmrenmdkr76": {
+          "from": {
+            "componentId": "DV2018",
+            "direction": "bottom",
+            "x": 1044,
+            "y": 988
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrenny3ue2",
+            "x": 1044,
+            "y": 1084
+          },
+          "viaPoints": []
+        },
+        "cmrenmms38b": {
+          "from": {
+            "componentId": "DV2017",
+            "direction": "right",
+            "x": 838,
+            "y": 1084
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrenmq138w",
+            "x": 938.6666870117188,
+            "y": 1084
+          },
+          "viaPoints": []
+        },
+        "cmrenmms38b_cmrenmq138w": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmrenmq138w",
+            "x": 938.6666870117188,
+            "y": 1084
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrenny3ue2",
+            "x": 1044,
+            "y": 1084
+          },
+          "viaPoints": []
+        },
+        "cmrenmq138x": {
+          "from": {
+            "componentId": "PU2012",
+            "direction": "right",
+            "x": 883,
+            "y": 923
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrenmq138w",
+            "x": 938.6666870117188,
+            "y": 1084
+          },
+          "viaPoints": []
+        },
+        "cmrenny3ue3": {
+          "from": {
+            "componentId": "DV1020",
+            "direction": "left",
+            "x": 1481,
+            "y": 1084
+          },
+          "mediumId": "product",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmreno09aeg",
+            "x": 1416,
+            "y": 1084
+          },
+          "viaPoints": []
+        },
+        "cmrenny3ue3_cmreno09aeg": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmreno09aeg",
+            "x": 1416,
+            "y": 1084
+          },
+          "mediumId": "product",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmrenny3ue2",
+            "x": 1044,
+            "y": 1084
+          },
+          "viaPoints": []
+        },
+        "cmreno09beh": {
+          "from": {
+            "componentId": "DV1019",
+            "direction": "bottom",
+            "x": 1416,
+            "y": 1014
+          },
+          "mediumId": "product",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmreno09aeg",
+            "x": 1416,
+            "y": 1084
+          },
+          "viaPoints": []
+        },
+        "cmrenpp0df5": {
+          "from": {
+            "componentId": "DV1026",
+            "direction": "right",
+            "x": 1602,
+            "y": 168
+          },
+          "mediumId": "warm",
+          "size": "inherit",
+          "to": {
+            "componentId": "DV1024",
+            "direction": "top",
+            "x": 1716,
+            "y": 234
+          },
+          "viaPoints": []
+        },
+        "cmrenq6p2f6": {
+          "from": {
+            "componentId": "DV1023",
+            "direction": "bottom",
+            "x": 1764,
+            "y": 1014
+          },
+          "mediumId": "product",
+          "size": "inherit",
+          "to": {
+            "componentId": "DV1022",
+            "direction": "right",
+            "x": 1717.5,
+            "y": 1084
+          },
+          "viaPoints": []
+        },
+        "cmsdg6of919": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmsdg6of918",
+            "x": 287,
+            "y": 100
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "componentId": "PU2010",
+            "direction": "top",
+            "x": 120,
+            "y": 696
+          },
+          "viaPoints": []
+        },
+        "cmsdg71ox33": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmsdg71ow32",
+            "x": 287,
+            "y": 100
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmsdg6of918",
+            "x": 287,
+            "y": 100
+          },
+          "viaPoints": []
+        },
+        "cmsdj674t6y": {
+          "from": {
+            "componentId": "DV1011",
+            "direction": "left",
+            "x": 681,
+            "y": 100
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmsdg71ow32",
+            "x": 287,
+            "y": 100
+          },
+          "viaPoints": []
+        },
+        "cmumlvpinw": {
+          "from": {
+            "kind": "node",
+            "nodeId": "cmumlvpinv",
+            "x": 1044,
+            "y": 839
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "to": {
+            "componentId": "DV2018",
+            "direction": "top",
+            "x": 1044,
+            "y": 952
+          },
+          "viaPoints": []
+        },
+        "cmumlvpinx": {
+          "from": {
+            "componentId": "Tank0000",
+            "direction": "left",
+            "x": 1097,
+            "y": 839
+          },
+          "mediumId": "neutral",
+          "size": "inherit",
+          "state": "open",
+          "to": {
+            "kind": "node",
+            "nodeId": "cmumlvpinv",
+            "x": 1044,
+            "y": 839
+          },
+          "viaPoints": []
+        }
+      },
+      "gridSize": 12,
+      "nodes": {
+        "cmrdvp0wj3q": {
+          "x": 468,
+          "y": 289
+        },
+        "cmremh2qa2m": {
+          "x": 660,
+          "y": 289
+        },
+        "cmremh6542z": {
+          "x": 852,
+          "y": 289
+        },
+        "cmremruh546": {
+          "x": 1044,
+          "y": 720
+        },
+        "cmremsf6x4n": {
+          "x": 336,
+          "y": 861
+        },
+        "cmremso3p6u": {
+          "x": 637,
+          "y": 861
+        },
+        "cmren62k2al": {
+          "x": 722.5,
+          "y": 1154
+        },
+        "cmren6lxbcu": {
+          "x": 1584,
+          "y": 1084
+        },
+        "cmren9u78if": {
+          "x": 1044,
+          "y": 504
+        },
+        "cmreng87ymq": {
+          "x": 1488,
+          "y": 168
+        },
+        "cmrenmq138w": {
+          "x": 938.6666870117188,
+          "y": 1084
+        },
+        "cmrenny3ue2": {
+          "x": 1044,
+          "y": 1084
+        },
+        "cmreno09aeg": {
+          "x": 1416,
+          "y": 1084
+        },
+        "cmrentddwfg": {
+          "x": 564,
+          "y": 861
+        },
+        "cmrentgq9g3": {
+          "x": 720,
+          "y": 1084
+        },
+        "cmsdg6of918": {
+          "x": 287,
+          "y": 100
+        },
+        "cmsdg71ow32": {
+          "x": 287,
+          "y": 100
+        },
+        "cmumlvpinv": {
+          "x": 1044,
+          "y": 839
+        }
+      },
+      "showReadout": true,
+      "showTag": true,
+      "style": {
+        "backgroundColor": "var(--container-section-color)"
+      },
+      "userToolbar": {
+        "showRightPanelOpenButton": true,
+        "showZoomToggle": true
+      },
+      "zones": {
+        "zms4z3ino0": {
+          "detailView": "",
+          "h": 420,
+          "label": "",
+          "viewParams": {},
+          "w": 804,
+          "x": 156,
+          "y": 252
+        },
+        "zms4z5him1": {
+          "detailView": "",
+          "h": 456,
+          "label": "",
+          "viewParams": {},
+          "w": 624,
+          "x": 1260,
+          "y": 132
+        },
+        "zms4zdhmf2": {
+          "detailView": "",
+          "h": 444,
+          "label": "",
+          "viewParams": {},
+          "w": 672,
+          "x": 288,
+          "y": 744
+        },
+        "zms4zdymg3": {
+          "detailView": "",
+          "h": 180,
+          "label": "",
+          "viewParams": {},
+          "w": 672,
+          "x": 252,
+          "y": 60
+        },
+        "zms4zfih44": {
+          "detailView": "Page/TankView",
+          "h": 468,
+          "label": "Group 2",
+          "viewParams": {},
+          "w": 624,
+          "x": 1260,
+          "y": 672
+        }
+      }
+    },
+    "scripts": {
+      "customMethods": [],
+      "extensionFunctions": null,
+      "messageHandlers": [
+        {
+          "messageType": "rightPanelOpen",
+          "pageScope": true,
+          "script": "\tself.props.userToolbar.rightPanelOpen \u003d payload[\u0027open\u0027]",
+          "sessionScope": false,
+          "viewScope": false
+        }
+      ]
+    },
+    "type": "openbridge.manual.connector-diagram"
+  }
+}

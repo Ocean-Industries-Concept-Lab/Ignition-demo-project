@@ -8,8 +8,9 @@ description: Use when working with Perspective style classes in this Ignition pr
 ## Overview
 
 A Perspective **style class** is a named bundle of CSS that components reference by name.
-In this project, **the class name IS its folder path** under
-`com.inductiveautomation.perspective/style-classes/`.
+In each item (`demos/<name>/`, `templates/<name>/`, `tutorials/<name>/`), **the class name IS
+its folder path** under `com.inductiveautomation.perspective/style-classes/`. Items are
+self-sufficient, so a change to a shared class must be made in every item that has it.
 
 Folder `style-classes/font/body/` → class name **`font/body`**.
 

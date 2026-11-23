@@ -1,0 +1,273 @@
+{
+  "custom": {
+    "tag": 2010
+  },
+  "params": {
+    "readoutPosition": "bottom",
+    "tagpath": "[default]process/pump0"
+  },
+  "propConfig": {
+    "custom.tag": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "1": "{view.params.tagpath}"
+          },
+          "tagPath": "{1}/pumpTag"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.readoutPosition": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagpath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 52,
+      "width": 52
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": [
+              {
+                "config": {
+                  "id": "sidemenu",
+                  "type": "open",
+                  "viewParams": {
+                    "faceplateType": "pump",
+                    "tagpath": "{view.params.tagpath}"
+                  }
+                },
+                "scope": "C",
+                "type": "dock"
+              },
+              {
+                "config": {
+                  "script": "\tsystem.perspective.sendMessage(\u0027rightPanelOpen\u0027, payload\u003d{\u0027open\u0027: True}, scope\u003d\u0027page\u0027)"
+                },
+                "scope": "G",
+                "type": "script"
+              }
+            ]
+          }
+        },
+        "meta": {
+          "name": "PU2013"
+        },
+        "position": {
+          "height": 48,
+          "width": 48
+        },
+        "propConfig": {
+          "props.activated": {
+            "binding": {
+              "config": {
+                "expression": "{session.custom.hoverId}\u003d{view.params.tagpath}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.alert": {
+            "binding": {
+              "config": {
+                "expression": "tag({view.params.tagpath}+\"/Alarm Metrics.hasActive\") || (tag({view.params.tagpath}+\"/Alarm Metrics.clearUnackCount\") \u003e 0)"
+              },
+              "type": "expr"
+            }
+          },
+          "props.alertFrameMode": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "activeAcked": "tag({view.params.tagpath}+\"/Alarm Metrics.activeAckCount\")",
+                  "activeUnacked": "tag({view.params.tagpath}+\"/Alarm Metrics.activeUnackCount\")",
+                  "clearedAcked": "tag({view.params.tagpath}+\"/Alarm Metrics.clearUnackCount\")"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "    if value.activeUnacked \u003e 0:\n    \treturn \"unacked-active\"\n    elif value.activeAcked \u003e 0:\n    \treturn \"acked-active\"\n    else:\n\t\treturn \"unacked-rectified\"",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
+          "props.alertFrameStatus": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "highestActive": "tag({view.params.tagpath}+\"/Alarm Metrics.highestActivePriority\") ",
+                  "highestUnacked": "tag({view.params.tagpath}+\"/Alarm Metrics.highestUnackedPriority\") "
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\tif value.highestActive \u003e 0:\n\t\treturn \"level-\"+str(value.highestActive).lower()\n\telif value.highestUnacked \u003e 0:\n\t\treturn \"level-\"+str(value.highestUnacked).lower()\n\telse:\n\t\treturn \"level-low\"",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
+          "props.badgeControl": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/pumpMode"
+              },
+              "transforms": [
+                {
+                  "fallback": "none",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "local",
+                      "output": "local"
+                    },
+                    {
+                      "input": "manual",
+                      "output": "manual"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.direction": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "tagpath": "{view.params.tagpath}"
+                },
+                "tagPath": "{tagpath}/pumpOn"
+              },
+              "transforms": [
+                {
+                  "fallback": "forward-stopped",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "forward"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.hasTag": {
+            "binding": {
+              "config": {
+                "path": "session.custom.showTag"
+              },
+              "type": "property"
+            }
+          },
+          "props.on": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/pumpOn"
+              },
+              "type": "tag"
+            }
+          },
+          "props.readoutPosition": {
+            "binding": {
+              "config": {
+                "path": "view.params.readoutPosition"
+              },
+              "type": "property"
+            }
+          },
+          "props.showReadoutStack": {
+            "binding": {
+              "config": {
+                "expression": "{session.custom.showReadout} || {session.custom.showTag}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.showStatus": {
+            "binding": {
+              "config": {
+                "path": "session.custom.showReadout"
+              },
+              "type": "property"
+            }
+          },
+          "props.speed": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/pumpSpeed"
+              },
+              "type": "tag"
+            }
+          },
+          "props.tag": {
+            "binding": {
+              "config": {
+                "expression": "tostr({view.custom.tag})"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "componentSize": "medium",
+          "hasSpeed": true,
+          "speedUnit": "%",
+          "variant": "double"
+        },
+        "type": "automation.pump.pump"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "backgroundColor": "#FFA50000",
+        "classes": "utils/overflow-visible"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

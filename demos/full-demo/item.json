@@ -1,0 +1,11 @@
+{
+  "id": "full-demo",
+  "kind": "demo",
+  "title": "Full demo",
+  "description": "Includes a P&ID process overview, a card-based dashboard, automation (IAS) and maritime instrument pages, a full alert page, and a shared top bar and navigation menu.",
+  "projectName": "OpenBridge_full_demo",
+  "runnable": true,
+  "tags": "tags/default-tags.json",
+  "image": "preview.png",
+  "imageAlt": "OpenBridge full demo showing tanks, valves, pumps and pressure instruments"
+}

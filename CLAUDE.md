@@ -4,11 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-This directory is a single **Ignition 8.3 project** (`OpenBridge_demo`) living inside a running
-Gateway's data folder (`/usr/local/ignition/data/projects/OpenBridge_demo`). There is no build
-step, package manager, or test runner — the "source" is the tree of JSON/CSS/Python resource
-files that the Gateway loads into memory and serves as a **Perspective** web app. Editing a file
-on disk does nothing until the Gateway re-scans the project (see workflow below).
+This repository holds the **Ignition 8.3 projects** offered on the OpenBridge module's Config page.
+Each folder under `demos/`, `templates/` and `tutorials/` is one self-sufficient project with its
+own `project.json` and an `item.json` describing it. See `README.md` for adding an item and for
+syncing one into a Gateway's projects folder. The repo root is not a project.
+
+`scripts/build_catalog.py` builds the release bundle from git-tracked files, and
+`python3 -I scripts/test_build_catalog.py` tests it. The "source" of each item is the tree of
+JSON/CSS/Python resource files that the Gateway loads into memory and serves as a **Perspective**
+web app. Editing a file on disk does nothing until the Gateway re-scans the project (see workflow
+below).
 
 The app is a maritime/industrial HMI built largely from **OpenBridge**, **automation**, and
 **navigation-instruments** Perspective component modules (tanks, valves, motors, pumps, compasses,
@@ -27,20 +32,21 @@ curl -s -X POST http://localhost:8088/data/api/v1/scan/projects \
 - Token is in `.env.local` (gitignored); the header value is the whole string after the first `=`,
   including its `claude:`/`Postman:` prefix. Success = HTTP 200 with a JSON scan-status body.
 - Then reload the running page (an already-open client holds the OLD view until reloaded):
-  `http://localhost:8088/data/perspective/client/OpenBridge_demo/<page>` — use the Playwright MCP
+  `http://localhost:8088/data/perspective/client/<project>/<page>` — use the Playwright MCP
   `browser_navigate` + `browser_take_screenshot` to verify.
 - Do NOT `touch` files and wait for the periodic scan, edit via the Gateway Web UI, or hand-edit a
   resource.json `lastModificationSignature` (the scan recomputes it).
 - The **`ignition-scan-projects` skill** covers this in full — use it after any resource edit.
 - If a client page shows **"Trial Expired"** (2-hour trial), use the **`ignition-reset-trial` skill**.
 - `./restart_gateway.sh` does a full Gateway restart (`../../../ignition.sh restart`) — only needed
-  for module/config-level changes, not resource edits.
+  for module/config-level changes, not resource edits. It works only when this repo is checked out
+  directly under the Gateway's `data/projects/` folder.
 
 ## Resource layout
 
-Ignition modules own top-level folders (`com.inductiveautomation.perspective`,
-`com.inductiveautomation.vision`, `com.inductiveautomation.mcp`). Perspective is where nearly all the
-work happens:
+Inside an item folder, Ignition modules own the top-level folders
+(`com.inductiveautomation.perspective`, `com.inductiveautomation.vision`,
+`com.inductiveautomation.mcp`). Perspective is where nearly all the work happens:
 
 - `views/` — the screens. Each view is a folder with `view.json` (the component tree),
   `resource.json` (metadata), and a `thumbnail.png`. Pages live under `views/Page/*`; the shared
