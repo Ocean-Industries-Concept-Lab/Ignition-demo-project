@@ -6,5 +6,7 @@
   "projectName": "OpenBridge_tutorial_first_screen",
   "runnable": true,
   "tags": "tags/tags.json",
-  "docsUrl": "https://docs.openstudio.no/tutorials/first-screen/"
+  "docsUrl": "https://docs.openstudio.no/tutorials/first-screen/",
+  "image": "preview.png",
+  "imageAlt": "A process overview with a tank, a pump, a valve and pressure and flow readouts"
 }
