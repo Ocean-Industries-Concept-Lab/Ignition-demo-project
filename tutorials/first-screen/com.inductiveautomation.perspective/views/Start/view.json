@@ -8,65 +8,54 @@
     }
   },
   "root": {
-    "type": "ia.container.flex",
+    "type": "openbridge.manual.connector-diagram",
     "meta": {
       "name": "root"
     },
     "props": {
-      "direction": "column",
-      "style": {
-        "padding": "16px"
+      "userToolbar": {
+        "showViewModeToggle": false,
+        "showLegend": false,
+        "showTagToggle": false,
+        "showReadoutToggle": false
       }
     },
     "children": [
       {
-        "type": "openbridge.manual.card",
+        "type": "ia.display.label",
         "meta": {
-          "name": "Card"
+          "name": "Title"
         },
         "position": {
-          "grow": 1,
-          "basis": "0"
+          "x": 16,
+          "y": 16,
+          "width": 800,
+          "height": 32
         },
         "props": {
-          "hasTitle": true,
-          "title": "Your first OpenBridge screen"
-        },
-        "children": [
-          {
-            "type": "ia.container.flex",
-            "meta": {
-              "name": "Content"
-            },
-            "props": {
-              "direction": "row",
-              "wrap": "wrap",
-              "alignContent": "flex-start",
-              "style": {
-                "padding": "16px",
-                "gap": "16px"
-              }
-            },
-            "children": [
-              {
-                "type": "ia.display.label",
-                "meta": {
-                  "name": "Instructions"
-                },
-                "position": {
-                  "basis": "100%",
-                  "shrink": 0
-                },
-                "props": {
-                  "text": "Add the tank, pump, valve and readouts to this card. Follow the tutorial at docs.openstudio.no/tutorials/first-screen.",
-                  "style": {
-                    "classes": "font/body text-color/element-active"
-                  }
-                }
-              }
-            ]
+          "text": "Your first OpenBridge screen",
+          "style": {
+            "classes": "font/title text-color/element-active"
           }
-        ]
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Instructions"
+        },
+        "position": {
+          "x": 16,
+          "y": 52,
+          "width": 1200,
+          "height": 24
+        },
+        "props": {
+          "text": "Drop the tank, pump, valve and readouts onto this diagram. Follow the tutorial at docs.openstudio.no/tutorials/first-screen.",
+          "style": {
+            "classes": "font/body text-color/element-neutral"
+          }
+        }
       }
     ]
   }
