@@ -1,0 +1,10 @@
+{
+  "base": {
+    "style": {
+      "fontFamily": "var(--font-family-main)",
+      "fontWeight": "var(--automation-components-typography-label-font-weight)",
+      "fontSize": "var(--automation-components-typography-label-font-size)",
+      "lineHeight": "var(--automation-components-typography-label-line-height)"
+    }
+  }
+}

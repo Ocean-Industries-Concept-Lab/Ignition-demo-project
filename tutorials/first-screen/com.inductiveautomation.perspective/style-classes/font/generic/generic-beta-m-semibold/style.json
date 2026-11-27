@@ -1,0 +1,11 @@
+{
+  "base": {
+    "style": {
+      "fontFamily": "var(--font-family-main)",
+      "fontWeight": "var(--global-typography-generic-m-font-weight-medium)",
+      "fontSize": "var(--global-typography-generic-m-font-size)",
+      "lineHeight": "var(--global-typography-generic-m-line-height)",
+      "letterSpacing": "var(--global-typography-generic-m-letter-spacing)"
+    }
+  }
+}

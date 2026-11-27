@@ -1,0 +1,56 @@
+{
+  "name": "",
+  "tagType": "Provider",
+  "tags": [
+    {
+      "name": "Tutorials",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "name": "first-screen",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "TankLevel",
+              "tagType": "AtomicTag",
+              "valueSource": "expr",
+              "dataType": "Float8",
+              "expression": "50 + 30 * sin(2 * 3.14159265 * (toMillis(now(1000)) % 120000) / 120000.0)",
+              "engUnit": "%"
+            },
+            {
+              "name": "PumpRunning",
+              "tagType": "AtomicTag",
+              "valueSource": "expr",
+              "dataType": "Boolean",
+              "expression": "(toMillis(now(1000)) % 60000) < 30000"
+            },
+            {
+              "name": "Pressure",
+              "tagType": "AtomicTag",
+              "valueSource": "expr",
+              "dataType": "Float8",
+              "expression": "3 + 1.5 * sin(2 * 3.14159265 * (toMillis(now(1000)) % 90000) / 90000.0)",
+              "engUnit": "bar"
+            },
+            {
+              "name": "Flow",
+              "tagType": "AtomicTag",
+              "valueSource": "expr",
+              "dataType": "Float8",
+              "expression": "if({[.]PumpRunning} && {[.]ValveOpen}, 40 + 5 * sin(2 * 3.14159265 * (toMillis(now(1000)) % 20000) / 20000.0), 0)",
+              "engUnit": "m3/h"
+            },
+            {
+              "name": "ValveOpen",
+              "tagType": "AtomicTag",
+              "valueSource": "memory",
+              "dataType": "Boolean",
+              "value": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

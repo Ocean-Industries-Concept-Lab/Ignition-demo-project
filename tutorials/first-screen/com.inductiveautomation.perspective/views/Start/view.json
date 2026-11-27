@@ -1,0 +1,73 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 600,
+      "width": 1000
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "padding": "16px"
+      }
+    },
+    "children": [
+      {
+        "type": "openbridge.manual.card",
+        "meta": {
+          "name": "Card"
+        },
+        "position": {
+          "grow": 1,
+          "basis": "0"
+        },
+        "props": {
+          "hasTitle": true,
+          "title": "Your first OpenBridge screen"
+        },
+        "children": [
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Content"
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "wrap",
+              "alignContent": "flex-start",
+              "style": {
+                "padding": "16px",
+                "gap": "16px"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Instructions"
+                },
+                "position": {
+                  "basis": "100%",
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Add the tank, pump, valve and readouts to this card. Follow the tutorial at docs.openstudio.no/tutorials/first-screen.",
+                  "style": {
+                    "classes": "font/body text-color/element-active"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -42,6 +42,10 @@ def relative_item_path(folder, item, field):
     return path
 
 
+def is_docs_url(value):
+    return isinstance(value, str) and value.startswith("https://") and len(value) > len("https://")
+
+
 def read_item(repo, folder, files):
     try:
         item = json.loads((repo / folder / "item.json").read_text(encoding="utf-8"))
@@ -75,6 +79,8 @@ def read_item(repo, folder, files):
         raise CatalogError(f"{folder}: an item with an image needs imageAlt")
     if "imageAlt" in item and not isinstance(item["imageAlt"], str):
         raise CatalogError(f"{folder}: imageAlt must be text")
+    if "docsUrl" in item and not is_docs_url(item["docsUrl"]):
+        raise CatalogError(f"{folder}: docsUrl must be an https:// URL")
     return item, tags, image
 
 
@@ -122,7 +128,7 @@ def project_zip(repo, folder, files, image):
 
 
 def catalog_entry(item, tags, image):
-    return {
+    entry = {
         "id": item["id"],
         "kind": item["kind"],
         "title": item["title"],
@@ -133,6 +139,9 @@ def catalog_entry(item, tags, image):
         "hasImage": image is not None,
         "imageAlt": item.get("imageAlt", ""),
     }
+    if "docsUrl" in item:
+        entry["docsUrl"] = item["docsUrl"]
+    return entry
 
 
 def build(repo, version, out):

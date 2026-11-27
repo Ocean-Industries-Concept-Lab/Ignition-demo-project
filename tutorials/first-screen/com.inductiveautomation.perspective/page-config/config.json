@@ -1,0 +1,8 @@
+{
+  "pages": {
+    "/": {
+      "title": "First screen",
+      "viewPath": "Start"
+    }
+  }
+}

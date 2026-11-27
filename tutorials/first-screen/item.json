@@ -1,0 +1,10 @@
+{
+  "id": "first-screen",
+  "kind": "tutorial",
+  "title": "Your first OpenBridge screen",
+  "description": "Step-by-step tutorial for engineers new to Ignition: open the Designer, build a small process overview with a tank, pump, valve and readouts, bind it to simulated tags and run it in a browser.",
+  "projectName": "OpenBridge_tutorial_first_screen",
+  "runnable": true,
+  "tags": "tags/tags.json",
+  "docsUrl": "https://docs.openstudio.no/tutorials/first-screen/"
+}

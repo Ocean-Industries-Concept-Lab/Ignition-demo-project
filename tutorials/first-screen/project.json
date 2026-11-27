@@ -1,0 +1,7 @@
+{
+  "title": "OpenBridge tutorial: first screen",
+  "description": "Installed from the OpenBridge Config page. Follow the tutorial on docs.openstudio.no.",
+  "enabled": true,
+  "inheritable": false,
+  "parent": ""
+}

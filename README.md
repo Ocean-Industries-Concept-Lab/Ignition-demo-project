@@ -31,7 +31,9 @@ scripts/            builds and tests the release bundle
 
    `kind` must match the root folder (`demo`, `template` or `tutorial`). `id` uses lowercase
    letters, digits and hyphens. `projectName` uses letters, digits and underscores. Both must be
-   unique. `image`, `imageAlt` and `tags` are optional, but an image needs `imageAlt`.
+   unique. `image`, `imageAlt`, `tags` and `docsUrl` are optional, but an image needs `imageAlt`.
+   `docsUrl` must start with `https://`; the Config page shows it as a link on the item's card
+   ("Follow the tutorial" for a tutorial, "Read the docs" otherwise).
 
    A `runnable` item is installed with its inheritable flag off. `tags` is the path of a tag export
    in the item's `tags/` folder. An item with tags must be runnable. Its tags are imported into the
